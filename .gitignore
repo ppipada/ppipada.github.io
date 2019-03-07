@@ -1,0 +1,15 @@
+*.pyc
+*.swp
+.vscode
+
+### Vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+.idea
+.DS_Store
+tags
+.tern-project
