@@ -1,4 +1,4 @@
-# Few Scramblings and utilities
+# Utilities
 
 ## [GNU screen helper](./screen.md)
 ## [Python profiling](./python_profiling.md)
