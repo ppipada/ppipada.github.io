@@ -1,38 +1,13 @@
-# GNU screen helper
-
-## References 
-------------------------------
-- [Man Page](https://www.gnu.org/software/screen/manual/screen.html)
-- [Quick Reference](http://aperiodic.net/screen/quick_reference)
-
-## Basic commands
-------------------------------
-
-| Description | Command |
-|---|---|
-| Start a new session with session name | `screen -S <session_name>` |
-| List running sessions / screens | `screen -ls` |
-| Attach to a running session with name | `screen -R <session_name>` |
-| Detach a running session | `screen -d <session_name>` |
-| Command mode | `Ctrl+a` |
-| Enable vertical scrolling mode in a running session | `Ctrl-a ESC` |
-| Create new window | `Ctrl-a c` |
-| Change to window by number | `Ctrl-a <number>` |
-| Enter screen command | `Ctrl-a :` |
-| Send command to the screen session | `screen -X -S <session_name> <command>` |
-| Send kill command to the screen session | `screen -X -S <session_name> kill` |
-
-## RC File
-------------------------------
-A sample screenrc file with a hardstatus line at bottom, 3 windows created, with custom commands stuffed into each at session creation and some key bindings.
-
-```
 # location: ~/.screenrc
-# the following two lines give a two-line status, with the current window highlighted
+# A sample screenrc file with a hardstatus line at bottom
+# 3 windows created, with custom commands stuffed into each at session creation 
+# and some key bindings.
+
+# the following lines give a status line, with the current window highlighted
 hardstatus alwayslastline
-#hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%d/%m %{W}%C%A%{g}]'
 hardstatus string '%{= kg}[%{G}%H%? %1`%?%{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%][%{B}%d/%m %{W}%C%A%{g}]'
 #hardstatus string '%{= kg}[ %{G}%H %{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%]'
+#hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%d/%m %{W}%C%A%{g}]'
 
 # huge scrollback buffer
 defscrollback 10000
@@ -99,5 +74,3 @@ bind -c rsz -k ku eval "focus up"    "command -c rsz" # Up
 bind -c rsz -k kd eval "focus down"  "command -c rsz" # Down
 #source .screen_layout
 #layout save def
-
-```
