@@ -1,7 +1,7 @@
 # Python
 
 ## Closures
-------------------------------
+
 ### Closure chaining
 {% highlight python %}
 {% include_relative closures.py %}
@@ -13,8 +13,8 @@
 {% endhighlight %}
 
 ## Profiling
-------------------------------
-- cProfile a single function
+
+### cprofile a single function
 {% highlight python %}
 {% include_relative profile_example.py %}
 {% endhighlight %}

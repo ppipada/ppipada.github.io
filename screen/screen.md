@@ -1,12 +1,10 @@
 # GNU Screen helpers
 
 ## References 
-------------------------------
 - [Man Page](https://www.gnu.org/software/screen/manual/screen.html)
 - [Quick Reference](http://aperiodic.net/screen/quick_reference)
 
 ## Basic commands
-------------------------------
 
 | Description | Command |
 |---|---|
@@ -23,7 +21,6 @@
 | Send kill command to the screen session | `screen -X -S <session_name> kill` |
 
 ## RC File
-------------------------------
 {% highlight shell %}
 {% include_relative screenrc %}
 {% endhighlight %}
