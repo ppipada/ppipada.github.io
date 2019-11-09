@@ -5,15 +5,18 @@
 ## Python
 ### Closures
 - Closure chaining
-```python
+{% highlight python %}
 {% include_relative pyscripts/closures.py %}
-```
+{% endhighlight %}
+
 - Example
-```python
+{% highlight python %}
 {% include_relative pyscripts/closure_chaining_example.py %}
-```
+{% endhighlight %}
+
 ### Profiling
 - cProfile a single function
-```python
+{% highlight python %}
 {% include_relative pyscripts/profile_example.py %}
-```
+{% endhighlight %}
+
