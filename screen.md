@@ -1,0 +1,103 @@
+# GNU screen helper
+
+## References 
+------------------------------
+- [Man Page](https://www.gnu.org/software/screen/manual/screen.html)
+- [Quick Reference](http://aperiodic.net/screen/quick_reference)
+
+## Basic commands
+------------------------------
+
+| Description | Command |
+|---|---|
+| Start a new session with session name | `screen -S <session_name>` |
+| List running sessions / screens | `screen -ls` |
+| Attach to a running session with name | `screen -R <session_name>` |
+| Detach a running session | `screen -d <session_name>` |
+| Command mode | `Ctrl+a` |
+| Enable vertical scrolling mode in a running session | `Ctrl-a ESC` |
+| Create new window | `Ctrl-a c` |
+| Change to window by number | `Ctrl-a <number>` |
+| Enter screen command | `Ctrl-a :` |
+| Send command to the screen session | `screen -X -S <session_name> <command>` |
+| Send kill command to the screen session | `screen -X -S <session_name> kill` |
+
+## RC File
+------------------------------
+A sample screenrc file with a hardstatus line at bottom, 3 windows created, with custom commands stuffed into each at session creation and some key bindings.
+
+```
+# location: ~/.screenrc
+# the following two lines give a two-line status, with the current window highlighted
+hardstatus alwayslastline
+#hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%d/%m %{W}%C%A%{g}]'
+hardstatus string '%{= kg}[%{G}%H%? %1`%?%{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%][%{B}%d/%m %{W}%C%A%{g}]'
+#hardstatus string '%{= kg}[ %{G}%H %{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%]'
+
+# huge scrollback buffer
+defscrollback 10000
+
+# no welcome message
+startup_message off
+
+# 256 colors
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
+# mouse tracking allows to switch region focus by clicking
+#mousetrack on
+# default windows
+screen -t HOME 0 bash
+stuff "cd /root^M"
+screen -t SRV 1 bash
+stuff "cd /root/srv^M"
+screen -t MYSQL 2 bash
+stuff "cd /root/mysql^M"
+select 0
+#bind c screen 1 # window numbering starts at 1 not 0
+#bind 0 select 10
+
+# get rid of silly xoff stuff
+#bind s split
+
+# navigating regions with Ctrl-arrows
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+
+# switch windows with F3 (prev) and F4 (next)
+bindkey "^[OR" prev
+bindkey "^[OS" next
+
+# switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)
+bindkey "^[O1;5R" layout prev
+bindkey "^[O1;5S" layout next
+
+# F2 puts Screen into resize mode. Resize regions using hjkl keys.
+bindkey "^[OQ" eval "command -c rsz" # enter resize mode
+                                                                                                                                                                             1,1           Top
+# switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)
+bindkey "^[O1;5R" layout prev
+bindkey "^[O1;5S" layout next
+
+# F2 puts Screen into resize mode. Resize regions using hjkl keys.
+bindkey "^[OQ" eval "command -c rsz" # enter resize mode
+
+# use hjkl keys to resize regions
+bind -c rsz h eval "resize -h -5" "command -c rsz"
+bind -c rsz j eval "resize -v -5" "command -c rsz"
+bind -c rsz k eval "resize -v +5" "command -c rsz"
+bind -c rsz l eval "resize -h +5" "command -c rsz"
+
+# quickly switch between regions using tab and arrows
+bind -c rsz \t    eval "focus"       "command -c rsz" # Tab
+bind -c rsz -k kl eval "focus left"  "command -c rsz" # Left
+bind -c rsz -k kr eval "focus right" "command -c rsz" # Right
+bind -c rsz -k ku eval "focus up"    "command -c rsz" # Up
+bind -c rsz -k kd eval "focus down"  "command -c rsz" # Down
+#source .screen_layout
+#layout save def
+
+```
