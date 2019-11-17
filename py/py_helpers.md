@@ -1,4 +1,10 @@
-# Python
+# Python Helpers
+
+- [Closures](#closures)
+  - [Closure chaining](#closure-chaining)
+  - [Example](#example)
+- [Profiling](#profiling)
+  - [cprofile a single function](#cprofile-a-single-function)
 
 ## Closures
 
