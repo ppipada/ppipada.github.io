@@ -4,6 +4,7 @@
 - [Top](#top)
 - [Jekyll](#jekyll)
 - [Virtualbox](#virtualbox)
+- [Rsync](#rsync)
 
 ## Docker
 
@@ -39,3 +40,9 @@ Reference - [Using with bundler](https://jekyllrb.com/tutorials/using-jekyll-wit
 | Description                    | Command                                                                                        |
 | ------------------------------ | ---------------------------------------------------------------------------------------------- |
 | create a vmdk using raw device | `VBoxManage internalcommands createrawvmdk -filename "</path/to/file>.vmdk" -rawdisk /dev/sdb` |
+
+## Rsync
+
+| Description                                                   | Command                                                                                          |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| rsync to a remote server using ssh protocol and show progress | `rsync -avzhe ssh --progress ./localfolder user@<remote server name/ip>:/remote/folder/location` |
