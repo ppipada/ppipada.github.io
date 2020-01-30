@@ -5,6 +5,7 @@
 - [Jekyll](#jekyll)
 - [Virtualbox](#virtualbox)
 - [Rsync](#rsync)
+- [Disk paritions](#disk-paritions)
 
 ## Docker
 
@@ -46,3 +47,24 @@ Reference - [Using with bundler](https://jekyllrb.com/tutorials/using-jekyll-wit
 | Description                                                   | Command                                                                                          |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | rsync to a remote server using ssh protocol and show progress | `rsync -avzhe ssh --progress ./localfolder user@<remote server name/ip>:/remote/folder/location` |
+| Option to transfer files upto a certain size                  | `--max-size=<n>m`                                                                                |
+
+## Disk paritions
+
+Create a ntfs partition from an empty disk
+
+```shell
+sudo fdisk /dev/sdb
+# fdisk is interactive
+# press m for help
+# Press p to list any available partitions
+# create a new partition by using n
+# after altering partitions press w to write
+# make a ntfs file system with "quick format" i.e dont write zeroes and dont check for bad sectors
+# remove f for full format
+mkfs.ntfs -f /dev/sdb1
+blkid
+# Note the UUID of the partition E.g: /dev/sdb1 UUID="asdfg1246"
+# Adding a entry in /etc/fstab
+    UUID=asdfg1246   /disk1 ntfs-3g    permissions,locale=en_US.utf8    0   2
+```
