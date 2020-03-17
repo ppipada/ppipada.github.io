@@ -1,19 +1,19 @@
+# hidden files
+.*
+
+# python compiled files
 *.pyc
-*.swp
-.vscode
 
-### Vim ###
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-.idea
-.DS_Store
-tags
-.tern-project
+# jekyll debug
+_site
 
-# Jekyll
+# Jeykll Gemfile.lock
 Gemfile.lock
-_site/*
+
+# yui-compressor
+*.jar
+
+# bundle cache
+vendor
+
+.vscode
