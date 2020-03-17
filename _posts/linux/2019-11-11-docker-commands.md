@@ -5,7 +5,7 @@ categories: [Linux, Docker]
 tags: [linux, docker, utilities, commands]
 summary: Basic docker commands.
 seo:
-  date_modified: 2020-03-17 15:14:00 +0530
+  date_modified: 2020-03-17 15:21:18 +0530
 ---
 
 Basic docker commands.

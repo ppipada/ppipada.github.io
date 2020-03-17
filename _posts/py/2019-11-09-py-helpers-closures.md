@@ -5,7 +5,7 @@ categories: [Python, Helpers]
 tags: [python, utilities, scripts, closures]
 summary: A script to chain multiple closures in python with example usage.
 seo:
-  date_modified: 2020-03-17 15:14:00 +0530
+  date_modified: 2020-03-17 15:21:18 +0530
 ---
 
 A script to chain multiple closures in python with example usage.

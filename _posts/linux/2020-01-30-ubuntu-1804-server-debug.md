@@ -5,7 +5,7 @@ categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, debug, commands]
 summary: Few ubuntu server setup issues and corresponding steps to debug them.
 seo:
-  date_modified: 2020-03-17 15:14:00 +0530
+  date_modified: 2020-03-17 15:21:18 +0530
 ---
 
 Few ubuntu server setup issues and corresponding steps to debug them.

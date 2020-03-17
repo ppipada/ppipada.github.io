@@ -5,7 +5,7 @@ categories: [Python, Helpers]
 tags: [python, utilities, scripts, profiling]
 summary: A script to cprofile a single function in python
 seo:
-  date_modified: 2020-03-17 15:14:00 +0530
+  date_modified: 2020-03-17 15:21:18 +0530
 ---
 
 A script to cprofile a single function in python.

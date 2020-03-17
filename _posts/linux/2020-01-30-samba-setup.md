@@ -5,7 +5,7 @@ categories: [Linux, Samba]
 tags: [linux, samba, utilities, scripts, commands]
 summary: Steps to set up a samba server on ubuntu 18.04.
 seo:
-  date_modified: 2020-03-17 15:14:00 +0530
+  date_modified: 2020-03-17 15:21:18 +0530
 ---
 
 Steps to set up a samba server on ubuntu 18.04.
