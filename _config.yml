@@ -28,6 +28,9 @@ github:
 twitter:
   username: pipada            # change to your twitter username
 
+linkedin:
+  username: ppipada
+
 social:
   name: Pankaj Pipada                  # it will shows as the copyright owner in Footer
   # email: username@gmail.com             # change to your email address
@@ -37,7 +40,7 @@ social:
     - https://github.com/ppipada       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/ppipada/
+    - https://www.linkedin.com/in/ppipada
 
 #<meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
 google_site_verification: N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs # change to your verification string
@@ -75,7 +78,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dual
+theme_mode: dark
 
 # boolean type, global switch for ToC in posts.
 toc: true
