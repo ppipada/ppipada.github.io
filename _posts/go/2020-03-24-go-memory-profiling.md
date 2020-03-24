@@ -6,7 +6,7 @@ tags: [go, golang, guidelines, profiling]
 summary: Generic references and points to consider when doing a memory analysis with
   go programming language.
 seo:
-  date_modified: 2020-03-24 14:40:15 +0530
+  date_modified: 2020-03-24 14:41:39 +0530
 ---
 
 Generic references and points to consider when doing a memory analysis with go programming language.
