@@ -7,20 +7,20 @@ title: Quotes
 
 * * *
 
-Information is not knowledge \
-Knowledge is not wisdom \
-Wisdom is not truth \
-Truth is not beauty \
-Beauty is not love \
-Love is not music \
+Information is not knowledge  
+Knowledge is not wisdom  
+Wisdom is not truth  
+Truth is not beauty  
+Beauty is not love  
+Love is not music  
 Music is the best.
 
 --- _Frank Zappa_
 * * *
 
-I have this thought experiment I do in moments like that.... \
-I imagine being nothing at all. Dead and gone. \
-And while being dead and gone and nothing, you were allowed to re-live just one moment again of your long lost life for a just a couple minutes and it just so happens to be the one you are in living in right now. \
+I have this thought experiment I do in moments like that....  
+I imagine being nothing at all. Dead and gone.  
+And while being dead and gone and nothing, you were allowed to re-live just one moment again of your long lost life for a just a couple minutes and it just so happens to be the one you are in living in right now.  
 Its an amazing feeling. You will see your life with rare fresh eyes for just a few seconds. And then life goes on....
 
 --- _Kurt Vonnegut_
