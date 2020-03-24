@@ -24,6 +24,11 @@
   url: archives
   icon: "fas fa-archive"
 -
+  name: "Quotes"
+  path: tabs
+  url: quotes
+  icon: "fas fa-quotes"
+-
   name: "About"
   icon: "fas fa-info"
   path: tabs
