@@ -265,3 +265,10 @@ Good communication is as stimulating as black coffee, and just as hard to sleep 
 
 --- _Anne Morrow Lindbergh_
 * * *
+
+Parkinson's law of triviality: Members of an organization give disproportionate weight to trivial issues.
+
+Bikeshedding (Metaphor): Futile investment of time and energy in discussion of marginal technical issues.
+
+--- _C. Northcote Parkinson_
+* * *
