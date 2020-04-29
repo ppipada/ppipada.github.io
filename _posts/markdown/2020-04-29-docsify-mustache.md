@@ -6,8 +6,10 @@ tags: [markdown, yaml, front-matter, mustache, docsify]
 summary: Docsify, YAML front-matter, mustache templates & tags and some quirks when
   using them.
 seo:
-  date_modified: 2020-04-29 11:51:40 +0530
+  date_modified: 2020-04-29 11:52:50 +0530
 ---
+
+Docsify, YAML front-matter, mustache templates & tags and some quirks when using them.
 
 ## Docsify
 
@@ -23,7 +25,7 @@ One such plugin that is greatly useful is [Docsify-Mustache](https://docsify-mus
 
 - It allows preprocessing markdown documents with [Mustache](https://mustache.github.io/) template engine.
 - Mustache is a logic-less templating system. It works by expanding tags in a provided template using values provided in a hash or object.
-  - E.g: If you use `{{name}}` as template in your markdown and provide the value for `name` either via [YAML front-matter](https://docsify-mustache.github.io/#/?id=front-matter) or any other supported [sources](https://docsify-mustache.github.io/#/?id=sources), that value will get rendered.
+  - E.g: If you use {% raw %}`{{name}}`{% endraw %} as template in your markdown and provide the value for `name` either via [YAML front-matter](https://docsify-mustache.github.io/#/?id=front-matter) or any other supported [sources](https://docsify-mustache.github.io/#/?id=sources), that value will get rendered.
 - How to use this plugin with docsify is very well explained in the [documentation site](https://docsify-mustache.github.io/) for this plugin.
 
 ## Mustache tags
@@ -34,7 +36,7 @@ One such plugin that is greatly useful is [Docsify-Mustache](https://docsify-mus
 
 ### Variables
 
-Variables are the most basic tag type in mustache. The template for accessing a variable is `{{variable_name}}`.
+Variables are the most basic tag type in mustache. The template for accessing a variable is {% raw %}`{{variable_name}}`{% endraw %}.
 
 Example:
 
@@ -50,11 +52,15 @@ Example:
 
 - Now, if you want to refer this in the markdown file you can add:
 
+  {% raw %}
+
   ```markdown
   {{title}}
 
   This project belongs to category: {{category}}
   ```
+
+  {% endraw %}
 
 - When rendering the page `title` and `category` will be substituted using the values declared in the front matter.
 
@@ -62,7 +68,7 @@ Example:
 
 Sections render blocks of text one or more times, depending on the value of the key in the current context.
 
-A section begins with a pound and ends with a slash. That is, `{{#person}}` begins a `"person"` section while `{{/person}}` ends it.
+A section begins with a pound and ends with a slash. That is, {% raw %}`{{#person}}`{% endraw %} begins a `"person"` section while {% raw %}`{{/person}}`{% endraw %} ends it.
 
 When the value for a section is a non-empty list, the text in the block will be displayed once for each item in the list. The context of the block will be set to the current item for each iteration. In this way we can loop over collections.
 
@@ -81,12 +87,16 @@ Example:
 
 - Now, if you want to refer the `tags` list in the markdown file you can add:
 
+  {% raw %}
+
   ```markdown
   This doc is has the following tags:
   {{#tags}}
   {{.}}
   {{/tags}}
   ```
+
+  {% endraw %}
 
 - Output will be rendered as:
 
@@ -98,7 +108,7 @@ Example:
 
 Inverted sections may render text once based on the inverse value of the key. That is, they will be rendered if the key doesn't exist, is false, or is an empty list.
 
-An inverted section begins with a caret (hat) and ends with a slash. That is `{{^person}}` begins a "person" inverted section while `{{/person}}` ends it.
+An inverted section begins with a caret (hat) and ends with a slash. That is {% raw %}`{{^person}}`{% endraw %} begins a "person" inverted section while {% raw %}`{{/person}}`{% endraw %} ends it.
 
 Example:
 
@@ -113,6 +123,8 @@ Example:
 
 - Now, if you want to handle the `tags` list being empty and check for `category` being absent you can add:
 
+  {% raw %}
+
   ```markdown
   This doc is has the following tags:
   {{^category}}
@@ -123,6 +135,8 @@ Example:
   No tags found !!!
   {{/tags}}
   ```
+
+  {% endraw %}
 
 - Given that the categories key doesn't exist and the tags list is empty, Output will be rendered as:
 
@@ -137,10 +151,12 @@ An extended example where we add a YAML front-matter to a markdown file, use the
 
 Markdown file that adds a constant heading section to the documentation page, where the `title` will be displayed first, then `category` will be displayed and then the `tags` list is provided:
 
+{% raw %}
+
 ```markdown
 ---
 title: My awesome project documentation
-tags: [useful, 'rocket-science', launch]
+tags: [useful, "rocket-science", launch]
 ---
 
 # {{title}}
@@ -159,6 +175,8 @@ No tags found !!!
 {{/tags}}
 ```
 
+{% endraw %}
+
 The output rendered will be:
 
 ```text
@@ -171,4 +189,4 @@ Tag list: useful, rocket-science, launch
 
 ## Example project
 
-> Most of the above mentioned concepts and tools are used at my [tech-interview-prep](https://ppipada.github.io/tech-interview-prep/#/) project site. That can act as a good reference.
+> Most of the above mentioned concepts and tools are used at my [tech-interview-prep](https://ppipada.github.io/tech-interview-prep/#/){:target="_blank"} project site. That can act as a good reference.

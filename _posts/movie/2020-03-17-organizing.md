@@ -5,7 +5,7 @@ categories: [Movie]
 tags: [movie, linux, ubuntu, kodi]
 summary: Organizing a local storage based movie collection.
 seo:
-  date_modified: 2020-04-28 09:50:38 +0530
+  date_modified: 2020-04-29 11:52:50 +0530
 ---
 
 Organizing a local storage based movie collection. At a high level it involves:
