@@ -40,19 +40,29 @@
       {% endif %}
     {% endif %}
 
-    <li class="nav-item d-flex justify-content-center
+    <li class="nav-item d-flex justify-content-left
       {% if item.url == page_urls.last
         or item.name == page.tab_active
         or item.name == "Home" and page.layout == "home" %}active{% endif %}">
-      <a href="{{ ref }}" class="nav-link d-flex justify-content-center align-items-center w-100">
-        <i class="fa-fw {{ item.icon }} ml-3 mr-3 unloaded"></i>
+      <a href="{{ ref }}" class="nav-link d-flex justify-content-left align-items-center w-100">
+        <i class="fa-fw {{ item.icon }} ml-3 mr-3"></i>
         <span>{{ item.name | upcase }}</span>
       </a>
     </li> <!-- .nav-item -->
   {% endfor %}
-
   </ul> <!-- ul.nav.flex-column -->
-
+  <hr width="90%" align="center">
+  <br>
+  <div class="font-large font-italic d-flex justify-content-center align-items-center w-100">
+    <span>{{ site.external_projects_title }} </span>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center">
+    <a href="{{ site.external_project.url }}" class="d-flex justify-content-center align-items-center w-100" target="_blank">
+      <span>{{ site.external_project.title | upcase }}</span>
+      <i class="fa-fw {{ site.external_project.icon }} ml-3"></i>
+    </a>
+  </div>
 </div><!-- #nav-wrapper -->
 
 <div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4">

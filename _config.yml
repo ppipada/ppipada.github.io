@@ -53,6 +53,13 @@ baseurl: ''
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Kolkata
 
+external_projects_title: "Projects"
+
+external_project:
+  url: "https://ppipada.github.io/tech-interview-prep/#"
+  title: "Tech interview prep"
+  icon: "fas fa-external-link-alt"
+
 google_analytics:
   # Fill with your Google Analytics ID
   id: 'UA-160869118-1'

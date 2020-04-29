@@ -27,7 +27,7 @@
   name: "Quotes"
   path: tabs
   url: quotes
-  icon: "fas fa-quotes"
+  icon: "fas fa-book"
 -
   name: "About"
   icon: "fas fa-info"
