@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Go introductory primer - Scramblings</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Pankaj Pipada" /><meta name="description" content="Generic references to get started with go programming language." /><meta name="keywords" content="Dev, Blog, Scratchpad" />
+
+
+
+<meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="https://ppipada.github.io/posts/go/2019-11-17-go-intro-primer/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Go introductory primer" />
+<meta property="og:description" content="Generic references to get started with go programming language." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ppipada.github.io/posts/go/2019-11-17-go-intro-primer/" />
+<meta property="article:published_time" content="2019-11-17T20:55:00+05:30" />
+<meta property="article:modified_time" content="2019-11-17T20:55:00+05:30" />
+<meta itemprop="name" content="Go introductory primer">
+<meta itemprop="description" content="Generic references to get started with go programming language.">
+<meta itemprop="datePublished" content="2019-11-17T20:55:00&#43;05:30" />
+<meta itemprop="dateModified" content="2019-11-17T20:55:00&#43;05:30" />
+<meta itemprop="wordCount" content="502">
+
+
+
+<meta itemprop="keywords" content="go,golang,guidelines,learning," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Go introductory primer"/>
+<meta name="twitter:description" content="Generic references to get started with go programming language."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Scramblings</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/quotes/">
+        <li class="mobile-menu-item">Quotes</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Scramblings</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/quotes/">Quotes</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>Generic references to get started with go programming language.</p>
+<h2 id="getting-started-links">Getting started links</h2>
+<ul>
+<li><a href="https://golang.org/doc/install">Installation</a></li>
+<li><a href="https://golang.org/doc/code.html">How to Write Go code</a></li>
+<li><a href="https://tour.golang.org/welcome/1">Tour of Go</a></li>
+<li><a href="https://golang.org/doc/effective_go.html">Effective Go</a></li>
+<li><a href="https://golang.org/ref/spec">Reference documentation</a></li>
+</ul>
+<h2 id="project-layout">Project layout</h2>
+<ul>
+<li><a href="https://www.ardanlabs.com/blog/2017/02/package-oriented-design.html">Package Oriented Design</a></li>
+<li><a href="https://rakyll.org/style-packages/">Style guide</a></li>
+<li><a href="https://github.com/golang-standards/project-layout">Standard project layout</a></li>
+</ul>
+<h2 id="naming-conventions">Naming conventions</h2>
+<ul>
+<li><a href="https://golang.org/doc/effective_go.html#names">Standard</a></li>
+<li><a href="https://blog.golang.org/package-names">Package names go blog</a></li>
+<li><a href="https://talks.golang.org/2014/names.slide#1">Go Talk</a></li>
+<li>Few important rules:
+<ul>
+<li>Package names are singular, short, clear, lower case, with NO under_scores or mixedCaps.</li>
+<li>Package content: Avoid stutter, simplify function names.</li>
+<li><strong>Avoid</strong> meaningless package names such as util, lib, common, or misc.</li>
+<li>Function and variable names: The convention in Go is to use MixedCaps or mixedCaps rather than underscores to write multiword names.</li>
+<li>Keep local variables short. Common variable/type combinations can use really short names. E.g: ‘i’ - for index, ‘r’ for reader, ‘b’ for buffer.</li>
+<li>Acronyms should be all capitals: E.g: ServeHTTP and IDProcessor</li>
+</ul>
+</li>
+<li>Validation:
+<ul>
+<li>Use <a href="https://golang.org/cmd/gofmt/">gofmt</a> for autoformatting your code.</li>
+<li>Use <a href="https://github.com/golang/lint">golint</a>. It would provide warnings related to naming and styling of go code.</li>
+</ul>
+</li>
+</ul>
+<h2 id="code-comments">Code comments</h2>
+<ul>
+<li><a href="https://golang.org/doc/effective_go.html#commentary">Standard</a></li>
+<li><a href="https://blog.golang.org/godoc-documenting-go-code">Go Blog</a></li>
+<li>Few important rules:
+<ul>
+<li>The convention is simple: to document a type, variable, constant, function, or even a package, write a regular comment directly preceding its declaration, with no intervening blank line. Godoc will then present that comment as text alongside the item it documents.</li>
+<li>The comment is a complete sentence that begins with the name of the element it describes.</li>
+<li>Comments on package declarations should provide general package documentation.</li>
+<li>Use doc.go for packages that need large amount of introductory documentation.</li>
+</ul>
+</li>
+<li>Swagger documentation for APIs: Can use code annotations as described at <a href="https://goswagger.io/use/spec.html">GoSwagger</a></li>
+</ul>
+<h2 id="generic-guidelines">Generic guidelines</h2>
+<ul>
+<li>Writing clear idiomatic Go code: <a href="https://golang.org/doc/effective_go.html">Effective Go</a></li>
+<li>Few important rules:
+<ul>
+<li>Dependencies should be passed explicitly. E.g: Pass logger explicitly.</li>
+<li>Do NOT keep unused functions, constants, variables, types.</li>
+<li>Do NOT use panics/recover as exception catching mechanism.</li>
+<li>Avoid blanket error handling.</li>
+<li>Avoid Misusing errors.</li>
+<li>Avoid long functions. A function should not exhibit split personality.</li>
+<li>Avoid global objects.</li>
+</ul>
+</li>
+<li>Validation:
+<ul>
+<li><a href="https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck">Static check</a></li>
+<li><a href="https://golang.org/doc/articles/race_detector.html">Race detector</a></li>
+<li><a href="https://golang.org/cmd/vet/">Vet</a></li>
+<li>CI: <a href="https://github.com/golangci/golangci-lint">GolangCI-Lint</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li>Guidelines:
+<ul>
+<li>Go provides command <code>go test</code> for running tests in <code>\*\_test.go</code> files. It also has support for benchmarking.</li>
+<li><code>go test</code> has support for race detector using <code>- race</code>. Use it while running tests.</li>
+<li>Test file containing component tests should specify the build constraints so that files can be identifiable whether it has Unit or Component or Integration test. The build constraints will be helpful to exclusively run only UT or Component tests or Integration tests. Command “go test ./… -tags UT” will only run unit test file and will exclude file component_test.go as it as define build constraint “!UT”
+<ul>
+<li>E.g File component_test.go <code>// +build !UT … some tests</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tools:
+<ul>
+<li>Package for boiler plate test code generation: <a href="https://github.com/cweill/gotests">gotests</a>
+<ul>
+<li>This is available as a plugin in VSCode and other major IDEs.</li>
+</ul>
+</li>
+<li>Package for generating mocks for interfaces: <a href="https://github.com/golang/mock">mock</a></li>
+<li>Package for mocking SQL: <a href="https://github.com/DATA-DOG/go-sqlmock">go-sqlmock</a></li>
+<li>Test helpers: <a href="https://golang.org/pkg/testing/">testing</a></li>
+</ul>
+</li>
+<li>Measuring code coverage
+<ul>
+<li>Go test can be configured <code>-cover</code> to collect code coverage information.</li>
+<li>It does not have support to find code coverage in workflow testing. But can be <a href="https://www.elastic.co/blog/code-coverage-for-your-golang-system-tests">tweaked</a> to collect coverage information by writing test for entry point function of binary.</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ppipada@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/ppipada" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/ppipada" class="iconfont icon-github" title="github"></a>
+  <a href="https://ppipada.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Pankaj Pipada</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160869118-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

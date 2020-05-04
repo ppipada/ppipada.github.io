@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docsify on Scramblings</title>
+    <link>https://ppipada.github.io/tags/docsify/</link>
+    <description>Recent content in docsify on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ppipada.github.io/tags/docsify/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mustache templates and YAML front-matter with Docsify</title>
+      <link>https://ppipada.github.io/post/markdown/2020-04-29-docsify-mustache/</link>
+      <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/post/markdown/2020-04-29-docsify-mustache/</guid>
+      <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
+    </item>
+    
+  </channel>
+</rss>
