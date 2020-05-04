@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Samba on Scramblings</title>
+    <link>https://ppipada.github.io/categories/samba/</link>
+    <description>Recent content in Samba on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jan 2020 21:55:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ppipada.github.io/categories/samba/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Samba setup</title>
+      <link>https://ppipada.github.io/post/linux/2020-01-30-samba-setup/</link>
+      <pubDate>Thu, 30 Jan 2020 21:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/post/linux/2020-01-30-samba-setup/</guid>
+      <description>Steps to set up a samba server on ubuntu 18.04.</description>
+    </item>
+    
+  </channel>
+</rss>
