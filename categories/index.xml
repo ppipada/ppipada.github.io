@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Scramblings</title>
+    <link>https://ppipada.github.io/categories/</link>
+    <description>Recent content in Categories on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ppipada.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docsify</title>
+      <link>https://ppipada.github.io/categories/docsify/</link>
+      <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/docsify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://ppipada.github.io/categories/markdown/</link>
+      <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://ppipada.github.io/categories/linux/</link>
+      <pubDate>Tue, 28 Apr 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>https://ppipada.github.io/categories/mac/</link>
+      <pubDate>Tue, 28 Apr 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Commands</title>
+      <link>https://ppipada.github.io/categories/commands/</link>
+      <pubDate>Fri, 27 Mar 2020 09:22:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/commands/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://ppipada.github.io/categories/go/</link>
+      <pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guidelines</title>
+      <link>https://ppipada.github.io/categories/guidelines/</link>
+      <pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/guidelines/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movie</title>
+      <link>https://ppipada.github.io/categories/movie/</link>
+      <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Samba</title>
+      <link>https://ppipada.github.io/categories/samba/</link>
+      <pubDate>Thu, 30 Jan 2020 21:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/samba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://ppipada.github.io/categories/ubuntu/</link>
+      <pubDate>Thu, 30 Jan 2020 20:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://ppipada.github.io/categories/docker/</link>
+      <pubDate>Mon, 11 Nov 2019 21:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Screen</title>
+      <link>https://ppipada.github.io/categories/screen/</link>
+      <pubDate>Sat, 09 Nov 2019 21:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/screen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Helpers</title>
+      <link>https://ppipada.github.io/categories/helpers/</link>
+      <pubDate>Sat, 09 Nov 2019 20:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/helpers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://ppipada.github.io/categories/python/</link>
+      <pubDate>Sat, 09 Nov 2019 20:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

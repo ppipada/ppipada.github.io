@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Screen on Scramblings</title>
+    <link>https://ppipada.github.io/categories/screen/</link>
+    <description>Recent content in Screen on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Nov 2019 21:55:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ppipada.github.io/categories/screen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GNU Screen helpers</title>
+      <link>https://ppipada.github.io/post/linux/2019-11-09-screen/</link>
+      <pubDate>Sat, 09 Nov 2019 21:55:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/post/linux/2019-11-09-screen/</guid>
+      <description>References, basic commands and sample rc file for GNU screen.</description>
+    </item>
+    
+  </channel>
+</rss>
