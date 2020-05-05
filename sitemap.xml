@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/</loc>
-    <lastmod>2020-04-29T08:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/tags/</loc>
     <lastmod>2020-04-29T08:30:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -207,6 +200,20 @@
   <url>
     <loc>https://ppipada.github.io/tags/profiling/</loc>
     <lastmod>2020-03-24T11:11:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ppipada.github.io/papers-quotes/</loc>
+    <lastmod>2020-03-24T08:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ppipada.github.io/</loc>
+    <lastmod>2020-03-24T08:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -396,12 +403,6 @@
   <url>
     <loc>https://ppipada.github.io/post/py/2019-11-09-py-helpers-profiling/</loc>
     <lastmod>2019-11-09T19:55:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/quotes/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
