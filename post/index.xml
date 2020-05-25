@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 12:00:00 +0530</lastBuildDate>
     
 	<atom:link href="https://ppipada.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Understanding Paxos</title>
+      <link>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</link>
+      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</guid>
+      <description>Reading the paxos made simple paper and understanding it.</description>
+    </item>
     
     <item>
       <title>Mustache templates and YAML front-matter with Docsify</title>
