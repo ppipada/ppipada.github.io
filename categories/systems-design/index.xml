@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systems-Design on Scramblings</title>
+    <link>https://ppipada.github.io/categories/systems-design/</link>
+    <description>Recent content in Systems-Design on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 May 2020 12:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://ppipada.github.io/categories/systems-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understanding Paxos</title>
+      <link>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</link>
+      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</guid>
+      <description>Reading the paxos made simple paper and understanding it.</description>
+    </item>
+    
+  </channel>
+</rss>

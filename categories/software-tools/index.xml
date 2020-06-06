@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Scramblings</title>
-    <link>https://ppipada.github.io/</link>
-    <description>Recent content on Scramblings</description>
+    <title>Software-Tools on Scramblings</title>
+    <link>https://ppipada.github.io/categories/software-tools/</link>
+    <description>Recent content in Software-Tools on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 May 2020 12:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate>
     
-	<atom:link href="https://ppipada.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ppipada.github.io/categories/software-tools/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Understanding Paxos</title>
-      <link>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</link>
-      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
-      
-      <guid>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</guid>
-      <description>Reading the paxos made simple paper and understanding it.</description>
-    </item>
     
     <item>
       <title>Mustache templates and YAML front-matter with Docsify</title>
@@ -54,15 +45,6 @@
       
       <guid>https://ppipada.github.io/post/go/2020-03-24-go-memory-profiling/</guid>
       <description>Generic references and points to consider when doing a memory analysis with go programming language.</description>
-    </item>
-    
-    <item>
-      <title>Papers-Quotes</title>
-      <link>https://ppipada.github.io/papers-quotes/</link>
-      <pubDate>Tue, 24 Mar 2020 08:00:00 +0530</pubDate>
-      
-      <guid>https://ppipada.github.io/papers-quotes/</guid>
-      <description>Papers   Lifes irreducible structure   Paxos made simple   The Google file system - GFS   Dynamo: Amazon’s Highly Available Key-value Store   MapReduce: Simplified Data Processing on Large Clusters   TAO: Facebook’s Distributed Data Store for the Social Graph   Dapper, a Large-Scale Distributed Systems Tracing Infrastructure   Bigtable: A Distributed Storage System for Structured Data   Papers we love github repo   Quotes  Life  Frank Zappa</description>
     </item>
     
     <item>

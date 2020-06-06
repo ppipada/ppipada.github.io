@@ -3,49 +3,49 @@
   
   <url>
     <loc>https://ppipada.github.io/categories/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/distributed-systems/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/tags/distributed-systems/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/post/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ppipada.github.io/</loc>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ppipada.github.io/categories/systems-design/</loc>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/tags/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/docsify/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
+    <lastmod>2020-05-25T12:12:26+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -59,13 +59,6 @@
   
   <url>
     <loc>https://ppipada.github.io/tags/front-matter/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/markdown/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -93,6 +86,13 @@
   </url>
   
   <url>
+    <loc>https://ppipada.github.io/categories/software-tools/</loc>
+    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ppipada.github.io/tags/yaml/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -107,21 +107,7 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/categories/linux/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/tags/linux/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/mac/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -156,13 +142,6 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/categories/commands/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/tags/git/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -177,28 +156,7 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/categories/go/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/tags/go/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/tags/golang/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/guidelines/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -227,13 +185,6 @@
   
   <url>
     <loc>https://ppipada.github.io/papers-quotes/</loc>
-    <lastmod>2020-05-25T12:04:59+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/</loc>
     <lastmod>2020-05-25T12:04:59+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -275,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/categories/samba/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/tags/samba/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -317,13 +261,6 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/categories/ubuntu/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/post/go/2019-11-17-go-intro-primer/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -332,13 +269,6 @@
   
   <url>
     <loc>https://ppipada.github.io/tags/learning/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/docker/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -373,13 +303,6 @@
   </url>
   
   <url>
-    <loc>https://ppipada.github.io/categories/screen/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ppipada.github.io/tags/screen/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -388,20 +311,6 @@
   
   <url>
     <loc>https://ppipada.github.io/tags/closures/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/helpers/</loc>
-    <lastmod>2020-05-04T17:39:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/categories/python/</loc>
     <lastmod>2020-05-04T17:39:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
