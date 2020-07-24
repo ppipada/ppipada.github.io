@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 May 2020 12:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 11:00:00 +0530</lastBuildDate>
     
 	<atom:link href="https://ppipada.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux - Ubuntu initial dev setup</title>
+      <link>https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/</link>
+      <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/</guid>
+      <description>Initial dev setup for Ubuntu Linux.</description>
+    </item>
     
     <item>
       <title>Understanding Paxos</title>

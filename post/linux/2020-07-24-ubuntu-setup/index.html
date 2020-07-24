@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Linux - Ubuntu 18.04 server setup debug - Scramblings</title>
+  <title>Linux - Ubuntu initial dev setup - Scramblings</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Pankaj Pipada" /><meta name="description" content="Few ubuntu server setup issues and corresponding steps to debug them." /><meta name="keywords" content="Dev, Blog, Scratchpad" />
+<meta name="author" content="Pankaj Pipada" /><meta name="description" content="Initial dev setup for Ubuntu Linux." /><meta name="keywords" content="Dev, Blog, Scratchpad" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
-<link rel="canonical" href="https://ppipada.github.io/post/linux/2020-01-30-ubuntu-1804-server-debug/" />
+<link rel="canonical" href="https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Linux - Ubuntu 18.04 server setup debug" />
-<meta property="og:description" content="Few ubuntu server setup issues and corresponding steps to debug them." />
+<meta property="og:title" content="Linux - Ubuntu initial dev setup" />
+<meta property="og:description" content="Initial dev setup for Ubuntu Linux." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-01-30-ubuntu-1804-server-debug/" />
-<meta property="article:published_time" content="2020-01-30T20:55:00+05:30" />
-<meta property="article:modified_time" content="2020-06-06T07:23:36+05:30" />
-<meta itemprop="name" content="Linux - Ubuntu 18.04 server setup debug">
-<meta itemprop="description" content="Few ubuntu server setup issues and corresponding steps to debug them.">
-<meta itemprop="datePublished" content="2020-01-30T20:55:00&#43;05:30" />
-<meta itemprop="dateModified" content="2020-06-06T07:23:36&#43;05:30" />
-<meta itemprop="wordCount" content="170">
+<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/" />
+<meta property="article:published_time" content="2020-07-24T11:00:00+05:30" />
+<meta property="article:modified_time" content="2020-07-24T11:00:00+05:30" />
+<meta itemprop="name" content="Linux - Ubuntu initial dev setup">
+<meta itemprop="description" content="Initial dev setup for Ubuntu Linux.">
+<meta itemprop="datePublished" content="2020-07-24T11:00:00&#43;05:30" />
+<meta itemprop="dateModified" content="2020-07-24T11:00:00&#43;05:30" />
+<meta itemprop="wordCount" content="449">
 
 
 
-<meta itemprop="keywords" content="linux,ubuntu,debug,commands," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux - Ubuntu 18.04 server setup debug"/>
-<meta name="twitter:description" content="Few ubuntu server setup issues and corresponding steps to debug them."/>
+<meta itemprop="keywords" content="linux,ubuntu,commands," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux - Ubuntu initial dev setup"/>
+<meta name="twitter:description" content="Initial dev setup for Ubuntu Linux."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,15 +122,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Linux - Ubuntu 18.04 server setup debug</h1>
+      <h1 class="post-title">Linux - Ubuntu initial dev setup</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-01-30 </span>
+        <span class="post-time"> 2020-07-24 </span>
         <div class="post-category">
             <a href="/categories/software-tools/"> Software-Tools </a>
             </div>
-          <span class="more-meta"> 170 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 449 words </span>
+          <span class="more-meta"> 3 mins read </span>
         
       </div>
     </header>
@@ -138,29 +138,66 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#upgrade-packages">Upgrade packages</a></li>
+    <li><a href="#zsh-setup">ZSH setup</a></li>
+    <li><a href="#ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</a></li>
+    <li><a href="#basic-software-install">Basic software install</a></li>
+    <li><a href="#programming-language-settings">Programming language settings</a></li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Few ubuntu server setup issues and corresponding steps to debug them.</p>
-<ol>
-<li>
-<p>Disabling floppy drive: Error: <code>print_req_error: I/O error, dev fd0, sector 0</code></p>
+      <p>I had to setup a fresh Ubuntu dev machine after quite some time. Given that this was a loaner machine, I wanted to make sure that I have a minimal viable dev setup ready as quickly as possible.</p>
+<p>Below are the steps for the minimal things I need.</p>
+<h2 id="upgrade-packages">Upgrade packages</h2>
+<p>For a fresh setup it is better to first make sure that everything that is upgradable is up to date. If you have a specific version requirement for any package make sure you pin it at the package manager level.</p>
+<p>Basic commands</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo rmmod floppy
-sudo <span class="nb">echo</span> <span class="s2">&#34;blacklist floppy&#34;</span> <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist-floppy.conf
-sudo dpkg-reconfigure initramfs-tools
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt upgrade
+sudo apt install software-properties-common apt-transport-https wget zsh git vim tree
+sudo apt autoremove
 </code></pre></td></tr></table>
 </div>
-</div></li>
+</div><h2 id="zsh-setup">ZSH setup</h2>
+<ul>
 <li>
-<p>Error: Network not up: eth/ens doesnt show or no service network-manager</p>
+<p><a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">ZSH</a>
+ is an extended Bourne shell.</p>
+</li>
+<li>
+<p>Together with <a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">Oh-My-ZSH</a>
+ it provides a delight full dev experience.</p>
+</li>
+<li>
+<p>I personally like to use the <code>agnoster</code> theme from ohmyzsh with the plugins <code>git common-aliases zsh-syntax-highlighting zsh-autosuggestions</code></p>
+</li>
+<li>
+<p>For Ubuntu terminal make sure you got to <code>Terminal -&gt; Preferences -&gt; &lt;Your Profile&gt; -&gt; Colors</code> and uncheck the <code>Use system colors</code> option so that the theme colors are used in the terminal.</p>
+</li>
+<li>
+<p>Ohmyzsh standard plugins do not require explicit installation. Community plugins require some installation. Plugins links and installation guides are:</p>
+<ul>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh" target="_blank">common-aliases</a>
+</li>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank">zsh-syntax-highlighting</a>
+</li>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank">zsh-autosuggestions</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>My simple <code>/.zshrc</code> file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -180,30 +217,47 @@ sudo dpkg-reconfigure initramfs-tools
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo dhclient
-sudo apt update
-sudo apt install network-manager ifupdown
-sudo service network-manager restart
-sudo systemctl status NetworkManager.service
+<pre class="chroma"><code class="language-shell" data-lang="shell">
+<span class="c1"># If you come from bash you might have to change your $PATH.</span>
+<span class="c1"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span>
 
-sudo vi /etc/netplan/01-netcfg.yaml
-     <span class="c1"># This file describes the network interfaces available on your system</span>
-     <span class="c1"># For more information, see netplan(5).</span>
-     network:
-     version: <span class="m">2</span>
-     renderer: NetworkManager
-     ethernets:
-         ens32:
-         dhcp4: yes
-sudo netplan generate
-sudo netplan apply
+<span class="c1"># Path to your oh-my-zsh installation.</span>
+<span class="nb">export</span> <span class="nv">ZSH</span><span class="o">=</span><span class="s2">&#34;/home/username/.oh-my-zsh&#34;</span>
+
+<span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;agnoster&#34;</span>
+
+<span class="c1"># Which plugins would you like to load?</span>
+<span class="c1"># Standard plugins can be found in $ZSH/plugins/</span>
+<span class="c1"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
+<span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+<span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
+<span class="nv">plugins</span><span class="o">=(</span>git common-aliases zsh-syntax-highlighting zsh-autosuggestions<span class="o">)</span>
+
+<span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
+
+<span class="nb">export</span> <span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">100000</span>
+<span class="nb">export</span> <span class="nv">SAVEHIST</span><span class="o">=</span><span class="m">100000</span>
+
+
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p>ssh setup</p>
+</div><h2 id="ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</h2>
+<p>Interacting with multiple hosted git repositories is much smoother when using SSH keys.</p>
+<p>Specific git hosts provide their guides to do this, e.g: <a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">GitHub ssh key gen guide</a>
+.</p>
+<p>General setup includes:</p>
+<ul>
+<li>Generate a ssh key pair on a machine.</li>
+<li>Add it to your git host profile settings.</li>
+<li>Test ssh access to git</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -214,29 +268,33 @@ sudo netplan apply
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">## For regenerating only rsa key</span>
-sudo ssh-keygen -t rsa -b <span class="m">4096</span> -f ssh_host_rsa_key
-<span class="c1">## For regenerating all missing keys</span>
-sudo ssh-keygen
-<span class="c1"># service ssh restart</span>
-sudo systemctl status ssh
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -t ed25519 -C <span class="s2">&#34;email@example.com&#34;</span>
+ssh-keygen -t ed25519 -C <span class="s2">&#34;username@example.com&#34;</span>
+xclip -sel clip &lt; ~/.ssh/id_ed25519.pub
+
+<span class="c1"># Add your git host (GitLab/GitHub/BitBucket, etc) URL for git-example.com</span>
+ssh -T git@git-example.com
 </code></pre></td></tr></table>
 </div>
-</div></li>
-<li>
-<p>Fix non-configured locales</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo locale-gen en_US en_US.UTF-8
-sudo dpkg-reconfigure locales
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
+</div><h2 id="basic-software-install">Basic software install</h2>
+<ul>
+<li>VSCode. General post for VSCode helpers is <a href="./2020-04-28-vscode.md">here</a>
+</li>
+<li><a href="https://slack.com" target="_blank">Slack</a>
+</li>
+<li><a href="https://zoom.us/" target="_blank">Zoom</a>
+</li>
+<li><a href="https://gohugo.io/getting-started/installing/" target="_blank">Hugo</a>
+. Hugo is fantastic website building framework. Awesome for static sites.</li>
+</ul>
+<h2 id="programming-language-settings">Programming language settings</h2>
+<ul>
+<li>Go. Basic introductory primer is present <a href="../go/2019-11-17-go-intro-primer.md">here</a>
+.</li>
+<li>Python. Getting started <a href="https://www.python.org/about/gettingstarted/" target="_blank">link</a>
+</li>
+</ul>
+<p>Pull your code and go exploring :)</p>
 
     </div>
 
@@ -248,8 +306,8 @@ sudo dpkg-reconfigure locales
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-06-06
-        <a href="https://github.com/ppipada/scramblings-blog/commit/da119ae4bafa038e58e8efc3a82e9d1ed461da4a" title="cleanup categories and add quote">(da119ae)</a>
+        2020-07-24
+        
     </span>
   </p>
   
@@ -259,17 +317,12 @@ sudo dpkg-reconfigure locales
       <div class="post-tags">
           <a href="/tags/linux/">linux</a>
           <a href="/tags/ubuntu/">ubuntu</a>
-          <a href="/tags/debug/">debug</a>
           <a href="/tags/commands/">commands</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/linux/2020-01-30-samba-setup/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Samba setup</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/go/2019-11-17-go-intro-primer/">
-            <span class="next-text nav-default">Go introductory primer</span>
+        
+        <a class="next" href="/post/2020-05-25-understanding-paxos/">
+            <span class="next-text nav-default">Understanding Paxos</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
