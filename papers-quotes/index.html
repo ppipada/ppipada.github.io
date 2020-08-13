@@ -49,7 +49,7 @@
 <meta itemprop="description" content="Papers   Lifes irreducible structure   Paxos made simple   The Google file system - GFS   Dynamo: Amazon’s Highly Available Key-value Store   MapReduce: Simplified Data Processing on Large Clusters   TAO: Facebook’s Distributed Data Store for the Social Graph   Dapper, a Large-Scale Distributed Systems Tracing Infrastructure   Bigtable: A Distributed Storage System for Structured Data   Papers we love github repo   Quotes  Life  Frank Zappa">
 <meta itemprop="datePublished" content="2020-03-24T08:00:00&#43;05:30" />
 <meta itemprop="dateModified" content="2020-06-06T07:23:36&#43;05:30" />
-<meta itemprop="wordCount" content="1009">
+<meta itemprop="wordCount" content="1274">
 
 
 
@@ -138,6 +138,7 @@
         <li><a href="#morality">Morality</a></li>
         <li><a href="#people">People</a></li>
         <li><a href="#miscellaneous">Miscellaneous</a></li>
+        <li><a href="#technology">Technology</a></li>
       </ul>
     </li>
   </ul>
@@ -359,9 +360,32 @@ Its an amazing feeling. You will see your life with rare fresh eyes for just a f
 <div class="admonition quote"><p class="admonition-title">Anne Morrow Lindbergh</p>
 <p>Good communication is as stimulating as black coffee, and just as hard to sleep after.</p>
 </div>
+<h3 id="technology">Technology</h3>
+<hr>
 <div class="admonition quote"><p class="admonition-title">C. Northcote Parkinson</p>
 <p>Parkinson&rsquo;s law of triviality: Members of an organization give disproportionate weight to trivial issues.</p>
 <p>Bikeshedding (Metaphor): Futile investment of time and energy in discussion of marginal technical issues.</p>
+</div>
+<div class="admonition quote"><p class="admonition-title">Donald Knuth, Tony Hoare</p>
+<p>We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our
+opportunities in that critical 3%.</p>
+</div>
+<div class="admonition quote"><p class="admonition-title">Rob Pike</p>
+<p><a href="http://users.ece.utexas.edu/~adnan/pike.html" target="_blank">Rob Pike&#39;s 5 Rules of Programming</a>
+</p>
+<ol>
+<li>You can&rsquo;t tell where a program is going to spend its time. Bottlenecks occur in surprising places, so don&rsquo;t try to second guess and put in a speed hack until you&rsquo;ve proven that&rsquo;s where the bottleneck is.</li>
+<li>Measure. Don&rsquo;t tune for speed until you&rsquo;ve measured, and even then don&rsquo;t unless one part of the code overwhelms the rest.</li>
+<li>Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have big constants. Until you know that n is frequently going to be big, don&rsquo;t get fancy. (Even if n does get big, use Rule 2 first.)</li>
+<li>Fancy algorithms are buggier than simple ones, and they&rsquo;re much harder to implement. Use simple algorithms as well as simple data structures.</li>
+<li>Data dominates. If you&rsquo;ve chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming.</li>
+</ol>
+<ul>
+<li>Pike&rsquo;s rules 1 and 2 restate Donald Knuth/Tony Hoare&rsquo;s famous maxim &ldquo;Premature optimization is the root of all evil.&rdquo;</li>
+<li>Ken Thompson rephrased Pike&rsquo;s rules 3 and 4 as &ldquo;When in doubt, use brute force.&quot;.</li>
+<li>Rules 3 and 4 are instances of the design philosophy KISS. Rule 5 was previously stated by Fred Brooks in The Mythical Man-Month.</li>
+<li>Rule 5 is often shortened to &ldquo;write stupid code that uses smart objects&rdquo;.</li>
+</ul>
 </div>
 
     </div>
