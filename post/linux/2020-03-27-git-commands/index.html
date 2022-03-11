@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.94.0 with theme even" />
 
 
 <link rel="canonical" href="https://ppipada.github.io/post/linux/2020-03-27-git-commands/" />
@@ -35,24 +35,21 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.24752eee7d244519907709610f39db5d85a57e527ff033fcae4457858307d262.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Linux - Git commands" />
 <meta property="og:description" content="Few git commands." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-03-27-git-commands/" />
+<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-03-27-git-commands/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-03-27T09:22:00+05:30" />
-<meta property="article:modified_time" content="2020-07-24T14:29:12+05:30" />
+<meta property="article:modified_time" content="2022-03-11T12:55:01+05:30" />
+
 <meta itemprop="name" content="Linux - Git commands">
-<meta itemprop="description" content="Few git commands.">
-<meta itemprop="datePublished" content="2020-03-27T09:22:00&#43;05:30" />
-<meta itemprop="dateModified" content="2020-07-24T14:29:12&#43;05:30" />
-<meta itemprop="wordCount" content="42">
-
-
-
+<meta itemprop="description" content="Few git commands."><meta itemprop="datePublished" content="2020-03-27T09:22:00+05:30" />
+<meta itemprop="dateModified" content="2022-03-11T12:55:01+05:30" />
+<meta itemprop="wordCount" content="44">
 <meta itemprop="keywords" content="linux,git,utilities,commands," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux - Git commands"/>
 <meta name="twitter:description" content="Few git commands."/>
@@ -84,8 +81,6 @@
         <li class="mobile-menu-item">Home</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/papers-quotes/">
@@ -105,8 +100,6 @@
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
@@ -129,7 +122,7 @@
         <div class="post-category">
             <a href="/categories/software-tools/"> Software-Tools </a>
             </div>
-          <span class="more-meta"> 42 words </span>
+          <span class="more-meta"> 44 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -153,7 +146,7 @@
 <tbody>
 <tr>
 <td>Delete all branches locally except for ones having the word &ldquo;master&rdquo;</td>
-<td><code>git branch | grep -v &quot;master&quot; | xargs git branch -D</code></td>
+<td>`git branch</td>
 </tr>
 <tr>
 <td>Pull submodules initially</td>
@@ -162,6 +155,10 @@
 <tr>
 <td>Update submodules</td>
 <td><code>git submodule update --recursive --remote</code></td>
+</tr>
+<tr>
+<td>Clone using username pass in URL</td>
+<td>`git clone http://${GIT_USERNAME}:$(echo -n $GIT_PASSWORD</td>
 </tr>
 </tbody>
 </table>
@@ -176,8 +173,8 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-07-24
-        <a href="https://github.com/ppipada/scramblings-blog/commit/1e15b5bc5d75daae4d700e206d4752b547759cbc" title="rebuilding site Fri 24 Jul 14:29:12 IST 2020">(1e15b5b)</a>
+        2022-03-11
+        <a href="https://github.com/ppipada/scramblings-blog/commit/45abb9705921815cff01530c1f60d1928920cf57" title="pending notes">(45abb97)</a>
     </span>
   </p>
   
@@ -237,7 +234,7 @@
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

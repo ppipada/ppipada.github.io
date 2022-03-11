@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.94.0 with theme even" />
 
 
 <link rel="canonical" href="https://ppipada.github.io/post/py/2019-11-09-py-helpers-closures/" />
@@ -35,24 +35,21 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.24752eee7d244519907709610f39db5d85a57e527ff033fcae4457858307d262.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Python Helpers - Closures" />
 <meta property="og:description" content="A script to chain multiple closures in python with example usage." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ppipada.github.io/post/py/2019-11-09-py-helpers-closures/" />
+<meta property="og:url" content="https://ppipada.github.io/post/py/2019-11-09-py-helpers-closures/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-11-09T20:55:00+05:30" />
 <meta property="article:modified_time" content="2020-06-06T07:23:36+05:30" />
+
 <meta itemprop="name" content="Python Helpers - Closures">
-<meta itemprop="description" content="A script to chain multiple closures in python with example usage.">
-<meta itemprop="datePublished" content="2019-11-09T20:55:00&#43;05:30" />
-<meta itemprop="dateModified" content="2020-06-06T07:23:36&#43;05:30" />
-<meta itemprop="wordCount" content="323">
-
-
-
+<meta itemprop="description" content="A script to chain multiple closures in python with example usage."><meta itemprop="datePublished" content="2019-11-09T20:55:00+05:30" />
+<meta itemprop="dateModified" content="2020-06-06T07:23:36+05:30" />
+<meta itemprop="wordCount" content="322">
 <meta itemprop="keywords" content="python,utilities,scripts,closures," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python Helpers - Closures"/>
 <meta name="twitter:description" content="A script to chain multiple closures in python with example usage."/>
@@ -84,8 +81,6 @@
         <li class="mobile-menu-item">Home</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/papers-quotes/">
@@ -105,8 +100,6 @@
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
@@ -129,7 +122,7 @@
         <div class="post-category">
             <a href="/categories/software-tools/"> Software-Tools </a>
             </div>
-          <span class="more-meta"> 323 words </span>
+          <span class="more-meta"> 322 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -151,7 +144,7 @@
 <h2 id="closure-chaining">Closure chaining</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -173,32 +166,32 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-
-
-<span class="c1"># A new closure will be returned as a chain of Closures in the incoming list order</span>
-<span class="k">def</span> <span class="nf">chain_closures</span><span class="p">(</span><span class="n">closure_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">closure_list</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">None</span>
-
-    <span class="k">def</span> <span class="nf">chain</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">r</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="n">newfunc</span> <span class="o">=</span> <span class="n">f</span>
-            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">closure_list</span><span class="p">):</span>
-                <span class="n">newfunc</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">newfunc</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">newfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">r</span>
-
-    <span class="k">return</span> <span class="n">chain</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># A new closure will be returned as a chain of Closures in the incoming list order</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">chain_closures</span><span class="p">(</span><span class="n">closure_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">closure_list</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">chain</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">r</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">newfunc</span> <span class="o">=</span> <span class="n">f</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">closure_list</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">newfunc</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">newfunc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">newfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">r</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">chain</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="example">Example</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -280,93 +273,91 @@
 </span><span class="lnt">80
 </span><span class="lnt">81
 </span><span class="lnt">82
-</span><span class="lnt">83
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<span class="kn">from</span> <span class="nn">closures</span> <span class="kn">import</span> <span class="n">chain_closures</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">request_logger</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">rlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> x entry&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-            <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> x exit&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">ret</span>
-
-        <span class="k">return</span> <span class="n">rlog</span>
-
-    <span class="k">return</span> <span class="n">request_logger</span>
-
-
-<span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">request_logger</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">rlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> y entry&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-            <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> y exit&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">ret</span>
-
-        <span class="k">return</span> <span class="n">rlog</span>
-
-    <span class="k">return</span> <span class="n">request_logger</span>
-
-
-<span class="k">def</span> <span class="nf">z</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">c1</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">c2</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">request_logger</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">rlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="n">q</span> <span class="o">=</span> <span class="n">c1</span><span class="p">(</span><span class="n">c2</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;z entry&#34;</span><span class="p">)</span>
-            <span class="n">ret</span> <span class="o">=</span> <span class="n">q</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;z exit&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">ret</span>
-
-        <span class="k">return</span> <span class="n">rlog</span>
-
-    <span class="k">return</span> <span class="n">request_logger</span>
-
-
-<span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
-    <span class="n">c1</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">c2</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-    <span class="n">q</span> <span class="o">=</span> <span class="n">c1</span><span class="p">(</span><span class="n">c2</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">q</span>
-
-
-<span class="k">def</span> <span class="nf">get_w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">c1</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">c2</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-    <span class="n">q</span> <span class="o">=</span> <span class="n">chain_closures</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">q</span>
-
-
-<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-    <span class="c1"># raise Exception(&#34;me except&#34;)</span>
-
-
-<span class="k">def</span> <span class="nf">smain</span><span class="p">():</span>
-    <span class="n">c4</span> <span class="o">=</span> <span class="n">get_w</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-    <span class="n">f2</span> <span class="o">=</span> <span class="n">c4</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
-    <span class="n">f2</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f2</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%y %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-    <span class="n">smain</span><span class="p">()</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">closures</span> <span class="kn">import</span> <span class="n">chain_closures</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">logging</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">request_logger</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">rlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> x entry&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> x exit&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">rlog</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">request_logger</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">request_logger</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">rlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> y entry&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> y exit&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">rlog</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">request_logger</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">z</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c1</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c2</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">request_logger</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">rlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">q</span> <span class="o">=</span> <span class="n">c1</span><span class="p">(</span><span class="n">c2</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;z entry&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ret</span> <span class="o">=</span> <span class="n">q</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;z exit&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">rlog</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">request_logger</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c1</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c2</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span> <span class="o">=</span> <span class="n">c1</span><span class="p">(</span><span class="n">c2</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_w</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c1</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c2</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span> <span class="o">=</span> <span class="n">chain_closures</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># raise Exception(&#34;me except&#34;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">smain</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c4</span> <span class="o">=</span> <span class="n">get_w</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f2</span> <span class="o">=</span> <span class="n">c4</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f2</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f2</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%y %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">smain</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -440,7 +431,7 @@
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

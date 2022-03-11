@@ -1,0 +1,31 @@
+
+
+
+Content: blog post, text, photo, audio, video
+Associations: comment, like  
+
+make available: publish to self
+
+Others: 
+follow/unfollow/block
+share
+groups: collection of subscriptions
+
+communicate: 
+get informed about "others"
+Direct message
+
+Aggregates:
+trends
+timeline
+"influence"
+
+
+Self state:
+all Content and Associations
+follower list, block list
+group participation
+history: unfollow list, group history
+
+Actions:
+share -> push someone elses content to your followers

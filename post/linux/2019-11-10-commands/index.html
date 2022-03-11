@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.94.0 with theme even" />
 
 
 <link rel="canonical" href="https://ppipada.github.io/post/linux/2019-11-10-commands/" />
@@ -35,24 +35,21 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.24752eee7d244519907709610f39db5d85a57e527ff033fcae4457858307d262.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Linux - Ubuntu - Random commands" />
 <meta property="og:description" content="Random collection of commands for Ubuntu Linux." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ppipada.github.io/post/linux/2019-11-10-commands/" />
+<meta property="og:url" content="https://ppipada.github.io/post/linux/2019-11-10-commands/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-11-10T21:55:00+05:30" />
 <meta property="article:modified_time" content="2020-06-06T07:23:36+05:30" />
+
 <meta itemprop="name" content="Linux - Ubuntu - Random commands">
-<meta itemprop="description" content="Random collection of commands for Ubuntu Linux.">
-<meta itemprop="datePublished" content="2019-11-10T21:55:00&#43;05:30" />
-<meta itemprop="dateModified" content="2020-06-06T07:23:36&#43;05:30" />
-<meta itemprop="wordCount" content="267">
-
-
-
+<meta itemprop="description" content="Random collection of commands for Ubuntu Linux."><meta itemprop="datePublished" content="2019-11-10T21:55:00+05:30" />
+<meta itemprop="dateModified" content="2020-06-06T07:23:36+05:30" />
+<meta itemprop="wordCount" content="261">
 <meta itemprop="keywords" content="linux,ubuntu,utilities,commands," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux - Ubuntu - Random commands"/>
 <meta name="twitter:description" content="Random collection of commands for Ubuntu Linux."/>
@@ -84,8 +81,6 @@
         <li class="mobile-menu-item">Home</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/papers-quotes/">
@@ -105,8 +100,6 @@
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
@@ -129,7 +122,7 @@
         <div class="post-category">
             <a href="/categories/software-tools/"> Software-Tools </a>
             </div>
-          <span class="more-meta"> 267 words </span>
+          <span class="more-meta"> 261 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -174,7 +167,7 @@
 </tr>
 <tr>
 <td>run top in batch mode 10 times with 5 seconds delay in command mode with output sorted by memory and only print 15 lines at a time</td>
-<td><code>top -b -n 10 -d 5 -c -o %MEM | grep &quot;load average&quot; -A 15</code></td>
+<td>`top -b -n 10 -d 5 -c -o %MEM</td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +226,7 @@
 <p>Create a ntfs partition from an empty disk</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -248,20 +241,20 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo fdisk /dev/sdb
-<span class="c1"># fdisk is interactive</span>
-<span class="c1"># press m for help</span>
-<span class="c1"># Press p to list any available partitions</span>
-<span class="c1"># create a new partition by using n</span>
-<span class="c1"># after altering partitions press w to write</span>
-<span class="c1"># make a ntfs file system with &#34;quick format&#34; i.e dont write zeroes and dont check for bad sectors</span>
-<span class="c1"># remove f for full format</span>
-mkfs.ntfs -f /dev/sdb1
-blkid
-<span class="c1"># Note the UUID of the partition E.g: /dev/sdb1 UUID=&#34;asdfg1246&#34;</span>
-<span class="c1"># Adding a entry in /etc/fstab</span>
-    <span class="nv">UUID</span><span class="o">=</span>asdfg1246   /disk1 ntfs-3g    permissions,locale<span class="o">=</span>en_US.utf8    <span class="m">0</span>   <span class="m">2</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo fdisk /dev/sdb
+</span></span><span class="line"><span class="cl"><span class="c1"># fdisk is interactive</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># press m for help</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Press p to list any available partitions</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># create a new partition by using n</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># after altering partitions press w to write</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># make a ntfs file system with &#34;quick format&#34; i.e dont write zeroes and dont check for bad sectors</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># remove f for full format</span>
+</span></span><span class="line"><span class="cl">mkfs.ntfs -f /dev/sdb1
+</span></span><span class="line"><span class="cl">blkid
+</span></span><span class="line"><span class="cl"><span class="c1"># Note the UUID of the partition E.g: /dev/sdb1 UUID=&#34;asdfg1246&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Adding a entry in /etc/fstab</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">UUID</span><span class="o">=</span>asdfg1246   /disk1 ntfs-3g    permissions,locale<span class="o">=</span>en_US.utf8    <span class="m">0</span>   <span class="m">2</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -335,7 +328,7 @@ blkid
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

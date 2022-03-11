@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.94.0 with theme even" />
 
 
 <link rel="canonical" href="https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/" />
@@ -35,24 +35,21 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.24752eee7d244519907709610f39db5d85a57e527ff033fcae4457858307d262.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Linux - Ubuntu initial dev setup" />
 <meta property="og:description" content="Initial dev setup for Ubuntu Linux." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/" />
+<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-07-24T11:00:00+05:30" />
 <meta property="article:modified_time" content="2020-07-24T14:44:47+05:30" />
+
 <meta itemprop="name" content="Linux - Ubuntu initial dev setup">
-<meta itemprop="description" content="Initial dev setup for Ubuntu Linux.">
-<meta itemprop="datePublished" content="2020-07-24T11:00:00&#43;05:30" />
-<meta itemprop="dateModified" content="2020-07-24T14:44:47&#43;05:30" />
-<meta itemprop="wordCount" content="449">
-
-
-
+<meta itemprop="description" content="Initial dev setup for Ubuntu Linux."><meta itemprop="datePublished" content="2020-07-24T11:00:00+05:30" />
+<meta itemprop="dateModified" content="2020-07-24T14:44:47+05:30" />
+<meta itemprop="wordCount" content="447">
 <meta itemprop="keywords" content="linux,ubuntu,commands," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux - Ubuntu initial dev setup"/>
 <meta name="twitter:description" content="Initial dev setup for Ubuntu Linux."/>
@@ -84,8 +81,6 @@
         <li class="mobile-menu-item">Home</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/papers-quotes/">
@@ -105,8 +100,6 @@
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
@@ -129,7 +122,7 @@
         <div class="post-category">
             <a href="/categories/software-tools/"> Software-Tools </a>
             </div>
-          <span class="more-meta"> 449 words </span>
+          <span class="more-meta"> 447 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -157,17 +150,17 @@
 <p>Basic commands</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update
-sudo apt upgrade
-sudo apt install software-properties-common apt-transport-https wget zsh git vim tree
-sudo apt autoremove
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade
+</span></span><span class="line"><span class="cl">sudo apt install software-properties-common apt-transport-https wget zsh git vim tree
+</span></span><span class="line"><span class="cl">sudo apt autoremove
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="zsh-setup">ZSH setup</h2>
 <ul>
@@ -200,7 +193,7 @@ sudo apt autoremove
 <p>My simple <code>~/.zshrc</code> file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -220,33 +213,29 @@ sudo apt autoremove
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">
-<span class="c1"># If you come from bash you might have to change your $PATH.</span>
-<span class="c1"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span>
-
-<span class="c1"># Path to your oh-my-zsh installation.</span>
-<span class="nb">export</span> <span class="nv">ZSH</span><span class="o">=</span><span class="s2">&#34;/home/username/.oh-my-zsh&#34;</span>
-
-<span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;agnoster&#34;</span>
-
-<span class="c1"># Which plugins would you like to load?</span>
-<span class="c1"># Standard plugins can be found in $ZSH/plugins/</span>
-<span class="c1"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
-<span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
-<span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
-<span class="nv">plugins</span><span class="o">=(</span>git common-aliases zsh-syntax-highlighting zsh-autosuggestions<span class="o">)</span>
-
-<span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
-
-<span class="nb">export</span> <span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">100000</span>
-<span class="nb">export</span> <span class="nv">SAVEHIST</span><span class="o">=</span><span class="m">100000</span>
-
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># If you come from bash you might have to change your $PATH.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Path to your oh-my-zsh installation.</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">ZSH</span><span class="o">=</span><span class="s2">&#34;/home/username/.oh-my-zsh&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;agnoster&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Which plugins would you like to load?</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Standard plugins can be found in $ZSH/plugins/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">plugins</span><span class="o">=(</span>git common-aliases zsh-syntax-highlighting zsh-autosuggestions<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">100000</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SAVEHIST</span><span class="o">=</span><span class="m">100000</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</h2>
 <p>Interacting with multiple hosted git repositories is much smoother when using SSH keys.</p>
@@ -260,7 +249,7 @@ sudo apt autoremove
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -268,13 +257,13 @@ sudo apt autoremove
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -t ed25519 -C <span class="s2">&#34;email@example.com&#34;</span>
-ssh-keygen -t ed25519 -C <span class="s2">&#34;username@example.com&#34;</span>
-xclip -sel clip &lt; ~/.ssh/id_ed25519.pub
-
-<span class="c1"># Add your git host (GitLab/GitHub/BitBucket, etc) URL for git-example.com</span>
-ssh -T git@git-example.com
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;username@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">xclip -sel clip &lt; ~/.ssh/id_ed25519.pub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add your git host (GitLab/GitHub/BitBucket, etc) URL for git-example.com</span>
+</span></span><span class="line"><span class="cl">ssh -T git@git-example.com
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="basic-software-install">Basic software install</h2>
 <ul>
@@ -362,7 +351,7 @@ ssh -T git@git-example.com
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

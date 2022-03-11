@@ -3,21 +3,21 @@
   
   <url>
     <loc>https://ppipada.github.io/categories/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/tags/commands/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/tags/linux/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,21 +31,28 @@
   
   <url>
     <loc>https://ppipada.github.io/post/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ppipada.github.io/</loc>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/categories/software-tools/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/tags/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -129,7 +136,7 @@
   
   <url>
     <loc>https://ppipada.github.io/tags/utilities/</loc>
-    <lastmod>2020-07-24T14:29:12+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -150,14 +157,14 @@
   
   <url>
     <loc>https://ppipada.github.io/tags/git/</loc>
-    <lastmod>2020-07-24T14:29:12+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ppipada.github.io/post/linux/2020-03-27-git-commands/</loc>
-    <lastmod>2020-07-24T14:29:12+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -192,14 +199,7 @@
   
   <url>
     <loc>https://ppipada.github.io/papers-quotes/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -23,7 +23,7 @@
 <meta name="google-site-verification" content="N111Sz7tv1JxXon2wQalp2ObKpEbY2AqOuEXnLzvxJs" />
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.94.0 with theme even" />
 
 
 <link rel="canonical" href="https://ppipada.github.io/post/linux/2020-01-30-ubuntu-1804-server-debug/" />
@@ -35,24 +35,21 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.24752eee7d244519907709610f39db5d85a57e527ff033fcae4457858307d262.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Linux - Ubuntu 18.04 server setup debug" />
 <meta property="og:description" content="Few ubuntu server setup issues and corresponding steps to debug them." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-01-30-ubuntu-1804-server-debug/" />
+<meta property="og:url" content="https://ppipada.github.io/post/linux/2020-01-30-ubuntu-1804-server-debug/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-01-30T20:55:00+05:30" />
 <meta property="article:modified_time" content="2020-06-06T07:23:36+05:30" />
+
 <meta itemprop="name" content="Linux - Ubuntu 18.04 server setup debug">
-<meta itemprop="description" content="Few ubuntu server setup issues and corresponding steps to debug them.">
-<meta itemprop="datePublished" content="2020-01-30T20:55:00&#43;05:30" />
-<meta itemprop="dateModified" content="2020-06-06T07:23:36&#43;05:30" />
+<meta itemprop="description" content="Few ubuntu server setup issues and corresponding steps to debug them."><meta itemprop="datePublished" content="2020-01-30T20:55:00+05:30" />
+<meta itemprop="dateModified" content="2020-06-06T07:23:36+05:30" />
 <meta itemprop="wordCount" content="170">
-
-
-
 <meta itemprop="keywords" content="linux,ubuntu,debug,commands," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux - Ubuntu 18.04 server setup debug"/>
 <meta name="twitter:description" content="Few ubuntu server setup issues and corresponding steps to debug them."/>
@@ -84,8 +81,6 @@
         <li class="mobile-menu-item">Home</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/papers-quotes/">
@@ -105,8 +100,6 @@
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
@@ -148,22 +141,22 @@
 <p>Disabling floppy drive: Error: <code>print_req_error: I/O error, dev fd0, sector 0</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo rmmod floppy
-sudo <span class="nb">echo</span> <span class="s2">&#34;blacklist floppy&#34;</span> <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist-floppy.conf
-sudo dpkg-reconfigure initramfs-tools
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo rmmod floppy
+</span></span><span class="line"><span class="cl">sudo <span class="nb">echo</span> <span class="s2">&#34;blacklist floppy&#34;</span> <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist-floppy.conf
+</span></span><span class="line"><span class="cl">sudo dpkg-reconfigure initramfs-tools
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p>Error: Network not up: eth/ens doesnt show or no service network-manager</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -182,31 +175,31 @@ sudo dpkg-reconfigure initramfs-tools
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo dhclient
-sudo apt update
-sudo apt install network-manager ifupdown
-sudo service network-manager restart
-sudo systemctl status NetworkManager.service
-
-sudo vi /etc/netplan/01-netcfg.yaml
-     <span class="c1"># This file describes the network interfaces available on your system</span>
-     <span class="c1"># For more information, see netplan(5).</span>
-     network:
-     version: <span class="m">2</span>
-     renderer: NetworkManager
-     ethernets:
-         ens32:
-         dhcp4: yes
-sudo netplan generate
-sudo netplan apply
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dhclient
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install network-manager ifupdown
+</span></span><span class="line"><span class="cl">sudo service network-manager restart
+</span></span><span class="line"><span class="cl">sudo systemctl status NetworkManager.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo vi /etc/netplan/01-netcfg.yaml
+</span></span><span class="line"><span class="cl">     <span class="c1"># This file describes the network interfaces available on your system</span>
+</span></span><span class="line"><span class="cl">     <span class="c1"># For more information, see netplan(5).</span>
+</span></span><span class="line"><span class="cl">     network:
+</span></span><span class="line"><span class="cl">     version: <span class="m">2</span>
+</span></span><span class="line"><span class="cl">     renderer: NetworkManager
+</span></span><span class="line"><span class="cl">     ethernets:
+</span></span><span class="line"><span class="cl">         ens32:
+</span></span><span class="line"><span class="cl">         dhcp4: yes
+</span></span><span class="line"><span class="cl">sudo netplan generate
+</span></span><span class="line"><span class="cl">sudo netplan apply
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p>ssh setup</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -214,26 +207,26 @@ sudo netplan apply
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">## For regenerating only rsa key</span>
-sudo ssh-keygen -t rsa -b <span class="m">4096</span> -f ssh_host_rsa_key
-<span class="c1">## For regenerating all missing keys</span>
-sudo ssh-keygen
-<span class="c1"># service ssh restart</span>
-sudo systemctl status ssh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">## For regenerating only rsa key</span>
+</span></span><span class="line"><span class="cl">sudo ssh-keygen -t rsa -b <span class="m">4096</span> -f ssh_host_rsa_key
+</span></span><span class="line"><span class="cl"><span class="c1">## For regenerating all missing keys</span>
+</span></span><span class="line"><span class="cl">sudo ssh-keygen
+</span></span><span class="line"><span class="cl"><span class="c1"># service ssh restart</span>
+</span></span><span class="line"><span class="cl">sudo systemctl status ssh
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p>Fix non-configured locales</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo locale-gen en_US en_US.UTF-8
-sudo dpkg-reconfigure locales
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo locale-gen en_US en_US.UTF-8
+</span></span><span class="line"><span class="cl">sudo dpkg-reconfigure locales
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
@@ -309,7 +302,7 @@ sudo dpkg-reconfigure locales
   <span class="copyright-year">
     &copy; 
     2019 - 
-    2020
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
