@@ -1,347 +1,295 @@
-<?xml-stylesheet type="text/xsl" href="https://ppipada.github.io/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ppipada.github.io/categories/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+    <loc>https://ppipada.github.io/docs/linux/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/tags/commands/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/py/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/tags/linux/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/go/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2020-07-24-ubuntu-setup/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/papers/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/about/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://ppipada.github.io/quotes/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://ppipada.github.io/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://ppipada.github.io/tags/commands/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/tags/linux/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2020-07-24-ubuntu-setup/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://ppipada.github.io/categories/software-tools/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/tags/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/ubuntu/</loc>
-    <lastmod>2020-07-24T14:44:47+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/distributed-systems/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/categories/systems-design/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/2020-05-25-understanding-paxos/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/posts/2020-05-25-understanding-paxos/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/docsify/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/front-matter/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/markdown/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/mustache/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/markdown/2020-04-29-docsify-mustache/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/yaml/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/mac/</loc>
-    <lastmod>2020-07-24T14:29:12+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/utilities/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/vscode/</loc>
-    <lastmod>2020-07-24T14:29:12+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2020-04-28-vscode/</loc>
-    <lastmod>2020-07-24T14:29:12+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/git/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2020-03-27-git-commands/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2020-03-27-git-commands/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/golang/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/guidelines/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/go/2020-03-24-go-memory-profiling/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/go/posts/2020-03-24-go-memory-profiling/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/profiling/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/papers-quotes/</loc>
-    <lastmod>2022-03-11T12:55:01+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/kodi/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/categories/movie/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/movie/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/movie/2020-03-17-organizing/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/posts/movie/2020-03-17-organizing/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/samba/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2020-01-30-samba-setup/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2020-01-30-samba-setup/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/scripts/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/debug/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2020-01-30-ubuntu-1804-server-debug/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/go/2019-11-17-go-intro-primer/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/go/posts/2019-11-17-go-intro-primer/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/learning/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/docker/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2019-11-11-docker-commands/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2019-11-11-docker-commands/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2019-11-10-commands/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2019-11-10-commands/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/linux/2019-11-09-screen/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/linux/posts/2019-11-09-screen/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/screen/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/closures/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ppipada.github.io/tags/python/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-closures/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-profiling/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/archives/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/categories/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/docs/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/offline/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/posts/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/search/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ppipada.github.io/tags/</loc>
+    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/py/2019-11-09-py-helpers-closures/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ppipada.github.io/post/py/2019-11-09-py-helpers-profiling/</loc>
-    <lastmod>2020-06-06T07:23:36+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
 </urlset>

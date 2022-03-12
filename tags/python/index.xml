@@ -6,22 +6,23 @@
     <description>Recent content in python on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
     <lastBuildDate>Sat, 09 Nov 2019 20:55:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Helpers - Closures</title>
-      <link>https://ppipada.github.io/post/py/2019-11-09-py-helpers-closures/</link>
+      <link>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-closures/</link>
       <pubDate>Sat, 09 Nov 2019 20:55:00 +0530</pubDate>
       
-      <guid>https://ppipada.github.io/post/py/2019-11-09-py-helpers-closures/</guid>
+      <guid>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-closures/</guid>
       <description>A script to chain multiple closures in python with example usage.</description>
     </item>
     
     <item>
       <title>Python Helpers - Profiling</title>
-      <link>https://ppipada.github.io/post/py/2019-11-09-py-helpers-profiling/</link>
+      <link>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-profiling/</link>
       <pubDate>Sat, 09 Nov 2019 19:55:00 +0530</pubDate>
       
-      <guid>https://ppipada.github.io/post/py/2019-11-09-py-helpers-profiling/</guid>
+      <guid>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-profiling/</guid>
       <description>A script to cprofile a single function in python</description>
     </item>
     

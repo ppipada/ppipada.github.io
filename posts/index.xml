@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Scramblings</title>
+    <link>https://ppipada.github.io/posts/</link>
+    <description>Recent content in Posts on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright><atom:link href="https://ppipada.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Paxos</title>
+      <link>https://ppipada.github.io/posts/2020-05-25-understanding-paxos/</link>
+      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/posts/2020-05-25-understanding-paxos/</guid>
+      <description>Reading the paxos made simple paper and understanding it.</description>
+    </item>
+    
+    <item>
+      <title>Mustache templates and YAML front-matter with Docsify</title>
+      <link>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</link>
+      <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</guid>
+      <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
+    </item>
+    
+    <item>
+      <title>Movies - Organizing a largish movie collection</title>
+      <link>https://ppipada.github.io/posts/movie/2020-03-17-organizing/</link>
+      <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
+      
+      <guid>https://ppipada.github.io/posts/movie/2020-03-17-organizing/</guid>
+      <description>Organizing a local storage based movie collection.</description>
+    </item>
+    
+  </channel>
+</rss>

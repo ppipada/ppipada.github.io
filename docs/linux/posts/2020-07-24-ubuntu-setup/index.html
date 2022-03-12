@@ -1,0 +1,501 @@
+<!doctype html><html itemscope itemtype="http://schema.org/WebPage" lang="en" data-palette="blue-gray"
+   data-mode="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linux - Ubuntu initial dev setup - Scramblings</title><link rel="apple-touch-icon" href="https://ppipada.github.io/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="https://ppipada.github.io/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://ppipada.github.io/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://ppipada.github.io/images/icons/favicon.ico">
+<link rel="manifest" href="https://ppipada.github.io/manifest.json">
+<meta name="keywords" content="" />
+<meta name="description" content="Initial dev setup for Ubuntu Linux." /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Linux - Ubuntu initial dev setup">
+<meta itemprop="description" content="Initial dev setup for Ubuntu Linux."><meta itemprop="datePublished" content="2020-07-24T11:00:00+05:30" />
+<meta itemprop="dateModified" content="2022-03-12T20:20:10+05:30" />
+<meta itemprop="wordCount" content="447">
+<meta itemprop="keywords" content="linux,ubuntu,commands," /><meta property="og:title" content="Linux - Ubuntu initial dev setup" />
+<meta property="og:description" content="Initial dev setup for Ubuntu Linux." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ppipada.github.io/docs/linux/posts/2020-07-24-ubuntu-setup/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2020-07-24T11:00:00+05:30" />
+<meta property="article:modified_time" content="2022-03-12T20:20:10+05:30" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux - Ubuntu initial dev setup"/>
+<meta name="twitter:description" content="Initial dev setup for Ubuntu Linux."/>
+<meta property="og:image" content="https://ppipada.github.io/images/logo.png"/>
+  <meta name="twitter:image" content="https://ppipada.github.io/images/logo.png"/><link rel="stylesheet" href="https://ppipada.github.io/assets/main/bundle.min.f9be46c552139424714432402be826adcc4520fd7548874d0815ce3c6821256b.css" integrity="sha256-+b5GxVITlCRxRDJAK+gmrcxFIP11SIdNCBXOPGghJWs=" crossorigin="anonymous"><link rel="stylesheet" href="https://ppipada.github.io/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"></head>
+  <body><script>const items=["mode","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs-"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3" href="https://ppipada.github.io"><img class="logo" alt="Logo" src="https://ppipada.github.io/images/logo.png" loading="lazy"
+   width="512" height="512"
+   />
+Scramblings
+    </a>
+    <div class="offcanvas offcanvas-bottom surface" tabindex="-1" id="offcanvasSocialShare" aria-labelledby="offcanvasSocialShare">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Share</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=Linux%20-%20Ubuntu%20initial%20dev%20setup&url=https%3a%2f%2fppipada.github.io%2fdocs%2flinux%2fposts%2f2020-07-24-ubuntu-setup%2f">
+      <i class="fab fa-fw fa-twitter"></i> Twitter
+    </a>
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fppipada.github.io%2fdocs%2flinux%2fposts%2f2020-07-24-ubuntu-setup%2f">
+      <i class="fab fa-fw fa-facebook-f"></i> Facebook
+    </a>
+  </div>
+</div>
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Settings</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+
+
+
+<div class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> Font Size</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</div>
+
+
+
+<div class="setting actions d-flex justify-content-around mt-auto overflow-auto">
+  <a role="button" class="action action-go-back" href="javascript: window.history.back();">
+    <span class="action-icon"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> Go back
+  </a>
+  <a role="button" class="action action-reload-page">
+    <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+  </a>
+  <a role="button" class="action action-copy-url">
+    <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> Copy URL
+  </a><a class="action action-social-share" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
+    aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
+    <span class="action-icon"><i class="fas fa-2x fa-share-alt"></i></span> Share
+  </a></div>
+
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="https://ppipada.github.io/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="https://ppipada.github.io/posts/">
+            Posts
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="https://ppipada.github.io/archives/">
+            Archives
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="https://ppipada.github.io/quotes/">
+            Quotes
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="https://ppipada.github.io/docs/">
+            Digital Garden
+          </a>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main class="container">
+      <div class="row content"><button class="catalog-toggle d-lg-none position-fixed top-0 left-0 h-100 p-0" type="button" data-bs-toggle="collapse" data-bs-target=".docs-catalog" aria-expanded="false" aria-controls="collapseCatalog">
+    <i class="catalog-toggle-icon fas fa-chevron-circle-down" data-fa-transform="rotate-270"></i>
+</button>
+<aside class="docs-catalog col-lg-2 collapse collapse-horizontal catalog-collapse" tabindex="-1" data-bs-hide="focusout">
+  <div class="container px-0 px-lg-1">
+    <div class="row card component">
+      <div class="card-body">
+        <ul class="list-unstyled mb-2"><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/papers/">Awesome Papers</a>
+        </li><li class="mb-2" tabindex="-1">
+          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2 bg-background text-on-background">
+            <a href="https://ppipada.github.io/docs/go/">Go</a>
+            <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
+              data-bs-target="#catalog-f5aa2d8de8a4faf7e20ecc5c85fb96fc" aria-expanded="false" aria-controls="catalog-f5aa2d8de8a4faf7e20ecc5c85fb96fc">
+              <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
+            </a>
+          </div>
+          <div class="mt-2 border-start collapse" id="catalog-f5aa2d8de8a4faf7e20ecc5c85fb96fc">
+            <ul class="btn-toggle-nav list-unstyled fw-normal ms-2">
+              <ul class="list-unstyled mb-2"><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/go/posts/2019-11-17-go-intro-primer/">Go introductory primer</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/go/posts/2020-03-24-go-memory-profiling/">Memory analysis in Go</a>
+        </li></ul>
+            </ul>
+          </div>
+        </li><li class="mb-2" tabindex="-1">
+          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2 bg-background text-on-background">
+            <a href="https://ppipada.github.io/docs/py/">Python</a>
+            <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
+              data-bs-target="#catalog-bfb5a15d636cbb200b47bc4d909cb48f" aria-expanded="false" aria-controls="catalog-bfb5a15d636cbb200b47bc4d909cb48f">
+              <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
+            </a>
+          </div>
+          <div class="mt-2 border-start collapse" id="catalog-bfb5a15d636cbb200b47bc4d909cb48f">
+            <ul class="btn-toggle-nav list-unstyled fw-normal ms-2">
+              <ul class="list-unstyled mb-2"><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-closures/">Python Helpers - Closures</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-profiling/">Python Helpers - Profiling</a>
+        </li></ul>
+            </ul>
+          </div>
+        </li><li class="mb-2" tabindex="-1">
+          <div class="catalog-section py-1 d-flex justify-content-between align-items-center px-2 bg-accent text-white">
+            <a href="https://ppipada.github.io/docs/linux/">Linux</a>
+            <a class="btn-toggle collapsed ms-1" role="button" data-bs-toggle="collapse"
+              data-bs-target="#catalog-5990d373ac824b52e97a76c2b3e2ff2c" aria-expanded="true" aria-controls="catalog-5990d373ac824b52e97a76c2b3e2ff2c">
+              <i class="btn-toggle-icon fas fa-chevron-circle-down ms-auto" data-fa-transform="rotate-270"></i>
+            </a>
+          </div>
+          <div class="mt-2 border-start collapse show" id="catalog-5990d373ac824b52e97a76c2b3e2ff2c">
+            <ul class="btn-toggle-nav list-unstyled fw-normal ms-2">
+              <ul class="list-unstyled mb-2"><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2019-11-11-docker-commands/">Docker - Commands</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2019-11-09-screen/">GNU Screen helpers</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2020-03-27-git-commands/">Linux - Git commands</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2019-11-10-commands/">Linux - Ubuntu - Random commands</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/">Linux - Ubuntu 18.04 server setup debug</a>
+        </li><li class="mb-2 active text-accent" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2020-07-24-ubuntu-setup/">Linux - Ubuntu initial dev setup</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2020-01-30-samba-setup/">Samba setup</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/">VSCode basic helpers</a>
+        </li></ul>
+            </ul>
+          </div>
+        </li></ul>
+      </div>
+    </div>
+  </div>
+</aside><div class="col-lg-7 ms-auto">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="https://ppipada.github.io/">Home</a></li><li class="breadcrumb-item"><a href="https://ppipada.github.io/docs/">Digital Garden</a></li><li class="breadcrumb-item"><a href="https://ppipada.github.io/docs/linux/">Linux</a></li><li class="breadcrumb-item active">Linux - Ubuntu Initial Dev Setup</li></ol>
+  </div>
+</nav><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a class="action action-panel-toggler" role="button" title="Panel toggler">
+      <i class="fas fa-fw fa-chevron-circle-down"></i>
+    </a>
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button" title="Sidebar toggler">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+
+    
+
+    
+    
+    
+    <a class="action d-lg-none" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    
+  </div>
+</div>
+<article class="row card component mb-4 post">
+<div class="card-header ">
+    <h1 class="card-title post-title">Linux - Ubuntu Initial Dev Setup
+</h1>
+</div>
+<div class="card-body"><div class="post-meta">
+  <span class="post-date" title="created on 2020-07-24 11:00:00 &#43;0530 IST, updated on 2022-03-12 20:20:10 &#43;0530 IST.">
+    Jul 24, 2020
+  </span><span class="post-reading-time">
+    3 min read
+  </span><span class="post-taxonomies"><a href="https://ppipada.github.io/categories/software-tools/" class="badge post-taxonomy">Software-Tools</a><a href="https://ppipada.github.io/tags/linux/" class="badge post-taxonomy">linux</a><a href="https://ppipada.github.io/tags/ubuntu/" class="badge post-taxonomy">ubuntu</a><a href="https://ppipada.github.io/tags/commands/" class="badge post-taxonomy">commands</a></span>
+</div>
+<div class="post-content mb-3"><p>I had to setup a fresh Ubuntu dev machine after quite some time. Given that this was a loaner machine, I wanted to make sure that I have a minimal viable dev setup ready as quickly as possible.</p>
+<p>Below are the steps for the minimal things I need.</p>
+<h2 id="upgrade-packages">Upgrade packages<a class="anchor ms-1" href="#upgrade-packages"><i class="fas fa-link"></i></a></h2>
+<p>For a fresh setup it is better to first make sure that everything that is upgradable is up to date. If you have a specific version requirement for any package make sure you pin it at the package manager level.</p>
+<p>Basic commands</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade
+</span></span><span class="line"><span class="cl">sudo apt install software-properties-common apt-transport-https wget zsh git vim tree
+</span></span><span class="line"><span class="cl">sudo apt autoremove
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="zsh-setup">ZSH setup<a class="anchor ms-1" href="#zsh-setup"><i class="fas fa-link"></i></a></h2>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">ZSH</a>
+ is an extended Bourne shell.</p>
+</li>
+<li>
+<p>Together with <a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">Oh-My-ZSH</a>
+ it provides a delight full dev experience.</p>
+</li>
+<li>
+<p>I personally like to use the <code>agnoster</code> theme from ohmyzsh with the plugins <code>git common-aliases zsh-syntax-highlighting zsh-autosuggestions</code></p>
+</li>
+<li>
+<p>For Ubuntu terminal make sure you got to <code>Terminal -&gt; Preferences -&gt; &lt;Your Profile&gt; -&gt; Colors</code> and uncheck the <code>Use system colors</code> option so that the theme colors are used in the terminal.</p>
+</li>
+<li>
+<p>Ohmyzsh standard plugins do not require explicit installation. Community plugins require some installation. Plugins links and installation guides are:</p>
+<ul>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh" target="_blank">common-aliases</a>
+</li>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank">zsh-syntax-highlighting</a>
+</li>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank">zsh-autosuggestions</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>My simple <code>~/.zshrc</code> file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># If you come from bash you might have to change your $PATH.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Path to your oh-my-zsh installation.</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">ZSH</span><span class="o">=</span><span class="s2">&#34;/home/username/.oh-my-zsh&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;agnoster&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Which plugins would you like to load?</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Standard plugins can be found in $ZSH/plugins/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">plugins</span><span class="o">=(</span>git common-aliases zsh-syntax-highlighting zsh-autosuggestions<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">100000</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SAVEHIST</span><span class="o">=</span><span class="m">100000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories<a class="anchor ms-1" href="#ssh-key-gen-and-add-to-repositories"><i class="fas fa-link"></i></a></h2>
+<p>Interacting with multiple hosted git repositories is much smoother when using SSH keys.</p>
+<p>Specific git hosts provide their guides to do this, e.g: <a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">GitHub ssh key gen guide</a>
+.</p>
+<p>General setup includes:</p>
+<ul>
+<li>Generate a ssh key pair on a machine.</li>
+<li>Add it to your git host profile settings.</li>
+<li>Test ssh access to git</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;username@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">xclip -sel clip &lt; ~/.ssh/id_ed25519.pub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add your git host (GitLab/GitHub/BitBucket, etc) URL for git-example.com</span>
+</span></span><span class="line"><span class="cl">ssh -T git@git-example.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="basic-software-install">Basic software install<a class="anchor ms-1" href="#basic-software-install"><i class="fas fa-link"></i></a></h2>
+<ul>
+<li>VSCode. General post for VSCode helpers is <a href="/docs/linux/posts/2020-04-28-vscode/">here</a>
+</li>
+<li><a href="https://slack.com" target="_blank">Slack</a>
+</li>
+<li><a href="https://zoom.us/" target="_blank">Zoom</a>
+</li>
+<li><a href="https://gohugo.io/getting-started/installing/" target="_blank">Hugo</a>
+. Hugo is fantastic website building framework. Awesome for static sites.</li>
+</ul>
+<h2 id="programming-language-settings">Programming language settings<a class="anchor ms-1" href="#programming-language-settings"><i class="fas fa-link"></i></a></h2>
+<ul>
+<li>Go. Basic introductory primer is present <a href="/docs/go/posts/2019-11-17-go-intro-primer/">here</a>
+.</li>
+<li>Python. Getting started <a href="https://www.python.org/about/gettingstarted/" target="_blank">link</a>
+</li>
+</ul>
+<p>Pull your code and go exploring :)</p>
+</div></div>
+<div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
+    <i class="fas fa-fw fa-chevron-circle-down" data-fa-transform="rotate-90"></i>
+    <a href="https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/">VSCode Basic Helpers
+</a>
+  </div></div></div>
+</article></div>
+</div><aside class="sidebar d-flex docs-sidebar col-lg-3 position-sticky">
+  <div class="container">
+    
+    <div class="post-toc row mb-4 card component" id="postTOC">
+  <div class="card-header">
+    <h2 class="card-title">Contents</h2>
+  </div>
+  <div class="card-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#upgrade-packages">Upgrade packages</a></li>
+    <li><a href="#zsh-setup">ZSH setup</a></li>
+    <li><a href="#ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</a></li>
+    <li><a href="#basic-software-install">Basic software install</a></li>
+    <li><a href="#programming-language-settings">Programming language settings</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <section class="recent-posts row card component">
+  <div class="card-header">
+    <h2 class="card-title">Recent Posts</h2>
+  </div>
+  <div class="card-body">
+    <ul class="post-list"><li>
+        <a href="https://ppipada.github.io/docs/papers/">Awesome Papers
+</a>
+      </li><li>
+        <a href="https://ppipada.github.io/docs/linux/posts/2020-07-24-ubuntu-setup/">Linux - Ubuntu Initial Dev Setup
+</a>
+      </li><li>
+        <a href="https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/">VSCode Basic Helpers
+</a>
+      </li><li>
+        <a href="https://ppipada.github.io/docs/linux/posts/2020-03-27-git-commands/">Linux - Git Commands
+</a>
+      </li><li>
+        <a href="https://ppipada.github.io/docs/go/posts/2020-03-24-go-memory-profiling/">Memory Analysis in Go
+</a>
+      </li></ul>
+  </div>
+</section>
+
+<section class="categories-taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="https://ppipada.github.io/categories">Categories</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="https://ppipada.github.io/categories/software-tools/" class="badge rounded post-taxonomy" title="Software-Tools">
+            Software-Tools<span class="badge badge-sm text-white bg-accent ms-1">14</span></a><a href="https://ppipada.github.io/categories/movie/" class="badge rounded post-taxonomy" title="Movie">
+            Movie<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="https://ppipada.github.io/categories/systems-design/" class="badge rounded post-taxonomy" title="Systems-Design">
+            Systems-Design<span class="badge badge-sm text-white bg-accent ms-1">1</span></a></div>
+      </div>
+    </section><section class="tags-taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="https://ppipada.github.io/tags">Tags</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="https://ppipada.github.io/tags/linux/" class="badge rounded post-taxonomy" title="linux">
+            linux<span class="badge badge-sm text-white bg-accent ms-1">9</span></a><a href="https://ppipada.github.io/tags/commands/" class="badge rounded post-taxonomy" title="commands">
+            commands<span class="badge badge-sm text-white bg-accent ms-1">8</span></a><a href="https://ppipada.github.io/tags/utilities/" class="badge rounded post-taxonomy" title="utilities">
+            utilities<span class="badge badge-sm text-white bg-accent ms-1">8</span></a><a href="https://ppipada.github.io/tags/scripts/" class="badge rounded post-taxonomy" title="scripts">
+            scripts<span class="badge badge-sm text-white bg-accent ms-1">4</span></a><a href="https://ppipada.github.io/tags/ubuntu/" class="badge rounded post-taxonomy" title="ubuntu">
+            ubuntu<span class="badge badge-sm text-white bg-accent ms-1">4</span></a><a href="https://ppipada.github.io/tags/golang/" class="badge rounded post-taxonomy" title="golang">
+            golang<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://ppipada.github.io/tags/guidelines/" class="badge rounded post-taxonomy" title="guidelines">
+            guidelines<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://ppipada.github.io/tags/profiling/" class="badge rounded post-taxonomy" title="profiling">
+            profiling<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://ppipada.github.io/tags/python/" class="badge rounded post-taxonomy" title="python">
+            python<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://ppipada.github.io/tags/closures/" class="badge rounded post-taxonomy" title="closures">
+            closures<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="https://ppipada.github.io/tags" class="badge rounded post-taxonomy" title="ALL">
+          ALL
+          <span class="badge badge-sm text-white bg-accent ms-1">26</span>
+        </a></div>
+      </div>
+    </section>
+
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" href="mailto:ppipada@gmail.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/ppipada" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/in/ppipada" title="LinkedIn" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
+</div></footer>
+<script src="https://ppipada.github.io/assets/main/bundle.min.efb86de6d24da44911ea5d9309575b1852191a1e70d7b3c84d0525fbe6e6911e.js" integrity="sha256-77ht5tJNpEkR6l2TCVdbGFIZGh5w17PITQUl&#43;&#43;bmkR4=" crossorigin="anonymous" defer></script><script src="https://ppipada.github.io/assets/icons/bundle.min.0773b6d7072a6206d25cf5e5451e1c79ae3063644f0fcff612256eb3111baaa0.js" integrity="sha256-B3O21wcqYgbSXPXlRR4cea4wY2RPD8/2EiVusxEbqqA=" crossorigin="anonymous" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('https:\/\/ppipada.github.io\/service-worker.min.js').then(function(reg) {
+      console.log('Successfully registered service worker', reg);
+    }).catch(function(err) {
+      console.warn('Error whilst registering service worker', err);
+    });
+  });
+}
+</script><script src="https://ppipada.github.io/assets/viewer/bundle.min.3e11fd50ad797f19695d1b62947f87b757dbc7a84bba169ffc01423286f6c282.js" integrity="sha256-PhH9UK15fxlpXRtilH&#43;Ht1fbx6hLuhaf/AFCMob2woI=" crossorigin="anonymous" defer></script>
+</body>
+</html>

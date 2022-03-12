@@ -6,13 +6,14 @@
     <description>Recent content in docsify on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
     <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/tags/docsify/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mustache templates and YAML front-matter with Docsify</title>
-      <link>https://ppipada.github.io/post/markdown/2020-04-29-docsify-mustache/</link>
+      <link>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</link>
       <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
       
-      <guid>https://ppipada.github.io/post/markdown/2020-04-29-docsify-mustache/</guid>
+      <guid>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</guid>
       <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
     </item>
     
