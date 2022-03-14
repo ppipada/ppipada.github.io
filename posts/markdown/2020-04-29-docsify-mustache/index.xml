@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mustache templates and YAML front-matter with Docsify on Scramblings</title>
+    <link>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</link>
+    <description>Recent content in Mustache templates and YAML front-matter with Docsify on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

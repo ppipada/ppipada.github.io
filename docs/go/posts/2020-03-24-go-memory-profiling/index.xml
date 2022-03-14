@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memory analysis in Go on Scramblings</title>
+    <link>https://ppipada.github.io/docs/go/posts/2020-03-24-go-memory-profiling/</link>
+    <description>Recent content in Memory analysis in Go on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 24 Mar 2020 11:11:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/docs/go/posts/2020-03-24-go-memory-profiling/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
