@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mac on Scramblings</title>
-    <link>https://ppipada.github.io/tags/mac/</link>
+    <link>https://pankajpipada.com/tags/mac/</link>
     <description>Recent content in mac on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 28 Apr 2020 08:30:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Apr 2020 08:30:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VSCode basic helpers</title>
-      <link>https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/</link>
+      <link>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</link>
       <pubDate>Tue, 28 Apr 2020 08:30:00 +0530</pubDate>
       
-      <guid>https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/</guid>
+      <guid>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</guid>
       <description>Basic shortcuts, useful plugins, and sample settings file for VSCode.</description>
     </item>
     

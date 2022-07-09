@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>samba on Scramblings</title>
-    <link>https://ppipada.github.io/tags/samba/</link>
+    <link>https://pankajpipada.com/tags/samba/</link>
     <description>Recent content in samba on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 30 Jan 2020 21:55:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/tags/samba/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jan 2020 21:55:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/samba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Samba setup</title>
-      <link>https://ppipada.github.io/docs/linux/posts/2020-01-30-samba-setup/</link>
+      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</link>
       <pubDate>Thu, 30 Jan 2020 21:55:00 +0530</pubDate>
       
-      <guid>https://ppipada.github.io/docs/linux/posts/2020-01-30-samba-setup/</guid>
+      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</guid>
       <description>Steps to set up a samba server on ubuntu 18.04.</description>
     </item>
     

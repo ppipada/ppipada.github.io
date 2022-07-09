@@ -2,292 +2,292 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ppipada.github.io/docs/linux/</loc>
+    <loc>https://pankajpipada.com/docs/linux/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/py/</loc>
+    <loc>https://pankajpipada.com/docs/py/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/go/</loc>
+    <loc>https://pankajpipada.com/docs/go/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/papers/</loc>
+    <loc>https://pankajpipada.com/docs/papers/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/about/</loc>
+    <loc>https://pankajpipada.com/about/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/quotes/</loc>
+    <loc>https://pankajpipada.com/quotes/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/</loc>
+    <loc>https://pankajpipada.com/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/commands/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/commands/</loc>
+    <loc>https://pankajpipada.com/tags/linux/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/linux/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2020-07-24-ubuntu-setup/</loc>
+    <loc>https://pankajpipada.com/categories/software-tools/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/ubuntu/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/categories/software-tools/</loc>
+    <loc>https://pankajpipada.com/tags/distributed-systems/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/ubuntu/</loc>
+    <loc>https://pankajpipada.com/categories/systems-design/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/distributed-systems/</loc>
+    <loc>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/categories/systems-design/</loc>
+    <loc>https://pankajpipada.com/tags/docsify/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/front-matter/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/markdown/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/mustache/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/yaml/</loc>
+    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/mac/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/posts/2020-05-25-understanding-paxos/</loc>
+    <loc>https://pankajpipada.com/tags/utilities/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/docsify/</loc>
+    <loc>https://pankajpipada.com/tags/vscode/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/front-matter/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/markdown/</loc>
+    <loc>https://pankajpipada.com/tags/git/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/mustache/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/posts/markdown/2020-04-29-docsify-mustache/</loc>
+    <loc>https://pankajpipada.com/tags/golang/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/yaml/</loc>
+    <loc>https://pankajpipada.com/tags/guidelines/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/mac/</loc>
+    <loc>https://pankajpipada.com/docs/go/posts/2020-03-24-go-memory-profiling/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/utilities/</loc>
+    <loc>https://pankajpipada.com/tags/profiling/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/vscode/</loc>
+    <loc>https://pankajpipada.com/tags/kodi/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2020-04-28-vscode/</loc>
+    <loc>https://pankajpipada.com/categories/movie/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/git/</loc>
+    <loc>https://pankajpipada.com/tags/movie/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2020-03-27-git-commands/</loc>
+    <loc>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/golang/</loc>
+    <loc>https://pankajpipada.com/tags/samba/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/guidelines/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/go/posts/2020-03-24-go-memory-profiling/</loc>
+    <loc>https://pankajpipada.com/tags/scripts/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/profiling/</loc>
+    <loc>https://pankajpipada.com/tags/debug/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/kodi/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/categories/movie/</loc>
+    <loc>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/movie/</loc>
+    <loc>https://pankajpipada.com/tags/learning/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/posts/movie/2020-03-17-organizing/</loc>
+    <loc>https://pankajpipada.com/tags/docker/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/samba/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2020-01-30-samba-setup/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/scripts/</loc>
+    <loc>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/debug/</loc>
+    <loc>https://pankajpipada.com/tags/screen/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</loc>
+    <loc>https://pankajpipada.com/tags/closures/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/go/posts/2019-11-17-go-intro-primer/</loc>
+    <loc>https://pankajpipada.com/tags/python/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/learning/</loc>
+    <loc>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-closures/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/docker/</loc>
+    <loc>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-profiling/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2019-11-11-docker-commands/</loc>
+    <loc>https://pankajpipada.com/archives/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2019-11-10-commands/</loc>
+    <loc>https://pankajpipada.com/categories/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/linux/posts/2019-11-09-screen/</loc>
+    <loc>https://pankajpipada.com/docs/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/screen/</loc>
+    <loc>https://pankajpipada.com/offline/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/closures/</loc>
+    <loc>https://pankajpipada.com/posts/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/tags/python/</loc>
+    <loc>https://pankajpipada.com/search/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-closures/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/docs/py/posts/2019-11-09-py-helpers-profiling/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/archives/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/categories/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/docs/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/offline/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/posts/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/search/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://ppipada.github.io/tags/</loc>
+    <loc>https://pankajpipada.com/tags/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

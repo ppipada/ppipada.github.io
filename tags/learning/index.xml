@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning on Scramblings</title>
-    <link>https://ppipada.github.io/tags/learning/</link>
+    <link>https://pankajpipada.com/tags/learning/</link>
     <description>Recent content in learning on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 17 Nov 2019 20:55:00 +0530</lastBuildDate><atom:link href="https://ppipada.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2019 20:55:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go introductory primer</title>
-      <link>https://ppipada.github.io/docs/go/posts/2019-11-17-go-intro-primer/</link>
+      <link>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</link>
       <pubDate>Sun, 17 Nov 2019 20:55:00 +0530</pubDate>
       
-      <guid>https://ppipada.github.io/docs/go/posts/2019-11-17-go-intro-primer/</guid>
+      <guid>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</guid>
       <description>Generic references to get started with go programming language.</description>
     </item>
     
