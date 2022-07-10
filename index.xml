@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jul 2022 16:00:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Awesome Papers</title>
-      <link>https://pankajpipada.com/docs/papers/</link>
-      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
+      <title>Voraciousness</title>
+      <link>https://pankajpipada.com/posts/2022-07-09-voraciousness/</link>
+      <pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
       
-      <guid>https://pankajpipada.com/docs/papers/</guid>
-      <description> Lifes irreducible structure Paxos made simple The Google file system - GFS Dynamo: Amazon’s Highly Available Key-value Store MapReduce: Simplified Data Processing on Large Clusters TAO: Facebook’s Distributed Data Store for the Social Graph Dapper, a Large-Scale Distributed Systems Tracing Infrastructure Bigtable: A Distributed Storage System for Structured Data Papers we love github repo </description>
+      <guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
+      <description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
     </item>
     
     <item>
@@ -46,10 +46,10 @@
     
     <item>
       <title>Understanding Paxos</title>
-      <link>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</link>
+      <link>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</link>
       <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
       
-      <guid>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</guid>
+      <guid>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</guid>
       <description>Reading the paxos made simple paper and understanding it.</description>
     </item>
     
@@ -96,6 +96,15 @@
       
       <guid>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</guid>
       <description>Organizing a local storage based movie collection.</description>
+    </item>
+    
+    <item>
+      <title>Awesome papers list</title>
+      <link>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</link>
+      <pubDate>Thu, 12 Mar 2020 08:30:00 +0530</pubDate>
+      
+      <guid>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</guid>
+      <description>Great papers and references</description>
     </item>
     
     <item>

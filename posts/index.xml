@@ -8,12 +8,12 @@
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright><atom:link href="https://pankajpipada.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Understanding Paxos</title>
-      <link>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</link>
-      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
+      <title>Voraciousness</title>
+      <link>https://pankajpipada.com/posts/2022-07-09-voraciousness/</link>
+      <pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
       
-      <guid>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</guid>
-      <description>Reading the paxos made simple paper and understanding it.</description>
+      <guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
+      <description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
     </item>
     
     <item>

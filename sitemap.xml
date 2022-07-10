@@ -18,7 +18,17 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/docs/papers/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/</loc>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/2022-07-09-voraciousness/</loc>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -29,11 +39,6 @@
   </url><url>
     <loc>https://pankajpipada.com/quotes/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/</loc>
-    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -63,17 +68,22 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/tags/distributed-systems/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/papers/</loc>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/categories/systems-design/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <loc>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</loc>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -174,6 +184,16 @@
   </url><url>
     <loc>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</loc>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/lists/</loc>
+    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
