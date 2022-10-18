@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 09 Jul 2022 16:00:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 16:00:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Separation of concerns and architectural thought</title>
+      <link>https://pankajpipada.com/posts/2022-10-18-archlevels/</link>
+      <pubDate>Tue, 18 Oct 2022 16:00:00 +0530</pubDate>
+      
+      <guid>https://pankajpipada.com/posts/2022-10-18-archlevels/</guid>
+      <description>General thought on architectural boundaries, levels and issues that need to be tackled at each level.</description>
+    </item>
+    
     <item>
       <title>Voraciousness</title>
       <link>https://pankajpipada.com/posts/2022-07-09-voraciousness/</link>

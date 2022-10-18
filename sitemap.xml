@@ -22,13 +22,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://pankajpipada.com/categories/architecture/</loc>
+    <lastmod>2022-10-18T17:23:16+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://pankajpipada.com/</loc>
-    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
+    <lastmod>2022-10-18T17:23:16+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/2022-10-18-archlevels/</loc>
+    <lastmod>2022-10-18T17:23:16+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/systems-design/</loc>
+    <lastmod>2022-10-18T17:23:16+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/posts/2022-07-09-voraciousness/</loc>
-    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
+    <lastmod>2022-07-14T14:36:33+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -73,11 +88,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/categories/papers/</loc>
-    <lastmod>2022-07-10T16:32:40+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/categories/systems-design/</loc>
     <lastmod>2022-07-10T16:32:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
