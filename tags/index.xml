@@ -8,6 +8,15 @@
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright><atom:link href="https://pankajpipada.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>distributed-systems</title>
+      <link>https://pankajpipada.com/tags/distributed-systems/</link>
+      <pubDate>Tue, 18 Oct 2022 17:00:00 +0530</pubDate>
+      
+      <guid>https://pankajpipada.com/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>commands</title>
       <link>https://pankajpipada.com/tags/commands/</link>
       <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
@@ -31,15 +40,6 @@
       <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>distributed-systems</title>
-      <link>https://pankajpipada.com/tags/distributed-systems/</link>
-      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/tags/distributed-systems/</guid>
       <description></description>
     </item>
     
