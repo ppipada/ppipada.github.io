@@ -5,25 +5,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Separation of concerns and architectural thought - Scramblings</title><link rel="apple-touch-icon" href="https://pankajpipada.com/images/icons/icon-180x180.png" sizes="180x180">
+    <title>Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo - Scramblings</title><link rel="apple-touch-icon" href="https://pankajpipada.com/images/icons/icon-180x180.png" sizes="180x180">
 <link rel="icon" href="https://pankajpipada.com/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="https://pankajpipada.com/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="https://pankajpipada.com/images/icons/favicon.ico">
 <link rel="manifest" href="https://pankajpipada.com/manifest.json">
 <meta name="keywords" content="" />
-<meta name="description" content="General thought on architectural boundaries, levels and issues that need to be tackled at each level." /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Separation of concerns and architectural thought">
-<meta itemprop="description" content="General thought on architectural boundaries, levels and issues that need to be tackled at each level."><meta itemprop="datePublished" content="2022-10-18T16:00:00+05:30" />
-<meta itemprop="dateModified" content="2022-10-18T18:06:12+05:30" />
-<meta itemprop="wordCount" content="734">
-<meta itemprop="keywords" content="" /><meta property="og:title" content="Separation of concerns and architectural thought" />
-<meta property="og:description" content="General thought on architectural boundaries, levels and issues that need to be tackled at each level." />
+<meta name="description" content="A interaction with ChatGPT as a pair programmer for learning and using a new technology tool." /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo">
+<meta itemprop="description" content="A interaction with ChatGPT as a pair programmer for learning and using a new technology tool."><meta itemprop="datePublished" content="2023-02-11T16:00:00+05:30" />
+<meta itemprop="dateModified" content="2023-02-11T18:06:20+05:30" />
+<meta itemprop="wordCount" content="1011">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo" />
+<meta property="og:description" content="A interaction with ChatGPT as a pair programmer for learning and using a new technology tool." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pankajpipada.com/posts/2022-10-18-archlevels/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-10-18T16:00:00+05:30" />
-<meta property="article:modified_time" content="2022-10-18T18:06:12+05:30" />
+<meta property="og:url" content="https://pankajpipada.com/posts/2023-02-11-pairprogram/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-11T16:00:00+05:30" />
+<meta property="article:modified_time" content="2023-02-11T18:06:20+05:30" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Separation of concerns and architectural thought"/>
-<meta name="twitter:description" content="General thought on architectural boundaries, levels and issues that need to be tackled at each level."/>
+<meta name="twitter:title" content="Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo"/>
+<meta name="twitter:description" content="A interaction with ChatGPT as a pair programmer for learning and using a new technology tool."/>
 <meta property="og:image" content="https://pankajpipada.com/images/logo.png"/>
   <meta name="twitter:image" content="https://pankajpipada.com/images/logo.png"/>
 <link rel="stylesheet" href="https://pankajpipada.com/assets/main/bundle.min.b4fc0f53fb368ca1b51f1346cfef18f58b5c7a4eb243ba9bd55237d40c0baf39.css" integrity="sha256-tPwPU/s2jKG1HxNGz+8Y9Ytcek6yQ7qb1VI31AwLrzk=" crossorigin="anonymous"><link rel="stylesheet" href="https://pankajpipada.com/assets/viewer/bundle.min.6070b2af84f19b1663683173befd7b511e21bd766215f77447dbbd91caa83083.css" integrity="sha256-YHCyr4TxmxZjaDFzvv17UR4hvXZiFfd0R9u9kcqoMIM=" crossorigin="anonymous"></head>
@@ -48,11 +48,11 @@ Scramblings
   </div>
   <div class="offcanvas-body">
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=Separation%20of%20concerns%20and%20architectural%20thought&url=https%3a%2f%2fpankajpipada.com%2fposts%2f2022-10-18-archlevels%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=Beginner%20level%20learning%20and%20pair%20programming%20with%20ChatGPT%20-%20A%20case%20study%20of%20Admonitions%20in%20Hugo&url=https%3a%2f%2fpankajpipada.com%2fposts%2f2023-02-11-pairprogram%2f">
       <i class="fab fa-fw fa-twitter"></i> Twitter
     </a>
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpankajpipada.com%2fposts%2f2022-10-18-archlevels%2f">
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpankajpipada.com%2fposts%2f2023-02-11-pairprogram%2f">
       <i class="fab fa-fw fa-facebook-f"></i> Facebook
     </a>
   </div>
@@ -136,7 +136,7 @@ Scramblings
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="https://pankajpipada.com/">Home</a></li><li class="breadcrumb-item"><a href="https://pankajpipada.com/posts/">Posts</a></li><li class="breadcrumb-item active">Separation of Concerns and Architectural Thought</li></ol>
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="https://pankajpipada.com/">Home</a></li><li class="breadcrumb-item"><a href="https://pankajpipada.com/posts/">Posts</a></li><li class="breadcrumb-item active">Beginner Level Learning and Pair Programming With ChatGPT - A Case Study of Admonitions in Hugo</li></ol>
   </div>
 </nav><div class="post-panel-wrapper position-sticky">
   <div class="d-flex flex-column component rounded post-panel position-absolute">
@@ -161,99 +161,51 @@ Scramblings
 </div>
 <article class="row card component mb-4 post">
   <div class="card-header ">
-    <h1 class="card-title post-title">Separation of Concerns and Architectural Thought
+    <h1 class="card-title post-title">Beginner Level Learning and Pair Programming With ChatGPT - A Case Study of Admonitions in Hugo
 </h1>
   </div>
   <div class="card-body"><div class="post-meta">
-  <span class="post-date" title="created on 2022-10-18 16:00:00 &#43;0530 IST, updated on 2022-10-18 18:06:12 &#43;0530 IST.">
-    Oct 18, 2022
+  <span class="post-date" title="created on 2023-02-11 16:00:00 &#43;0530 IST, updated on 2023-02-11 18:06:20 &#43;0530 IST.">
+    Feb 11, 2023
   </span><span class="post-reading-time">
-    4 min read
-  </span><span class="post-taxonomies"><a href="https://pankajpipada.com/categories/architecture/" class="badge post-taxonomy">Architecture</a><a href="https://pankajpipada.com/categories/systems-design/" class="badge post-taxonomy">Systems-Design</a></span>
+    5 min read
+  </span><span class="post-taxonomies"><a href="https://pankajpipada.com/categories/programming/" class="badge post-taxonomy">Programming</a><a href="https://pankajpipada.com/categories/software-tools/" class="badge post-taxonomy">Software-Tools</a></span>
 </div>
-<div class="post-content mb-3"><p>Recently a friend posed a question to our common group: What common problems do you face in building complex, evolving, maintainable systems? Below is the general path that this discussion flowed.</p>
-<h2 id="broad-level-architectural-thought">Broad level architectural thought<a class="anchor ms-1" href="#broad-level-architectural-thought"><i class="fas fa-link"></i></a></h2>
-<p>Main Architectural goal for building large, complex enough and evolving systems is almost always the same: Minimize the resources (people, machines) needed to accommodate change.</p>
-<p>Top level method for doing this is almost always: separation of concerns. Achieving separation of concerns needs you to make tradeoffs. These are people, process, product related. E.g: dev velocity, team coordination, system performance, scalability, availability, failure models, etc.</p>
-<p>As your org/project grows, the optimal tradeoff point shifts and you do the corresponding changes to adjust to these shifting tradeoffs.</p>
-<h2 id="multi-service-integration-thought">Multi service integration thought<a class="anchor ms-1" href="#multi-service-integration-thought"><i class="fas fa-link"></i></a></h2>
-<p>The defined API contract needs to be designed so that it is stable. Proper Resource based rest APIs come in handy for this. This is generally a non-trivial, error prone task for a lot of people, as defining resources you are handling and operations on them for today and tomorrow is very difficult. Same goes for DB schema design in a single service context.</p>
-<p>One school of thought says that don&rsquo;t worry about tomorrows responsibility as it is impossible to predict. While a good advice, completely ignoring any forward compatibility thought leads to a lot of pain down the line is a general observation.</p>
-<h2 id="single-serviceconcern-bounded-thought">Single service/concern bounded thought<a class="anchor ms-1" href="#single-serviceconcern-bounded-thought"><i class="fas fa-link"></i></a></h2>
-<p>Similar to Arch, major issue remain separation of concerns and tradeoffs you make.</p>
-<p>Dev&rsquo;s generally tend to start by mixing all things in a single function, class, package, etc. E.g; For a web service, people tend to do transport stuff (SSL, serialization, HTTP), business logic, database handling all as single methods in single place. For non web service process, people tend to handle any communication, threading, thread coordination, configuration, business logic, etc in single place. This mixing can be seen generally in different areas as below.</p>
-<ul>
-<li>
-<p>Observability: Adding anything related to observability tends to disturb business logic. E.g If you want an api metric to be present, you should be able to do that without touching BL. It generally doesn&rsquo;t happen that cleanly.</p>
-</li>
-<li>
-<p>State management and access: State handling is another common thing that starts as &ldquo;accessible to all&rdquo; as it is the simplest thing to start with. E.g: Make all states (Tables, files, blobs, etc) accessible to all functionality. As part of architectural evolution, you start by defining clear boundaries slowly slowly in terms of modules, packages, etc.</p>
-</li>
-<li>
-<p>Class/Package issues: People would generally find it very very difficult to define boundaries of packages, classes. This is common even if classes or packages are designed with private/public functional capabilities. E.g: If a function is exposed, should it really be exposed? Is that function part of the responsibility of the class/package?</p>
-</li>
-</ul>
-<p>As newer requirements pour into the system, the architectural, service interaction and service responsibility specific tradeoffs change.</p>
-<p>Few examples of these changes within a service boundary level are:</p>
-<ul>
-<li>
-<p>Changing levels of abstraction - a new class is created out of one big one. This may result in routing calls. Preferred way to handle this is to create a new class, let callers integrate with it, in the mean time redirect from main class to here. If the cost of maintenance turns out to be high, you have to force clients to upgrade. One middle ground here is: provide a sdk, do the rerouting in sdk, ask clients to upgrade the sdk.</p>
-</li>
-<li>
-<p>Interface change: especially if parameters are removed. This may result in building a stub to manage it. This is preferably handled via versioning. Backward incompatible changes need to upgrade major versions. Old version stays until you deprecate it. In a single codebase, modifying the callers is almost always preferred over handling rerouting, stubs, etc. Versioning is used when you don&rsquo;t control the callers. Again, tradeoff is cost of modifying everybody, vs maintaining reroutes.</p>
-</li>
-</ul>
-<h2 id="size-of-teams-vs-rulespatterns">Size of teams vs rules/patterns<a class="anchor ms-1" href="#size-of-teams-vs-rulespatterns"><i class="fas fa-link"></i></a></h2>
-<p>One thing that I believe is that the rules/patterns to handle change don&rsquo;t really change. What changes is the tradeoffs associated with picking a solution.</p>
-<h2 id="references">References<a class="anchor ms-1" href="#references"><i class="fas fa-link"></i></a></h2>
-<ul>
-<li>Blog at a abstract level: <a href="https://martinfowler.com/articles/patterns-legacy-displacement/" target="_blank">Patterns of legacy displacement</a>
-
-<ul>
-<li>Details about patterns are present in sidebar.
-<ul>
-<li>Critical Aggregator</li>
-<li>Divert the Flow</li>
-<li>Extract Product Lines</li>
-<li>Feature Parity</li>
-<li>Legacy Mimic</li>
-<li>Revert to Source</li>
-<li>Transitional Architecture</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Books that I like:
-<ul>
-<li>Software Architecture the hard parts</li>
-<li>Clean Architecture</li>
-</ul>
-</li>
-<li>Architectural bookshelf with different levels/context of the problems:
-<ul>
-<li><a href="https://architectelevator.com/architecture/architect-bookshelf/" target="_blank">Architect bookshelf</a>
-</li>
-<li><a href="https://architectelevator.com/assets/img/architect_library_all.jpg" target="_blank">Architect library all</a>
-</li>
-</ul>
-</li>
-</ul>
-<p><picture><img class="img-fluid" alt="Architect Bookshelf" src="https://pankajpipada.com/images/architect_library_all.jpg" loading="lazy"
-    
-     width="712" height="940"
-     />
-</picture>
-
-</p>
+<div class="post-content mb-3"><h2 id="introduction">Introduction<a class="anchor ms-1" href="#introduction"><i class="fas fa-link"></i></a></h2>
+<p>Have you ever wanted to learn a new programming language or framework but felt overwhelmed and unsure of where to start? Pair programming can offer a solution to this challenge by allowing you to learn from a more experienced developer in real-time. In this case study, we will explore the pair programming experience between me and ChatGPT in the context of learning about &ldquo;Admonitions&rdquo; in Hugo.</p>
+<h3 id="relevant-background">Relevant background<a class="anchor ms-1" href="#relevant-background"><i class="fas fa-link"></i></a></h3>
+<p>I have some small amount of experience in web development, and I am familiar with using Hugo, a popular open-source static site generator. My primary day job experience is with backend technologies and architecture. I am an absolute beginner when it comes to CSS styles, placing and using them in hugo, writing HTML using styles and hugo specific functions.</p>
+<p>I have been wanting to add an admonition that adds each quote in a box, to my quote&rsquo;s page in this blog for some time. With the very limited experience I have in this area, I was not able to create a clean solution for it until now. With rise in ChatGPT&rsquo;s and some experimentation with it, I decided to take on this task.</p>
+<h3 id="what-are-admonitions-in-hugo">What are Admonitions in Hugo?<a class="anchor ms-1" href="#what-are-admonitions-in-hugo"><i class="fas fa-link"></i></a></h3>
+<p>Admonitions are blocks of text that emphasize particular information and enhance the visual appeal of a document. They are commonly used to create notes, warnings, tips, and other types of annotations. Admonitions in Hugo can be created using the &ldquo;shortcodes&rdquo; feature, which allows you to add custom content to a page using a simple syntax.</p>
+<h2 id="interaction-with-chatgpt">Interaction with ChatGPT<a class="anchor ms-1" href="#interaction-with-chatgpt"><i class="fas fa-link"></i></a></h2>
+<h3 id="step-1-set-context">Step 1: Set context<a class="anchor ms-1" href="#step-1-set-context"><i class="fas fa-link"></i></a></h3>
+<p><code>Me</code> &gt; Explain admonitions in hugo, give samples related to it, and guide on how to create them. (This was through multiple questions, but no code from my side.)</p>
+<p><code>ChatGPT</code> &gt; ChatGPT provides step-by-step instructions on how to create Admonitions in Hugo using the built-in shortcodes feature and custom CSS styles. I can see an example of adding quotes with HTML and associated CSS, as well as modifying the CSS to highlight the author name differently. ChatGPT also provides HTML code for creating a blockquote shortcode and modifying it to take the author name as an argument rather than as a separate span.</p>
+<h3 id="step-2-get-code-for-my-problem-with-input-code-hints">Step 2: Get code for my problem with input code hints<a class="anchor ms-1" href="#step-2-get-code-for-my-problem-with-input-code-hints"><i class="fas fa-link"></i></a></h3>
+<p><code>Me</code> &gt; Style the blockquote admonition to match my hugo theme. This also through multiple questions, but this time, relevant code was provided each time.</p>
+<p><code>ChatGPT</code> &gt; I could learn how to modify the CSS styles to match my specific Hugo-themed-Bootstrap theme. ChatGPT provides CSS code for styling the blockquote elements to match the styles used in the theme, including the background color, border color, padding, and font styles for the author name.</p>
+<p><code>Me</code> &gt; I was unsure on exact placement of CSS files and using them in shortcode in the theme. I asked ChatGPT about it.</p>
+<p><code>ChatGPT</code> &gt; ChatGPT also explains where to add CSS styles to a shortcode in Hugo. I could also learn about the steps to create a CSS file and include it in the HTML template for the site. This time too it gives relevant code blocks.</p>
+<h3 id="step-3-non-chatgpt-steps-needed">Step 3: Non-ChatGPT steps needed<a class="anchor ms-1" href="#step-3-non-chatgpt-steps-needed"><i class="fas fa-link"></i></a></h3>
+<p>At this point, I had a working code, but the font awesome icons were missing in the output as the theme had the icon in <code>fas</code> set and ChatGPT&rsquo;s response had been guiding me to use it from the <code>fa</code> set. Identifying and rectifying them through ChatGPT interaction turned out to be very difficult. I had to go through the general route of exploring themes code, Stack Overflow search through Google, and then fixing it.</p>
+<h3 id="step-4-block-edit-using-chatgpt-instead-of-regex">Step 4: Block edit using ChatGPT instead of regex<a class="anchor ms-1" href="#step-4-block-edit-using-chatgpt-instead-of-regex"><i class="fas fa-link"></i></a></h3>
+<p><code>Me</code> &gt; At this point a fully functional and tested shortcode was created. I now needed to use it across all the different quotes I had. Without ChatGPT, I would need to do a regex replace for doing some edits and then do some manual edits where regex was not really possible due to the slightly ad hoc nature of placement of information. I asked ChatGPT to do what I wanted as plain text command and provided input of my full text file.</p>
+<p><code>ChatGPT</code> &gt; ChatGPT was able to do the task of replacing the old &ldquo;highlight&rdquo; built-in admonition, with blockquote admonition, replace the author name from previous text field to the admonition parameter field perfectly. It was not able to reformat a few quotes into Markdown again properly. I decided to manually do that as it was a very minor task.</p>
+<h2 id="experience-on-guiding-chatgpt">Experience on guiding ChatGPT<a class="anchor ms-1" href="#experience-on-guiding-chatgpt"><i class="fas fa-link"></i></a></h2>
+<p>You can see that I needed to guide ChatGPT to the correct answer by asking specific and clear questions related to the topic of Admonitions in Hugo.</p>
+<p>I started by asking the basic question, then basic code, then edits to the code, then rectifying the code to match the specific environment. Even though ChatGPT helped to a large extent, identifying issues and whether the code generated and guidance is relevant to the consumers&rsquo; environment is definitely the user&rsquo;s responsibility. Supplementing with additional context can assist, but the responsibility and the need for user knowledge remains unchanged.</p>
+<h2 id="conclusion">Conclusion<a class="anchor ms-1" href="#conclusion"><i class="fas fa-link"></i></a></h2>
+<p>This interaction highlights the benefits of pair programming and learning, as it allows for a back-and-forth exchange of information and knowledge. Pairing with ChatGPT can be an effective way to learn about greenfield or brownfield programming concepts for a user.</p>
+<p>Though ChatGPT provides clear and concise instructions, examples, and code snippets to help the user understand and implement the concepts, as a consumer you need to be aware of what you want and what environment you are working with to get better results. There are some areas, where traditional debug and search Google/Stack Overflow is much easier path to solve the problem. Knowing when to move to the traditional method rather than spending time in ChatGPT is a skill to develop.</p>
+<p>Whether you are a beginner or an experienced developer, pair programming with ChatGPT can be a valuable learning experience.</p>
+<h2 id="epilogue">Epilogue<a class="anchor ms-1" href="#epilogue"><i class="fas fa-link"></i></a></h2>
+<p>This post itself was reviewed and modified using ChatGPT for spelling, grammar, sentence formulation, and structure. This task went fully without any hassle.</p>
 </div></div>
   <div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
     <i class="fas fa-fw fa-chevron-circle-down post-prev-icon" data-fa-transform="rotate-90"></i>
-    <a href="https://pankajpipada.com/posts/2022-07-09-voraciousness/">Voraciousness
+    <a href="https://pankajpipada.com/posts/2022-10-18-archlevels/">Separation of Concerns and Architectural Thought
 </a>
-  </div><div class="post-nav post-next">
-    <a href="https://pankajpipada.com/posts/2023-02-11-pairprogram/">Beginner Level Learning and Pair Programming With ChatGPT - A Case Study of Admonitions in Hugo
-</a>
-    <i class="fas fa-fw fa-chevron-circle-down post-next-icon" data-fa-transform="rotate-270"></i>
   </div></div></div>
 </article><section class="related-posts row card component">
     <div class="card-header">
@@ -261,6 +213,11 @@ Scramblings
     </div>
     <div class="card-body">
       <ul class="post-list"><li>
+          <a href="https://pankajpipada.com/posts/2022-10-18-archlevels/">Separation of Concerns and Architectural Thought
+</a>
+          <span class="float-end post-date">Oct 18, 2022
+</span>
+        </li><li>
           <a href="https://pankajpipada.com/posts/2022-07-09-voraciousness/">Voraciousness
 </a>
           <span class="float-end post-date">Jul 9, 2022
@@ -288,11 +245,23 @@ Scramblings
   <div class="card-body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#broad-level-architectural-thought">Broad level architectural thought</a></li>
-    <li><a href="#multi-service-integration-thought">Multi service integration thought</a></li>
-    <li><a href="#single-serviceconcern-bounded-thought">Single service/concern bounded thought</a></li>
-    <li><a href="#size-of-teams-vs-rulespatterns">Size of teams vs rules/patterns</a></li>
-    <li><a href="#references">References</a></li>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#relevant-background">Relevant background</a></li>
+        <li><a href="#what-are-admonitions-in-hugo">What are Admonitions in Hugo?</a></li>
+      </ul>
+    </li>
+    <li><a href="#interaction-with-chatgpt">Interaction with ChatGPT</a>
+      <ul>
+        <li><a href="#step-1-set-context">Step 1: Set context</a></li>
+        <li><a href="#step-2-get-code-for-my-problem-with-input-code-hints">Step 2: Get code for my problem with input code hints</a></li>
+        <li><a href="#step-3-non-chatgpt-steps-needed">Step 3: Non-ChatGPT steps needed</a></li>
+        <li><a href="#step-4-block-edit-using-chatgpt-instead-of-regex">Step 4: Block edit using ChatGPT instead of regex</a></li>
+      </ul>
+    </li>
+    <li><a href="#experience-on-guiding-chatgpt">Experience on guiding ChatGPT</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#epilogue">Epilogue</a></li>
   </ul>
 </nav>
   </div>

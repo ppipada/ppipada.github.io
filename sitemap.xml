@@ -22,6 +22,26 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://pankajpipada.com/posts/2023-02-11-pairprogram/</loc>
+    <lastmod>2023-02-11T18:06:20+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/programming/</loc>
+    <lastmod>2023-02-11T18:06:20+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/</loc>
+    <lastmod>2023-02-11T18:06:20+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/software-tools/</loc>
+    <lastmod>2023-02-11T18:06:20+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://pankajpipada.com/tags/distributed-systems/</loc>
     <lastmod>2022-10-18T18:06:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -33,11 +53,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/categories/papers/</loc>
-    <lastmod>2022-10-18T18:06:12+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/</loc>
     <lastmod>2022-10-18T18:06:12+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -84,11 +99,6 @@
   </url><url>
     <loc>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/categories/software-tools/</loc>
-    <lastmod>2022-07-09T13:17:38+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
