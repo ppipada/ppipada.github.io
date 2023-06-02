@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coffee on Scramblings</title>
+    <link>https://pankajpipada.com/categories/coffee/</link>
+    <description>Recent content in coffee on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 02 Jun 2023 11:50:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/categories/coffee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Go-to Espresso Recipe - An Everyday Brew</title>
+      <link>https://pankajpipada.com/posts/2023-06-02-espresso/</link>
+      <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
+      
+      <guid>https://pankajpipada.com/posts/2023-06-02-espresso/</guid>
+      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+    </item>
+    
+  </channel>
+</rss>

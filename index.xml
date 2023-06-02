@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 25 May 2023 00:15:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jun 2023 11:50:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Go-to Espresso Recipe - An Everyday Brew</title>
+      <link>https://pankajpipada.com/posts/2023-06-02-espresso/</link>
+      <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
+      
+      <guid>https://pankajpipada.com/posts/2023-06-02-espresso/</guid>
+      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+    </item>
+    
     <item>
       <title>Remembering my friend</title>
       <link>https://pankajpipada.com/posts/2023-05-25-remembering/</link>
