@@ -22,23 +22,33 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://pankajpipada.com/categories/coffee/</loc>
-    <lastmod>2023-06-02T11:50:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/posts/2023-06-02-espresso/</loc>
-    <lastmod>2023-06-02T11:50:00+05:30</lastmod>
+    <loc>https://pankajpipada.com/categories/life/</loc>
+    <lastmod>2023-07-02T19:10:36+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/</loc>
-    <lastmod>2023-06-02T11:50:00+05:30</lastmod>
+    <lastmod>2023-07-02T19:10:36+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/2023-07-02-great-work/</loc>
+    <lastmod>2023-07-02T19:10:36+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/coffee/</loc>
+    <lastmod>2023-07-02T19:10:36+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/2023-06-02-espresso/</loc>
+    <lastmod>2023-07-02T19:10:36+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/posts/2023-05-25-remembering/</loc>
-    <lastmod>2023-05-25T00:56:33+05:30</lastmod>
+    <lastmod>2023-07-02T19:10:36+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

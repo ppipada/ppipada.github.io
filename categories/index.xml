@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright><atom:link href="https://pankajpipada.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>coffee</title>
+      <title>Life</title>
+      <link>https://pankajpipada.com/categories/life/</link>
+      <pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
+      
+      <guid>https://pankajpipada.com/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coffee</title>
       <link>https://pankajpipada.com/categories/coffee/</link>
       <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
       
