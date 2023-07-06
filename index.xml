@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Scramblings</title>
     <link>https://pankajpipada.com/</link>
     <description>Recent content on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright>
     <lastBuildDate>Sun, 02 Jul 2023 12:01:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Survival mode, life immediately after and Paul Graham&#39;s How to do great work</title>
@@ -14,7 +15,7 @@
       <pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-07-02-great-work/</guid>
-      <description>How survival mode or life immediately after it affects one&amp;rsquo;s ability to do great work and what to adjust in the article for it.</description>
+      <description><![CDATA[How survival mode or life immediately after it affects one&rsquo;s ability to do great work and what to adjust in the article for it.]]></description>
     </item>
     
     <item>
@@ -23,7 +24,7 @@
       <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-06-02-espresso/</guid>
-      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+      <description><![CDATA[A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.]]></description>
     </item>
     
     <item>
@@ -32,7 +33,7 @@
       <pubDate>Thu, 25 May 2023 00:15:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-05-25-remembering/</guid>
-      <description>Remembering my friend</description>
+      <description><![CDATA[Remembering my friend]]></description>
     </item>
     
     <item>
@@ -41,16 +42,7 @@
       <pubDate>Sat, 11 Feb 2023 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-02-11-pairprogram/</guid>
-      <description>A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.</description>
-    </item>
-    
-    <item>
-      <title>DynamoDB paper</title>
-      <link>https://pankajpipada.com/docs/papers/posts/2022-10-18-dynamodb/</link>
-      <pubDate>Tue, 18 Oct 2022 17:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/papers/posts/2022-10-18-dynamodb/</guid>
-      <description>Learnings from the dynamoDB paper</description>
+      <description><![CDATA[A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.]]></description>
     </item>
     
     <item>
@@ -59,7 +51,7 @@
       <pubDate>Tue, 18 Oct 2022 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2022-10-18-archlevels/</guid>
-      <description>General thought on architectural boundaries, levels and issues that need to be tackled at each level.</description>
+      <description><![CDATA[General thought on architectural boundaries, levels and issues that need to be tackled at each level.]]></description>
     </item>
     
     <item>
@@ -68,53 +60,7 @@
       <pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
-      <description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://pankajpipada.com/about/</link>
-      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://pankajpipada.com/about/</guid>
-      <description>About me</description>
-    </item>
-    
-    <item>
-      <title>Quotes</title>
-      <link>https://pankajpipada.com/quotes/</link>
-      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://pankajpipada.com/quotes/</guid>
-      <description>Life Information is not knowledge
-Knowledge is not wisdom
-Wisdom is not truth
-Truth is not beauty
-Beauty is not love
-Love is not music
-Music is the best.
-- Frank Zappa
-I have this thought experiment I do in moments like that&amp;hellip;.
-I imagine being nothing at all. Dead and gone.
-And while being dead and gone and nothing, you were allowed to re-live just one moment again of your long lost life for a just a couple minutes and it just so happens to be the one you are in living in right now.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu initial dev setup</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</link>
-      <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</guid>
-      <description>Initial dev setup for Ubuntu Linux.</description>
-    </item>
-    
-    <item>
-      <title>Understanding Paxos</title>
-      <link>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</link>
-      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</guid>
-      <description>Reading the paxos made simple paper and understanding it.</description>
+      <description><![CDATA[Personal experience about voraciousness, its decrease, corresponding issues and thoughts.]]></description>
     </item>
     
     <item>
@@ -123,34 +69,7 @@ And while being dead and gone and nothing, you were allowed to re-live just one 
       <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/</guid>
-      <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
-    </item>
-    
-    <item>
-      <title>VSCode basic helpers</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</link>
-      <pubDate>Tue, 28 Apr 2020 08:30:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</guid>
-      <description>Basic shortcuts, useful plugins, and sample settings file for VSCode.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Git commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</link>
-      <pubDate>Fri, 27 Mar 2020 09:22:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</guid>
-      <description>Few git commands.</description>
-    </item>
-    
-    <item>
-      <title>Memory analysis in Go</title>
-      <link>https://pankajpipada.com/docs/go/posts/2020-03-24-go-memory-profiling/</link>
-      <pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/go/posts/2020-03-24-go-memory-profiling/</guid>
-      <description>Generic references and points to consider when doing a memory analysis with go programming language.</description>
+      <description><![CDATA[Docsify, YAML front-matter, mustache templates &amp; tags and some quirks when using them.]]></description>
     </item>
     
     <item>
@@ -159,97 +78,7 @@ And while being dead and gone and nothing, you were allowed to re-live just one 
       <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</guid>
-      <description>Organizing a local storage based movie collection.</description>
-    </item>
-    
-    <item>
-      <title>Awesome papers list</title>
-      <link>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</link>
-      <pubDate>Thu, 12 Mar 2020 08:30:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</guid>
-      <description>Great papers and references</description>
-    </item>
-    
-    <item>
-      <title>Samba setup</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</link>
-      <pubDate>Thu, 30 Jan 2020 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</guid>
-      <description>Steps to set up a samba server on ubuntu 18.04.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu 18.04 server setup debug</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</link>
-      <pubDate>Thu, 30 Jan 2020 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</guid>
-      <description>Few ubuntu server setup issues and corresponding steps to debug them.</description>
-    </item>
-    
-    <item>
-      <title>Go introductory primer</title>
-      <link>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</link>
-      <pubDate>Sun, 17 Nov 2019 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</guid>
-      <description>Generic references to get started with go programming language.</description>
-    </item>
-    
-    <item>
-      <title>Docker - Commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</link>
-      <pubDate>Mon, 11 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</guid>
-      <description>Basic docker commands.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu - Random commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</link>
-      <pubDate>Sun, 10 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</guid>
-      <description>Random collection of commands for Ubuntu Linux.</description>
-    </item>
-    
-    <item>
-      <title>GNU Screen helpers</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</link>
-      <pubDate>Sat, 09 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</guid>
-      <description>References, basic commands and sample rc file for GNU screen.</description>
-    </item>
-    
-    <item>
-      <title>Python Helpers - Closures</title>
-      <link>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-closures/</link>
-      <pubDate>Sat, 09 Nov 2019 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-closures/</guid>
-      <description>A script to chain multiple closures in python with example usage.</description>
-    </item>
-    
-    <item>
-      <title>Python Helpers - Profiling</title>
-      <link>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-profiling/</link>
-      <pubDate>Sat, 09 Nov 2019 19:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-profiling/</guid>
-      <description>A script to cprofile a single function in python</description>
-    </item>
-    
-    <item>
-      <title>Offline</title>
-      <link>https://pankajpipada.com/offline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://pankajpipada.com/offline/</guid>
-      <description></description>
+      <description><![CDATA[Organizing a local storage based movie collection.]]></description>
     </item>
     
   </channel>

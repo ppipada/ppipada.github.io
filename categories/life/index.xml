@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Life on Scramblings</title>
     <link>https://pankajpipada.com/categories/life/</link>
     <description>Recent content in Life on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright>
     <lastBuildDate>Sun, 02 Jul 2023 12:01:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Survival mode, life immediately after and Paul Graham&#39;s How to do great work</title>
@@ -14,7 +15,7 @@
       <pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-07-02-great-work/</guid>
-      <description>How survival mode or life immediately after it affects one&amp;rsquo;s ability to do great work and what to adjust in the article for it.</description>
+      <description><![CDATA[How survival mode or life immediately after it affects one&rsquo;s ability to do great work and what to adjust in the article for it.]]></description>
     </item>
     
     <item>
@@ -23,7 +24,7 @@
       <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-06-02-espresso/</guid>
-      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+      <description><![CDATA[A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.]]></description>
     </item>
     
     <item>
@@ -32,8 +33,9 @@
       <pubDate>Thu, 25 May 2023 00:15:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-05-25-remembering/</guid>
-      <description>Remembering my friend</description>
+      <description><![CDATA[Remembering my friend]]></description>
     </item>
     
   </channel>
 </rss>
+

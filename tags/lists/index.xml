@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>lists on Scramblings</title>
     <link>https://pankajpipada.com/tags/lists/</link>
     <description>Recent content in lists on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright>
     <lastBuildDate>Thu, 12 Mar 2020 08:30:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/lists/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Awesome papers list</title>
-      <link>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</link>
-      <pubDate>Thu, 12 Mar 2020 08:30:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/papers/posts/2020-03-12-awesome-papers/</guid>
-      <description>Great papers and references</description>
-    </item>
-    
   </channel>
 </rss>
+

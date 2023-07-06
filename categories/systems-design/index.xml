@@ -1,39 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Systems-Design on Scramblings</title>
     <link>https://pankajpipada.com/categories/systems-design/</link>
     <description>Recent content in Systems-Design on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright>
     <lastBuildDate>Tue, 18 Oct 2022 17:00:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/categories/systems-design/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DynamoDB paper</title>
-      <link>https://pankajpipada.com/docs/papers/posts/2022-10-18-dynamodb/</link>
-      <pubDate>Tue, 18 Oct 2022 17:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/papers/posts/2022-10-18-dynamodb/</guid>
-      <description>Learnings from the dynamoDB paper</description>
-    </item>
-    
     <item>
       <title>Separation of concerns and architectural thought</title>
       <link>https://pankajpipada.com/posts/2022-10-18-archlevels/</link>
       <pubDate>Tue, 18 Oct 2022 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2022-10-18-archlevels/</guid>
-      <description>General thought on architectural boundaries, levels and issues that need to be tackled at each level.</description>
-    </item>
-    
-    <item>
-      <title>Understanding Paxos</title>
-      <link>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</link>
-      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/papers/posts/2020-05-25-understanding-paxos/</guid>
-      <description>Reading the paxos made simple paper and understanding it.</description>
+      <description><![CDATA[General thought on architectural boundaries, levels and issues that need to be tackled at each level.]]></description>
     </item>
     
   </channel>
 </rss>
+

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Scramblings</title>
     <link>https://pankajpipada.com/posts/</link>
     <description>Recent content in Posts on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright><atom:link href="https://pankajpipada.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright><atom:link href="https://pankajpipada.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Survival mode, life immediately after and Paul Graham&#39;s How to do great work</title>
       <link>https://pankajpipada.com/posts/2023-07-02-great-work/</link>
       <pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-07-02-great-work/</guid>
-      <description>How survival mode or life immediately after it affects one&amp;rsquo;s ability to do great work and what to adjust in the article for it.</description>
+      <description><![CDATA[How survival mode or life immediately after it affects one&rsquo;s ability to do great work and what to adjust in the article for it.]]></description>
     </item>
     
     <item>
@@ -22,7 +23,7 @@
       <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-06-02-espresso/</guid>
-      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+      <description><![CDATA[A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.]]></description>
     </item>
     
     <item>
@@ -31,7 +32,7 @@
       <pubDate>Thu, 25 May 2023 00:15:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-05-25-remembering/</guid>
-      <description>Remembering my friend</description>
+      <description><![CDATA[Remembering my friend]]></description>
     </item>
     
     <item>
@@ -40,7 +41,7 @@
       <pubDate>Sat, 11 Feb 2023 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-02-11-pairprogram/</guid>
-      <description>A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.</description>
+      <description><![CDATA[A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.]]></description>
     </item>
     
     <item>
@@ -49,7 +50,7 @@
       <pubDate>Tue, 18 Oct 2022 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2022-10-18-archlevels/</guid>
-      <description>General thought on architectural boundaries, levels and issues that need to be tackled at each level.</description>
+      <description><![CDATA[General thought on architectural boundaries, levels and issues that need to be tackled at each level.]]></description>
     </item>
     
     <item>
@@ -58,7 +59,7 @@
       <pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
-      <description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
+      <description><![CDATA[Personal experience about voraciousness, its decrease, corresponding issues and thoughts.]]></description>
     </item>
     
     <item>
@@ -67,7 +68,7 @@
       <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/</guid>
-      <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
+      <description><![CDATA[Docsify, YAML front-matter, mustache templates &amp; tags and some quirks when using them.]]></description>
     </item>
     
     <item>
@@ -76,8 +77,9 @@
       <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</guid>
-      <description>Organizing a local storage based movie collection.</description>
+      <description><![CDATA[Organizing a local storage based movie collection.]]></description>
     </item>
     
   </channel>
 </rss>
+

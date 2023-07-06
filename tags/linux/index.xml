@@ -1,93 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>linux on Scramblings</title>
     <link>https://pankajpipada.com/tags/linux/</link>
     <description>Recent content in linux on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright>
     <lastBuildDate>Fri, 24 Jul 2020 11:00:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux - Ubuntu initial dev setup</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</link>
-      <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</guid>
-      <description>Initial dev setup for Ubuntu Linux.</description>
-    </item>
-    
-    <item>
-      <title>VSCode basic helpers</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</link>
-      <pubDate>Tue, 28 Apr 2020 08:30:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</guid>
-      <description>Basic shortcuts, useful plugins, and sample settings file for VSCode.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Git commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</link>
-      <pubDate>Fri, 27 Mar 2020 09:22:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</guid>
-      <description>Few git commands.</description>
-    </item>
-    
     <item>
       <title>Movies - Organizing a largish movie collection</title>
       <link>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</link>
       <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</guid>
-      <description>Organizing a local storage based movie collection.</description>
-    </item>
-    
-    <item>
-      <title>Samba setup</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</link>
-      <pubDate>Thu, 30 Jan 2020 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</guid>
-      <description>Steps to set up a samba server on ubuntu 18.04.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu 18.04 server setup debug</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</link>
-      <pubDate>Thu, 30 Jan 2020 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</guid>
-      <description>Few ubuntu server setup issues and corresponding steps to debug them.</description>
-    </item>
-    
-    <item>
-      <title>Docker - Commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</link>
-      <pubDate>Mon, 11 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</guid>
-      <description>Basic docker commands.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu - Random commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</link>
-      <pubDate>Sun, 10 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</guid>
-      <description>Random collection of commands for Ubuntu Linux.</description>
-    </item>
-    
-    <item>
-      <title>GNU Screen helpers</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</link>
-      <pubDate>Sat, 09 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</guid>
-      <description>References, basic commands and sample rc file for GNU screen.</description>
+      <description><![CDATA[Organizing a local storage based movie collection.]]></description>
     </item>
     
   </channel>
 </rss>
+

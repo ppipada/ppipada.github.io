@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Software-Tools on Scramblings</title>
     <link>https://pankajpipada.com/categories/software-tools/</link>
     <description>Recent content in Software-Tools on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
+</copyright>
     <lastBuildDate>Sat, 11 Feb 2023 16:00:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/categories/software-tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo</title>
@@ -14,16 +15,7 @@
       <pubDate>Sat, 11 Feb 2023 16:00:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/2023-02-11-pairprogram/</guid>
-      <description>A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu initial dev setup</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</link>
-      <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-07-24-ubuntu-setup/</guid>
-      <description>Initial dev setup for Ubuntu Linux.</description>
+      <description><![CDATA[A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.]]></description>
     </item>
     
     <item>
@@ -32,34 +24,7 @@
       <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/</guid>
-      <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
-    </item>
-    
-    <item>
-      <title>VSCode basic helpers</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</link>
-      <pubDate>Tue, 28 Apr 2020 08:30:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-04-28-vscode/</guid>
-      <description>Basic shortcuts, useful plugins, and sample settings file for VSCode.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Git commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</link>
-      <pubDate>Fri, 27 Mar 2020 09:22:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-03-27-git-commands/</guid>
-      <description>Few git commands.</description>
-    </item>
-    
-    <item>
-      <title>Memory analysis in Go</title>
-      <link>https://pankajpipada.com/docs/go/posts/2020-03-24-go-memory-profiling/</link>
-      <pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/go/posts/2020-03-24-go-memory-profiling/</guid>
-      <description>Generic references and points to consider when doing a memory analysis with go programming language.</description>
+      <description><![CDATA[Docsify, YAML front-matter, mustache templates &amp; tags and some quirks when using them.]]></description>
     </item>
     
     <item>
@@ -68,80 +33,9 @@
       <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
       
       <guid>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</guid>
-      <description>Organizing a local storage based movie collection.</description>
-    </item>
-    
-    <item>
-      <title>Samba setup</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</link>
-      <pubDate>Thu, 30 Jan 2020 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-samba-setup/</guid>
-      <description>Steps to set up a samba server on ubuntu 18.04.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu 18.04 server setup debug</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</link>
-      <pubDate>Thu, 30 Jan 2020 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2020-01-30-ubuntu-1804-server-debug/</guid>
-      <description>Few ubuntu server setup issues and corresponding steps to debug them.</description>
-    </item>
-    
-    <item>
-      <title>Go introductory primer</title>
-      <link>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</link>
-      <pubDate>Sun, 17 Nov 2019 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/go/posts/2019-11-17-go-intro-primer/</guid>
-      <description>Generic references to get started with go programming language.</description>
-    </item>
-    
-    <item>
-      <title>Docker - Commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</link>
-      <pubDate>Mon, 11 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-11-docker-commands/</guid>
-      <description>Basic docker commands.</description>
-    </item>
-    
-    <item>
-      <title>Linux - Ubuntu - Random commands</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</link>
-      <pubDate>Sun, 10 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-10-commands/</guid>
-      <description>Random collection of commands for Ubuntu Linux.</description>
-    </item>
-    
-    <item>
-      <title>GNU Screen helpers</title>
-      <link>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</link>
-      <pubDate>Sat, 09 Nov 2019 21:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/linux/posts/2019-11-09-screen/</guid>
-      <description>References, basic commands and sample rc file for GNU screen.</description>
-    </item>
-    
-    <item>
-      <title>Python Helpers - Closures</title>
-      <link>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-closures/</link>
-      <pubDate>Sat, 09 Nov 2019 20:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-closures/</guid>
-      <description>A script to chain multiple closures in python with example usage.</description>
-    </item>
-    
-    <item>
-      <title>Python Helpers - Profiling</title>
-      <link>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-profiling/</link>
-      <pubDate>Sat, 09 Nov 2019 19:55:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/docs/py/posts/2019-11-09-py-helpers-profiling/</guid>
-      <description>A script to cprofile a single function in python</description>
+      <description><![CDATA[Organizing a local storage based movie collection.]]></description>
     </item>
     
   </channel>
 </rss>
+

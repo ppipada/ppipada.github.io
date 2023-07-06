@@ -342,6 +342,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://pankajpipada.com/movies/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://pankajpipada.com/offline/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
