@@ -22,18 +22,43 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</loc>
-    <lastmod>2023-07-30T18:00:00+05:30</lastmod>
+    <loc>https://pankajpipada.com/tags/genai/</loc>
+    <lastmod>2024-04-15T14:54:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://pankajpipada.com/categories/life/</loc>
-    <lastmod>2023-07-30T18:00:00+05:30</lastmod>
+    <loc>https://pankajpipada.com/posts/2024-04-15-genai-resources/</loc>
+    <lastmod>2024-04-15T14:54:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/llm/</loc>
+    <lastmod>2024-04-15T14:54:40+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/</loc>
-    <lastmod>2023-07-30T18:00:00+05:30</lastmod>
+    <lastmod>2024-04-15T14:54:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/software-tools/</loc>
+    <lastmod>2024-04-15T14:54:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/utilities/</loc>
+    <lastmod>2024-04-15T14:54:40+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</loc>
+    <lastmod>2023-07-30T19:01:45+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://pankajpipada.com/categories/life/</loc>
+    <lastmod>2023-07-30T19:01:45+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -68,11 +93,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/categories/programming/</loc>
-    <lastmod>2023-02-11T18:06:20+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/categories/software-tools/</loc>
     <lastmod>2023-02-11T18:06:20+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -178,11 +198,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://pankajpipada.com/tags/mac/</loc>
-    <lastmod>2022-03-12T20:20:10+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://pankajpipada.com/tags/utilities/</loc>
     <lastmod>2022-03-12T20:20:10+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
