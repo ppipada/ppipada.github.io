@@ -25,7 +25,7 @@
 <meta itemprop="name" content="Linux - Ubuntu initial dev setup">
 <meta itemprop="description" content="Initial dev setup for Ubuntu Linux."><meta itemprop="datePublished" content="2020-07-24T11:00:00+05:30" />
 <meta itemprop="dateModified" content="2022-03-12T20:20:10+05:30" />
-<meta itemprop="wordCount" content="447">
+<meta itemprop="wordCount" content="708">
 <meta itemprop="keywords" content="linux,ubuntu,commands," />
   <meta property="og:image" content="https://pankajpipada.com/images/logo.png"/>
   <meta name="twitter:image" content="https://pankajpipada.com/images/logo.png"/>
@@ -307,7 +307,7 @@ Scramblings
     <h1 class="card-title post-title my-2">Linux - Ubuntu Initial Dev Setup</h1>
 </div>
 <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="created on 2020-07-24 11:00:00 &#43;0530 IST, updated on 2022-03-12 20:20:10 &#43;0530 IST.">July 24, 2020</span><span class="post-reading-time me-1 mb-1">3 min read</span><a href="/categories/software-tools/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+  <span class="post-date me-1 mb-1" title="created on 2020-07-24 11:00:00 &#43;0530 IST, updated on 2022-03-12 20:20:10 &#43;0530 IST.">July 24, 2020</span><span class="post-reading-time me-1 mb-1">4 min read</span><a href="/categories/software-tools/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
       <i class="fas fa-fw fa-folder me-1"></i>Software-Tools</a><a href="/tags/commands/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Commands</a><a href="/tags/linux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Linux</a><a href="/tags/ubuntu/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Ubuntu</a>
 </div>
 
@@ -455,6 +455,32 @@ Scramblings
 . Hugo is fantastic website building framework. Awesome for static sites.</li>
 </ul>
 
+<h2 id="microsoft-ergonomic-keyboard-setup-4000-and-2019-ergonomic-keyboard" data-numberify>Microsoft ergonomic keyboard setup (4000 and 2019 ergonomic keyboard)<a class="anchor ms-1" href="#microsoft-ergonomic-keyboard-setup-4000-and-2019-ergonomic-keyboard"></a></h2>
+<ul>
+<li>All keyboard shortcuts can be configured using <code>Settings &gt; Keyboard &gt; View and Customize shortcuts</code></li>
+<li>Volume keys are generally enabled by default. Recheck under <code>Sound and media</code></li>
+<li>Favorite keys <code>1</code>, <code>2</code> and <code>3</code> are already configured to <code>Recent favorites</code> of same number as <code>Super + 1, ...</code>.
+<ul>
+<li>To modify them to an application you can follow instructions in this <a href="https://askubuntu.com/questions/968103/disable-the-default-app-key-supernum-functionality-on-ubuntu-17-10-and-later" target="_blank">StackOverflow question</a>
+. tl;dr: Install <code>dconf-editor</code>, modify <code>app-hotkey-x</code> at <code>org.gnome.shell.extensions.dash-to-dock</code>. Reboot/Relogin after any changes via <code>dconf-editor</code></li>
+</ul>
+</li>
+<li>Media keys other than open media app (generally one that has right facing triangle inside a rectangle) can be configured using <code>Sound and media</code></li>
+<li>For open media app:
+<ul>
+<li>First disable the &ldquo;Tools&rdquo; key shortcut as mentioned in this <a href="https://askubuntu.com/questions/1325012/cannot-disable-tools-keybinding-on-20-04" target="_blank">StackOverflow question</a>
+. tl;dr: Install <code>dconf-editor</code>, modify <code>control-center-static</code> at <code>org.gnome.settings-daemon.plugins.media-keys</code>. Reboot/Relogin after any changes via <code>dconf-editor</code></li>
+<li>If you want to open the default media app, you can now do that using <code>Sound and media &gt; Launch media player</code>;</li>
+<li>If you want to set a custom application you can do that via <code>Custom shortcuts &gt; + &gt; {name; e.g music}, {your music apps cli command ; e.g: youtube-music}, {Tools}</code></li>
+</ul>
+</li>
+<li>For <code>Calculator</code> you can set it in <code>Launchers</code>.</li>
+<li><code>Snipping</code> is equivalent to <code>PrtScn</code>.</li>
+<li><code>App switcher</code> is equivalent to <code>Activities</code> or <code>Tab switcher</code></li>
+<li><code>Search</code> is equivalent to <code>Activities</code> i.e (windows button)</li>
+<li><code>Emoji</code> needs to be set as a <code>Custom shortcut &gt; + &gt; {Characters}, {gnome-characters}, {press the emoji button. It will come as Shift + Ctrl + Alt + Super + Space}</code>. Office button can be set similarly to whatever you want.</li>
+</ul>
+
 <h2 id="programming-language-settings" data-numberify>Programming language settings<a class="anchor ms-1" href="#programming-language-settings"></a></h2>
 <ul>
 <li>Go. Basic introductory primer is present <a href="/docs/go/posts/2019-11-17-go-intro-primer/">here</a>
@@ -529,6 +555,7 @@ Scramblings
     <li><a href="#zsh-setup">ZSH setup</a></li>
     <li><a href="#ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</a></li>
     <li><a href="#basic-software-install">Basic software install</a></li>
+    <li><a href="#microsoft-ergonomic-keyboard-setup-4000-and-2019-ergonomic-keyboard">Microsoft ergonomic keyboard setup (4000 and 2019 ergonomic keyboard)</a></li>
     <li><a href="#programming-language-settings">Programming language settings</a></li>
   </ul>
 </nav>
