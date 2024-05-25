@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quotes on Scramblings</title>
-    <link>https://ppipada.github.io/quotes/</link>
+    <link>https://pankajpipada.com/quotes/</link>
     <description>Recent content in Quotes on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ppipada.github.io/quotes/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
+    <atom:link href="https://pankajpipada.com/quotes/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

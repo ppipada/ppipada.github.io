@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>markdown on Scramblings</title>
+    <title>Markdown on Scramblings</title>
     <link>https://pankajpipada.com/tags/markdown/</link>
-    <description>Recent content in markdown on Scramblings</description>
+    <description>Recent content in Markdown on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
-</copyright>
-    <lastBuildDate>Wed, 29 Apr 2020 08:30:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 26 May 2024 01:20:01 +0530</lastBuildDate>
+    <atom:link href="https://pankajpipada.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mustache templates and YAML front-matter with Docsify</title>
-      <link>https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/</link>
+      <link>https://pankajpipada.com/posts/2020-04-29-docsify-mustache/</link>
       <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/</guid>
-      <description><![CDATA[Docsify, YAML front-matter, mustache templates &amp; tags and some quirks when using them.]]></description>
+      <guid>https://pankajpipada.com/posts/2020-04-29-docsify-mustache/</guid>
+      <description>Docsify, YAML front-matter, mustache templates &amp;amp; tags and some quirks when using them.</description>
     </item>
-    
   </channel>
 </rss>
-

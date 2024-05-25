@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Scramblings</title>
     <link>https://pankajpipada.com/tags/</link>
     <description>Recent content in Tags on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
-</copyright><atom:link href="https://pankajpipada.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 26 May 2024 01:20:01 +0530</lastBuildDate>
+    <atom:link href="https://pankajpipada.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gpt</title>
+      <link>https://pankajpipada.com/tags/gpt/</link>
+      <pubDate>Mon, 15 Apr 2024 11:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/gpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>https://pankajpipada.com/tags/life/</link>
+      <pubDate>Sun, 30 Jul 2023 18:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Papers</title>
+      <link>https://pankajpipada.com/tags/papers/</link>
+      <pubDate>Tue, 18 Oct 2022 17:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/papers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Systems-Design</title>
+      <link>https://pankajpipada.com/tags/systems-design/</link>
+      <pubDate>Tue, 18 Oct 2022 16:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/systems-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux-Utils</title>
+      <link>https://pankajpipada.com/tags/linux-utils/</link>
+      <pubDate>Fri, 24 Jul 2020 11:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/linux-utils/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://pankajpipada.com/tags/markdown/</link>
+      <pubDate>Wed, 29 Apr 2020 08:30:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>https://pankajpipada.com/tags/golang/</link>
+      <pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Movie</title>
+      <link>https://pankajpipada.com/tags/movie/</link>
+      <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/movie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://pankajpipada.com/tags/python/</link>
+      <pubDate>Sat, 09 Nov 2019 20:55:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/tags/python/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
-

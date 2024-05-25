@@ -1,175 +1,125 @@
-<!doctype html><html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="en"
-  
-   data-palette="blue-gray"
-   data-mode="light">
-  <head>
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Understanding Paxos - Scramblings</title><link rel="apple-touch-icon" href="https://pankajpipada.com/images/icons/icon-180x180.png" sizes="180x180">
-<link rel="icon" href="https://pankajpipada.com/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://pankajpipada.com/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://pankajpipada.com/images/icons/favicon.ico">
-<link rel="manifest" href="https://pankajpipada.com/manifest.json">
-<meta name="keywords" content="" />
-<meta name="description" content="Reading the paxos made simple paper and understanding it." /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Understanding Paxos">
-<meta itemprop="description" content="Reading the paxos made simple paper and understanding it."><meta itemprop="datePublished" content="2020-05-25T12:00:00+05:30" />
-<meta itemprop="dateModified" content="2022-03-12T20:20:10+05:30" />
-<meta itemprop="wordCount" content="100">
-<meta itemprop="keywords" content="distributed-systems," /><meta property="og:title" content="Understanding Paxos" />
-<meta property="og:description" content="Reading the paxos made simple paper and understanding it." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://pankajpipada.com/posts/2020-05-25-understanding-paxos/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-05-25T12:00:00+05:30" />
-<meta property="article:modified_time" content="2022-03-12T20:20:10+05:30" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Understanding Paxos"/>
-<meta name="twitter:description" content="Reading the paxos made simple paper and understanding it."/>
-<meta property="og:image" content="https://pankajpipada.com/images/logo.png"/>
-  <meta name="twitter:image" content="https://pankajpipada.com/images/logo.png"/><link rel="stylesheet" href="https://pankajpipada.com/assets/main/bundle.min.ffeb5eae6563db9f8db3a2c7b45629400bcbd79dc3c0a24f82118f3846b2b315.css" integrity="sha256-/+termVj25+Ns6LHtFYpQAvL153DwKJPghGPOEaysxU=" crossorigin="anonymous"><link rel="stylesheet" href="https://pankajpipada.com/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"></head>
-  <body><script>const items=["mode","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs-"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3" href="https://pankajpipada.com"><picture><img class="logo" alt="Logo" src="https://pankajpipada.com/images/logo.png" loading="lazy"
     
-     width="512" height="512"
-     />
-</picture>
-Scramblings
-    </a>
-    <div class="offcanvas offcanvas-bottom surface" tabindex="-1" id="offcanvasSocialShare" aria-labelledby="offcanvasSocialShare">
-  <div class="offcanvas-header">
-    <h3 class="offcanvas-title">Share</h3>
-    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
-  <div class="offcanvas-body">
-    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=Understanding%20Paxos&url=https%3a%2f%2fpankajpipada.com%2fposts%2f2020-05-25-understanding-paxos%2f">
-      <i class="fab fa-fw fa-twitter"></i> Twitter
-    </a>
-    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpankajpipada.com%2fposts%2f2020-05-25-understanding-paxos%2f">
-      <i class="fab fa-fw fa-facebook-f"></i> Facebook
-    </a>
-  </div>
-</div>
-    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
-  aria-controls="offcanvasSettings" aria-label="Toggle settings">
-  <i class="fas fa-ellipsis-v"></i>
-</button>
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
 
-<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
-  <div class="offcanvas-header">
-    <h3 class="offcanvas-title">Settings</h3>
-    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
-  <div class="offcanvas-body d-flex flex-column">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
 
-
-
-<div class="setting">
-  <form class="font-size-switcher-form row">
-    <div class="col-auto">
-      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> Font Size</label>
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-2 mt-1 mb-1 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/logo.png"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white" href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/ppipada" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.linkedin.com/in/ppipada" target="_blank">
+                            <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:ppipada@gmail.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://pankajpipada.com/index.xml" target="_blank">
+                            <i class="fas fa-rss fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
     </div>
-    <div class="col-auto ms-auto">
-      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
-    </div>
-  </form>
-</div>
-
-
-
-<div class="setting actions d-flex justify-content-around mt-auto overflow-auto">
-  <a role="button" class="action action-go-back" href="javascript: window.history.back();">
-    <span class="action-icon"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> Go back
-  </a>
-  <a role="button" class="action action-reload-page">
-    <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
-  </a>
-  <a role="button" class="action action-copy-url">
-    <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> Copy URL
-  </a><a class="action action-social-share" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
-    aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
-    <span class="action-icon"><i class="fas fa-2x fa-share-alt"></i></span> Share
-  </a></div>
-
-</div>
-</div>
-
-    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
-      <form class="search-bar my-1" action="https://pankajpipada.com/search">
-  <div class="input-group input-group-sm">
-    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
-    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
-  </div>
-</form>
-      <ul class="navbar-nav ms-auto"><li class="nav-item">
-          <a class="nav-link" href="https://pankajpipada.com/posts/">
-            Posts
-          </a>
-        </li><li class="nav-item">
-          <a class="nav-link" href="https://pankajpipada.com/archives/">
-            Archives
-          </a>
-        </li><li class="nav-item">
-          <a class="nav-link" href="https://pankajpipada.com/quotes/">
-            Quotes
-          </a>
-        </li><li class="nav-item">
-          <a class="nav-link" href="https://pankajpipada.com/docs/">
-            Digital Garden
-          </a>
-        </li></ul>
-    </div>
-  </div>
-</nav>
+    <hr />
 </header>
-<main class="container">
-      <div class="row content">
-<div class="col-lg-8">
-  <div class="container"><nav class="row card component" aria-label="breadcrumb">
-  <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="https://pankajpipada.com/">Home</a></li><li class="breadcrumb-item"><a href="https://pankajpipada.com/posts/">Posts</a></li><li class="breadcrumb-item active">Understanding Paxos</li></ol>
-  </div>
-</nav><div class="post-panel-wrapper position-sticky">
-  <div class="d-flex flex-column component rounded post-panel position-absolute">
-    
-    <a class="action action-panel-toggler" role="button" title="Panel toggler">
-      <i class="fas fa-fw fa-chevron-circle-down"></i>
-    </a>
-    <a id="sidebarToggler" class="action d-none d-lg-block" role="button" title="Sidebar toggler">
-  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
-</a>
-
-    
-
-    
-    
-    
-    
-    
-  </div>
+<div class="container">
+<div class="pl-sm-4 ml-sm-5">
+  <div class="h1" style="text-align: center; margin-bottom: 3rem">
+    Understanding Paxos
+  </div><div class="mt-1 mb-5">
+  
 </div>
-<article class="row card component mb-4 post">
-  <div class="card-header ">
-    <h1 class="card-title post-title">Understanding Paxos
-</h1>
-  </div>
-  <div class="card-body"><div class="post-meta">
-  <span class="post-date" title="created on 2020-05-25 12:00:00 &#43;0530 IST, updated on 2022-03-12 20:20:10 &#43;0530 IST.">
-    May 25, 2020
-  </span><span class="post-reading-time">
-    1 min read
-  </span><span class="post-taxonomies"><a href="https://pankajpipada.com/categories/systems-design/" class="badge post-taxonomy">Systems-Design</a><a href="https://pankajpipada.com/tags/distributed-systems/" class="badge post-taxonomy">distributed-systems</a></span>
-</div>
-<div class="post-content mb-3"><p>Below are the steps recommended to read the <code>Paxos made simple</code> paper by <code>Leslie Lamport</code> and understand Paxos.</p>
+<p>Below are the steps recommended to read the <code>Paxos made simple</code> paper by <code>Leslie Lamport</code> and understand Paxos.</p>
+<h2 id="steps">Steps</h2>
 <ol>
 <li>
 <p>Read full paper.</p>
@@ -177,12 +127,13 @@ Scramblings
 <li><a href="https://lamport.azurewebsites.net/pubs/paxos-simple.pdf" target="_blank">Paxos made simple</a>
 </li>
 </ul>
-<div class="admonition quote"><p class="admonition-title">The King. Alice in wonderland.</p>
-<p>“Begin at the beginning,” the King said gravely,
-“and go on till you come to the end: then stop.”</p>
 </li>
 </ol>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>“Begin at the beginning,” the King said gravely,
+</span></span><span style="display:flex;"><span>“and go on till you come to the end: then stop.”
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- The King. Alice in wonderland.
+</span></span><span style="display:flex;"><span>  </span></span></code></pre></div>
 <ol start="2">
 <li>
 <p>Re-look at why is &ldquo;leader election required&rdquo;. 2.5 -&gt; 2.4 -&gt; 2.3</p>
@@ -200,123 +151,19 @@ Scramblings
 <p>Repeat 2-4 again. Do 1-4, if still not sure.</p>
 </li>
 </ol>
-</div></div>
-  <div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
-    <i class="fas fa-fw fa-chevron-circle-down post-prev-icon" data-fa-transform="rotate-90"></i>
-    <a href="https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/">Mustache Templates and YAML Front-Matter With Docsify
-</a>
-  </div></div></div>
-</article><section class="related-posts row card component">
-    <div class="card-header">
-      <h2 class="card-title">Related Posts</h2>
-    </div>
-    <div class="card-body">
-      <ul class="post-list"><li>
-          <a href="https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/">Mustache Templates and YAML Front-Matter With Docsify
-</a>
-          <span class="float-end post-date">Apr 29, 2020
-</span>
-        </li><li>
-          <a href="https://pankajpipada.com/posts/movie/2020-03-17-organizing/">Movies - Organizing a Largish Movie Collection
-</a>
-          <span class="float-end post-date">Mar 17, 2020
-</span>
-        </li></ul>
-    </div>
-  </section></div>
-</div><aside class="col-lg-4 sidebar d-flex">
-  <div class="container d-flex flex-column">
-    
-    <section class="recent-posts row card component">
-  <div class="card-header">
-    <h2 class="card-title">Recent Posts</h2>
-  </div>
-  <div class="card-body">
-    <ul class="post-list"><li>
-        <a href="https://pankajpipada.com/posts/2020-05-25-understanding-paxos/">Understanding Paxos
-</a>
-      </li><li>
-        <a href="https://pankajpipada.com/posts/markdown/2020-04-29-docsify-mustache/">Mustache Templates and YAML Front-Matter With Docsify
-</a>
-      </li><li>
-        <a href="https://pankajpipada.com/posts/movie/2020-03-17-organizing/">Movies - Organizing a Largish Movie Collection
-</a>
-      </li></ul>
-  </div>
-</section><section class="categories-taxonomies row card component">
-      <div class="card-header">
-        <h2 class="card-title">
-          <a href="https://pankajpipada.com/categories">Categories</a>
-        </h2>
-      </div>
-      <div class="card-body">
-        <div class="py-2"><a href="https://pankajpipada.com/categories/software-tools/" class="badge rounded post-taxonomy" title="Software-Tools">
-            Software-Tools<span class="badge badge-sm text-white bg-accent ms-1">14</span></a><a href="https://pankajpipada.com/categories/movie/" class="badge rounded post-taxonomy" title="Movie">
-            Movie<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="https://pankajpipada.com/categories/systems-design/" class="badge rounded post-taxonomy" title="Systems-Design">
-            Systems-Design<span class="badge badge-sm text-white bg-accent ms-1">1</span></a></div>
-      </div>
-    </section><section class="tags-taxonomies row card component">
-      <div class="card-header">
-        <h2 class="card-title">
-          <a href="https://pankajpipada.com/tags">Tags</a>
-        </h2>
-      </div>
-      <div class="card-body">
-        <div class="py-2"><a href="https://pankajpipada.com/tags/linux/" class="badge rounded post-taxonomy" title="linux">
-            linux<span class="badge badge-sm text-white bg-accent ms-1">9</span></a><a href="https://pankajpipada.com/tags/commands/" class="badge rounded post-taxonomy" title="commands">
-            commands<span class="badge badge-sm text-white bg-accent ms-1">8</span></a><a href="https://pankajpipada.com/tags/utilities/" class="badge rounded post-taxonomy" title="utilities">
-            utilities<span class="badge badge-sm text-white bg-accent ms-1">8</span></a><a href="https://pankajpipada.com/tags/scripts/" class="badge rounded post-taxonomy" title="scripts">
-            scripts<span class="badge badge-sm text-white bg-accent ms-1">4</span></a><a href="https://pankajpipada.com/tags/ubuntu/" class="badge rounded post-taxonomy" title="ubuntu">
-            ubuntu<span class="badge badge-sm text-white bg-accent ms-1">4</span></a><a href="https://pankajpipada.com/tags/golang/" class="badge rounded post-taxonomy" title="golang">
-            golang<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://pankajpipada.com/tags/guidelines/" class="badge rounded post-taxonomy" title="guidelines">
-            guidelines<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://pankajpipada.com/tags/profiling/" class="badge rounded post-taxonomy" title="profiling">
-            profiling<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://pankajpipada.com/tags/python/" class="badge rounded post-taxonomy" title="python">
-            python<span class="badge badge-sm text-white bg-accent ms-1">2</span></a><a href="https://pankajpipada.com/tags/closures/" class="badge rounded post-taxonomy" title="closures">
-            closures<span class="badge badge-sm text-white bg-accent ms-1">1</span></a><a href="https://pankajpipada.com/tags" class="badge rounded post-taxonomy" title='ALL'>
-          ALL
-          <span class="badge badge-sm text-white bg-accent ms-1">26</span>
-        </a></div>
-      </div>
-    </section><section class="row card component">
-    <div class="card-header">
-      <h2 class="card-title"><a href="https://pankajpipada.com/archives/">Archives</a></h2>
-    </div>
-    <div class="card-body">
-      <ul class="post-list">
-        <li><a href="https://pankajpipada.com/archives/#archive-2020">2020(3)</a></li>
-      </ul>
-    </div>
-</section>
-    
-  </div>
-</aside>
+
 </div>
-    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" href="mailto:ppipada@gmail.com" title="Email">
-      <i class="fas fa-fw fa-2x fa-envelope"></i>
-    </a><a class="nav-link social-link" target="_blank" href="https://github.com/ppipada" title="GitHub" rel="noopener noreferrer">
-        <i class="fa-fw fa-2x fab fa-github"></i>
-      </a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/in/ppipada" title="LinkedIn" rel="noopener noreferrer">
-        <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
-      </a><a class="nav-link social-link" target="_blank" href="https://pankajpipada.com/index.xml" title="RSS" rel="noopener noreferrer">
-    <i class="fas fa-fw fa-2x fa-rss"></i>
-  </a></nav>
-<div class="copyright mb-2">
-  Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
-</div>
-<div class="powered-by mb-2">
-  Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
-</div></footer>
-<script src="https://pankajpipada.com/assets/main/bundle.min.5f8aaee3e7c7b70d617c24ebe440ed70b78aba398be09b734dcdc66cdbdafce8.js" integrity="sha256-X4qu4&#43;fHtw1hfCTr5EDtcLeKujmL4JtzTc3GbNva/Og=" crossorigin="anonymous" defer></script><script src="https://pankajpipada.com/assets/icons/bundle.min.dbd4108ba597958838327a4648e246319b36f169f9b0c981ba2b2fbfb34970d0.js" integrity="sha256-29QQi6WXlYg4MnpGSOJGMZs28Wn5sMmBuisvv7NJcNA=" crossorigin="anonymous" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('https:\/\/pankajpipada.com\/service-worker.min.js').then(function(reg) {
-      console.log('Successfully registered service worker', reg);
-    }).catch(function(err) {
-      console.warn('Error whilst registering service worker', err);
-    });
-  });
-}
-</script><script src="https://pankajpipada.com/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
-</body>
+
+            </div>
+        </div><footer class="text-center pb-1">
+  <small class="text-muted">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </small>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+        
+    </body>
 </html>

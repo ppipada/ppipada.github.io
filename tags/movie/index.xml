@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>movie on Scramblings</title>
+    <title>Movie on Scramblings</title>
     <link>https://pankajpipada.com/tags/movie/</link>
-    <description>Recent content in movie on Scramblings</description>
+    <description>Recent content in Movie on Scramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright © 2016-2022 Pankaj Pipada. All Rights Reserved.
-</copyright>
-    <lastBuildDate>Tue, 17 Mar 2020 16:53:00 +0530</lastBuildDate><atom:link href="https://pankajpipada.com/tags/movie/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 26 May 2024 01:20:01 +0530</lastBuildDate>
+    <atom:link href="https://pankajpipada.com/tags/movie/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Movies - Organizing a largish movie collection</title>
-      <link>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</link>
+      <link>https://pankajpipada.com/posts/2020-03-17-organizing/</link>
       <pubDate>Tue, 17 Mar 2020 16:53:00 +0530</pubDate>
-      
-      <guid>https://pankajpipada.com/posts/movie/2020-03-17-organizing/</guid>
-      <description><![CDATA[Organizing a local storage based movie collection.]]></description>
+      <guid>https://pankajpipada.com/posts/2020-03-17-organizing/</guid>
+      <description>Organizing a local storage based movie collection.</description>
     </item>
-    
   </channel>
 </rss>
-
