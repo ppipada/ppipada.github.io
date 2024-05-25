@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-2 mt-1 mb-1 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/logo.png"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white" href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/ppipada" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.linkedin.com/in/ppipada" target="_blank">
+                            <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:ppipada@gmail.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://pankajpipada.com/index.xml" target="_blank">
+                            <i class="fas fa-rss fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+<div class="pl-sm-4 ml-sm-5">
+  <div class="h1" style="text-align: center; margin-bottom: 3rem">
+    Linux - Ubuntu initial dev setup
+  </div><div class="mt-1 mb-5">
+  
+  <aside>
+    <h5>Contents</h5>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#upgrade-packages">Upgrade packages</a></li>
+    <li><a href="#zsh-setup">ZSH setup</a></li>
+    <li><a href="#ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</a></li>
+    <li><a href="#basic-software-install">Basic software install</a></li>
+    <li><a href="#microsoft-ergonomic-keyboard-setup-4000-and-2019-ergonomic-keyboard">Microsoft ergonomic keyboard setup (4000 and 2019 ergonomic keyboard)</a></li>
+    <li><a href="#programming-language-settings">Programming language settings</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+</div>
+<p>I had to setup a fresh Ubuntu dev machine after quite some time. Given that this was a loaner machine, I wanted to make sure that I have a minimal viable dev setup ready as quickly as possible.</p>
+<p>Below are the steps for the minimal things I need.</p>
+<h2 id="upgrade-packages">Upgrade packages</h2>
+<p>For a fresh setup it is better to first make sure that everything that is upgradable is up to date. If you have a specific version requirement for any package make sure you pin it at the package manager level.</p>
+<p>Basic commands</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt upgrade
+</span></span><span style="display:flex;"><span>sudo apt install software-properties-common apt-transport-https wget zsh git vim tree
+</span></span><span style="display:flex;"><span>sudo apt autoremove
+</span></span></code></pre></div><h2 id="zsh-setup">ZSH setup</h2>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">ZSH</a>
+ is an extended Bourne shell.</p>
+</li>
+<li>
+<p>Together with <a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">Oh-My-ZSH</a>
+ it provides a delight full dev experience.</p>
+</li>
+<li>
+<p>I personally like to use the <code>agnoster</code> theme from ohmyzsh with the plugins <code>git common-aliases zsh-syntax-highlighting zsh-autosuggestions</code></p>
+</li>
+<li>
+<p>For Ubuntu terminal make sure you got to <code>Terminal -&gt; Preferences -&gt; &lt;Your Profile&gt; -&gt; Colors</code> and uncheck the <code>Use system colors</code> option so that the theme colors are used in the terminal.</p>
+</li>
+<li>
+<p>Ohmyzsh standard plugins do not require explicit installation. Community plugins require some installation. Plugins links and installation guides are:</p>
+<ul>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh" target="_blank">common-aliases</a>
+</li>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank">zsh-syntax-highlighting</a>
+</li>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank">zsh-autosuggestions</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>My simple <code>~/.zshrc</code> file:</p>
+
+
+
+
+<div class="highlight"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># If you come from bash you might have to change your $PATH.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Path to your oh-my-zsh installation.</span>
+</span></span><span style="display:flex;"><span>export ZSH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/username/.oh-my-zsh&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ZSH_THEME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;agnoster&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Which plugins would you like to load?</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Standard plugins can be found in $ZSH/plugins/</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add wisely, as too many plugins slow down shell startup.</span>
+</span></span><span style="display:flex;"><span>plugins<span style="color:#f92672">=(</span>git common-aliases zsh-syntax-highlighting zsh-autosuggestions<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>source $ZSH/oh-my-zsh.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>
+</span></span><span style="display:flex;"><span>export SAVEHIST<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>
+</span></span><span style="display:flex;"><span>
+</span></span></code></pre></div></div>
+
+<h2 id="ssh-key-gen-and-add-to-repositories">SSH key-gen and add to repositories</h2>
+<p>Interacting with multiple hosted git repositories is much smoother when using SSH keys.</p>
+<p>Specific git hosts provide their guides to do this, e.g: <a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">GitHub ssh key gen guide</a>
+.</p>
+<p>General setup includes:</p>
+<ul>
+<li>Generate a ssh key pair on a machine.</li>
+<li>Add it to your git host profile settings.</li>
+<li>Test ssh access to git</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;email@example.com&#34;</span>
+</span></span><span style="display:flex;"><span>ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;username@example.com&#34;</span>
+</span></span><span style="display:flex;"><span>xclip -sel clip &lt; ~/.ssh/id_ed25519.pub
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add your git host (GitLab/GitHub/BitBucket, etc) URL for git-example.com</span>
+</span></span><span style="display:flex;"><span>ssh -T git@git-example.com
+</span></span></code></pre></div><h2 id="basic-software-install">Basic software install</h2>
+<ul>
+<li>VSCode. General post for VSCode helpers is <a href="../../posts/2020-04-28-vscode/">here</a>
+</li>
+<li><a href="https://slack.com" target="_blank">Slack</a>
+</li>
+<li><a href="https://zoom.us/" target="_blank">Zoom</a>
+</li>
+<li><a href="https://gohugo.io/getting-started/installing/" target="_blank">Hugo</a>
+. Hugo is fantastic website building framework. Awesome for static sites.</li>
+</ul>
+<h2 id="microsoft-ergonomic-keyboard-setup-4000-and-2019-ergonomic-keyboard">Microsoft ergonomic keyboard setup (4000 and 2019 ergonomic keyboard)</h2>
+<ul>
+<li>All keyboard shortcuts can be configured using <code>Settings &gt; Keyboard &gt; View and Customize shortcuts</code></li>
+<li>Volume keys are generally enabled by default. Recheck under <code>Sound and media</code></li>
+<li>Favorite keys <code>1</code>, <code>2</code> and <code>3</code> are already configured to <code>Recent favorites</code> of same number as <code>Super + 1, ...</code>.
+<ul>
+<li>To modify them to an application you can follow instructions in this <a href="https://askubuntu.com/questions/968103/disable-the-default-app-key-supernum-functionality-on-ubuntu-17-10-and-later" target="_blank">StackOverflow question</a>
+. tl;dr: Install <code>dconf-editor</code>, modify <code>app-hotkey-x</code> at <code>org.gnome.shell.extensions.dash-to-dock</code>. Reboot/Relogin after any changes via <code>dconf-editor</code></li>
+</ul>
+</li>
+<li>Media keys other than open media app (generally one that has right facing triangle inside a rectangle) can be configured using <code>Sound and media</code></li>
+<li>For open media app:
+<ul>
+<li>First disable the &ldquo;Tools&rdquo; key shortcut as mentioned in this <a href="https://askubuntu.com/questions/1325012/cannot-disable-tools-keybinding-on-20-04" target="_blank">StackOverflow question</a>
+. tl;dr: Install <code>dconf-editor</code>, modify <code>control-center-static</code> at <code>org.gnome.settings-daemon.plugins.media-keys</code>. Reboot/Relogin after any changes via <code>dconf-editor</code></li>
+<li>If you want to open the default media app, you can now do that using <code>Sound and media &gt; Launch media player</code>;</li>
+<li>If you want to set a custom application you can do that via <code>Custom shortcuts &gt; + &gt; {name; e.g music}, {your music apps cli command ; e.g: youtube-music}, {Tools}</code></li>
+</ul>
+</li>
+<li>For <code>Calculator</code> you can set it in <code>Launchers</code>.</li>
+<li><code>Snipping</code> is equivalent to <code>PrtScn</code>.</li>
+<li><code>App switcher</code> is equivalent to <code>Activities</code> or <code>Tab switcher</code></li>
+<li><code>Search</code> is equivalent to <code>Activities</code> i.e (windows button)</li>
+<li><code>Emoji</code> needs to be set as a <code>Custom shortcut &gt; + &gt; {Characters}, {gnome-characters}, {press the emoji button. It will come as Shift + Ctrl + Alt + Super + Space}</code>. Office button can be set similarly to whatever you want.</li>
+</ul>
+<h2 id="programming-language-settings">Programming language settings</h2>
+<ul>
+<li>Go. Basic introductory primer is present <a href="../../posts/2019-11-17-go-intro-primer/">here</a>
+.</li>
+<li>Python. Getting started <a href="https://www.python.org/about/gettingstarted/" target="_blank">link</a>
+</li>
+</ul>
+<p>Pull your code and go exploring :)</p>
+
+</div>
+
+            </div>
+        </div><footer class="text-center pb-1">
+  <small class="text-muted">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </small>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+        
+    </body>
+</html>

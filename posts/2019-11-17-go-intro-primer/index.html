@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-2 mt-1 mb-1 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/logo.png"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white" href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/ppipada" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.linkedin.com/in/ppipada" target="_blank">
+                            <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:ppipada@gmail.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://pankajpipada.com/index.xml" target="_blank">
+                            <i class="fas fa-rss fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+<div class="pl-sm-4 ml-sm-5">
+  <div class="h1" style="text-align: center; margin-bottom: 3rem">
+    Go introductory primer
+  </div><div class="mt-1 mb-5">
+  
+  <aside>
+    <h5>Contents</h5>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started-links">Getting started links</a></li>
+    <li><a href="#project-layout">Project layout</a></li>
+    <li><a href="#naming-conventions">Naming conventions</a></li>
+    <li><a href="#code-comments">Code comments</a></li>
+    <li><a href="#generic-guidelines">Generic guidelines</a></li>
+    <li><a href="#testing">Testing</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+</div>
+<p>Generic references to get started with go programming language.</p>
+<h2 id="getting-started-links">Getting started links</h2>
+<ul>
+<li><a href="https://golang.org/doc/install" target="_blank">Installation</a>
+</li>
+<li><a href="https://golang.org/doc/code.html" target="_blank">How to Write Go code</a>
+</li>
+<li><a href="https://tour.golang.org/welcome/1" target="_blank">Tour of Go</a>
+</li>
+<li><a href="https://golang.org/doc/effective_go.html" target="_blank">Effective Go</a>
+</li>
+<li><a href="https://golang.org/ref/spec" target="_blank">Reference documentation</a>
+</li>
+</ul>
+<h2 id="project-layout">Project layout</h2>
+<ul>
+<li><a href="https://www.ardanlabs.com/blog/2017/02/package-oriented-design.html" target="_blank">Package Oriented Design</a>
+</li>
+<li><a href="https://rakyll.org/style-packages/" target="_blank">Style guide</a>
+</li>
+<li><a href="https://github.com/golang-standards/project-layout" target="_blank">Standard project layout</a>
+</li>
+</ul>
+<h2 id="naming-conventions">Naming conventions</h2>
+<ul>
+<li><a href="https://golang.org/doc/effective_go.html#names" target="_blank">Standard</a>
+</li>
+<li><a href="https://blog.golang.org/package-names" target="_blank">Package names go blog</a>
+</li>
+<li><a href="https://talks.golang.org/2014/names.slide#1" target="_blank">Go Talk</a>
+</li>
+<li>Few important rules:
+<ul>
+<li>Package names are singular, short, clear, lower case, with NO under_scores or mixedCaps.</li>
+<li>Package content: Avoid stutter, simplify function names.</li>
+<li><strong>Avoid</strong> meaningless package names such as util, lib, common, or misc.</li>
+<li>Function and variable names: The convention in Go is to use MixedCaps or mixedCaps rather than underscores to write multiword names.</li>
+<li>Keep local variables short. Common variable/type combinations can use really short names. E.g: ‘i’ - for index, ‘r’ for reader, ‘b’ for buffer.</li>
+<li>Acronyms should be all capitals: E.g: ServeHTTP and IDProcessor</li>
+</ul>
+</li>
+<li>Validation:
+<ul>
+<li>Use <a href="https://golang.org/cmd/gofmt/" target="_blank">gofmt</a>
+ for autoformatting your code.</li>
+<li>Use <a href="https://github.com/golang/lint" target="_blank">golint</a>
+. It would provide warnings related to naming and styling of go code.</li>
+</ul>
+</li>
+</ul>
+<h2 id="code-comments">Code comments</h2>
+<ul>
+<li><a href="https://golang.org/doc/effective_go.html#commentary" target="_blank">Standard</a>
+</li>
+<li><a href="https://blog.golang.org/godoc-documenting-go-code" target="_blank">Go Blog</a>
+</li>
+<li>Few important rules:
+<ul>
+<li>The convention is simple: to document a type, variable, constant, function, or even a package, write a regular comment directly preceding its declaration, with no intervening blank line. Godoc will then present that comment as text alongside the item it documents.</li>
+<li>The comment is a complete sentence that begins with the name of the element it describes.</li>
+<li>Comments on package declarations should provide general package documentation.</li>
+<li>Use doc.go for packages that need large amount of introductory documentation.</li>
+</ul>
+</li>
+<li>Swagger documentation for APIs: Can use code annotations as described at <a href="https://goswagger.io/use/spec.html" target="_blank">GoSwagger</a>
+</li>
+</ul>
+<h2 id="generic-guidelines">Generic guidelines</h2>
+<ul>
+<li>Writing clear idiomatic Go code: <a href="https://golang.org/doc/effective_go.html" target="_blank">Effective Go</a>
+</li>
+<li>Few important rules:
+<ul>
+<li>Dependencies should be passed explicitly. E.g: Pass logger explicitly.</li>
+<li>Do NOT keep unused functions, constants, variables, types.</li>
+<li>Do NOT use panics/recover as exception catching mechanism.</li>
+<li>Avoid blanket error handling.</li>
+<li>Avoid Misusing errors.</li>
+<li>Avoid long functions. A function should not exhibit split personality.</li>
+<li>Avoid global objects.</li>
+</ul>
+</li>
+<li>Validation:
+<ul>
+<li><a href="https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck" target="_blank">Static check</a>
+</li>
+<li><a href="https://golang.org/doc/articles/race_detector.html" target="_blank">Race detector</a>
+</li>
+<li><a href="https://golang.org/cmd/vet/" target="_blank">Vet</a>
+</li>
+<li>CI: <a href="https://github.com/golangci/golangci-lint" target="_blank">GolangCI-Lint</a>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li>Guidelines:
+<ul>
+<li>Go provides command <code>go test</code> for running tests in <code>\*\_test.go</code> files. It also has support for benchmarking.</li>
+<li><code>go test</code> has support for race detector using <code>- race</code>. Use it while running tests.</li>
+<li>Test file containing component tests should specify the build constraints so that files can be identifiable whether it has Unit or Component or Integration test. The build constraints will be helpful to exclusively run only UT or Component tests or Integration tests. Command “go test ./… -tags UT” will only run unit test file and will exclude file component_test.go as it as define build constraint “!UT”
+<ul>
+<li>E.g File component_test.go <code>// +build !UT … some tests</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tools:
+<ul>
+<li>Package for boiler plate test code generation: <a href="https://github.com/cweill/gotests" target="_blank">gotests</a>
+
+<ul>
+<li>This is available as a plugin in VSCode and other major IDEs.</li>
+</ul>
+</li>
+<li>Package for generating mocks for interfaces: <a href="https://github.com/golang/mock" target="_blank">mock</a>
+</li>
+<li>Package for mocking SQL: <a href="https://github.com/DATA-DOG/go-sqlmock" target="_blank">go-sqlmock</a>
+</li>
+<li>Test helpers: <a href="https://golang.org/pkg/testing/" target="_blank">testing</a>
+</li>
+</ul>
+</li>
+<li>Measuring code coverage
+<ul>
+<li>Go test can be configured <code>-cover</code> to collect code coverage information.</li>
+<li>It does not have support to find code coverage in workflow testing. But can be <a href="https://www.elastic.co/blog/code-coverage-for-your-golang-system-tests" target="_blank">tweaked</a>
+ to collect coverage information by writing test for entry point function of binary.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+            </div>
+        </div><footer class="text-center pb-1">
+  <small class="text-muted">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </small>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+        
+    </body>
+</html>

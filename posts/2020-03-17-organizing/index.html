@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-2 mt-1 mb-1 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/logo.png"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white" href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/ppipada" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.linkedin.com/in/ppipada" target="_blank">
+                            <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:ppipada@gmail.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://pankajpipada.com/index.xml" target="_blank">
+                            <i class="fas fa-rss fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+<div class="pl-sm-4 ml-sm-5">
+  <div class="h1" style="text-align: center; margin-bottom: 3rem">
+    Movies - Organizing a largish movie collection
+  </div><div class="mt-1 mb-5">
+  
+  <aside>
+    <h5>Contents</h5>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prepare-movie-metadata">Prepare movie metadata</a></li>
+    <li><a href="#renaming-and-folder-arrangement">Renaming and folder arrangement</a></li>
+    <li><a href="#manage-movies-in-kodi">Manage movies in Kodi</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+</div>
+<p>Organizing a local storage based movie collection. At a high level it involves:</p>
+<ul>
+<li><a href="#prepare-movie-metadata">Prepare movie metadata</a>
+</li>
+<li><a href="#renaming-and-folder-arrangement">Renaming and folder arrangement</a>
+</li>
+<li><a href="#manage-movies-in-kodi">Manage movies in Kodi</a>
+</li>
+</ul>
+<h2 id="prepare-movie-metadata">Prepare movie metadata</h2>
+<ul>
+<li>
+<p>Use <a href="https://www.tinymediamanager.org/" target="_blank">TinyMediaManager i.e tmm</a>
+ for metadata management</p>
+</li>
+<li>
+<p>Step 1: Prepare source folders:</p>
+<ul>
+<li>Import local movie paths
+<ul>
+<li>These are called as <code>sources</code> in <code>tmm</code>.</li>
+<li>Add these via <code>settings</code></li>
+</ul>
+</li>
+<li>Clean duplicates</li>
+<li>Manage multi file movies
+<ul>
+<li>Naming convention is important.</li>
+<li>Files should end with <code>-cd1, -cd2, etc or -part1, -part2, etc</code>.</li>
+</ul>
+</li>
+<li>Bulk Subtitles find and download is generally a bad idea.
+<ul>
+<li>Lot of inaccuracies in downloads.</li>
+<li>Better do this one by one and before any renaming of files.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 2: Scrape metadata</p>
+<ul>
+<li>Generally prefer <a href="https://kodi.tv/" target="_blank">Kodi</a>
+ format metadata (nfo) files. <code>tmm</code> provides option for this in the setting.</li>
+<li><a href="https://www.imdb.com/" target="_blank">IMDb</a>
+ vs <a href="https://www.themoviedb.org/" target="_blank">TMDb</a>
+ metadata
+<ul>
+<li><code>IMDb</code> scrapping generally is slow for bulk operations</li>
+<li><code>TMDb</code> provides a good source for movie metadata and most of it (including fan art and posters) can be downloaded from here.</li>
+<li>I prefer rating from <code>IMDb</code>. There is an option to select just ratings from <code>IMDb</code> in <code>tmm</code></li>
+</ul>
+</li>
+<li>I would recommend doing a two pass metadata search
+<ul>
+<li>In the first pass do a bulk operation using <code>TMDb</code> scrapper. This can include <code>TMDb</code> ratings.</li>
+<li>Once all metadata is downloaded a second bulk search can be done just for <code>ratings</code> and <code>top 250</code> data using <code>IMDb</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="renaming-and-folder-arrangement">Renaming and folder arrangement</h2>
+<ul>
+<li>This step move movies to a <code>Kodi</code> recommended structure using <code>tmm</code>.</li>
+<li><em>CAUTION</em> Once renaming is complete it cannot be <em>undone</em>. Verify each and every thing before doing renaming.</li>
+<li>Recommended folder structure is <code>movie-name (year)</code>. Generally prefer a flat structure over sub-directories and deep hierarchies.</li>
+<li>General preference for file names is same as folder name.
+<ul>
+<li>I personally prefer <code>movie-name (year) video-resolution imdb-rating part-no</code>.</li>
+</ul>
+</li>
+<li>Once folder name and file name preferences are set in <code>Settings-&gt;Movies-&gt;Renamer</code>, do a dry run to see the changes that <code>tmm</code> is going to do.</li>
+<li>Verify the dry run result carefully. Adjust settings if something seems weird.</li>
+<li>Execute rename once verified.</li>
+</ul>
+<h2 id="manage-movies-in-kodi">Manage movies in Kodi</h2>
+<ul>
+<li>Install <a href="https://kodi.tv/" target="_blank">Kodi</a>
+ on your laptop/desktop/tv.</li>
+<li>Import the media folder created using <code>tmm</code> above in <code>Kodi</code> media manager.</li>
+<li>As a general setting enable <code>Update library on startup</code>.</li>
+<li>Cleaning DB in <code>Kodi</code> is a bit of a pain. Avoid folder/movie path changes.
+<ul>
+<li>Keep running <code>clean library</code> even for smaller changes done to files/folders.</li>
+</ul>
+</li>
+<li>Periodically i.e once you have watched enough movies you may want to do a <code>export library</code>. This writes <code>watched</code> status and any extra info in <code>Kodi</code> to .nfo files in source.</li>
+</ul>
+
+</div>
+
+            </div>
+        </div><footer class="text-center pb-1">
+  <small class="text-muted">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </small>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+        
+    </body>
+</html>

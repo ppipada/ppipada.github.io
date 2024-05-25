@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Papers on Scramblings</title>
+    <link>https://pankajpipada.com/tags/papers/</link>
+    <description>Recent content in Papers on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 26 May 2024 01:20:01 +0530</lastBuildDate>
+    <atom:link href="https://pankajpipada.com/tags/papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DynamoDB paper</title>
+      <link>https://pankajpipada.com/posts/2022-10-18-dynamodb/</link>
+      <pubDate>Tue, 18 Oct 2022 17:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2022-10-18-dynamodb/</guid>
+      <description>Learnings from the dynamoDB paper</description>
+    </item>
+    <item>
+      <title>Understanding Paxos</title>
+      <link>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</link>
+      <pubDate>Mon, 25 May 2020 12:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2020-05-25-understanding-paxos/</guid>
+      <description>Reading the paxos made simple paper and understanding it.</description>
+    </item>
+    <item>
+      <title>Awesome papers list</title>
+      <link>https://pankajpipada.com/posts/2020-03-12-awesome-papers/</link>
+      <pubDate>Thu, 12 Mar 2020 08:30:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2020-03-12-awesome-papers/</guid>
+      <description>Great papers and references</description>
+    </item>
+  </channel>
+</rss>

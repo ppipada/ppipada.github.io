@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Scramblings</title>
+    <link>https://pankajpipada.com/tags/life/</link>
+    <description>Recent content in Life on Scramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 26 May 2024 01:20:01 +0530</lastBuildDate>
+    <atom:link href="https://pankajpipada.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding my balance: An evolved and simplified task management system</title>
+      <link>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</link>
+      <pubDate>Sun, 30 Jul 2023 18:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</guid>
+      <description>An evolution in work related task management over the years, that has worked for me, and has personally shaped my professional life.</description>
+    </item>
+    <item>
+      <title>Blunt/Direct/Assertive communicators, online communication challenges and how to overcome them</title>
+      <link>https://pankajpipada.com/posts/2023-07-10-assertive/</link>
+      <pubDate>Mon, 10 Jul 2023 18:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2023-07-10-assertive/</guid>
+      <description>This blog post explores the challenges faced by blunt or direct communicators, particularly in the context of online communication, and proposes some effective strategies that have proven helpful.</description>
+    </item>
+    <item>
+      <title>Survival mode, life immediately after and Paul Graham&#39;s How to do great work</title>
+      <link>https://pankajpipada.com/posts/2023-07-02-great-work/</link>
+      <pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2023-07-02-great-work/</guid>
+      <description>How survival mode or life immediately after it affects one&amp;rsquo;s ability to do great work and what to adjust in the article for it.</description>
+    </item>
+    <item>
+      <title>My Go-to Espresso Recipe - An Everyday Brew</title>
+      <link>https://pankajpipada.com/posts/2023-06-02-espresso/</link>
+      <pubDate>Fri, 02 Jun 2023 11:50:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2023-06-02-espresso/</guid>
+      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+    </item>
+    <item>
+      <title>Remembering my friend</title>
+      <link>https://pankajpipada.com/posts/2023-05-25-remembering/</link>
+      <pubDate>Thu, 25 May 2023 00:15:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2023-05-25-remembering/</guid>
+      <description>Remembering my friend</description>
+    </item>
+    <item>
+      <title>Voraciousness</title>
+      <link>https://pankajpipada.com/posts/2022-07-09-voraciousness/</link>
+      <pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
+      <description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
+    </item>
+  </channel>
+</rss>

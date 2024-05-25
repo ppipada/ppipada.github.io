@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-2 mt-1 mb-1 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/logo.png"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white" href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://github.com/ppipada" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.linkedin.com/in/ppipada" target="_blank">
+                            <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:ppipada@gmail.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://pankajpipada.com/index.xml" target="_blank">
+                            <i class="fas fa-rss fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+<div class="pl-sm-4 ml-sm-5">
+  <div class="h1" style="text-align: center; margin-bottom: 3rem">
+    Python Helpers - Profiling
+  </div><div class="mt-1 mb-5">
+  
+</div>
+<p>A script to cprofile a single function in python.</p>
+<h2 id="cprofile-a-single-function-in-python">cprofile a single function in python</h2>
+
+
+
+
+<div class="highlight"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> cProfile
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pstats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> StringIO
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> closure_chaining_example <span style="color:#f92672">import</span> smain
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>, datefmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">-%b-%y %H:%M:%S&#39;</span>, level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG)
+</span></span><span style="display:flex;"><span>pr <span style="color:#f92672">=</span> cProfile<span style="color:#f92672">.</span>Profile()
+</span></span><span style="display:flex;"><span>pr<span style="color:#f92672">.</span>enable()
+</span></span><span style="display:flex;"><span>smain()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># do something</span>
+</span></span><span style="display:flex;"><span>pr<span style="color:#f92672">.</span>disable()
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> StringIO<span style="color:#f92672">.</span>StringIO()
+</span></span><span style="display:flex;"><span>sortby <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cumulative&#39;</span>
+</span></span><span style="display:flex;"><span>ps <span style="color:#f92672">=</span> pstats<span style="color:#f92672">.</span>Stats(pr, stream<span style="color:#f92672">=</span>s)<span style="color:#f92672">.</span>sort_stats(sortby)
+</span></span><span style="display:flex;"><span>ps<span style="color:#f92672">.</span>print_stats()
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Profilestats: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, s<span style="color:#f92672">.</span>getvalue())
+</span></span></code></pre></div></div>
+
+
+</div>
+
+            </div>
+        </div><footer class="text-center pb-1">
+  <small class="text-muted">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </small>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+        
+    </body>
+</html>
