@@ -6,14 +6,14 @@
     <meta name="description" content="" />
 
     
-    <link rel="stylesheet" href="../../vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.min.css">
 
     
-    <link rel="stylesheet" href="../../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
     
     
     
-    <link rel="stylesheet" href="../../css/theme.min.css">
+    <link rel="stylesheet" href="../css/theme.min.css">
 
     
     
@@ -35,11 +35,11 @@ if (!doNotTrack) {
     <div class="row justify-content-center">
         
         <div class="col-sm-5 col-12 text-sm-right text-center pt-sm-4">
-            <a href="../../" class="text-decoration-none">
+            <a href="../" class="text-decoration-none">
                 <img id="home-image" class="rounded-circle"
                     
                         
-                            src="../../images/logo.png"
+                            src="../images/logo.png"
                         
                     
                 />
@@ -48,7 +48,7 @@ if (!doNotTrack) {
         <div class="col-sm-7 col-12 text-sm-left text-center">
         
             <h2 class="m-0 mt-4">
-                <a href="../../" class="text-decoration-none">
+                <a href="../" class="text-decoration-none">
                     
                         Scramblings
                     
@@ -63,15 +63,15 @@ if (!doNotTrack) {
                 
                 
                     <li class= "badge" style="display: inline;">
-                        <a class="" href="../../tags/" title="Tags">Tags</a>
+                        <a class="" href="../tags/" title="Tags">Tags</a>
                     </li>
                 
                     <li class= "badge" style="display: inline;">
-                        <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                        <a class="" href="../quotes/" title="Quotes">Quotes</a>
                     </li>
                 
                     <li class= "badge" style="display: inline;">
-                        <a class="" href="../../movies/" title="Movies">Movies</a>
+                        <a class="" href="../movies/" title="Movies">Movies</a>
                     </li>
                 
                 
@@ -87,12 +87,7 @@ if (!doNotTrack) {
 <ul id="breadcrumbs" style="list-style: none; padding: 0;">
 
 
-<li style="display: inline;"><a href="../../" style="color: grey;"><i class="fas fa-home" st></i></a></li>
-
-    
-<li style="display: inline;"><span style="color: grey;">&gt;</span>
-<a href="../../posts/" style="color: grey;">Posts</a>
-</li>
+<li style="display: inline;"><a href="../" style="color: grey;"><i class="fas fa-home" st></i></a></li>
 
 
 <li style="display: inline;"><span style="color: grey;">&gt;</span></li>
@@ -118,57 +113,13 @@ if (!doNotTrack) {
         </button>
     </div>
 </form>
-<div class="pl-sm-4 ml-sm-5">
-  <div style="margin-bottom: 3rem">
-    <h1 style="text-align: center">DynamoDB paper</h1>
-    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1em; color: #6c757d; height: 1.2em; line-height: 1em; padding: 0.25em;">
-        <div>
-        Oct 18, 2022
-        </div>
-        <div>
-        <i class="fa fa-tags"></i>
-        
-            <a href="../../tags/papers" style="color: #6c757d; text-decoration: none;">papers</a>
-        
-        </div>
-    </div>
-  </div><div class="mt-1 mb-5">
-  
-</div>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://www.usenix.org/system/files/atc22-elhemali.pdf" target="_blank">Amazon DynamoDB at USENIX ATC 22</a>
-</li>
-<li><a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" target="_blank">Amazon Dynamo at SOSP 2007</a>
-</li>
+<div id="search-container" class="container">
+<ul id="searchresults">
+    <li>
+        Enter a search query ...
+    </li>
 </ul>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>
-<p>Good insight into how the evolution worked from Dynamo to DynamoDB.</p>
-</li>
-<li>
-<p>Having a fixed unwavering goal of providing a managed service with fast and <em>predictable</em> performance at any scale is great.</p>
-</li>
-</ul>
-<h3 id="system-properties">System properties</h3>
-<ul>
-<li>DynamoDB is a fully managed cloud service.</li>
-<li>DynamoDB employs a multi-tenant architecture</li>
-<li>DynamoDB achieves boundless scale for tables</li>
-<li>DynamoDB provides predictable performance.</li>
-<li>DynamoDB is highly available</li>
-<li>DynamoDB supports flexible use cases</li>
-</ul>
-<h3 id="lessons-learnt-from-the-evolution">Lessons learnt from the evolution</h3>
-<ul>
-<li>Adapting to customers’ traffic patterns to reshape the physical partitioning scheme of the database tables improves customer experience.</li>
-<li>Performing continuous verification of data-at-rest is a reliable way to protect against both hardware failures and software bugs in order to meet high durability goals.</li>
-<li>Maintaining high availability as a system evolves requires careful operational discipline and tooling. Mechanisms such as formal proofs of complex algorithms, game days (chaos and load tests), upgrade/downgrade tests, and deployment safety provides the freedom to safely adjust and experiment with the code without the fear of compromising correctness.</li>
-<li>Designing systems for predictability over absolute efficiency improves system stability. While components such as caches can improve performance, do not allow them to hide the work that would be performed in their absence, ensuring that the system is always provisioned to handle the unexpected.</li>
-</ul>
-
-</div>
+</div> 
 
             </div>
         </div>
@@ -206,19 +157,19 @@ if (!doNotTrack) {
   </span>
 </footer>
 
-        <script src="../../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
     
         
-        <script src="../../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
         
-        <script src="../../vendor/datatables.net/js/dataTables.min.js"></script>
+        <script src="../vendor/datatables.net/js/dataTables.min.js"></script>
     
         
-        <script src="../../vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="../vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
 
         
-        <script src="../../vendor/lunr/lunr.min.js"></script>
+        <script src="../vendor/lunr/lunr.min.js"></script>
 
         
         

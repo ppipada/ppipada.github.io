@@ -97,11 +97,22 @@ if (!doNotTrack) {
 
         </div>
     </div>
-    <hr />
 </header>
 
         <div id="content" class="mx-auto">
             <div class="container">
+                <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 80%;">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input type="text" class="form-control rounded-pill" id="search-input" name="query" placeholder="Type here to search..." aria-label="Search">
+        <button class="btn border-0 bg-transparent" type="submit">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
     <h1 class="mt-5" style="text-align: center">404 - Not Found</h1>
     <blockquote class="blockquote mt-5" style="text-align: center; font-style: italic;">
         <p>"Not all those who wander are lost."</p>
@@ -154,9 +165,18 @@ if (!doNotTrack) {
     
         
         <script src="./vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+
         
-            
+        <script src="./vendor/lunr/lunr.min.js"></script>
+
+        
+        
             <script src="https://pankajpipada.com/js/movietables.min.8ba9f7584cf26d76edcc1e30a88ca8b89a32908c41cc70f1bb233952121cffdc.js" integrity="sha256-i6n3WEzybXbtzB4wqIyouJoykIxBzHDxuyM5UhIc/9w="></script>
+        
+
+        
+        
+            <script src="https://pankajpipada.com/js/search.min.a65c3e05b6a3923549243e532112eaa1cfc371b1f1f024642a24e6fe559b7d0b.js" integrity="sha256-plw&#43;BbajkjVJJD5TIRLqoc/DcbHx8CRkKiTm/lWbfQs="></script>
         
     </body>
 </html>
