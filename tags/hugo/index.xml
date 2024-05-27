@@ -7,14 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 27 May 2024 15:45:28 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2024 17:47:43 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo - Integrate search using lunr.js</title>
+      <link>https://pankajpipada.com/posts/2024-05-27-hugo-search/</link>
+      <pubDate>Mon, 27 May 2024 15:49:39 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2024-05-27-hugo-search/</guid>
+      <description>Integrating search in a Hugo-based static site using lunr.js</description>
+    </item>
     <item>
       <title>Hugo - Copying Files to Output Using Pipes</title>
       <link>https://pankajpipada.com/posts/2024-05-27-hugo-copy/</link>
       <pubDate>Mon, 27 May 2024 15:14:50 +0530</pubDate>
       <guid>https://pankajpipada.com/posts/2024-05-27-hugo-copy/</guid>
       <description>Process to copy assets like images/css or non-assets, such as source maps from node_modules, to output using Hugo Pipes.</description>
+    </item>
+    <item>
+      <title>Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo</title>
+      <link>https://pankajpipada.com/posts/2023-02-11-pairprogram/</link>
+      <pubDate>Sat, 11 Feb 2023 16:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2023-02-11-pairprogram/</guid>
+      <description>A interaction with ChatGPT as a pair programmer for learning and using a new technology tool.</description>
     </item>
   </channel>
 </rss>

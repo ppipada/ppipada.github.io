@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    
+        
+    
+    
+    <meta name="description" content="Integrating search in a Hugo-based static site using lunr.js" />
+    
+    
+    <link rel="stylesheet" href="../../vendor/bootstrap/dist/css/bootstrap.min.css">
+
+
+
+
+
+    
+    
+
+
+
+    
+    <link rel="stylesheet" href="../../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto;">
+    <div class="row justify-content-center">
+        
+        <div class="col-sm-5 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/icon-192x192.png"
+                        
+                    
+                    alt="home-image"
+                />
+            </a>
+        </div>
+        <div class="col-sm-7 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+<ul id="breadcrumbs" style="list-style: none; padding: 0;">
+
+
+<li style="display: inline;"><a href="../../" style="color: grey;" aria-label="home"><i class="fas fa-home" st></i></a></li>
+
+    
+<li style="display: inline;"><span style="color: grey;">&gt;</span>
+<a href="../../posts/" style="color: grey;">Posts</a>
+</li>
+
+
+<li style="display: inline;"><span style="color: grey;">&gt;</span></li>
+
+</ul>
+</div>
+
+        </div>
+        
+    </div>
+</header>
+
+        <div id="content" class="mx-auto">
+            <div class="container">
+                <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 90%;">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input type="text" class="form-control rounded-pill" id="search-input" name="query" placeholder="Type here to search..." aria-label="Search">
+        <button class="btn border-0 bg-transparent" type="submit" aria-label="search">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+<div class="pl-sm-4 ml-sm-5">
+  <div style="margin-bottom: 3rem">
+    <h1 style="text-align: center">Hugo - Integrate search using lunr.js</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1em; color: #6c757d; height: 1.2em; line-height: 1em; padding: 0.25em;">
+        <div>
+        May 27, 2024
+        </div>
+        <div>
+        <i class="fa fa-tags"></i>
+        
+            <a href="../../tags/hugo" style="color: #6c757d; text-decoration: none;">hugo</a>
+        
+        </div>
+    </div>
+  </div><div class="mt-1 mb-5">
+  
+  <aside>
+    <h4>Table of contents</h4>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-create-a-data-index-for-search">Step 1: Create a data index for search</a></li>
+    <li><a href="#step-2-create-the-search-form">Step 2: Create the Search Form</a></li>
+    <li><a href="#step-3-set-up-your-search-page">Step 3: Set Up Your Search Page</a></li>
+    <li><a href="#step-4-create-the-search-layout">Step 4: Create the Search Layout</a></li>
+    <li><a href="#step-5-create-the-search-business-logic-script">Step 5: Create the Search business logic script</a></li>
+    <li><a href="#optimization-concerns">Optimization Concerns</a>
+      <ul>
+        <li><a href="#index-data-caching">Index Data Caching</a></li>
+        <li><a href="#limiting-search-results">Limiting Search Results</a></li>
+        <li><a href="#async-loading-of-scripts">Async Loading of Scripts</a></li>
+        <li><a href="#query-based-search">Query-Based Search</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+</div>
+<p>Adding search functionality to a static site generated with Hugo can significantly improve the user experience. <code>lunr.js</code> is a powerful JavaScript library for full-text search, offering a lightweight and fast solution ideal for static sites. In this guide, we will integrate search using <code>lunr.js</code> and address optimization concerns to ensure efficient and smooth operation. Note that the examples use Bootstrap and Font Awesome icons, but the same elements can be adapted to any styling system as required.</p>
+<h2 id="step-1-create-a-data-index-for-search">Step 1: Create a data index for search</h2>
+<ul>
+<li>In your <code>config.toml</code>, add the following lines to enable the generation of the search index file:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">outputFormats</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">outputFormats</span>.<span style="color:#a6e22e">JSON</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mediaType</span> = <span style="color:#e6db74">&#34;application/json&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">baseName</span> = <span style="color:#e6db74">&#34;index&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isPlainText</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><ul>
+<li>Then, create a <code>layouts/index.json</code> file, that will have a template for creating the data index.</li>
+<li>This file will be processed during hugo build to create a <code>{output dir e.g public}/index.json</code></li>
+<li>For example, if you want to have title, url, content, tags, date available, the template will look something like below:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>{{- $index := slice -}}
+</span></span><span style="display:flex;"><span>{{- range $.Site.RegularPages -}}
+</span></span><span style="display:flex;"><span>    {{- $tags := slice }}
+</span></span><span style="display:flex;"><span>    {{- range .Params.tags -}}
+</span></span><span style="display:flex;"><span>        {{- $tags = $tags | append . }}
+</span></span><span style="display:flex;"><span>    {{- end -}}
+</span></span><span style="display:flex;"><span>    {{- $content := .Content | plainify | htmlUnescape }}
+</span></span><span style="display:flex;"><span>    {{- $datestr := .Date.Format &#34;Jan 2, 2006&#34; }}
+</span></span><span style="display:flex;"><span>    {{- $indexItem := dict &#34;url&#34; .Permalink &#34;title&#34; .Title &#34;content&#34; $content &#34;tags&#34; $tags &#34;date&#34; $datestr -}}
+</span></span><span style="display:flex;"><span>    {{- $index = $index | append $indexItem }}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span><span style="display:flex;"><span>{{- $index | jsonify (dict &#34;indent&#34; &#34; &#34;) }}
+</span></span></code></pre></div><h2 id="step-2-create-the-search-form">Step 2: Create the Search Form</h2>
+<ul>
+<li>Now that we have the data created for search, we would need to establish a interaction mechanism with the user.</li>
+<li>You can embed the search form in the header or body of all pages or restrict it to a dedicated search page. It can be embedded as <code>{{ partial &quot;search-form.html&quot; . }}</code></li>
+<li>This form should, take input from user, and on action, invoke the search page with search query embedded into the url.</li>
+<li>Below is a slightly opinionated <code>layouts/partials/search-form.html</code>, using Bootstrap classes and Font Awesome icons for styling. This can be adapted to any styling system. The form takes user input and invokes the search page with the search query embedded into the URL.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Form with a get page action --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{{ with .GetPage &#34;/search&#34; }}{{.Permalink}}{{end}}&#39;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;get&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;d-flex justify-content-center mt-2 mb-4&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Hidden label for accessibility --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">hidden</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search-input&#34;</span>&gt;Search site&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input-group&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 90%;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Icon inside the input group for visual enhancement --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input-group-text border-0 bg-transparent&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-search&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Search input field. The &#34;name&#34; defined here will be used to parse the URL when executing the business logic in search.js --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control rounded-pill&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search-input&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;query&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Type here to search...&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Search&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Submit button with an arrow icon --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn border-0 bg-transparent&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fa fa-arrow-right&#34;</span>&gt;&lt;/<span style="color:#f92672">i</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span></code></pre></div><h2 id="step-3-set-up-your-search-page">Step 3: Set Up Your Search Page</h2>
+<ul>
+<li>To actually execute the query and display the results we need to create a search page.</li>
+<li>Generally it would be <code>content/search/_index.md</code>, but this can change depending on your chosen site organization for Hugo.</li>
+<li>This file should point to a search layout, that we will create below.</li>
+<li>You can customize it as required. Typically a bare minimum file will look like:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Search&#34;
+</span></span><span style="display:flex;"><span>layout: &#34;search&#34;
+</span></span><span style="display:flex;"><span>description: &#34;Search page&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h2 id="step-4-create-the-search-layout">Step 4: Create the Search Layout</h2>
+<ul>
+<li>Now, the above page needs to be served using a layout.</li>
+<li>The search layout defines the structure of the search page and includes necessary scripts for <code>lunr.js</code> and the custom search logic.</li>
+<li>By including these scripts in the layout page only, we can ensure that the search functionality is loaded on this page only and doesn&rsquo;t really affect other pages. This can help optimize performance for the rest of the site.</li>
+<li>Create a <code>search.html</code> file in your <code>layouts/_default</code> directory:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search-container&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- This is where the search results will be displayed. Initialize as empty list. --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchresults&#34;</span>&gt;&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Include lunr.js library. This can be included from node_modules mounted as assets/vendor, refer to their cdn or directly use from static/js.  --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ $lunrJS := resources.Get &#34;vendor/lunr/lunr.min.js&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $lunrJS.RelPermalink }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Include the custom search script where the magic happens. This can be used from assets/js like below, or directly from static/js. --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ with resources.Get &#34;js/search.js&#34; }}
+</span></span><span style="display:flex;"><span>  {{ $minifiedScript := . | minify | fingerprint }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Permalink }}&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Data.Integrity }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>{{ else }}
+</span></span><span style="display:flex;"><span>  {{ errorf &#34;search.js not found in assets/js/&#34; }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><h2 id="step-5-create-the-search-business-logic-script">Step 5: Create the Search business logic script</h2>
+<ul>
+<li>Now we need to connect all the above site elements to <code>lunr.js</code>, perform search and render results. We will create a javascript script for this.</li>
+<li>This script handles the entire search process, including loading the search index, processing search queries, and displaying results.</li>
+<li>The below script can be placed as <code>assets/js/search.js</code> and included in your search layout as shown in a previous step.</li>
+<li>Alternately, you can put it directly inside <code>static/js</code> folder too and include it via the search layout above.</li>
+<li>Flow of the Code
+<ul>
+<li>Initialization: The script initializes the <code>lunr.js</code> search index and ensures it only happens once for a page load.</li>
+<li>Caching: It checks for cached search data in <code>localStorage</code>. If valid cached data is available, it uses it; otherwise, it fetches new data and caches it.</li>
+<li>Building the Index: The script constructs the <code>lunr.js</code> search index from the fetched data.</li>
+<li>Search Query Handling: It reads the search query from the URL parameters and triggers a search if a query is present.</li>
+<li>Search Execution: It performs the search using the built index and processes the query to ensure it is valid.</li>
+<li>Displaying Results: It limits the displayed results to a maximum of 10 to avoid overwhelming users and improve performance.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Get the search input element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">searchElem</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;search-input&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Define a global object to store search-related data and ensure it&#39;s initialized only once
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">pankajpipadaCom</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">pankajpipadaCom</span> <span style="color:#f92672">||</span> {};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Initialize search only once
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">initialized</span>) {
+</span></span><span style="display:flex;"><span>  window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">lunrIndex</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>  window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">posts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>  window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">initialized</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Load search data and initialize lunr.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">loadSearch</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to load search data and initialize lunr.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadSearch</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">getTime</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Check for cached data in localStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">storedData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;postData&#34;</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Use cached data if available and not expired
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">storedData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">storedData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">storedData</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">now</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">storedData</span>.<span style="color:#a6e22e">expiry</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Using cached data&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">buildIndex</span>(<span style="color:#a6e22e">storedData</span>.<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">checkURLAndSearch</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Cached data expired&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">removeItem</span>(<span style="color:#e6db74">&#34;postData&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Fetch search data via AJAX request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">xhr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">responseText</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">buildIndex</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">checkURLAndSearch</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Search initialized&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Cache fetched data with expiry
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;postData&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">expiry</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">getTime</span>() <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>, <span style="color:#75715e">// TTL for 1 week
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          })
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Error parsing JSON:&#34;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">showError</span>(<span style="color:#e6db74">&#34;Failed to load search data.&#34;</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">200</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Failed to load data:&#34;</span>, <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">status</span>, <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">statusText</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">showError</span>(<span style="color:#e6db74">&#34;Failed to load search data.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">onerror</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Network error occurred.&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">showError</span>(<span style="color:#e6db74">&#34;Failed to load search data due to network error.&#34;</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;../index.json&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xhr</span>.<span style="color:#a6e22e">send</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to build lunr.js index
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">buildIndex</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">callback</span>) {
+</span></span><span style="display:flex;"><span>  window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">posts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>;
+</span></span><span style="display:flex;"><span>  window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">lunrIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lunr</span>(<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">ref</span>(<span style="color:#e6db74">&#34;url&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">field</span>(<span style="color:#e6db74">&#34;content&#34;</span>, { <span style="color:#a6e22e">boost</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">field</span>(<span style="color:#e6db74">&#34;title&#34;</span>, { <span style="color:#a6e22e">boost</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">field</span>(<span style="color:#e6db74">&#34;tags&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">field</span>(<span style="color:#e6db74">&#34;date&#34;</span>);
+</span></span><span style="display:flex;"><span>    window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">posts</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">doc</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">doc</span>);
+</span></span><span style="display:flex;"><span>    }, <span style="color:#66d9ef">this</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Index built at&#34;</span>, <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>());
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">callback</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to display error message
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showError</span>(<span style="color:#a6e22e">message</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">searchResults</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;searchresults&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">searchResults</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`&lt;br&gt;&lt;h2 style=&#34;text-align:center&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/h2&gt;`</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">searchElem</span>.<span style="color:#a6e22e">disabled</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>; <span style="color:#75715e">// Disable search input on error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to check URL for search query and perform search
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkURLAndSearch</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">urlParams</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>(window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">search</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">urlParams</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;query&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">query</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">searchElem</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">query</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">showSearchResults</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to perform search and display results
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showSearchResults</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">lunrIndex</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Index not available.&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>; <span style="color:#75715e">// Exit function if index not loaded
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">searchElem</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">searchString</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/[^\w\s]/gi</span>, <span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">searchString</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">displayResults</span>([]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>; <span style="color:#75715e">// Exit if the search string is empty or only whitespace
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">matches</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">lunrIndex</span>.<span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">searchString</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;matches&#34;</span>, <span style="color:#a6e22e">matches</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">matchPosts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">matches</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">m</span>) =&gt;
+</span></span><span style="display:flex;"><span>    window.<span style="color:#a6e22e">pankajpipadaCom</span>.<span style="color:#a6e22e">posts</span>.<span style="color:#a6e22e">find</span>((<span style="color:#a6e22e">p</span>) =&gt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">ref</span>)
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Match posts&#34;</span>, <span style="color:#a6e22e">matchPosts</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">displayResults</span>(<span style="color:#a6e22e">matchPosts</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to display search results
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">displayResults</span>(<span style="color:#a6e22e">results</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchResults</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;searchresults&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">maxResults</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; <span style="color:#75715e">// Limit to 10 results
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">results</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resultList</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">results</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">maxResults</span>).<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">result</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">result</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resultList</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">getResultStr</span>(<span style="color:#a6e22e">result</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">searchResults</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">resultList</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">searchResults</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;No results found.&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function to format search result items
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getResultStr</span>(<span style="color:#a6e22e">result</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">resultList</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &lt;li style=&#34;margin-bottom: 1rem&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;a href=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">url</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/a&gt;&lt;br /&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;p&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">150</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">...&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;div style=&#34;display: flex; justify-content: space-between; align-items: center; font-size: 0.9em; color: #6c757d; height: 1.2em; line-height: 1em; padding: 0.25em;&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;div&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">date</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;div&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">tags</span>
+</span></span><span style="display:flex;"><span>                  .<span style="color:#a6e22e">map</span>(
+</span></span><span style="display:flex;"><span>                    (<span style="color:#a6e22e">tag</span>) =&gt;
+</span></span><span style="display:flex;"><span>                      <span style="color:#e6db74">`&lt;a href=&#34;/tags/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tag</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; style=&#34;color: #6c757d;&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tag</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/a&gt;`</span>
+</span></span><span style="display:flex;"><span>                  )
+</span></span><span style="display:flex;"><span>                  .<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;, &#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &lt;/li&gt;`</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">resultList</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="optimization-concerns">Optimization Concerns</h2>
+<h3 id="index-data-caching">Index Data Caching</h3>
+<ul>
+<li>By default, the index is not preserved across page loads, which can result in unnecessary data fetching and processing.</li>
+<li>To improve performance, we can use <code>localStorage</code> to cache the search data. This caching mechanism is already implemented in the <code>loadSearch</code> function, where data is stored with a time-to-live (TTL) of one week.</li>
+<li>This ensures that the index is only fetched and built once a week, reducing the load on the server and improving user experience.</li>
+<li>Note that <code>localStorage</code> needs data to be in a serializable format and hence the index directly cannot be cached. Therefore, we are caching the <code>index.json</code> post data that we created in the first step and then rebuilding the index at each window creation.</li>
+</ul>
+<h3 id="limiting-search-results">Limiting Search Results</h3>
+<ul>
+<li>Limit the number of search results displayed to the user to avoid overwhelming them and to improve performance.</li>
+<li>This is done by taking a <code>maxResults</code> length slice above.</li>
+</ul>
+<h3 id="async-loading-of-scripts">Async Loading of Scripts</h3>
+<ul>
+<li>
+<p>To improve page load times, ensure that the search scripts are loaded asynchronously.</p>
+</li>
+<li>
+<p>This is achieved by adding the defer attribute to the script tags in the layout.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $lunrJS.RelPermalink }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Permalink }}&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Data.Integrity }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>Note that this deferring means the page will first render and then the actual search execution will begin.</p>
+</li>
+</ul>
+<h3 id="query-based-search">Query-Based Search</h3>
+<ul>
+<li>Our layout doesn&rsquo;t really communicate with the script as such. It just loads the script. The script itself, sees if the data and indexes are present, then checks the URL for search query, then executes the search, modifies the html to add the result list items.</li>
+<li>It also helps to allow users to share searches easily.</li>
+<li>This is already handled in the <code>checkURLAndSearch</code> function, which reads the query parameter from the URL and performs a search if it&rsquo;s present.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>To recap, we created a search index data, a user interaction form, a search page and a layout for it.</li>
+<li>All this and <code>lunr.js</code> is tied together using a custom javascript.</li>
+<li>As noted before, the stylings used are bootstrap and font awesome based here, but can be easily adapted to any styling system.</li>
+<li>An implemented example of this can be found in this sites search functionality. Example search <a href="https://pankajpipada.com/search/?query=hugo" target="_blank">query</a>
+</li>
+</ul>
+
+</div>
+
+            </div>
+        </div>
+        <footer class="text-center pb-1">
+  <ul id="nav-social" class="list-inline mb-1">
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+        <i class="fab fa-github fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+        <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+        <i class="fas fa-at fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+        <i class="fas fa-rss fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+  </ul>
+  <span class="text-muted" style="font-size:0.8em">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </span>
+</footer>
+</body>
+</html>
