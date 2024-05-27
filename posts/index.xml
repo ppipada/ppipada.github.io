@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 26 May 2024 01:20:01 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2024 15:45:28 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo - Copying Files to Output Using Pipes</title>
+      <link>https://pankajpipada.com/posts/2024-05-27-hugo-copy/</link>
+      <pubDate>Mon, 27 May 2024 15:14:50 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2024-05-27-hugo-copy/</guid>
+      <description>Process to copy assets like images/css or non-assets, such as source maps from node_modules, to output using Hugo Pipes.</description>
+    </item>
     <item>
       <title>Great Resources for Learning Generative AI and Large Language Models (LLMs)</title>
       <link>https://pankajpipada.com/posts/2024-04-15-genai-resources/</link>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    
+        
+    
+    
+    <meta name="description" content="Process to copy assets like images/css or non-assets, such as source maps from node_modules, to output using Hugo Pipes." />
+    
+    
+    <link rel="stylesheet" href="../../vendor/bootstrap/dist/css/bootstrap.min.css">
+
+
+
+
+
+    
+    
+
+
+
+    
+    <link rel="stylesheet" href="../../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto;">
+    <div class="row justify-content-center">
+        
+        <div class="col-sm-5 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/icon-192x192.png"
+                        
+                    
+                    alt="home-image"
+                />
+            </a>
+        </div>
+        <div class="col-sm-7 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+                
+                <li class= "badge" style="display: inline;">
+                    <a href="../../search/" title="Search">
+                        <i class="fa fa-search"></i>
+                        Search
+                    </a>
+                </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+<ul id="breadcrumbs" style="list-style: none; padding: 0;">
+
+
+<li style="display: inline;"><a href="../../" style="color: grey;" aria-label="home"><i class="fas fa-home" st></i></a></li>
+
+    
+<li style="display: inline;"><span style="color: grey;">&gt;</span>
+<a href="../../posts/" style="color: grey;">Posts</a>
+</li>
+
+
+<li style="display: inline;"><span style="color: grey;">&gt;</span></li>
+
+</ul>
+</div>
+
+        </div>
+        <hr />
+    </div>
+</header>
+
+        <div id="content" class="mx-auto">
+            <div class="container">
+<div class="pl-sm-4 ml-sm-5">
+  <div style="margin-bottom: 3rem">
+    <h1 style="text-align: center">Hugo - Copying Files to Output Using Pipes</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1em; color: #6c757d; height: 1.2em; line-height: 1em; padding: 0.25em;">
+        <div>
+        May 27, 2024
+        </div>
+        <div>
+        <i class="fa fa-tags"></i>
+        
+            <a href="../../tags/hugo" style="color: #6c757d; text-decoration: none;">hugo</a>
+        
+        </div>
+    </div>
+  </div><div class="mt-1 mb-5">
+  
+  <aside>
+    <h4>Table of contents</h4>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#non-resources">Non-Resources</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+</div>
+<p>In Hugo, copying files to the output during the build process is a common task, especially when dealing with external resources like CSS, JavaScript, or source maps from <code>node_modules</code>. In this post, we will walk through how to achieve this without any additional external dependencies.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Resources in Hugo are any files that can be processed by Hugo Pipes, such as images, stylesheets, and javascript files.</li>
+<li>These resources can be transformed, minified, concatenated, and otherwise manipulated using Hugo&rsquo;s built-in functions.</li>
+<li>They are typically placed in the <code>assets</code> directory or other mounted directories.</li>
+<li>A common method to copy resources involves using <code>resource.Get</code> followed by <code>Permalink</code>, <code>RelPermalink</code>, or <code>Publish</code>.</li>
+<li>Here&rsquo;s an example of how to copy a CSS file from <code>node_modules</code> to your output:
+<ul>
+<li>
+<p>First, mount <code>node_modules</code> to the assets folder. This can be done in <code>config.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">module</span>]
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;node_modules&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
+</span></span></code></pre></div><p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo documentation <a href="https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts" target="_blank">here</a>
+.</p>
+</li>
+<li>
+<p>Now you have to refer to the mount path (i.e., <code>assets/vendor</code> above) when using Hugo pipes to process this file. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $bootstrapCSS := resources.Get &#34;vendor/bootstrap/dist/css/bootstrap.min.css&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $bootstrapCSS.RelPermalink }}&#34;</span>&gt;
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h2 id="non-resources">Non-Resources</h2>
+<ul>
+<li>Non-resources are files that Hugo does not process automatically, such as certain source maps or configuration files.</li>
+<li>These files might be crucial for development or debugging but are not part of the standard resource pipeline in Hugo.</li>
+<li>For non-resources, the above approach doesn&rsquo;t work directly because Hugo doesn&rsquo;t create resources for them.</li>
+<li>Instead, you can follow these steps:
+<ul>
+<li>Read the file.</li>
+<li>Use <code>resources.FromString</code>.</li>
+<li>Publish the resource.</li>
+</ul>
+</li>
+<li>To optimize this process, you can create a partial and use it in your layout.</li>
+<li>Here&rsquo;s an example partial that can be placed as <code>layouts/partials/copy-sourcemap-from-nodemodules.html</code>:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $mapFileOrig := . }}
+</span></span><span style="display:flex;"><span>{{ $mapFileNode := printf &#34;/node_modules/%s&#34; $mapFileOrig }}
+</span></span><span style="display:flex;"><span>{{ $mapFileVendor := printf &#34;vendor/%s&#34; $mapFileOrig }}
+</span></span><span style="display:flex;"><span>{{/* warnf &#34;Source map in: %s, node path: %s vendor path: %s&#34; $mapFileOrig $mapFileNode $mapFileVendor */}}
+</span></span><span style="display:flex;"><span>{{ $mapContent := readFile $mapFileNode }}
+</span></span><span style="display:flex;"><span>{{ if $mapContent }}
+</span></span><span style="display:flex;"><span>    {{ $map := resources.FromString $mapFileVendor $mapContent }}
+</span></span><span style="display:flex;"><span>    {{ $map.Publish }}
+</span></span><span style="display:flex;"><span>{{ else }}
+</span></span><span style="display:flex;"><span>    {{ errorf &#34;Source map not found: %s&#34; $mapFileNode }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><ul>
+<li>To use this partial, include it in your template (generally <code>baseof.html</code>, etc) like this:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;copy-sourcemap-from-nodemodules.html&#34; &#34;bootstrap/dist/css/bootstrap.min.css.map&#34; }}
+</span></span></code></pre></div><ul>
+<li>Note that during development, you <em>may</em> need to deleted the output folder and then build your site again for resource copy to work.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>By following these steps, you can effectively manage and include both resources and non-resources in your Hugo projects, ensuring that all necessary files are available in the final output.</p>
+
+</div>
+
+            </div>
+        </div>
+        <footer class="text-center pb-1">
+  <ul id="nav-social" class="list-inline mb-1">
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+        <i class="fab fa-github fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+        <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+        <i class="fas fa-at fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+        <i class="fas fa-rss fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+  </ul>
+  <span class="text-muted" style="font-size:0.8em">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+  </span>
+</footer>
+</body>
+</html>
