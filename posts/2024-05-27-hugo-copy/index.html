@@ -179,7 +179,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;node_modules&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
-</span></span></code></pre></div><p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo documentation <a href="https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts" target="_blank">here</a>
+</span></span></code></pre></div></li>
+<li>
+<p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo documentation <a href="https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts" target="_blank">here</a>
 .</p>
 </li>
 <li>
@@ -192,19 +194,28 @@ if (!doNotTrack) {
 </ul>
 <h2 id="non-resources">Non-Resources</h2>
 <ul>
-<li>Non-resources are files that Hugo does not process automatically, such as certain source maps or configuration files.</li>
-<li>These files might be crucial for development or debugging but are not part of the standard resource pipeline in Hugo.</li>
-<li>For non-resources, the above approach doesn&rsquo;t work directly because Hugo doesn&rsquo;t create resources for them.</li>
-<li>Instead, you can follow these steps:
+<li>
+<p>Non-resources are files that Hugo does not process automatically, such as certain source maps or configuration files.</p>
+</li>
+<li>
+<p>These files might be crucial for development or debugging but are not part of the standard resource pipeline in Hugo.</p>
+</li>
+<li>
+<p>For non-resources, the above approach doesn&rsquo;t work directly because Hugo doesn&rsquo;t create resources for them.</p>
+</li>
+<li>
+<p>Instead, you can follow these steps:</p>
 <ul>
 <li>Read the file.</li>
 <li>Use <code>resources.FromString</code>.</li>
 <li>Publish the resource.</li>
 </ul>
 </li>
-<li>To optimize this process, you can create a partial and use it in your layout.</li>
-<li>Here&rsquo;s an example partial that can be placed as <code>layouts/partials/copy-sourcemap-from-nodemodules.html</code>:</li>
-</ul>
+<li>
+<p>To optimize this process, you can create a partial and use it in your layout.</p>
+</li>
+<li>
+<p>Here&rsquo;s an example partial that can be placed as <code>layouts/partials/copy-sourcemap-from-nodemodules.html</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $mapFileOrig := . }}
 </span></span><span style="display:flex;"><span>{{ $mapFileNode := printf &#34;/node_modules/%s&#34; $mapFileOrig }}
 </span></span><span style="display:flex;"><span>{{ $mapFileVendor := printf &#34;vendor/%s&#34; $mapFileOrig }}
@@ -216,12 +227,14 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>{{ else }}
 </span></span><span style="display:flex;"><span>    {{ errorf &#34;Source map not found: %s&#34; $mapFileNode }}
 </span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><ul>
-<li>To use this partial, include it in your template (generally <code>baseof.html</code>, etc) like this:</li>
-</ul>
+</span></span></code></pre></div></li>
+<li>
+<p>To use this partial, include it in your template (generally <code>baseof.html</code>, etc) like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;copy-sourcemap-from-nodemodules.html&#34; &#34;bootstrap/dist/css/bootstrap.min.css.map&#34; }}
-</span></span></code></pre></div><ul>
-<li>Note that during development, you <em>may</em> need to deleted the output folder and then build your site again for resource copy to work.</li>
+</span></span></code></pre></div></li>
+<li>
+<p>Note that during development, you <em>may</em> need to deleted the output folder and then build your site again for resource copy to work.</p>
+</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>By following these steps, you can effectively manage and include both resources and non-resources in your Hugo projects, ensuring that all necessary files are available in the final output.</p>

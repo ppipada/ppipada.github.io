@@ -158,7 +158,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#step-1-create-a-data-index-for-search">Step 1: Create a data index for search</a></li>
     <li><a href="#step-2-create-the-search-form">Step 2: Create the Search Form</a></li>
-    <li><a href="#step-3-set-up-your-search-page">Step 3: Set Up Your Search Page</a></li>
+    <li><a href="#step-3-set-up-your-search-content-page">Step 3: Set Up Your Search Content Page</a></li>
     <li><a href="#step-4-create-the-search-layout">Step 4: Create the Search Layout</a></li>
     <li><a href="#step-5-create-the-search-business-logic-script">Step 5: Create the Search business logic script</a></li>
     <li><a href="#optimization-concerns">Optimization Concerns</a>
@@ -229,9 +229,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">button</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
-</span></span></code></pre></div><h2 id="step-3-set-up-your-search-page">Step 3: Set Up Your Search Page</h2>
+</span></span></code></pre></div><h2 id="step-3-set-up-your-search-content-page">Step 3: Set Up Your Search Content Page</h2>
 <ul>
-<li>To actually execute the query and display the results we need to create a search page.</li>
+<li>To actually execute the query and display the results we need to create a search content page.</li>
 <li>Generally it would be <code>content/search/_index.md</code>, but this can change depending on your chosen site organization for Hugo.</li>
 <li>This file should point to a search layout, that we will create below.</li>
 <li>You can customize it as required. Typically a bare minimum file will look like:</li>
@@ -459,17 +459,13 @@ if (!doNotTrack) {
 </ul>
 <h3 id="async-loading-of-scripts">Async Loading of Scripts</h3>
 <ul>
-<li>
-<p>To improve page load times, ensure that the search scripts are loaded asynchronously.</p>
-</li>
-<li>
-<p>This is achieved by adding the defer attribute to the script tags in the layout.</p>
+<li>To improve page load times, ensure that the search scripts are loaded asynchronously.</li>
+<li>This is achieved by adding the defer attribute to the script tags in the layout.</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $lunrJS.RelPermalink }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Permalink }}&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Data.Integrity }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div></li>
-<li>
-<p>Note that this deferring means the page will first render and then the actual search execution will begin.</p>
-</li>
+</span></span></code></pre></div><ul>
+<li>Note that this deferring means the page will first render and then the actual search execution will begin.</li>
 </ul>
 <h3 id="query-based-search">Query-Based Search</h3>
 <ul>
