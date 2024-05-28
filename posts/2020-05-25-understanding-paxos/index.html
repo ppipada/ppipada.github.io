@@ -11,6 +11,18 @@
     
     <meta name="description" content="Reading the paxos made simple paper and understanding it." />
     
+    <script>
+        
+        
+    
+        const storedTheme = localStorage.getItem('darkMode');
+        if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.style.backgroundColor = "#333333";
+            document.documentElement.style.color = "#E0E0E0";
+        }
+    </script>
+    
+
     
     <link rel="stylesheet" href="../../vendor/bootstrap/dist/css/bootstrap.min.css">
 
@@ -24,14 +36,14 @@
 
 
     
-    <link rel="stylesheet" href="../../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
-    
-    
     
     
     
     <link rel="stylesheet" href="../../css/custom.min.css">
     
+
+        
+
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
 <script>

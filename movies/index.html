@@ -11,6 +11,18 @@
     
     <meta name="description" content="A table of my watched movies over the years and associated metadata along with my ratings." />
     
+    <script>
+        
+        
+    
+        const storedTheme = localStorage.getItem('darkMode');
+        if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.style.backgroundColor = "#333333";
+            document.documentElement.style.color = "#E0E0E0";
+        }
+    </script>
+    
+
     
     <link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.min.css">
 
@@ -24,14 +36,17 @@
 
 
     
-    <link rel="stylesheet" href="../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
-    
-    
     
     
     
     <link rel="stylesheet" href="../css/custom.min.css">
     
+
+    
+    
+    <link rel="stylesheet" href="../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+        
+
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
 <script>
@@ -24044,7 +24059,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script src="../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../vendor/jquery/dist/jquery.min.js" defer></script>
 
 
 
@@ -24057,14 +24072,14 @@ if (!doNotTrack) {
 
 
 
-<script src="../vendor/datatables.net/js/dataTables.min.js"></script>
+<script src="../vendor/datatables.net/js/dataTables.min.js" defer></script>
 
 
-<script src="../vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+<script src="../vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js" defer></script>
 
 
 
-<script src="https://pankajpipada.com/js/movietables.min.040eba4021e2c6d3a194aef9d4eb2f60b44ec7f9d732ff974749f8bd7a3f74b4.js" integrity="sha256-BA66QCHixtOhlK751OsvYLROx/nXMv&#43;XR0n4vXo/dLQ="></script>
+<script src="https://pankajpipada.com/js/movietables.min.040eba4021e2c6d3a194aef9d4eb2f60b44ec7f9d732ff974749f8bd7a3f74b4.js" integrity="sha256-BA66QCHixtOhlK751OsvYLROx/nXMv&#43;XR0n4vXo/dLQ=" defer></script>
 
 
         <footer class="text-center pb-1">
