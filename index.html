@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en" data-bs-theme="light"><head>
 	<meta name="generator" content="Hugo 0.123.7">
     <title>Scramblings</title>
     <meta charset="utf-8">
@@ -30,10 +30,8 @@
     
     
     
-    <link rel="stylesheet" href="./css/theme.min.css">
-
     
-    
+    <link rel="stylesheet" href="./css/custom.min.css">
     
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
@@ -48,10 +46,19 @@ if (!doNotTrack) {
 </script>
 
 </head>
-<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto;">
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto; position: relative;">
+    
+    <div style="position: absolute; top: 0; left: 0; z-index: 10;">
+        
+<button id="darkModeToggle" class="btn" style="background: transparent; border: none;">
+    <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+    
     <div class="row justify-content-center">
         
-        <div class="col-sm-5 col-12 text-sm-right text-center pt-sm-4">
+        <div class="col-sm-5 col-12 text-sm-end text-center pt-1">
             <a href="./" class="text-decoration-none" aria-label="home">
                 <img id="home-image" class="rounded-circle"
                     
@@ -63,9 +70,9 @@ if (!doNotTrack) {
                 />
             </a>
         </div>
-        <div class="col-sm-7 col-12 text-sm-left text-center">
+        <div class="col-sm-7 col-12 text-sm-start text-center">
         
-            <h2 class="m-0 mt-4">
+            <h2 class="m-0 mt-2">
                 <a href="./" class="text-decoration-none">
                     
                         Scramblings
@@ -77,18 +84,18 @@ if (!doNotTrack) {
                     Dev scratchpad. Digital garden
                 
             </p>
-            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: large;">
                 
                 
-                    <li class= "badge" style="display: inline;">
+                    <li class="badge" style="display: inline;">
                         <a class="" href="./tags/" title="Tags">Tags</a>
                     </li>
                 
-                    <li class= "badge" style="display: inline;">
+                    <li class="badge" style="display: inline;">
                         <a class="" href="./quotes/" title="Quotes">Quotes</a>
                     </li>
                 
-                    <li class= "badge" style="display: inline;">
+                    <li class="badge" style="display: inline;">
                         <a class="" href="./movies/" title="Movies">Movies</a>
                     </li>
                 
@@ -103,8 +110,8 @@ if (!doNotTrack) {
             </ul>
             <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
 <ul id="breadcrumbs" style="list-style: none; padding: 0;">
-
-
+    
+    
 </ul>
 </div>
 
@@ -113,9 +120,9 @@ if (!doNotTrack) {
     </div>
 </header>
 
-        <div id="content" class="mx-auto">
-            <div class="container">
-                <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
+            <div id="content" class="mx-auto">
+                <div class="container">
+                    <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
     <label hidden for="search-input">Search site</label>
     <div class="input-group" style="width: 90%;">
         <span class="input-group-text border-0 bg-transparent">
@@ -130,20 +137,14 @@ if (!doNotTrack) {
     
     <div class="pl-sm-4 ml-sm-5 pt-2">
   
-  <div class="pb-3">
-    <h4><span class="badge category">2024</span></h4><ul class="list-unstyled" style="margin-bottom: 1rem">
+  <div class="pb-2">
+    <h3><span class="badge category">2024</span></h3><ul class="list-unstyled" style="margin-bottom: 1rem">
   <li>
   <div style="text-align: left">
     <a href="https://pankajpipada.com/posts/2024-05-28-hugo-breadcrumb-toc-codefile-quote/">Hugo - Snippets for Breadcrumbs, Table of contents, Import code file as markdown, Quote</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 28, 2024</div>
 </li>
 <li>
@@ -151,13 +152,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2024-05-28-hugo-copy-button/">Hugo - Introduce a Copy Button for Code Blocks</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 28, 2024</div>
 </li>
 <li>
@@ -165,13 +160,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2024-05-27-hugo-datatables/">Hugo - Integrating Datatables</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 27, 2024</div>
 </li>
 <li>
@@ -179,13 +168,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2024-05-27-hugo-search/">Hugo - Integrate search using lunr.js</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 27, 2024</div>
 </li>
 <li>
@@ -193,13 +176,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2024-05-27-hugo-copy/">Hugo - Copying Files to Output Using Pipes</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 27, 2024</div>
 </li>
 <li>
@@ -207,33 +184,21 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2024-04-15-genai-resources/">Great Resources for Learning Generative AI and Large Language Models (LLMs)</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Apr 15, 2024</div>
 </li>
 
 </ul>
 </div>
   
-  <div class="pb-3">
-    <h4><span class="badge category">2023</span></h4><ul class="list-unstyled" style="margin-bottom: 1rem">
+  <div class="pb-2">
+    <h3><span class="badge category">2023</span></h3><ul class="list-unstyled" style="margin-bottom: 1rem">
   <li>
   <div style="text-align: left">
     <a href="https://pankajpipada.com/posts/2023-07-30-taskmgmt/">Finding my balance: An evolved and simplified task management system</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jul 30, 2023</div>
 </li>
 <li>
@@ -241,13 +206,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2023-07-10-assertive/">Blunt/Direct/Assertive communicators, online communication challenges and how to overcome them</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jul 10, 2023</div>
 </li>
 <li>
@@ -255,13 +214,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2023-07-02-great-work/">Survival mode, life immediately after and Paul Graham&#39;s How to do great work</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jul 2, 2023</div>
 </li>
 <li>
@@ -269,13 +222,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2023-06-02-espresso/">My Go-to Espresso Recipe - An Everyday Brew</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jun 2, 2023</div>
 </li>
 <li>
@@ -283,13 +230,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2023-05-25-remembering/">Remembering my friend</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 25, 2023</div>
 </li>
 <li>
@@ -297,33 +238,21 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2023-02-11-pairprogram/">Beginner level learning and pair programming with ChatGPT - A case study of Admonitions in Hugo</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Feb 11, 2023</div>
 </li>
 
 </ul>
 </div>
   
-  <div class="pb-3">
-    <h4><span class="badge category">2022</span></h4><ul class="list-unstyled" style="margin-bottom: 1rem">
+  <div class="pb-2">
+    <h3><span class="badge category">2022</span></h3><ul class="list-unstyled" style="margin-bottom: 1rem">
   <li>
   <div style="text-align: left">
     <a href="https://pankajpipada.com/posts/2022-10-18-dynamodb/">DynamoDB paper</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Oct 18, 2022</div>
 </li>
 <li>
@@ -331,13 +260,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2022-10-18-archlevels/">Separation of concerns and architectural thought</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Oct 18, 2022</div>
 </li>
 <li>
@@ -345,33 +268,21 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2022-07-09-voraciousness/">Voraciousness</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jul 9, 2022</div>
 </li>
 
 </ul>
 </div>
   
-  <div class="pb-3">
-    <h4><span class="badge category">2020</span></h4><ul class="list-unstyled" style="margin-bottom: 1rem">
+  <div class="pb-2">
+    <h3><span class="badge category">2020</span></h3><ul class="list-unstyled" style="margin-bottom: 1rem">
   <li>
   <div style="text-align: left">
     <a href="https://pankajpipada.com/posts/2020-07-24-ubuntu-setup/">Linux - Ubuntu initial dev setup</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jul 24, 2020</div>
 </li>
 <li>
@@ -379,13 +290,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-05-25-understanding-paxos/">Understanding Paxos</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">May 25, 2020</div>
 </li>
 <li>
@@ -393,13 +298,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-04-29-docsify-mustache/">Mustache templates and YAML front-matter with Docsify</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Apr 29, 2020</div>
 </li>
 <li>
@@ -407,13 +306,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-04-28-vscode/">VSCode basic helpers</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Apr 28, 2020</div>
 </li>
 <li>
@@ -421,13 +314,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-03-27-git-commands/">Linux - Git commands</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Mar 27, 2020</div>
 </li>
 <li>
@@ -435,13 +322,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-03-24-go-memory-profiling/">Memory analysis in Go</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Mar 24, 2020</div>
 </li>
 <li>
@@ -449,13 +330,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-03-17-organizing/">Movies - Organizing a largish movie collection</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Mar 17, 2020</div>
 </li>
 <li>
@@ -463,13 +338,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-03-12-awesome-papers/">Awesome papers list</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Mar 12, 2020</div>
 </li>
 <li>
@@ -477,13 +346,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-01-30-samba-setup/">Samba setup</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jan 30, 2020</div>
 </li>
 <li>
@@ -491,33 +354,21 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2020-01-30-ubuntu-1804-server-debug/">Linux - Ubuntu 18.04 server setup debug</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Jan 30, 2020</div>
 </li>
 
 </ul>
 </div>
   
-  <div class="pb-3">
-    <h4><span class="badge category">2019</span></h4><ul class="list-unstyled" style="margin-bottom: 1rem">
+  <div class="pb-2">
+    <h3><span class="badge category">2019</span></h3><ul class="list-unstyled" style="margin-bottom: 1rem">
   <li>
   <div style="text-align: left">
     <a href="https://pankajpipada.com/posts/2019-11-17-go-intro-primer/">Go introductory primer</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Nov 17, 2019</div>
 </li>
 <li>
@@ -525,13 +376,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2019-11-11-docker-commands/">Docker - Commands</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Nov 11, 2019</div>
 </li>
 <li>
@@ -539,13 +384,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2019-11-10-commands/">Linux - Ubuntu - Random commands</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Nov 10, 2019</div>
 </li>
 <li>
@@ -553,13 +392,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2019-11-09-screen/">GNU Screen helpers</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Nov 9, 2019</div>
 </li>
 <li>
@@ -567,13 +400,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2019-11-09-py-helpers-closures/">Python Helpers - Closures</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Nov 9, 2019</div>
 </li>
 <li>
@@ -581,13 +408,7 @@ if (!doNotTrack) {
     <a href="https://pankajpipada.com/posts/2019-11-09-py-helpers-profiling/">Python Helpers - Profiling</a>
   </div>
 </li>
-<li
-  style="
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-bottom: 0.8rem;
-  "
->
+<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
   <div style="text-align: left">Nov 9, 2019</div>
 </li>
 
@@ -597,8 +418,8 @@ if (!doNotTrack) {
 </div>
 
 
+                </div>
             </div>
-        </div>
         <footer class="text-center pb-1">
   <ul id="nav-social" class="list-inline mb-1">
     
@@ -634,8 +455,26 @@ if (!doNotTrack) {
   </span>
 </footer>
 
+        <script src="./vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        
+            
+                
+                <script src="https://pankajpipada.com/js/darkmode.min.e7e6643ae9d563edefff7e0c7073f737868c941716010b66720d8b75ef3ce208.js" integrity="sha256-5&#43;ZkOunVY&#43;3v/34McHP3N4aMlBcWAQtmcg2Lde884gg=" defer></script>
+            
+        
+        
+
+
+
+
+
+    
+    
+
+
+        
             
             <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
-            
+        
     </body>
 </html>

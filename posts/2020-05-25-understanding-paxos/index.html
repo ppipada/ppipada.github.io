@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en" data-bs-theme="light"><head>
     <title>Scramblings</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,10 +29,8 @@
     
     
     
-    <link rel="stylesheet" href="../../css/theme.min.css">
-
     
-    
+    <link rel="stylesheet" href="../../css/custom.min.css">
     
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
@@ -47,10 +45,19 @@ if (!doNotTrack) {
 </script>
 
 </head>
-<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto;">
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto; position: relative;">
+    
+    <div style="position: absolute; top: 0; left: 0; z-index: 10;">
+        
+<button id="darkModeToggle" class="btn" style="background: transparent; border: none;">
+    <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+    
     <div class="row justify-content-center">
         
-        <div class="col-sm-5 col-12 text-sm-right text-center pt-sm-4">
+        <div class="col-sm-5 col-12 text-sm-end text-center pt-1">
             <a href="../../" class="text-decoration-none" aria-label="home">
                 <img id="home-image" class="rounded-circle"
                     
@@ -62,9 +69,9 @@ if (!doNotTrack) {
                 />
             </a>
         </div>
-        <div class="col-sm-7 col-12 text-sm-left text-center">
+        <div class="col-sm-7 col-12 text-sm-start text-center">
         
-            <h2 class="m-0 mt-4">
+            <h2 class="m-0 mt-2">
                 <a href="../../" class="text-decoration-none">
                     
                         Scramblings
@@ -76,18 +83,18 @@ if (!doNotTrack) {
                     Dev scratchpad. Digital garden
                 
             </p>
-            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: large;">
                 
                 
-                    <li class= "badge" style="display: inline;">
+                    <li class="badge" style="display: inline;">
                         <a class="" href="../../tags/" title="Tags">Tags</a>
                     </li>
                 
-                    <li class= "badge" style="display: inline;">
+                    <li class="badge" style="display: inline;">
                         <a class="" href="../../quotes/" title="Quotes">Quotes</a>
                     </li>
                 
-                    <li class= "badge" style="display: inline;">
+                    <li class="badge" style="display: inline;">
                         <a class="" href="../../movies/" title="Movies">Movies</a>
                     </li>
                 
@@ -102,18 +109,23 @@ if (!doNotTrack) {
             </ul>
             <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
 <ul id="breadcrumbs" style="list-style: none; padding: 0;">
-
-
-<li style="display: inline;"><a href="../../" style="color: grey;" aria-label="home"><i class="fas fa-home" st></i></a></li>
-
     
-<li style="display: inline;"><span style="color: grey;">&gt;</span>
-<a href="../../posts/" style="color: grey;">Posts</a>
-</li>
-
-
-<li style="display: inline;"><span style="color: grey;">&gt;</span></li>
-
+    
+    <li class="text-muted" style="display: inline;">
+        <a class="text-muted" href="../../" aria-label="home"><i class="fas fa-home"></i></a>
+    </li>
+    
+        
+    <li class="text-muted" style="display: inline;">
+        <span>&gt;</span>
+        <a class="text-muted" href="../../posts/">Posts</a>
+    </li>
+    
+    
+    <li class="text-muted" style="display: inline;">
+        <span>&gt;</span>
+    </li>
+    
 </ul>
 </div>
 
@@ -122,9 +134,9 @@ if (!doNotTrack) {
     </div>
 </header>
 
-        <div id="content" class="mx-auto">
-            <div class="container">
-                <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
+            <div id="content" class="mx-auto">
+                <div class="container">
+                    <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
     <label hidden for="search-input">Search site</label>
     <div class="input-group" style="width: 90%;">
         <span class="input-group-text border-0 bg-transparent">
@@ -137,16 +149,16 @@ if (!doNotTrack) {
     </div>
 </form>
 <div class="pl-sm-4 ml-sm-5">
-  <div style="margin-bottom: 3rem">
+  <div style="margin-bottom: 2rem">
     <h1 style="text-align: center">Understanding Paxos</h1>
-    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1em; color: #6c757d; height: 1.2em; line-height: 1em; padding: 0.25em;">
+    <div class="text-muted" style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;">
         <div>
         May 25, 2020 | Reading Time: 1 min
         </div>
         <div>
         <i class="fa fa-tags"></i>
         
-            <a href="../../tags/papers" style="color: #6c757d; text-decoration: none;">papers</a>
+            <a class="text-muted" href="../../tags/papers">papers</a>
         
         </div>
     </div>
@@ -159,15 +171,15 @@ if (!doNotTrack) {
 <li>Read full paper. <a href="https://lamport.azurewebsites.net/pubs/paxos-simple.pdf" target="_blank">Paxos made simple</a>
 </li>
 </ol>
-  <div class="authorquote" style="background-color: #f9f9f9; border-left: 10px solid #ccc; margin: 2.5em 10px; padding: 1em 1em 2em 4em; position: relative;">
-  <div class="quote-wrapper" style="display: flex; align-items: flex-start;">
-    <i class="fas fa-quote-left" style="font-size: 2em; color: #6c757d; margin-right: 0.5em; flex-shrink: 0;"></i>
-    <div class="quote-content" style="flex: 1; line-height: 1.5;">
+  <div class="authorquote border-start border-3 border-secondary px-4 py-1" style="margin: 2.5em 10px; position: relative;">
+  <div class="quote-wrapper d-flex align-items-start">
+    <i class="fas fa-quote-left text-muted pe-2" style="font-size: 2em; flex-shrink: 0;"></i>
+    <div class="quote-content flex-grow-1" style="line-height: 1.5;">
   “Begin at the beginning,” the King said gravely,
   “and go on till you come to the end: then stop.”
   </div>
   </div>
-  <div class="author" style="font-style: italic; font-weight: bold; color: #6c757d; text-align: right; margin-top: 1em;">-- The King, Alice in wonderland.</div>
+  <div class="author text-muted text-end mt-1" style="font-style: italic; font-weight: bold;">-- The King, Alice in wonderland.</div>
 </div>
 <ol start="2">
 <li>
@@ -189,8 +201,8 @@ if (!doNotTrack) {
 
 </div>
 
+                </div>
             </div>
-        </div>
         <footer class="text-center pb-1">
   <ul id="nav-social" class="list-inline mb-1">
     
@@ -226,8 +238,26 @@ if (!doNotTrack) {
   </span>
 </footer>
 
+        <script src="../../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        
+            
+                
+                <script src="https://pankajpipada.com/js/darkmode.min.e7e6643ae9d563edefff7e0c7073f737868c941716010b66720d8b75ef3ce208.js" integrity="sha256-5&#43;ZkOunVY&#43;3v/34McHP3N4aMlBcWAQtmcg2Lde884gg=" defer></script>
+            
+        
+        
+
+
+
+
+
+    
+    
+
+
+        
             
             <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
-            
+        
     </body>
 </html>
