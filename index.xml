@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 28 May 2024 12:58:22 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2024 13:41:25 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo - Introduce a Copy Button for Code Blocks</title>
+      <link>https://pankajpipada.com/posts/2024-05-28-hugo-copy-button/</link>
+      <pubDate>Tue, 28 May 2024 13:07:14 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2024-05-28-hugo-copy-button/</guid>
+      <description>Create a header with language name and copy button on top of highlighted code blocks</description>
+    </item>
     <item>
       <title>Hugo - Integrating Datatables</title>
       <link>https://pankajpipada.com/posts/2024-05-27-hugo-datatables/</link>

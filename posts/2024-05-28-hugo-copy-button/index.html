@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    
+        
+    
+    
+    <meta name="description" content="Create a header with language name and copy button on top of highlighted code blocks" />
+    
+    
+    <link rel="stylesheet" href="../../vendor/bootstrap/dist/css/bootstrap.min.css">
+
+
+
+
+
+    
+    
+
+
+
+    
+    <link rel="stylesheet" href="../../vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto;">
+    <div class="row justify-content-center">
+        
+        <div class="col-sm-5 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/icon-192x192.png"
+                        
+                    
+                    alt="home-image"
+                />
+            </a>
+        </div>
+        <div class="col-sm-7 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../tags/" title="Tags">Tags</a>
+                    </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                    </li>
+                
+                    <li class= "badge" style="display: inline;">
+                        <a class="" href="../../movies/" title="Movies">Movies</a>
+                    </li>
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+<ul id="breadcrumbs" style="list-style: none; padding: 0;">
+
+
+<li style="display: inline;"><a href="../../" style="color: grey;" aria-label="home"><i class="fas fa-home" st></i></a></li>
+
+    
+<li style="display: inline;"><span style="color: grey;">&gt;</span>
+<a href="../../posts/" style="color: grey;">Posts</a>
+</li>
+
+
+<li style="display: inline;"><span style="color: grey;">&gt;</span></li>
+
+</ul>
+</div>
+
+        </div>
+        
+    </div>
+</header>
+
+        <div id="content" class="mx-auto">
+            <div class="container">
+                <form id="search" action='https://pankajpipada.com/search/' method="get" class="d-flex justify-content-center mt-2 mb-4">
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 90%;">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input type="text" class="form-control rounded-pill" id="search-input" name="query" placeholder="Type here to search..." aria-label="Search">
+        <button class="btn border-0 bg-transparent" type="submit" aria-label="search">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+<div class="pl-sm-4 ml-sm-5">
+  <div style="margin-bottom: 3rem">
+    <h1 style="text-align: center">Hugo - Introduce a Copy Button for Code Blocks</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1em; color: #6c757d; height: 1.2em; line-height: 1em; padding: 0.25em;">
+        <div>
+        May 28, 2024 | Reading Time: 4 min
+        </div>
+        <div>
+        <i class="fa fa-tags"></i>
+        
+            <a href="../../tags/hugo" style="color: #6c757d; text-decoration: none;">hugo</a>
+        
+        </div>
+    </div>
+  </div><div class="mt-1 mb-5">
+  
+  <aside>
+    <h4>Table of contents</h4>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-javascript-adding-the-copy-button">Step 1: JavaScript: Adding the Copy Button</a></li>
+    <li><a href="#step-2-integration-in-layouts">Step 2: Integration in layouts</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+</div>
+<p>One way to enhance the usability of your documentation or blog is by adding a copy button to your code blocks, allowing users to easily copy code snippets to their clipboard. In this post, we will integrate a copy button for code blocks in a Hugo-based static site.</p>
+<p>The implementation involves creating a JavaScript function to add the button and then integrating that into your page layouts. The example provided uses Bootstrap 5 but can be adapted as needed.</p>
+<h2 id="step-1-javascript-adding-the-copy-button">Step 1: JavaScript: Adding the Copy Button</h2>
+<ul>
+<li>Create a new JavaScript file, <code>copybutton.js</code> with below code.</li>
+<li>This can be placed in the <code>static/js</code> or <code>assets/js</code> directory of your Hugo project.</li>
+<li>The implementation introduces a header row with language and copy button. It will do this for all code blocks with the <code>language-*</code> class and with some parent as <code>highlight</code>.</li>
+<li>The business logic can be easily modified to suit any other class layout (e.g: all pre code blocks, or all code blocks etc)</li>
+<li>In this current form, it would work for both table based class generation in hugo or normal one.</li>
+<li>Please note that you would need to adjust the styling to your theme.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addCopyButtonToCodeBlocks</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span>  <span style="color:#75715e">// Function to determine if the background color is light or dark
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isColorDark</span>(<span style="color:#a6e22e">color</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rgb</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\d+/g</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">rgb</span>[<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">rgb</span>[<span style="color:#ae81ff">1</span>], <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">rgb</span>[<span style="color:#ae81ff">2</span>], <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span><span>    <span style="color:#75715e">// Calculate luminance
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">luminance</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0.299</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.587</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.114</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">luminance</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.5</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span><span>  <span style="color:#75715e">// Function to adjust color brightness significantly
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">adjustColorBrightness</span>(<span style="color:#a6e22e">color</span>, <span style="color:#a6e22e">amount</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rgb</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\d+/g</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">255</span>, Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">0</span>, parseInt(<span style="color:#a6e22e">rgb</span>[<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">amount</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">255</span>, Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">0</span>, parseInt(<span style="color:#a6e22e">rgb</span>[<span style="color:#ae81ff">1</span>], <span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">amount</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">255</span>, Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">0</span>, parseInt(<span style="color:#a6e22e">rgb</span>[<span style="color:#ae81ff">2</span>], <span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">amount</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`rgb(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">r</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">g</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">b</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span><span>  <span style="color:#75715e">// Get all code blocks with a class of &#34;language-*&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">codeBlocks</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span><span>    <span style="color:#e6db74">&#39;pre &gt; code[class^=&#34;language-&#34;]&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span><span>  );
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">copyIcon</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;i class=&#34;fas fa-copy&#34;&gt;&lt;/i&gt; copy code&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">copiedIcon</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;i class=&#34;fas fa-check&#34;&gt;&lt;/i&gt; copied!&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span><span>  <span style="color:#75715e">// For each code block, add a copy button inside a header
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">codeBlocks</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">codeBlock</span>) =&gt; {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span><span>    <span style="color:#75715e">// Get the background color of the code block
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">computedStyle</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">getComputedStyle</span>(<span style="color:#a6e22e">codeBlock</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">backgroundColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">computedStyle</span>.<span style="color:#a6e22e">backgroundColor</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span><span>    <span style="color:#75715e">// Adjust the header color to be significantly lighter or darker than the background color
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headerColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isColorDark</span>(<span style="color:#a6e22e">backgroundColor</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span><span>      <span style="color:#f92672">?</span> <span style="color:#a6e22e">adjustColorBrightness</span>(<span style="color:#a6e22e">backgroundColor</span>, <span style="color:#ae81ff">65</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span><span>      <span style="color:#f92672">:</span> <span style="color:#a6e22e">adjustColorBrightness</span>(<span style="color:#a6e22e">backgroundColor</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">65</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">textColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isColorDark</span>(<span style="color:#a6e22e">backgroundColor</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;#d1d1d1&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#606060&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span><span>    <span style="color:#75715e">// Create the header div
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">header</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">backgroundColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headerColor</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;flex&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">justifyContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;space-between&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">alignItems</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;center&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">paddingRight</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.5rem&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">paddingLeft</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.5rem&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">borderTopLeftRadius</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;5px&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">borderTopRightRadius</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;5px&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textColor</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">borderBottom</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`1px solid </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">headerColor</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;small&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span><span>    <span style="color:#75715e">// Create the copy button
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">copyButton</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;button&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;btn&#34;</span>, <span style="color:#e6db74">&#34;copy-code-button&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">background</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">border</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textColor</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">fontSize</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;100%&#34;</span>; <span style="color:#75715e">// Override the font size
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">cursor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pointer&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">copyIcon</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span><span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">marginLeft</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;auto&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span><span>    <span style="color:#75715e">// Add a click event listener to the copy button
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span><span>      <span style="color:#75715e">// Copy the code inside the code block to the clipboard
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">codeToCopy</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">codeBlock</span>.<span style="color:#a6e22e">innerText</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span><span>      <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">clipboard</span>.<span style="color:#a6e22e">writeText</span>(<span style="color:#a6e22e">codeToCopy</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span><span>      <span style="color:#75715e">// Update the copy button text to indicate that the code has been copied
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">copiedIcon</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span><span>      <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span><span>        <span style="color:#a6e22e">copyButton</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">copyIcon</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span><span>      }, <span style="color:#ae81ff">1500</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span><span>    });
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span><span>    <span style="color:#75715e">// Get the language from the class
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">classList</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">codeBlock</span>.<span style="color:#a6e22e">classList</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">languageClass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">find</span>((<span style="color:#a6e22e">cls</span>) =&gt; <span style="color:#a6e22e">cls</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;language-&#34;</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">language</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">languageClass</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span><span>      <span style="color:#f92672">?</span> <span style="color:#a6e22e">languageClass</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;language-&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span><span>      <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span><span>    <span style="color:#75715e">// Create the language label
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">languageLabel</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;span&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span><span>    <span style="color:#a6e22e">languageLabel</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">language</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">language</span>.<span style="color:#a6e22e">toLowerCase</span>() <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span><span>    <span style="color:#a6e22e">languageLabel</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">marginRight</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10px&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span><span>    <span style="color:#75715e">// Append the language label and copy button to the header
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">languageLabel</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span><span>    <span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">copyButton</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span><span>    <span style="color:#75715e">// Find the parent element with the &#34;highlight&#34; class and insert the header before it
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">highlightParent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">codeBlock</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;.highlight&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">highlightParent</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span><span>      <span style="color:#a6e22e">highlightParent</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">header</span>, <span style="color:#a6e22e">highlightParent</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span><span>  });
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span><span><span style="color:#75715e">// Call the function to add copy buttons to code blocks
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#a6e22e">addCopyButtonToCodeBlocks</span>);
+</span></span></code></pre></div><h2 id="step-2-integration-in-layouts">Step 2: Integration in layouts</h2>
+<ul>
+<li>To include this JavaScript file in your Hugo site, you need to modify a layout page where you want to have the copybutton present.</li>
+<li>If you want it to be present in all your pages, it could be the <code>baseof.html</code> file.</li>
+<li>If you place it in the <code>assets/js</code> directory, it can integrated as:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ with resources.Get &#34;js/copybutton.js&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    {{ $minifiedScript := . | minify | fingerprint }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Permalink }}&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $minifiedScript.Data.Integrity }}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>{{ else }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    {{ errorf &#34;copybutton.js not found in assets/js/&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>{{ end }}
+</span></span></code></pre></div><ul>
+<li>If you place it in the <code>static/js</code> directory, it can integrated as:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ &#34;</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">copybutton</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">relURL</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div>
+</div>
+
+            </div>
+        </div>
+        <footer class="text-center pb-1">
+  <ul id="nav-social" class="list-inline mb-1">
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+        <i class="fab fa-github fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+        <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+        <i class="fas fa-at fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item mr-3">
+      <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+        <i class="fas fa-rss fa-1x text-muted"></i>
+      </a>
+    </li>
+    
+  </ul>
+  <span class="text-muted" style="font-size:0.8em">
+     Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved. 
+    <br />
+    Made with ♥️ using <a href="https://gohugo.io/" target="_blank">Hugo</a> and <a href="https://github.com/austingebauer/devise" target="_blank">Devise theme</a>
+  </span>
+</footer>
+
+            
+            <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
+            
+    </body>
+</html>
