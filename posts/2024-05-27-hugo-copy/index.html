@@ -175,10 +175,10 @@ if (!doNotTrack) {
 <ul>
 <li>
 <p>First, mount <code>node_modules</code> to the assets folder. This can be done in <code>config.toml</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">module</span>]
-</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;node_modules&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[<span style="color:#a6e22e">module</span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;node_modules&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo documentation <a href="https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts" target="_blank">here</a>
@@ -186,8 +186,8 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Now you have to refer to the mount path (i.e., <code>assets/vendor</code> above) when using Hugo pipes to process this file. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $bootstrapCSS := resources.Get &#34;vendor/bootstrap/dist/css/bootstrap.min.css&#34; }}
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $bootstrapCSS.RelPermalink }}&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ $bootstrapCSS := resources.Get &#34;vendor/bootstrap/dist/css/bootstrap.min.css&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $bootstrapCSS.RelPermalink }}&#34;</span>&gt;
 </span></span></code></pre></div></li>
 </ul>
 </li>
@@ -216,21 +216,21 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Here&rsquo;s an example partial that can be placed as <code>layouts/partials/copy-sourcemap-from-nodemodules.html</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $mapFileOrig := . }}
-</span></span><span style="display:flex;"><span>{{ $mapFileNode := printf &#34;/node_modules/%s&#34; $mapFileOrig }}
-</span></span><span style="display:flex;"><span>{{ $mapFileVendor := printf &#34;vendor/%s&#34; $mapFileOrig }}
-</span></span><span style="display:flex;"><span>{{/* warnf &#34;Source map in: %s, node path: %s vendor path: %s&#34; $mapFileOrig $mapFileNode $mapFileVendor */}}
-</span></span><span style="display:flex;"><span>{{ $mapContent := readFile $mapFileNode }}
-</span></span><span style="display:flex;"><span>{{ if $mapContent }}
-</span></span><span style="display:flex;"><span>    {{ $map := resources.FromString $mapFileVendor $mapContent }}
-</span></span><span style="display:flex;"><span>    {{ $map.Publish }}
-</span></span><span style="display:flex;"><span>{{ else }}
-</span></span><span style="display:flex;"><span>    {{ errorf &#34;Source map not found: %s&#34; $mapFileNode }}
-</span></span><span style="display:flex;"><span>{{ end }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{ $mapFileOrig := . }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>{{ $mapFileNode := printf &#34;/node_modules/%s&#34; $mapFileOrig }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>{{ $mapFileVendor := printf &#34;vendor/%s&#34; $mapFileOrig }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>{{/* warnf &#34;Source map in: %s, node path: %s vendor path: %s&#34; $mapFileOrig $mapFileNode $mapFileVendor */}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>{{ $mapContent := readFile $mapFileNode }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>{{ if $mapContent }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    {{ $map := resources.FromString $mapFileVendor $mapContent }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    {{ $map.Publish }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>{{ else }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    {{ errorf &#34;Source map not found: %s&#34; $mapFileNode }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>{{ end }}
 </span></span></code></pre></div></li>
 <li>
 <p>To use this partial, include it in your template (generally <code>baseof.html</code>, etc) like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;copy-sourcemap-from-nodemodules.html&#34; &#34;bootstrap/dist/css/bootstrap.min.css.map&#34; }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ partial &#34;copy-sourcemap-from-nodemodules.html&#34; &#34;bootstrap/dist/css/bootstrap.min.css.map&#34; }}
 </span></span></code></pre></div></li>
 <li>
 <p>Note that during development, you <em>may</em> need to deleted the output folder and then build your site again for resource copy to work.</p>
@@ -276,5 +276,9 @@ if (!doNotTrack) {
     <br />
   </span>
 </footer>
-</body>
+
+            
+            <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
+            
+    </body>
 </html>

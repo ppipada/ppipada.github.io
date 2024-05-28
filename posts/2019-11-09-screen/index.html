@@ -228,88 +228,83 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <h2 id="rc-file">RC File</h2>
-
-
-
-
-<div class="highlight"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># location: ~/.screenrc</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># A sample screenrc file with a hardstatus line at bottom</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3 windows created, with custom commands stuffed into each at session creation </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># and some key bindings.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># the following lines give a status line, with the current window highlighted</span>
-</span></span><span style="display:flex;"><span>hardstatus alwayslastline
-</span></span><span style="display:flex;"><span>hardstatus string <span style="color:#e6db74">&#39;%{= kg}[%{G}%H%? %1`%?%{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%][%{B}%d/%m %{W}%C%A%{g}]&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#hardstatus string &#39;%{= kg}[ %{G}%H %{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%]&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#hardstatus string &#39;%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%d/%m %{W}%C%A%{g}]&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># huge scrollback buffer</span>
-</span></span><span style="display:flex;"><span>defscrollback <span style="color:#ae81ff">10000</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># no welcome message</span>
-</span></span><span style="display:flex;"><span>startup_message off
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 256 colors</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># attrcolor b &#34;.I&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># termcapinfo xterm &#39;Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm&#39;</span>
-</span></span><span style="display:flex;"><span>defbce on
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># mouse tracking allows to switch region focus by clicking</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># mousetrack on</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># default windows</span>
-</span></span><span style="display:flex;"><span>screen -t HOME <span style="color:#ae81ff">0</span> bash
-</span></span><span style="display:flex;"><span>stuff <span style="color:#e6db74">&#34;cd /root&#34;</span>
-</span></span><span style="display:flex;"><span>screen -t SRV <span style="color:#ae81ff">1</span> bash
-</span></span><span style="display:flex;"><span>stuff <span style="color:#e6db74">&#34;cd /root/srv&#34;</span>
-</span></span><span style="display:flex;"><span>screen -t MYSQL <span style="color:#ae81ff">2</span> bash
-</span></span><span style="display:flex;"><span>stuff <span style="color:#e6db74">&#34;cd /root/mysql&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#bind c screen 1 # window numbering starts at 1 not 0</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#bind 0 select 10</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># get rid of silly xoff stuff</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#bind s split</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># navigating regions with Ctrl-arrows</span>
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[[1;5D&#34;</span> focus left
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[[1;5C&#34;</span> focus right
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[[1;5A&#34;</span> focus up
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[[1;5B&#34;</span> focus down
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># switch windows with F3 (prev) and F4 (next)</span>
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[OR&#34;</span> prev
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[OS&#34;</span> next
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)</span>
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[O1;5R&#34;</span> layout prev
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[O1;5S&#34;</span> layout next
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># F2 puts Screen into resize mode. Resize regions using hjkl keys.</span>
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[OQ&#34;</span> eval <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># enter resize mode</span>
-</span></span><span style="display:flex;"><span>                                                                                                                                                                             1,1           Top
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)</span>
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[O1;5R&#34;</span> layout prev
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[O1;5S&#34;</span> layout next
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># F2 puts Screen into resize mode. Resize regions using hjkl keys.</span>
-</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#34;^[OQ&#34;</span> eval <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># enter resize mode</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># use hjkl keys to resize regions</span>
-</span></span><span style="display:flex;"><span>bind -c rsz h eval <span style="color:#e6db74">&#34;resize -h -5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
-</span></span><span style="display:flex;"><span>bind -c rsz j eval <span style="color:#e6db74">&#34;resize -v -5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
-</span></span><span style="display:flex;"><span>bind -c rsz k eval <span style="color:#e6db74">&#34;resize -v +5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
-</span></span><span style="display:flex;"><span>bind -c rsz l eval <span style="color:#e6db74">&#34;resize -h +5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># quickly switch between regions using tab and arrows</span>
-</span></span><span style="display:flex;"><span>bind -c rsz <span style="color:#ae81ff">\t</span>    eval <span style="color:#e6db74">&#34;focus&#34;</span>       <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Tab</span>
-</span></span><span style="display:flex;"><span>bind -c rsz -k kl eval <span style="color:#e6db74">&#34;focus left&#34;</span>  <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Left</span>
-</span></span><span style="display:flex;"><span>bind -c rsz -k kr eval <span style="color:#e6db74">&#34;focus right&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Right</span>
-</span></span><span style="display:flex;"><span>bind -c rsz -k ku eval <span style="color:#e6db74">&#34;focus up&#34;</span>    <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Up</span>
-</span></span><span style="display:flex;"><span>bind -c rsz -k kd eval <span style="color:#e6db74">&#34;focus down&#34;</span>  <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Down</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#source .screen_layout</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#layout save def</span>
-</span></span></code></pre></div></div>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#75715e"># location: ~/.screenrc</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#75715e"># A sample screenrc file with a hardstatus line at bottom</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#75715e"># 3 windows created, with custom commands stuffed into each at session creation </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#75715e"># and some key bindings.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#75715e"># the following lines give a status line, with the current window highlighted</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>hardstatus alwayslastline
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>hardstatus string <span style="color:#e6db74">&#39;%{= kg}[%{G}%H%? %1`%?%{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%][%{B}%d/%m %{W}%C%A%{g}]&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e">#hardstatus string &#39;%{= kg}[ %{G}%H %{g}][%= %{= kB}%?%-Lw%?%{+b r}(%{G}%n*%f %t%?(%u)%?%{r})%{-b B}%?%+Lw%?%?%= %{g}%]&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#75715e">#hardstatus string &#39;%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%d/%m %{W}%C%A%{g}]&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#75715e"># huge scrollback buffer</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>defscrollback <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#75715e"># no welcome message</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>startup_message off
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#75715e"># 256 colors</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#75715e"># attrcolor b &#34;.I&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#75715e"># termcapinfo xterm &#39;Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>defbce on
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#75715e"># mouse tracking allows to switch region focus by clicking</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#75715e"># mousetrack on</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#75715e"># default windows</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>screen -t HOME <span style="color:#ae81ff">0</span> bash
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>stuff <span style="color:#e6db74">&#34;cd /root&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>screen -t SRV <span style="color:#ae81ff">1</span> bash
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>stuff <span style="color:#e6db74">&#34;cd /root/srv&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>screen -t MYSQL <span style="color:#ae81ff">2</span> bash
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>stuff <span style="color:#e6db74">&#34;cd /root/mysql&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#66d9ef">select</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#75715e">#bind c screen 1 # window numbering starts at 1 not 0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#75715e">#bind 0 select 10</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span><span style="color:#75715e"># get rid of silly xoff stuff</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#75715e">#bind s split</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span><span style="color:#75715e"># navigating regions with Ctrl-arrows</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>bindkey <span style="color:#e6db74">&#34;^[[1;5D&#34;</span> focus left
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>bindkey <span style="color:#e6db74">&#34;^[[1;5C&#34;</span> focus right
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>bindkey <span style="color:#e6db74">&#34;^[[1;5A&#34;</span> focus up
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>bindkey <span style="color:#e6db74">&#34;^[[1;5B&#34;</span> focus down
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span><span style="color:#75715e"># switch windows with F3 (prev) and F4 (next)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>bindkey <span style="color:#e6db74">&#34;^[OR&#34;</span> prev
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>bindkey <span style="color:#e6db74">&#34;^[OS&#34;</span> next
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span><span style="color:#75715e"># switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>bindkey <span style="color:#e6db74">&#34;^[O1;5R&#34;</span> layout prev
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>bindkey <span style="color:#e6db74">&#34;^[O1;5S&#34;</span> layout next
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span><span style="color:#75715e"># F2 puts Screen into resize mode. Resize regions using hjkl keys.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>bindkey <span style="color:#e6db74">&#34;^[OQ&#34;</span> eval <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># enter resize mode</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span>                                                                                                                                                                             1,1           Top
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span><span style="color:#75715e"># switch layouts with Ctrl+F3 (prev layout) and Ctrl+F4 (next)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span>bindkey <span style="color:#e6db74">&#34;^[O1;5R&#34;</span> layout prev
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span>bindkey <span style="color:#e6db74">&#34;^[O1;5S&#34;</span> layout next
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span><span style="color:#75715e"># F2 puts Screen into resize mode. Resize regions using hjkl keys.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span>bindkey <span style="color:#e6db74">&#34;^[OQ&#34;</span> eval <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># enter resize mode</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span><span><span style="color:#75715e"># use hjkl keys to resize regions</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span><span>bind -c rsz h eval <span style="color:#e6db74">&#34;resize -h -5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span><span>bind -c rsz j eval <span style="color:#e6db74">&#34;resize -v -5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span><span>bind -c rsz k eval <span style="color:#e6db74">&#34;resize -v +5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67</span><span>bind -c rsz l eval <span style="color:#e6db74">&#34;resize -h +5&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span><span><span style="color:#75715e"># quickly switch between regions using tab and arrows</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span><span>bind -c rsz <span style="color:#ae81ff">\t</span>    eval <span style="color:#e6db74">&#34;focus&#34;</span>       <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Tab</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span><span>bind -c rsz -k kl eval <span style="color:#e6db74">&#34;focus left&#34;</span>  <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Left</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72</span><span>bind -c rsz -k kr eval <span style="color:#e6db74">&#34;focus right&#34;</span> <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Right</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73</span><span>bind -c rsz -k ku eval <span style="color:#e6db74">&#34;focus up&#34;</span>    <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Up</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74</span><span>bind -c rsz -k kd eval <span style="color:#e6db74">&#34;focus down&#34;</span>  <span style="color:#e6db74">&#34;command -c rsz&#34;</span> <span style="color:#75715e"># Down</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75</span><span><span style="color:#75715e">#source .screen_layout</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76</span><span><span style="color:#75715e">#layout save def</span>
+</span></span></code></pre></div>
 
 </div>
 
@@ -348,5 +343,9 @@ if (!doNotTrack) {
     <br />
   </span>
 </footer>
-</body>
+
+            
+            <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
+            
+    </body>
 </html>

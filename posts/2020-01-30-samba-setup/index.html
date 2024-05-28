@@ -154,37 +154,37 @@ if (!doNotTrack) {
   
 </div>
 <p>Steps to set up a samba server on ubuntu 18.04.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt update
-</span></span><span style="display:flex;"><span>sudo apt install samba
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Allow Samba in ufw firewall</span>
-</span></span><span style="display:flex;"><span>sudo ufw allow <span style="color:#e6db74">&#39;Samba&#39;</span>
-</span></span><span style="display:flex;"><span>sudo systemctl status smbd
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a directory to host Samba share</span>
-</span></span><span style="display:flex;"><span>sudo mkdir /disk1/samba
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#### User setup</span>
-</span></span><span style="display:flex;"><span>sudo useradd -M -d /disk1/samba/peewee -s /usr/sbin/nologin -G sambashare peewee
-</span></span><span style="display:flex;"><span>sudo mkdir /disk1/samba/peewee
-</span></span><span style="display:flex;"><span>sudo chown peewee:sambashare /disk1/samba/peewee
-</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">2770</span> /disk1/samba/peewee
-</span></span><span style="display:flex;"><span>sudo smbpasswd -a peewee <span style="color:#75715e"># set password here</span>
-</span></span><span style="display:flex;"><span>sudo smbpasswd -e peewee
-</span></span><span style="display:flex;"><span>vi /etc/samba/smb.conf
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## Add these to the globals section to avoid name mangling and using appropriate charset</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># [globals]</span>
-</span></span><span style="display:flex;"><span>    mangled names <span style="color:#f92672">=</span> no
-</span></span><span style="display:flex;"><span>    dos charset <span style="color:#f92672">=</span> CP850
-</span></span><span style="display:flex;"><span>    unix charset <span style="color:#f92672">=</span> UTF-8
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span>peewee<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>    path <span style="color:#f92672">=</span> /disk1/samba/peewee
-</span></span><span style="display:flex;"><span>    browseable <span style="color:#f92672">=</span> yes
-</span></span><span style="display:flex;"><span>    read only <span style="color:#f92672">=</span> no
-</span></span><span style="display:flex;"><span>    force create mode <span style="color:#f92672">=</span> <span style="color:#ae81ff">0660</span>
-</span></span><span style="display:flex;"><span>    force directory mode <span style="color:#f92672">=</span> <span style="color:#ae81ff">2770</span>
-</span></span><span style="display:flex;"><span>    valid users <span style="color:#f92672">=</span> peewee
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>sudo systemctl restart smbd
-</span></span><span style="display:flex;"><span>sudo systemctl restart nmbd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>sudo apt update
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>sudo apt install samba
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#75715e"># Allow Samba in ufw firewall</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>sudo ufw allow <span style="color:#e6db74">&#39;Samba&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>sudo systemctl status smbd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#75715e"># Create a directory to host Samba share</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>sudo mkdir /disk1/samba
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e">#### User setup</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>sudo useradd -M -d /disk1/samba/peewee -s /usr/sbin/nologin -G sambashare peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>sudo mkdir /disk1/samba/peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>sudo chown peewee:sambashare /disk1/samba/peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>sudo chmod <span style="color:#ae81ff">2770</span> /disk1/samba/peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>sudo smbpasswd -a peewee <span style="color:#75715e"># set password here</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>sudo smbpasswd -e peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>vi /etc/samba/smb.conf
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    <span style="color:#75715e">## Add these to the globals section to avoid name mangling and using appropriate charset</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    <span style="color:#75715e"># [globals]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    mangled names <span style="color:#f92672">=</span> no
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    dos charset <span style="color:#f92672">=</span> CP850
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    unix charset <span style="color:#f92672">=</span> UTF-8
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    <span style="color:#f92672">[</span>peewee<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    path <span style="color:#f92672">=</span> /disk1/samba/peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    browseable <span style="color:#f92672">=</span> yes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    read only <span style="color:#f92672">=</span> no
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    force create mode <span style="color:#f92672">=</span> <span style="color:#ae81ff">0660</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    force directory mode <span style="color:#f92672">=</span> <span style="color:#ae81ff">2770</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>    valid users <span style="color:#f92672">=</span> peewee
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>sudo systemctl restart smbd
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>sudo systemctl restart nmbd
 </span></span></code></pre></div>
 </div>
 
@@ -223,5 +223,9 @@ if (!doNotTrack) {
     <br />
   </span>
 </footer>
-</body>
+
+            
+            <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
+            
+    </body>
 </html>

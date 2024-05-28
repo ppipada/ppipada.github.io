@@ -189,17 +189,17 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 <ul>
 <li>
 <p>For a node-based Hugo setup, you can install Datatables and its dependencies using npm:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install jquery datatables.net datatables.net-bs5
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npm install jquery datatables.net datatables.net-bs5
 </span></span></code></pre></div></li>
 <li>
 <p>After installation, ensure that the required JS and CSS files are included in your Hugo site&rsquo;s assets.</p>
 </li>
 <li>
 <p>First, you would need to mount the <code>node_modules</code> to the assets folder. This can be done in <code>config.toml</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">module</span>]
-</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;node_modules&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[<span style="color:#a6e22e">module</span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;node_modules&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo documentation <a href="https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts" target="_blank">here</a>
@@ -207,20 +207,20 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 </li>
 <li>
 <p>Now you have to refer to the mount path (i.e., <code>assets/vendor</code> above) when using Hugo pipes to process this file. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $datatablesBS5CSS := resources.Get &#34;vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css&#34; }}
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $datatablesBS5CSS.RelPermalink }}&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ $datatablesBS5CSS := resources.Get &#34;vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $datatablesBS5CSS.RelPermalink }}&#34;</span>&gt;
 </span></span></code></pre></div></li>
 </ul>
 <h3 id="cdn-based-installation">CDN-Based Installation</h3>
 <ul>
 <li>
 <p>For a simpler approach, you can use the CDN links to include Datatables and its dependencies:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- These can be included in the specific page directly so that other pages are not impacted--&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://code.jquery.com/jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#75715e">&lt;!-- These can be included in the specific page directly so that other pages are not impacted--&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://code.jquery.com/jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </span></span></code></pre></div></li>
 </ul>
 <h2 id="step-2-content-page">Step 2: Content Page</h2>
@@ -239,64 +239,64 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 </li>
 <li>
 <p>Sample content file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>title: &#34;Movie ratings&#34;
-</span></span><span style="display:flex;"><span>layout: &#34;movie&#34;
-</span></span><span style="display:flex;"><span>type: &#34;movie&#34;
-</span></span><span style="display:flex;"><span>toc: false
-</span></span><span style="display:flex;"><span>summary: &#34;A table of my watched movies over the years and associated metadata along with my ratings.&#34;
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Uncomment this invocation of shortcode  --&gt;</span>
-</span></span><span style="display:flex;"><span>{{/* &lt; <span style="color:#f92672">csvtable</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;movies/imdbratings_26052024.csv&#34;</span> &gt; */}} --&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>title: &#34;Movie ratings&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>layout: &#34;movie&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>type: &#34;movie&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>toc: false
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>summary: &#34;A table of my watched movies over the years and associated metadata along with my ratings.&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e">&lt;!-- Uncomment this invocation of shortcode  --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>{{/* &lt; <span style="color:#f92672">csvtable</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;movies/imdbratings_26052024.csv&#34;</span> &gt; */}} --&gt;
 </span></span></code></pre></div></li>
 <li>
 <p>The <code>csvtable</code> shortcode defined at <code>layouts/shortcodes/csvtable.html</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>{{ $path := .Get &#34;src&#34; }}
-</span></span><span style="display:flex;"><span>&lt;!-- Read the csv --&gt;
-</span></span><span style="display:flex;"><span>{{ $csv := readFile $path }}
-</span></span><span style="display:flex;"><span>{{ if $csv }}
-</span></span><span style="display:flex;"><span>&lt;!-- Unmarshal it as a data object --&gt;
-</span></span><span style="display:flex;"><span>{{ $data := $csv | transform.Unmarshal }}
-</span></span><span style="display:flex;"><span>&lt;!-- Populate the table --&gt;
-</span></span><span style="display:flex;"><span>&lt;table id=&#34;movieRatingsDataTable&#34; class=&#34;display&#34;&gt;
-</span></span><span style="display:flex;"><span>  &lt;thead&gt;
-</span></span><span style="display:flex;"><span>    &lt;!-- Declare the columns for your table --&gt;
-</span></span><span style="display:flex;"><span>    &lt;tr&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;No&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;Title&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;My Rating&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;IMDb Rating&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;Date Rated&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;Release Year&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;Directors&lt;/th&gt;
-</span></span><span style="display:flex;"><span>      &lt;th&gt;Genres&lt;/th&gt;
-</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
-</span></span><span style="display:flex;"><span>  &lt;/thead&gt;
-</span></span><span style="display:flex;"><span>  &lt;!-- Populate rows --&gt;
-</span></span><span style="display:flex;"><span>  &lt;tbody&gt;
-</span></span><span style="display:flex;"><span>    {{ range $index, $row := $data }}
-</span></span><span style="display:flex;"><span>    {{ if ne $index 0 }}
-</span></span><span style="display:flex;"><span>    &lt;tr&gt;
-</span></span><span style="display:flex;"><span>      &lt;!-- Note that the row object is dependent on your csv structure. Map proper column names. --&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ $index }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;
-</span></span><span style="display:flex;"><span>        &lt;a href=&#34;{{ index $row 5 }}&#34; target=&#34;_blank&#34;&gt;{{ index $row 3 }}&lt;/a&gt;
-</span></span><span style="display:flex;"><span>      &lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ index $row 1 }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ index $row 7 }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ index $row 2 }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ index $row 9 }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ index $row 13 }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>      &lt;td&gt;{{ index $row 10 }}&lt;/td&gt;
-</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
-</span></span><span style="display:flex;"><span>    {{ end }}
-</span></span><span style="display:flex;"><span>    {{ end }}
-</span></span><span style="display:flex;"><span>  &lt;/tbody&gt;
-</span></span><span style="display:flex;"><span>&lt;/table&gt;
-</span></span><span style="display:flex;"><span>{{ else }}
-</span></span><span style="display:flex;"><span>&lt;p&gt;Error: CSV file not found.&lt;/p&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{ $path := .Get &#34;src&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;!-- Read the csv --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>{{ $csv := readFile $path }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>{{ if $csv }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>&lt;!-- Unmarshal it as a data object --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>{{ $data := $csv | transform.Unmarshal }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>&lt;!-- Populate the table --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>&lt;table id=&#34;movieRatingsDataTable&#34; class=&#34;display&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  &lt;thead&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    &lt;!-- Declare the columns for your table --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>      &lt;th&gt;No&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>      &lt;th&gt;Title&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>      &lt;th&gt;My Rating&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>      &lt;th&gt;IMDb Rating&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>      &lt;th&gt;Date Rated&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      &lt;th&gt;Release Year&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>      &lt;th&gt;Directors&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>      &lt;th&gt;Genres&lt;/th&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>  &lt;/thead&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>  &lt;!-- Populate rows --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>  &lt;tbody&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    {{ range $index, $row := $data }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    {{ if ne $index 0 }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>      &lt;!-- Note that the row object is dependent on your csv structure. Map proper column names. --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>      &lt;td&gt;{{ $index }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>      &lt;td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>        &lt;a href=&#34;{{ index $row 5 }}&#34; target=&#34;_blank&#34;&gt;{{ index $row 3 }}&lt;/a&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>      &lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>      &lt;td&gt;{{ index $row 1 }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>      &lt;td&gt;{{ index $row 7 }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>      &lt;td&gt;{{ index $row 2 }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>      &lt;td&gt;{{ index $row 9 }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>      &lt;td&gt;{{ index $row 13 }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>      &lt;td&gt;{{ index $row 10 }}&lt;/td&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span>    {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>    {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>  &lt;/tbody&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>&lt;/table&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>{{ else }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>&lt;p&gt;Error: CSV file not found.&lt;/p&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>{{ end }}
 </span></span></code></pre></div></li>
 </ul>
 <h2 id="step-3-page-layout">Step 3: Page Layout</h2>
@@ -315,19 +315,19 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 </li>
 <li>
 <p>For example, <code>layouts/_default/movie.html</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
-</span></span><span style="display:flex;"><span>&lt;div class=&#34;container&#34; style=&#34;max-width: 1080px; margin: auto; overflow-x: auto&#34;&gt;
-</span></span><span style="display:flex;"><span>  &lt;h1 style=&#34;text-align: center; margin-bottom: 3rem&#34;&gt;{{ .Title }}&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  &lt;!-- The .Content will be the page content loaded by Hugo --&gt;
-</span></span><span style="display:flex;"><span>  &lt;section&gt;{{ .Content }}&lt;/section&gt;
-</span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;!-- Ensure scripts are deferred to improve page render performance --&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;https://code.jquery.com/jquery-3.6.0.min.js&#34; defer&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js&#34; defer&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js&#34; defer&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=&#34;/js/movietables.js&#34; defer&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;div class=&#34;container&#34; style=&#34;max-width: 1080px; margin: auto; overflow-x: auto&#34;&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  &lt;h1 style=&#34;text-align: center; margin-bottom: 3rem&#34;&gt;{{ .Title }}&lt;/h1&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  &lt;!-- The .Content will be the page content loaded by Hugo --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  &lt;section&gt;{{ .Content }}&lt;/section&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>&lt;/div&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>&lt;!-- Ensure scripts are deferred to improve page render performance --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>&lt;script src=&#34;https://code.jquery.com/jquery-3.6.0.min.js&#34; defer&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>&lt;script src=&#34;https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js&#34; defer&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>&lt;script src=&#34;https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js&#34; defer&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>&lt;script src=&#34;/js/movietables.js&#34; defer&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>{{ end }}
 </span></span></code></pre></div></li>
 </ul>
 <h2 id="step-4-datatable-initialization-function">Step 4: Datatable Initialization Function</h2>
@@ -343,26 +343,26 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 </li>
 <li>
 <p>Below is a simple example. This can be enhanced further as per your styling needs.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">jQuery</span>(<span style="color:#66d9ef">function</span> () {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#movieRatingsDataTable&#34;</span>).<span style="color:#a6e22e">DataTable</span>({
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ordering</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">order</span><span style="color:#f92672">:</span> [[<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#34;desc&#34;</span>]], <span style="color:#75715e">// Sort by the &#34;Date Rated&#34; column, assumed to be the fifth column (index 4)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pageLength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#75715e">// Set the default number of rows per page
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">columnDefs</span><span style="color:#f92672">:</span> [
-</span></span><span style="display:flex;"><span>      { <span style="color:#a6e22e">orderable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>] }, <span style="color:#75715e">// Make the Directors and Genres columns non-orderable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dt-head-center&#34;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;_all&#34;</span> }, <span style="color:#75715e">// Center align all header cells
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dt-body-center&#34;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;_all&#34;</span> }, <span style="color:#75715e">// Center align all body cells
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ],
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pagingType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;full_numbers&#34;</span>, <span style="color:#75715e">// Enhance pagination controls
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">responsive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable responsiveness
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">scrollX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable horizontal scrolling
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">language</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">search</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Filter records:&#34;</span>, <span style="color:#75715e">// Customizing the search box text
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">lengthMenu</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Display _MENU_ records per page&#34;</span>, <span style="color:#75715e">// Customize the length menu text
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Showing page _PAGE_ of _PAGES_&#34;</span>, <span style="color:#75715e">// Customize the page information text
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    },
-</span></span><span style="display:flex;"><span>  });
-</span></span><span style="display:flex;"><span>});
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#a6e22e">jQuery</span>(<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#movieRatingsDataTable&#34;</span>).<span style="color:#a6e22e">DataTable</span>({
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#a6e22e">ordering</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#a6e22e">order</span><span style="color:#f92672">:</span> [[<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#34;desc&#34;</span>]], <span style="color:#75715e">// Sort by the &#34;Date Rated&#34; column, assumed to be the fifth column (index 4)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pageLength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#75715e">// Set the default number of rows per page
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">columnDefs</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>      { <span style="color:#a6e22e">orderable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>] }, <span style="color:#75715e">// Make the Directors and Genres columns non-orderable
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#75715e"></span>      { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dt-head-center&#34;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;_all&#34;</span> }, <span style="color:#75715e">// Center align all header cells
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e"></span>      { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dt-body-center&#34;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;_all&#34;</span> }, <span style="color:#75715e">// Center align all body cells
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#75715e"></span>    ],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#a6e22e">pagingType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;full_numbers&#34;</span>, <span style="color:#75715e">// Enhance pagination controls
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">responsive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable responsiveness
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">scrollX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable horizontal scrolling
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">language</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>      <span style="color:#a6e22e">search</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Filter records:&#34;</span>, <span style="color:#75715e">// Customizing the search box text
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">lengthMenu</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Display _MENU_ records per page&#34;</span>, <span style="color:#75715e">// Customize the length menu text
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Showing page _PAGE_ of _PAGES_&#34;</span>, <span style="color:#75715e">// Customize the page information text
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#75715e"></span>    },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>  });
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>});
 </span></span></code></pre></div></li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
@@ -409,5 +409,9 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
     <br />
   </span>
 </footer>
-</body>
+
+            
+            <script src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo=" defer></script>
+            
+    </body>
 </html>
