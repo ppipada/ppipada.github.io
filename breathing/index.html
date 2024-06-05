@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-bs-theme="light"
+>
+  <head>
+    <title>Scramblings - Breathing exercises</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Breathing exercises" />
+    <script>
+      
+      
+
+      const storedTheme = localStorage.getItem('darkMode');
+      if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.style.backgroundColor = "#333333";
+          document.documentElement.style.color = "#E0E0E0";
+      }
+    </script>
+
+       
+    <link rel="stylesheet" href="../css/custom.min.css" />
+     
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+  </head>
+  <body>
+    
+    <div style="position: absolute; top: 0; right: 0; z-index: 10">
+      
+<button
+  id="darkModeToggle"
+  class="btn"
+  style="background: transparent; border: none"
+  aria-label="Toggle dark mode"
+>
+  <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+     
+<nav class="navbar navbar-expand navbar-light" style="width: 95%; margin: auto">
+  <ul class="navbar-nav mx-auto flex-row flex-wrap justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="../">
+        <i class="fas fa-home text-muted"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#" onclick="showSVG('deepequal')"
+        >Deep</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#" onclick="showSVG('samavritti')"
+        >Sama-Vritti</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#" onclick="showSVG('breathingfse')"
+        >4-7-8</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#" onclick="showSVG('bhramari')"
+        >Bhramari</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    showSVG("deepequal"); 
+  });
+
+  function showSVG(svgName) {
+    const svgs = document.querySelectorAll("#svgContainer > div");
+    const links = document.querySelectorAll(".nav-link");
+
+    
+    svgs.forEach((svg) => {
+      svg.style.display = "none";
+    });
+
+    links.forEach((link) => {
+      link.classList.remove("active"); 
+    });
+
+    
+    const selectedSVG = document.getElementById(svgName + "SVG");
+    if (selectedSVG) {
+      selectedSVG.style.display = "block";
+      const restartFunctionName = `${svgName}RestartAnimation`;
+      if (typeof window[restartFunctionName] === "function") {
+        window[restartFunctionName]();
+      }
+    }
+
+    
+    const activeLink = document.querySelector(
+      `a[onclick="showSVG('${svgName}')"]`
+    );
+    if (activeLink) {
+      activeLink.classList.add("active");
+    }
+  }
+</script>
+
+
+    
+    <div
+      id="svgContainer"
+      class="svg-container"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      <div id="deepequalSVG" style="display: none">
+        <svg id="deepequal" width="300px" height="300px" viewBox="0 0 100 100">
+  <circle
+    class="outer-circle"
+    cx="50"
+    cy="50"
+    r="40"
+    style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
+  />
+  <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      begin="0s"
+      id="deepinhale"
+    />
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      fill="freeze"
+      begin="deepinhale.end + 200ms"
+      id="deepexhale"
+    />
+  </circle>
+  <circle
+    class="inner-circle text-muted"
+    cx="50"
+    cy="50"
+    r="36"
+    style="fill: var(--bs-secondary-color); opacity: 0.3"
+  >
+    <animate
+      attributeName="r"
+      from="36"
+      to="18"
+      dur="4s"
+      repeatCount="1"
+      begin="deepinhale.begin"
+      fill="freeze"
+    />
+    <animate
+      attributeName="r"
+      from="18"
+      to="36"
+      dur="4s"
+      repeatCount="1"
+      begin="deepexhale.begin"
+      fill="freeze"
+    />
+  </circle>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="visible"
+  >
+    INHALE
+    <tspan x="50" y="50" font-size="4">nose</tspan>
+    <set
+      attributeName="visibility"
+      to="hidden"
+      begin="deepinhale.end"
+      fill="freeze"
+    />
+  </text>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="hidden"
+  >
+    EXHALE
+    <tspan x="50" y="50" font-size="4">nose</tspan>
+    <set
+      attributeName="visibility"
+      to="visible"
+      begin="deepexhale.begin"
+      fill="freeze"
+    />
+  </text>
+
+  
+<text
+  id="deepinhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="deepinhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="deepinhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="deepinhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("deepinhale", "deepinhale-countdown");
+  });
+</script>
+ 
+<text
+  id="deepexhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="deepexhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="deepexhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="deepexhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("deepexhale", "deepexhale-countdown");
+  });
+</script>
+
+</svg>
+
+<script>
+  function deepequalRestartAnimation() {
+    var svg = document.getElementById("deepequal");
+    var inhale = document.getElementById("deepinhale");
+
+    
+    setTimeout(() => {
+      svg.setCurrentTime(0);
+      inhale.beginElement();
+
+      
+      initializeCountdown("deepinhale", "deepinhale-countdown");
+      initializeCountdown("deepexhale", "deepexhale-countdown");
+    }, 200);
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    var inhale = document.getElementById("deepinhale");
+    var exhale = document.getElementById("deepexhale");
+
+    exhale.addEventListener("endEvent", deepequalRestartAnimation);
+
+    
+    inhale.beginElement();
+  });
+</script>
+
+      </div>
+      <div id="samavrittiSVG" style="display: none">
+        <svg id="samavritti" width="300px" height="300px" viewBox="0 0 100 100">
+  <circle
+    class="outer-circle"
+    cx="50"
+    cy="50"
+    r="40"
+    style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
+  />
+  <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      begin="0s"
+      id="svinhale"
+    />
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      begin="svinhale.end + 200ms"
+      id="svholdone"
+    />
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      fill="freeze"
+      begin="svholdone.end + 200ms"
+      id="svexhale"
+    />
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      begin="svexhale.end + 200ms"
+      id="svholdtwo"
+    />
+  </circle>
+  <circle
+    class="inner-circle text-muted"
+    cx="50"
+    cy="50"
+    r="36"
+    style="fill: var(--bs-secondary-color); opacity: 0.3"
+  >
+    <animate
+      attributeName="r"
+      from="36"
+      to="18"
+      dur="4s"
+      repeatCount="1"
+      begin="svinhale.begin"
+      fill="freeze"
+    />
+    <animate
+      attributeName="r"
+      from="18"
+      to="36"
+      dur="4s"
+      repeatCount="1"
+      begin="svexhale.begin"
+      fill="freeze"
+    />
+  </circle>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="visible"
+  >
+    INHALE
+    <tspan x="50" y="50" font-size="4">nose</tspan>
+    <set
+      attributeName="visibility"
+      to="hidden"
+      begin="svinhale.end"
+      fill="freeze"
+    />
+  </text>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="hidden"
+  >
+    HOLD
+    <set
+      attributeName="visibility"
+      to="visible"
+      begin="svholdone.begin"
+      fill="freeze"
+    />
+    <set
+      attributeName="visibility"
+      to="hidden"
+      begin="svholdone.end"
+      fill="freeze"
+    />
+  </text>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="hidden"
+  >
+    EXHALE
+    <tspan x="50" y="50" font-size="4">nose</tspan>
+    <set
+      attributeName="visibility"
+      to="visible"
+      begin="svexhale.begin"
+      fill="freeze"
+    />
+    <set
+      attributeName="visibility"
+      to="hidden"
+      begin="svexhale.end"
+      fill="freeze"
+    />
+  </text>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="hidden"
+  >
+    HOLD
+    <set
+      attributeName="visibility"
+      to="visible"
+      begin="svholdtwo.begin"
+      fill="freeze"
+    />
+  </text>
+
+  
+<text
+  id="svinhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="svinhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="svinhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="svinhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("svinhale", "svinhale-countdown");
+  });
+</script>
+ 
+<text
+  id="svholdone-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="svholdone-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="svholdone.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="svholdone.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("svholdone", "svholdone-countdown");
+  });
+</script>
+ 
+<text
+  id="svexhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="svexhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="svexhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="svexhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("svexhale", "svexhale-countdown");
+  });
+</script>
+ 
+<text
+  id="svholdtwo-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="svholdtwo-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="svholdtwo.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="svholdtwo.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("svholdtwo", "svholdtwo-countdown");
+  });
+</script>
+
+</svg>
+
+<script>
+  function samavrittiRestartAnimation() {
+    var svg = document.getElementById("samavritti");
+    var inhale = document.getElementById("svinhale");
+
+    setTimeout(() => {
+      svg.setCurrentTime(0);
+      inhale.beginElement();
+
+      
+      initializeCountdown("svinhale", "svinhale-countdown");
+      initializeCountdown("svholdone", "svholdone-countdown");
+      initializeCountdown("svexhale", "svexhale-countdown");
+      initializeCountdown("svholdtwo", "svholdtwo-countdown");
+    }, 200);
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    var inhale = document.getElementById("svinhale");
+    var svholdtwo = document.getElementById("svholdtwo");
+
+    svholdtwo.addEventListener("endEvent", samavrittiRestartAnimation);
+
+    
+    inhale.beginElement();
+  });
+</script>
+
+      </div>
+      <div id="breathingfseSVG" style="display: none">
+        <svg id="breathingfse" width="300px" height="300px" viewBox="0 0 100 100">
+  <circle
+    class="outer-circle"
+    cx="50"
+    cy="50"
+    r="40"
+    style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
+  />
+  <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="4s"
+      repeatCount="1"
+      begin="0s"
+      id="fseinhale"
+    />
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="7s"
+      repeatCount="1"
+      begin="fseinhale.end + 200ms"
+      id="fsehold"
+    />
+    <animateTransform
+      attributeType="XML"
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="8s"
+      repeatCount="1"
+      fill="freeze"
+      begin="fsehold.end + 200ms"
+      id="fseexhale"
+    />
+  </circle>
+  <circle
+    class="inner-circle text-muted"
+    cx="50"
+    cy="50"
+    r="36"
+    style="fill: var(--bs-secondary-color); opacity: 0.3"
+  >
+    <animate
+      attributeName="r"
+      from="36"
+      to="18"
+      dur="4s"
+      repeatCount="1"
+      begin="fseinhale.begin"
+      fill="freeze"
+    />
+    <animate
+      attributeName="r"
+      from="18"
+      to="36"
+      dur="8s"
+      repeatCount="1"
+      begin="fseexhale.begin"
+      fill="freeze"
+    />
+  </circle>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="visible"
+  >
+    INHALE
+    <tspan x="50" y="50" font-size="4">nose</tspan>
+    <set
+      attributeName="visibility"
+      to="hidden"
+      begin="fseinhale.end"
+      fill="freeze"
+    />
+  </text>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="hidden"
+  >
+    HOLD
+    <set
+      attributeName="visibility"
+      to="visible"
+      begin="fsehold.begin"
+      fill="freeze"
+    />
+    <set
+      attributeName="visibility"
+      to="hidden"
+      begin="fsehold.end"
+      fill="freeze"
+    />
+  </text>
+  <text
+    x="50"
+    y="45"
+    fill="var(--bs-body-color)"
+    text-anchor="middle"
+    alignment-baseline="central"
+    font-size="6"
+    visibility="hidden"
+  >
+    EXHALE
+    <tspan x="50" y="50" font-size="4">mouth</tspan>
+    <set
+      attributeName="visibility"
+      to="visible"
+      begin="fseexhale.begin"
+      fill="freeze"
+    />
+  </text>
+  
+<text
+  id="fseinhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="fseinhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="fseinhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="fseinhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("fseinhale", "fseinhale-countdown");
+  });
+</script>
+ 
+<text
+  id="fsehold-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="fsehold-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="fsehold.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="fsehold.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("fsehold", "fsehold-countdown");
+  });
+</script>
+ 
+<text
+  id="fseexhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="fseexhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="fseexhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="fseexhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("fseexhale", "fseexhale-countdown");
+  });
+</script>
+
+</svg>
+
+<script>
+  function breathingfseRestartAnimation() {
+    var svg = document.getElementById("breathingfse");
+    var inhale = document.getElementById("fseinhale");
+
+    setTimeout(() => {
+      svg.setCurrentTime(0);
+      inhale.beginElement();
+
+      
+      initializeCountdown("fseinhale", "fseinhale-countdown");
+      initializeCountdown("fsehold", "fsehold-countdown");
+      initializeCountdown("fseexhale", "fseexhale-countdown");
+    }, 200);
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    var inhale = document.getElementById("fseinhale");
+    var exhale = document.getElementById("fseexhale");
+
+    exhale.addEventListener("endEvent", breathingfseRestartAnimation);
+
+    
+    inhale.beginElement();
+  });
+</script>
+
+      </div>
+      <div id="bhramariSVG" style="display: none">
+        <div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <svg id="bhramari" width="300px" height="300px" viewBox="0 0 100 100">
+    <circle
+      class="outer-circle"
+      cx="50"
+      cy="50"
+      r="40"
+      style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
+    />
+    <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+      <animateTransform
+        attributeType="XML"
+        attributeName="transform"
+        type="rotate"
+        from="0 50 50"
+        to="360 50 50"
+        dur="4s"
+        repeatCount="1"
+        begin="0s"
+        id="bhinhale"
+      />
+      <animateTransform
+        attributeType="XML"
+        attributeName="transform"
+        type="rotate"
+        from="0 50 50"
+        to="360 50 50"
+        dur="8s"
+        repeatCount="1"
+        fill="freeze"
+        begin="bhinhale.end + 200ms"
+        id="bhexhale"
+      />
+    </circle>
+    <circle
+      class="inner-circle text-muted"
+      cx="50"
+      cy="50"
+      r="36"
+      style="fill: var(--bs-secondary-color); opacity: 0.3"
+    >
+      <animate
+        attributeName="r"
+        from="36"
+        to="18"
+        dur="4s"
+        repeatCount="1"
+        begin="bhinhale.begin"
+        fill="freeze"
+      />
+      <animate
+        attributeName="r"
+        from="18"
+        to="36"
+        dur="8s"
+        repeatCount="1"
+        begin="bhexhale.begin"
+        fill="freeze"
+      />
+    </circle>
+    <text
+      x="50"
+      y="45"
+      fill="var(--bs-body-color)"
+      text-anchor="middle"
+      alignment-baseline="central"
+      font-size="6"
+      visibility="visible"
+    >
+      INHALE
+      <tspan x="50" y="50" font-size="4">nose</tspan>
+      <set
+        attributeName="visibility"
+        to="hidden"
+        begin="bhinhale.end"
+        fill="freeze"
+      />
+    </text>
+    <text
+      x="50"
+      y="45"
+      fill="var(--bs-body-color)"
+      text-anchor="middle"
+      alignment-baseline="central"
+      font-size="6"
+      visibility="hidden"
+    >
+      EXHALE
+      <tspan x="50" y="50" font-size="4">nose + humming</tspan>
+      <set
+        attributeName="visibility"
+        to="visible"
+        begin="bhexhale.begin"
+        fill="freeze"
+      />
+    </text>
+
+    
+<text
+  id="bhinhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="bhinhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="bhinhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="bhinhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("bhinhale", "bhinhale-countdown");
+  });
+</script>
+ 
+<text
+  id="bhexhale-countdown"
+  x="50"
+  y="60"
+  fill="var(--bs-body-color)"
+  text-anchor="middle"
+  alignment-baseline="central"
+  font-size="4"
+  visibility="hidden"
+>
+  <tspan id="bhexhale-countdown-seconds"> </tspan>
+  secs
+  <set
+    attributeName="visibility"
+    to="visible"
+    begin="bhexhale.begin"
+    fill="freeze"
+  />
+  <set
+    attributeName="visibility"
+    to="hidden"
+    begin="bhexhale.end"
+    fill="freeze"
+  />
+</text>
+
+<script>
+  function startCountdown(elementId, duration) {
+    var countdownElement = document.getElementById(elementId);
+    var secondsElement = document.getElementById(elementId + "-seconds");
+    var endDate = new Date().getTime() + duration * 1000;
+
+    
+    var startNow = new Date().getTime();
+    var startDistance = endDate - startNow;
+    var startSeconds = Math.ceil(startDistance / 1000);
+    secondsElement.innerHTML = startSeconds;
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endDate - now;
+
+      
+      var seconds = Math.ceil(distance / 1000);
+
+      
+      secondsElement.innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        
+        return;
+      }
+
+      
+      if (seconds <= 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+
+  function initializeCountdown(followElementId, elementId) {
+    var followElement = document.getElementById(followElementId);
+    if (followElement) {
+      followElement.addEventListener("beginEvent", function () {
+        var duration = parseFloat(followElement.getAttribute("dur"));
+        if (isNaN(duration) || duration <= 0) {
+          console.error("Invalid duration");
+          return;
+        }
+        startCountdown(elementId, duration);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    initializeCountdown("bhexhale", "bhexhale-countdown");
+  });
+</script>
+
+  </svg>
+  <div
+    class="text-muted"
+    style="
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    "
+  >
+    thumbs: ears <br />
+    index: forehead <br />
+    middle: eyes <br />
+    ring: nostrils <br />
+    little: mouth-corners <br />
+  </div>
+</div>
+<script>
+  function bhramariRestartAnimation() {
+    var svg = document.getElementById("bhramari");
+    var inhale = document.getElementById("bhinhale");
+
+    
+    setTimeout(() => {
+      svg.setCurrentTime(0);
+      inhale.beginElement();
+
+      
+      initializeCountdown("bhinhale", "bhinhale-countdown");
+      initializeCountdown("bhexhale", "bhexhale-countdown");
+    }, 200);
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    var inhale = document.getElementById("bhinhale");
+    var exhale = document.getElementById("bhexhale");
+
+    exhale.addEventListener("endEvent", bhramariRestartAnimation);
+
+    
+    inhale.beginElement();
+  });
+</script>
+
+      </div>
+    </div>
+
+    
+    <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      
+    <script
+      src="https://pankajpipada.com/js/darkmode.min.467c1f2703af90b4caf73908aec83e480947a92577fdfdaf0642d9f4afb47ce5.js"
+      integrity="sha256-RnwfJwOvkLTK9zkIrsg&#43;SAlHqSV3/f2vBkLZ9K&#43;0fOU="
+    ></script>
+      
+
+
+
+
+
+    
+    
+
+
+  </body>
+</html>
