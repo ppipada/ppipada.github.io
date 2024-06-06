@@ -1,0 +1,11 @@
+/css/*
+  Cache-Control: public, max-age=7776000
+
+/js/*
+  Cache-Control: public, max-age=7776000
+
+/vendor/*
+  Cache-Control: public, max-age=7776000
+
+/webfonts/*
+  Cache-Control: public, max-age=7776000
