@@ -110,7 +110,6 @@ if (!doNotTrack) {
 
 
 
-        
         <div
             id="svgContainer"
             class="svg-container"
@@ -229,25 +228,21 @@ if (!doNotTrack) {
 </svg>
 
 <script>
-    function deepequalRestartAnimation() {
-        var svg = document.getElementById('deepequal');
-        var inhale = document.getElementById('deepinhale');
-
-        
-        setTimeout(() => {
-            svg.setCurrentTime(0);
-            inhale.beginElement();
-
-            
-            initializeCountdown('deepinhale', 'deepinhale-countdown');
-            initializeCountdown('deepexhale', 'deepexhale-countdown');
-        }, 200);
+    function deepequalRestartAnimation(timeout = 200) {
+        restartAnimationWithCountdowns(
+            'deepequal',
+            ['deepinhale', 'deepexhale'],
+            ['deepinhale-countdown', 'deepexhale-countdown'],
+            timeout
+        );
     }
 
     document.addEventListener('DOMContentLoaded', (event) => {
         var exhale = document.getElementById('deepexhale');
-        exhale.addEventListener('endEvent', deepequalRestartAnimation);
-        deepequalRestartAnimation();
+        if (exhale) {
+            exhale.addEventListener('endEvent', deepequalRestartAnimation);
+        }
+        deepequalRestartAnimation(0);
     });
 </script>
 
@@ -442,26 +437,21 @@ if (!doNotTrack) {
 </svg>
 
 <script>
-    function samavrittiRestartAnimation() {
-        var svg = document.getElementById('samavritti');
-        var inhale = document.getElementById('svinhale');
-
-        setTimeout(() => {
-            svg.setCurrentTime(0);
-            inhale.beginElement();
-
-            
-            initializeCountdown('svinhale', 'svinhale-countdown');
-            initializeCountdown('svholdone', 'svholdone-countdown');
-            initializeCountdown('svexhale', 'svexhale-countdown');
-            initializeCountdown('svholdtwo', 'svholdtwo-countdown');
-        }, 200);
+    function samavrittiRestartAnimation(timeout = 200) {
+        restartAnimationWithCountdowns(
+            'samavritti',
+            ['svinhale', 'svholdone', 'svexhale', 'svholdtwo'],
+            ['svinhale-countdown', 'svholdone-countdown', 'svexhale-countdown', 'svholdtwo-countdown'],
+            timeout
+        );
     }
 
     document.addEventListener('DOMContentLoaded', (event) => {
         var svholdtwo = document.getElementById('svholdtwo');
-        svholdtwo.addEventListener('endEvent', samavrittiRestartAnimation);
-        samavrittiRestartAnimation();
+        if (svholdtwo) {
+            svholdtwo.addEventListener('endEvent', samavrittiRestartAnimation);
+        }
+        samavrittiRestartAnimation(0);
     });
 </script>
 
@@ -614,25 +604,22 @@ if (!doNotTrack) {
 </svg>
 
 <script>
-    function breathingfseRestartAnimation() {
-        var svg = document.getElementById('breathingfse');
-        var inhale = document.getElementById('fseinhale');
-
-        setTimeout(() => {
-            svg.setCurrentTime(0);
-            inhale.beginElement();
-
-            
-            initializeCountdown('fseinhale', 'fseinhale-countdown');
-            initializeCountdown('fsehold', 'fsehold-countdown');
-            initializeCountdown('fseexhale', 'fseexhale-countdown');
-        }, 200);
+    function breathingfseRestartAnimation(timeout = 200) {
+        
+        restartAnimationWithCountdowns(
+            'breathingfse',
+            ['fseinhale', 'fsehold', 'fseexhale'],
+            ['fseinhale-countdown', 'fsehold-countdown', 'fseexhale-countdown'],
+            timeout
+        );
     }
 
     document.addEventListener('DOMContentLoaded', (event) => {
         var exhale = document.getElementById('fseexhale');
-        exhale.addEventListener('endEvent', breathingfseRestartAnimation);
-        breathingfseRestartAnimation();
+        if (exhale) {
+            exhale.addEventListener('endEvent', breathingfseRestartAnimation);
+        }
+        breathingfseRestartAnimation(0);
     });
 </script>
 
@@ -785,27 +772,23 @@ if (!doNotTrack) {
         little: mouth-corners <br />
     </div>
 </div>
+
 <script>
-    function bhramariRestartAnimation() {
-        var svg = document.getElementById('bhramari');
-        var inhale = document.getElementById('bhinhale');
-
-        
-        setTimeout(() => {
-            svg.setCurrentTime(0);
-            inhale.beginElement();
-
-            
-            initializeCountdown('bhinhale', 'bhinhale-countdown');
-            initializeCountdown('bhexhale', 'bhexhale-countdown');
-        }, 200);
+    function bhramariRestartAnimation(timeout = 200) {
+        restartAnimationWithCountdowns(
+            'bhramari',
+            ['bhinhale', 'bhexhale'],
+            ['bhinhale-countdown', 'bhexhale-countdown'],
+            timeout
+        );
     }
 
     document.addEventListener('DOMContentLoaded', (event) => {
         var exhale = document.getElementById('bhexhale');
-
-        exhale.addEventListener('endEvent', bhramariRestartAnimation);
-        bhramariRestartAnimation()
+        if (exhale) {
+            exhale.addEventListener('endEvent', bhramariRestartAnimation);
+        }
+        bhramariRestartAnimation(0);
     });
 </script>
 
@@ -814,7 +797,7 @@ if (!doNotTrack) {
 
         
             
-            <script src="https://pankajpipada.com/js/countdown.min.d19e4e5fa588913e45d235f55bb256c21dad5aed655b272fed86b392650eed04.js" integrity="sha256-0Z5OX6WIkT5F0jX1W7JWwh2tWu1lWycv7YazkmUO7QQ="></script>
+            <script src="https://pankajpipada.com/js/countdown.min.a1c8c6a587957762ef502b801215b7f586317368a17712f6e29579053d78cfd0.js" integrity="sha256-ocjGpYeVd2LvUCuAEhW39YYxc2ihdxL24pV5BT14z9A="></script>
         
         
         <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC&#43;mjoJimHGw="></script>
