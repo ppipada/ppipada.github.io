@@ -20,7 +20,13 @@
             document.documentElement.style.backgroundColor = "#333333";
             document.documentElement.style.color = "#E0E0E0";
         }
-    </script> 
+    </script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
         
         
             
@@ -521,5 +527,10 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
             ></script>
         
         
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.visibility = 'visible';
+            });
+        </script>
     </body>
 </html>

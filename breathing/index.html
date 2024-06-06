@@ -14,7 +14,12 @@
                 document.documentElement.style.backgroundColor = "#333333";
                 document.documentElement.style.color = "#E0E0E0";
             }
-        </script> 
+        </script>
+        <style>
+            body {
+                visibility: hidden;
+            }
+        </style>
         
         
             
@@ -45,7 +50,7 @@ if (!doNotTrack) {
         
 
         
-<nav class="navbar navbar-expand navbar-light" style="width: 95%; margin: auto">
+<nav class="navbar navbar-expand navbar-light" style="width: 90%; margin: auto">
     <ul class="navbar-nav mx-auto flex-row flex-wrap justify-content-center">
         <li class="nav-item">
             <a class="nav-link" href="../">
@@ -829,5 +834,10 @@ if (!doNotTrack) {
     
 
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.visibility = 'visible';
+            });
+        </script>
     </body>
 </html>

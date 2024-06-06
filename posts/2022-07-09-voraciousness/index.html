@@ -20,7 +20,13 @@
             document.documentElement.style.backgroundColor = "#333333";
             document.documentElement.style.color = "#E0E0E0";
         }
-    </script> 
+    </script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
         
         
             
@@ -355,5 +361,10 @@ Hopefully I achieve this clarity sooner rather than later.</p>
             ></script>
         
         
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.visibility = 'visible';
+            });
+        </script>
     </body>
 </html>
