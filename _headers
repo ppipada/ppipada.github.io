@@ -9,3 +9,6 @@
 
 /webfonts/*
   Cache-Control: public, max-age=7776000
+
+/images/*
+  Cache-Control: public, max-age=604800
