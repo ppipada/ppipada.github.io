@@ -50,7 +50,7 @@ if (!doNotTrack) {
         
 
         
-<nav class="navbar navbar-expand navbar-light" style="width: 90%; margin: auto">
+<nav class="navbar navbar-expand navbar-light" style="width: 85%; margin: auto">
     <ul class="navbar-nav mx-auto flex-row flex-wrap justify-content-center">
         <li class="nav-item">
             <a class="nav-link" href="../">
@@ -113,88 +113,96 @@ if (!doNotTrack) {
 
 
 
-        <div
-            id="svgContainer"
-            class="svg-container"
-            style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            "
+        <div id="svgContainer" class="container d-flex justify-content-center align-items-top" style="height: 100vh;">
+            <div id="deepequalSVG" class="container" style="display: none">
+                <div class="col-12 d-flex justify-content-center align-items-center" style="height: 350px;">
+    <svg id="deepequal" width="300px" height="300px" viewBox="0 0 100 100">
+        <circle
+            class="outer-circle"
+            cx="50"
+            cy="50"
+            r="40"
+            style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
+        />
+        <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                begin="0s"
+                id="deepinhale"
+            />
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                fill="freeze"
+                begin="deepinhale.end + 200ms"
+                id="deepexhale"
+            />
+        </circle>
+        <circle
+            class="inner-circle text-muted"
+            cx="50"
+            cy="50"
+            r="36"
+            style="fill: var(--bs-secondary-color); opacity: 0.3"
         >
-            <div id="deepequalSVG" style="display: none">
-                <svg id="deepequal" width="300px" height="300px" viewBox="0 0 100 100">
-    <circle
-        class="outer-circle"
-        cx="50"
-        cy="50"
-        r="40"
-        style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
-    />
-    <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            begin="0s"
-            id="deepinhale"
-        />
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            fill="freeze"
-            begin="deepinhale.end + 200ms"
-            id="deepexhale"
-        />
-    </circle>
-    <circle
-        class="inner-circle text-muted"
-        cx="50"
-        cy="50"
-        r="36"
-        style="fill: var(--bs-secondary-color); opacity: 0.3"
-    >
-        <animate attributeName="r" from="36" to="18" dur="4s" repeatCount="1" begin="deepinhale.begin" fill="freeze" />
-        <animate attributeName="r" from="18" to="36" dur="4s" repeatCount="1" begin="deepexhale.begin" fill="freeze" />
-    </circle>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="visible"
-    >
-        INHALE
-        <tspan x="50" y="50" font-size="4">nose</tspan>
-        <set attributeName="visibility" to="hidden" begin="deepinhale.end" fill="freeze" />
-    </text>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="hidden"
-    >
-        EXHALE
-        <tspan x="50" y="50" font-size="4">nose</tspan>
-        <set attributeName="visibility" to="visible" begin="deepexhale.begin" fill="freeze" />
-    </text>
+            <animate
+                attributeName="r"
+                from="36"
+                to="18"
+                dur="4s"
+                repeatCount="1"
+                begin="deepinhale.begin"
+                fill="freeze"
+            />
+            <animate
+                attributeName="r"
+                from="18"
+                to="36"
+                dur="4s"
+                repeatCount="1"
+                begin="deepexhale.begin"
+                fill="freeze"
+            />
+        </circle>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="visible"
+        >
+            INHALE
+            <tspan x="50" y="50" font-size="4">nose</tspan>
+            <set attributeName="visibility" to="hidden" begin="deepinhale.end" fill="freeze" />
+        </text>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="hidden"
+        >
+            EXHALE
+            <tspan x="50" y="50" font-size="4">nose</tspan>
+            <set attributeName="visibility" to="visible" begin="deepexhale.begin" fill="freeze" />
+        </text>
 
-    
+        
 <text
     id="deepinhale-countdown"
     x="50"
@@ -211,7 +219,7 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="deepinhale.end" fill="freeze" />
 </text>
 
-    
+        
 <text
     id="deepexhale-countdown"
     x="50"
@@ -228,7 +236,8 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="deepexhale.end" fill="freeze" />
 </text>
 
-</svg>
+    </svg>
+</div>
 
 <script>
     function deepequalRestartAnimation(timeout = 200) {
@@ -250,126 +259,143 @@ if (!doNotTrack) {
 </script>
 
             </div>
-            <div id="samavrittiSVG" style="display: none">
-                <svg id="samavritti" width="300px" height="300px" viewBox="0 0 100 100">
-    <circle
-        class="outer-circle"
-        cx="50"
-        cy="50"
-        r="40"
-        style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
-    />
-    <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            begin="0s"
-            id="svinhale"
+            <div id="samavrittiSVG" class="container" style="display: none">
+                <div class="col-12 d-flex justify-content-center align-items-center" style="height: 350px;">
+    <svg id="samavritti" width="300px" height="300px" viewBox="0 0 100 100">
+        <circle
+            class="outer-circle"
+            cx="50"
+            cy="50"
+            r="40"
+            style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
         />
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            begin="svinhale.end + 200ms"
-            id="svholdone"
-        />
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            fill="freeze"
-            begin="svholdone.end + 200ms"
-            id="svexhale"
-        />
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            begin="svexhale.end + 200ms"
-            id="svholdtwo"
-        />
-    </circle>
-    <circle
-        class="inner-circle text-muted"
-        cx="50"
-        cy="50"
-        r="36"
-        style="fill: var(--bs-secondary-color); opacity: 0.3"
-    >
-        <animate attributeName="r" from="36" to="18" dur="4s" repeatCount="1" begin="svinhale.begin" fill="freeze" />
-        <animate attributeName="r" from="18" to="36" dur="4s" repeatCount="1" begin="svexhale.begin" fill="freeze" />
-    </circle>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="visible"
-    >
-        INHALE
-        <tspan x="50" y="50" font-size="4">nose</tspan>
-        <set attributeName="visibility" to="hidden" begin="svinhale.end" fill="freeze" />
-    </text>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="hidden"
-    >
-        HOLD
-        <set attributeName="visibility" to="visible" begin="svholdone.begin" fill="freeze" />
-        <set attributeName="visibility" to="hidden" begin="svholdone.end" fill="freeze" />
-    </text>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="hidden"
-    >
-        EXHALE
-        <tspan x="50" y="50" font-size="4">nose</tspan>
-        <set attributeName="visibility" to="visible" begin="svexhale.begin" fill="freeze" />
-        <set attributeName="visibility" to="hidden" begin="svexhale.end" fill="freeze" />
-    </text>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="hidden"
-    >
-        HOLD
-        <set attributeName="visibility" to="visible" begin="svholdtwo.begin" fill="freeze" />
-    </text>
+        <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                begin="0s"
+                id="svinhale"
+            />
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                begin="svinhale.end + 200ms"
+                id="svholdone"
+            />
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                fill="freeze"
+                begin="svholdone.end + 200ms"
+                id="svexhale"
+            />
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                begin="svexhale.end + 200ms"
+                id="svholdtwo"
+            />
+        </circle>
+        <circle
+            class="inner-circle text-muted"
+            cx="50"
+            cy="50"
+            r="36"
+            style="fill: var(--bs-secondary-color); opacity: 0.3"
+        >
+            <animate
+                attributeName="r"
+                from="36"
+                to="18"
+                dur="4s"
+                repeatCount="1"
+                begin="svinhale.begin"
+                fill="freeze"
+            />
+            <animate
+                attributeName="r"
+                from="18"
+                to="36"
+                dur="4s"
+                repeatCount="1"
+                begin="svexhale.begin"
+                fill="freeze"
+            />
+        </circle>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="visible"
+        >
+            INHALE
+            <tspan x="50" y="50" font-size="4">nose</tspan>
+            <set attributeName="visibility" to="hidden" begin="svinhale.end" fill="freeze" />
+        </text>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="hidden"
+        >
+            HOLD
+            <set attributeName="visibility" to="visible" begin="svholdone.begin" fill="freeze" />
+            <set attributeName="visibility" to="hidden" begin="svholdone.end" fill="freeze" />
+        </text>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="hidden"
+        >
+            EXHALE
+            <tspan x="50" y="50" font-size="4">nose</tspan>
+            <set attributeName="visibility" to="visible" begin="svexhale.begin" fill="freeze" />
+            <set attributeName="visibility" to="hidden" begin="svexhale.end" fill="freeze" />
+        </text>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="hidden"
+        >
+            HOLD
+            <set attributeName="visibility" to="visible" begin="svholdtwo.begin" fill="freeze" />
+        </text>
 
-    
+        
 <text
     id="svinhale-countdown"
     x="50"
@@ -386,7 +412,7 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="svinhale.end" fill="freeze" />
 </text>
 
-    
+        
 <text
     id="svholdone-countdown"
     x="50"
@@ -403,7 +429,7 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="svholdone.end" fill="freeze" />
 </text>
 
-    
+        
 <text
     id="svexhale-countdown"
     x="50"
@@ -420,7 +446,7 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="svexhale.end" fill="freeze" />
 </text>
 
-    
+        
 <text
     id="svholdtwo-countdown"
     x="50"
@@ -437,7 +463,8 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="svholdtwo.end" fill="freeze" />
 </text>
 
-</svg>
+    </svg>
+</div>
 
 <script>
     function samavrittiRestartAnimation(timeout = 200) {
@@ -459,15 +486,8 @@ if (!doNotTrack) {
 </script>
 
             </div>
-            <div id="anulomvilomSVG" style="display: none">
-                <div
-    style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    "
->
+            <div id="anulomvilomSVG" class="container" style="display: none">
+                <div class="col-12 d-flex justify-content-center align-items-center" style="height: 350px;">
     <svg id="anulomvilom" width="300px" height="300px" viewBox="0 0 100 100">
         <circle
             class="outer-circle"
@@ -737,21 +757,22 @@ if (!doNotTrack) {
 </text>
 
     </svg>
-    <div
-        class="text-muted"
-        style="
+</div>
+<div
+    class="col-12 text-center mt-3 text-muted"
+    style="
             width: 90%;
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            height: 100px;
         "
-    >
-        Right Thumb: Right Nostril
-        <br />
-        Right Ring: Left Nostril
-    </div>
+>
+    Right Thumb: Right Nostril
+    <br />
+    Right Ring: Left Nostril
 </div>
 
 <script>
@@ -780,15 +801,8 @@ if (!doNotTrack) {
 </script>
 
             </div>
-            <div id="bhramariSVG" style="display: none">
-                <div
-    style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    "
->
+            <div id="bhramariSVG" class="container" style="display: none">
+                <div class="col-12 d-flex justify-content-center align-items-center" style="height: 350px;">
     <svg id="bhramari" width="300px" height="300px" viewBox="0 0 100 100">
         <circle
             class="outer-circle"
@@ -910,23 +924,24 @@ if (!doNotTrack) {
 </text>
 
     </svg>
-    <div
-        class="text-muted"
-        style="
+</div>
+<div
+    class="col-12 text-center mt-3 text-muted"
+    style="
             width: 90%;
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            height: 100px;
         "
-    >
-        thumbs: ears <br />
-        index: forehead <br />
-        middle: eyes <br />
-        ring: nostrils <br />
-        little: mouth-corners <br />
-    </div>
+>
+    thumbs: ears <br />
+    index: forehead <br />
+    middle: eyes <br />
+    ring: nostrils <br />
+    little: mouth-corners <br />
 </div>
 
 <script>
@@ -949,101 +964,118 @@ if (!doNotTrack) {
 </script>
 
             </div>
-            <div id="breathingfseSVG" style="display: none">
-                <svg id="breathingfse" width="300px" height="300px" viewBox="0 0 100 100">
-    <circle
-        class="outer-circle"
-        cx="50"
-        cy="50"
-        r="40"
-        style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
-    />
-    <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="4s"
-            repeatCount="1"
-            begin="0s"
-            id="fseinhale"
+            <div id="breathingfseSVG" class="container" style="display: none">
+                <div class="col-12 d-flex justify-content-center align-items-center" style="height: 350px;">
+    <svg id="breathingfse" width="300px" height="300px" viewBox="0 0 100 100">
+        <circle
+            class="outer-circle"
+            cx="50"
+            cy="50"
+            r="40"
+            style="fill: none; stroke: var(--bs-body-color); stroke-width: 0.5"
         />
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="7s"
-            repeatCount="1"
-            begin="fseinhale.end + 200ms"
-            id="fsehold"
-        />
-        <animateTransform
-            attributeType="XML"
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="8s"
-            repeatCount="1"
-            fill="freeze"
-            begin="fsehold.end + 200ms"
-            id="fseexhale"
-        />
-    </circle>
-    <circle
-        class="inner-circle text-muted"
-        cx="50"
-        cy="50"
-        r="36"
-        style="fill: var(--bs-secondary-color); opacity: 0.3"
-    >
-        <animate attributeName="r" from="36" to="18" dur="4s" repeatCount="1" begin="fseinhale.begin" fill="freeze" />
-        <animate attributeName="r" from="18" to="36" dur="8s" repeatCount="1" begin="fseexhale.begin" fill="freeze" />
-    </circle>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="visible"
-    >
-        INHALE
-        <tspan x="50" y="50" font-size="4">nose</tspan>
-        <set attributeName="visibility" to="hidden" begin="fseinhale.end" fill="freeze" />
-    </text>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="hidden"
-    >
-        HOLD
-        <set attributeName="visibility" to="visible" begin="fsehold.begin" fill="freeze" />
-        <set attributeName="visibility" to="hidden" begin="fsehold.end" fill="freeze" />
-    </text>
-    <text
-        x="50"
-        y="45"
-        fill="var(--bs-body-color)"
-        text-anchor="middle"
-        alignment-baseline="central"
-        font-size="6"
-        visibility="hidden"
-    >
-        EXHALE
-        <tspan x="50" y="50" font-size="4">mouth</tspan>
-        <set attributeName="visibility" to="visible" begin="fseexhale.begin" fill="freeze" />
-    </text>
-    
+        <circle class="moving-dot" cx="50" cy="10" r="2.5" style="fill: red">
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="4s"
+                repeatCount="1"
+                begin="0s"
+                id="fseinhale"
+            />
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="7s"
+                repeatCount="1"
+                begin="fseinhale.end + 200ms"
+                id="fsehold"
+            />
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="8s"
+                repeatCount="1"
+                fill="freeze"
+                begin="fsehold.end + 200ms"
+                id="fseexhale"
+            />
+        </circle>
+        <circle
+            class="inner-circle text-muted"
+            cx="50"
+            cy="50"
+            r="36"
+            style="fill: var(--bs-secondary-color); opacity: 0.3"
+        >
+            <animate
+                attributeName="r"
+                from="36"
+                to="18"
+                dur="4s"
+                repeatCount="1"
+                begin="fseinhale.begin"
+                fill="freeze"
+            />
+            <animate
+                attributeName="r"
+                from="18"
+                to="36"
+                dur="8s"
+                repeatCount="1"
+                begin="fseexhale.begin"
+                fill="freeze"
+            />
+        </circle>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="visible"
+        >
+            INHALE
+            <tspan x="50" y="50" font-size="4">nose</tspan>
+            <set attributeName="visibility" to="hidden" begin="fseinhale.end" fill="freeze" />
+        </text>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="hidden"
+        >
+            HOLD
+            <set attributeName="visibility" to="visible" begin="fsehold.begin" fill="freeze" />
+            <set attributeName="visibility" to="hidden" begin="fsehold.end" fill="freeze" />
+        </text>
+        <text
+            x="50"
+            y="45"
+            fill="var(--bs-body-color)"
+            text-anchor="middle"
+            alignment-baseline="central"
+            font-size="6"
+            visibility="hidden"
+        >
+            EXHALE
+            <tspan x="50" y="50" font-size="4">mouth</tspan>
+            <set attributeName="visibility" to="visible" begin="fseexhale.begin" fill="freeze" />
+        </text>
+        
 <text
     id="fseinhale-countdown"
     x="50"
@@ -1060,7 +1092,7 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="fseinhale.end" fill="freeze" />
 </text>
 
-    
+        
 <text
     id="fsehold-countdown"
     x="50"
@@ -1077,7 +1109,7 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="fsehold.end" fill="freeze" />
 </text>
 
-    
+        
 <text
     id="fseexhale-countdown"
     x="50"
@@ -1094,7 +1126,8 @@ if (!doNotTrack) {
     <set attributeName="visibility" to="hidden" begin="fseexhale.end" fill="freeze" />
 </text>
 
-</svg>
+    </svg>
+</div>
 
 <script>
     function breathingfseRestartAnimation(timeout = 200) {
