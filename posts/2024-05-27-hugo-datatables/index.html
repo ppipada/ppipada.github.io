@@ -237,7 +237,9 @@ if (!doNotTrack) {
         </aside>
     
 </div>
-<p>In this guide, we will walk through the steps to integrate Datatables into a Hugo site. We will cover both node-based and CDN-based installations, and discuss the necessary page layout, table layout, and Datatable initialization functions.</p>
+<p>In this guide, we will walk through the steps to integrate Datatables into a Hugo site. We will cover both node-based
+and CDN-based installations, and discuss the necessary page layout, table layout, and Datatable initialization
+functions.</p>
 <h2 id="what-datatables-provide">What Datatables Provide</h2>
 <p>Datatables offer numerous features to enhance the user experience when working with tabular data:</p>
 <ul>
@@ -248,8 +250,8 @@ if (!doNotTrack) {
 <li><strong>Customization</strong>: Extensive options to customize the appearance and behavior of tables.</li>
 </ul>
 <h2 id="step-1-installation">Step 1: Installation</h2>
-<p>Datatables provides various styling and js options that supports jQuery, bootstrap and others.
-Below we talk about Bootstrap5 packages, but this can be adopted to any other styling system too.</p>
+<p>Datatables provides various styling and js options that supports jQuery, bootstrap and others. Below we talk about
+Bootstrap5 packages, but this can be adopted to any other styling system too.</p>
 <h3 id="node-based-installation">Node-Based Installation</h3>
 <ul>
 <li>
@@ -267,7 +269,8 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets/vendor&#34;</span>
 </span></span></code></pre></div></li>
 <li>
-<p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo documentation  
+<p>Note that if you do this, you have to explicitly mount other folders too. Defaults are shown in the Hugo
+documentation  
 
 
 
@@ -283,16 +286,17 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 .</p>
 </li>
 <li>
-<p>Now you have to refer to the mount path (i.e., <code>assets/vendor</code> above) when using Hugo pipes to process this file. For example:</p>
+<p>Now you have to refer to the mount path (i.e., <code>assets/vendor</code> above) when using Hugo pipes to process this file.
+For example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ $datatablesBS5CSS := resources.Get &#34;vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css&#34; }}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $datatablesBS5CSS.RelPermalink }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $datatablesBS5CSS.RelPermalink }}&#34;</span> /&gt;
 </span></span></code></pre></div></li>
 </ul>
 <h3 id="cdn-based-installation">CDN-Based Installation</h3>
 <ul>
 <li>
 <p>For a simpler approach, you can use the CDN links to include Datatables and its dependencies:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css&#34;</span> /&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#75715e">&lt;!-- These can be included in the specific page directly so that other pages are not impacted--&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://code.jquery.com/jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
@@ -309,7 +313,8 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 <p>First, you can create the content with a specialized layout. For example at: <code>content/movies/_index.md</code>.</p>
 </li>
 <li>
-<p>If your actual data comes from a csv file, you can load that file and populate the table using a shortcode. Else, your data can directly go as content in the page.</p>
+<p>If your actual data comes from a csv file, you can load that file and populate the table using a shortcode. Else,
+your data can directly go as content in the page.</p>
 </li>
 <li>
 <p>Below is a sample content page and the associated csv read and table populate shortcode.</p>
@@ -317,15 +322,16 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 <li>
 <p>Sample content file:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>title: &#34;Movie ratings&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>layout: &#34;movie&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>type: &#34;movie&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>title: &#39;Movie ratings&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>layout: &#39;movie&#39;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>type: &#39;movie&#39;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>toc: false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>summary: &#34;A table of my watched movies over the years and associated metadata along with my ratings.&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>summary: &#39;A table of my watched movies over the years and associated metadata along with my ratings.&#39;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>---
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e">&lt;!-- Uncomment this invocation of shortcode  --&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>{{/* &lt; <span style="color:#f92672">csvtable</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;movies/imdbratings_26052024.csv&#34;</span> &gt; */}} --&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>{{/* &lt; <span style="color:#f92672">csvtable</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;movies/imdbratings_23072024.csv&#34;</span> &gt; */}} --&gt;
 </span></span></code></pre></div></li>
 <li>
 <p>The <code>csvtable</code> shortcode defined at <code>layouts/shortcodes/csvtable.html</code>:</p>
@@ -413,7 +419,8 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 <p>The Datatable initialization is a javascript function.</p>
 </li>
 <li>
-<p>You can write that as a separate script in <code>static/js</code> and use it, or add it in <code>assets/js</code> and load it via <code>resource.Get</code> as shown before or even embed it directly into the page layout file.</p>
+<p>You can write that as a separate script in <code>static/js</code> and use it, or add it in <code>assets/js</code> and load it via
+<code>resource.Get</code> as shown before or even embed it directly into the page layout file.</p>
 </li>
 <li>
 <p>All your options related to page render can be added here.</p>
@@ -421,30 +428,31 @@ Below we talk about Bootstrap5 packages, but this can be adopted to any other st
 <li>
 <p>Below is a simple example. This can be enhanced further as per your styling needs.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#a6e22e">jQuery</span>(<span style="color:#66d9ef">function</span> () {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#movieRatingsDataTable&#34;</span>).<span style="color:#a6e22e">DataTable</span>({
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#a6e22e">ordering</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#a6e22e">order</span><span style="color:#f92672">:</span> [[<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#34;desc&#34;</span>]], <span style="color:#75715e">// Sort by the &#34;Date Rated&#34; column, assumed to be the fifth column (index 4)
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pageLength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#75715e">// Set the default number of rows per page
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">columnDefs</span><span style="color:#f92672">:</span> [
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>      { <span style="color:#a6e22e">orderable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>] }, <span style="color:#75715e">// Make the Directors and Genres columns non-orderable
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#75715e"></span>      { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dt-head-center&#34;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;_all&#34;</span> }, <span style="color:#75715e">// Center align all header cells
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e"></span>      { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dt-body-center&#34;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;_all&#34;</span> }, <span style="color:#75715e">// Center align all body cells
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#75715e"></span>    ],
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#a6e22e">pagingType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;full_numbers&#34;</span>, <span style="color:#75715e">// Enhance pagination controls
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">responsive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable responsiveness
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">scrollX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable horizontal scrolling
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">language</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>      <span style="color:#a6e22e">search</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Filter records:&#34;</span>, <span style="color:#75715e">// Customizing the search box text
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">lengthMenu</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Display _MENU_ records per page&#34;</span>, <span style="color:#75715e">// Customize the length menu text
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Showing page _PAGE_ of _PAGES_&#34;</span>, <span style="color:#75715e">// Customize the page information text
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#75715e"></span>    },
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>  });
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;#movieRatingsDataTable&#39;</span>).<span style="color:#a6e22e">DataTable</span>({
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#a6e22e">ordering</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        <span style="color:#a6e22e">order</span><span style="color:#f92672">:</span> [[<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;desc&#39;</span>]], <span style="color:#75715e">// Sort by the &#34;Date Rated&#34; column, assumed to be the fifth column (index 4)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">pageLength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#75715e">// Set the default number of rows per page
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">columnDefs</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            { <span style="color:#a6e22e">orderable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>] }, <span style="color:#75715e">// Make the Directors and Genres columns non-orderable
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#75715e"></span>            { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dt-head-center&#39;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_all&#39;</span> }, <span style="color:#75715e">// Center align all header cells
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e"></span>            { <span style="color:#a6e22e">className</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dt-body-center&#39;</span>, <span style="color:#a6e22e">targets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_all&#39;</span> }, <span style="color:#75715e">// Center align all body cells
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#75715e"></span>        ],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        <span style="color:#a6e22e">pagingType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;full_numbers&#39;</span>, <span style="color:#75715e">// Enhance pagination controls
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">responsive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable responsiveness
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">scrollX</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// Enable horizontal scrolling
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">language</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>            <span style="color:#a6e22e">search</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Filter records:&#39;</span>, <span style="color:#75715e">// Customizing the search box text
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">lengthMenu</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Display _MENU_ records per page&#39;</span>, <span style="color:#75715e">// Customize the length menu text
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Showing page _PAGE_ of _PAGES_&#39;</span>, <span style="color:#75715e">// Customize the page information text
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#75715e"></span>        },
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    });
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>});
 </span></span></code></pre></div></li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li>With these steps, you can effectively integrate Datatables into your Hugo site, providing a robust and user-friendly way to display tabular data.</li>
+<li>With these steps, you can effectively integrate Datatables into your Hugo site, providing a robust and user-friendly
+way to display tabular data.</li>
 <li>Example integration is present in this sites Movie ratings page  
 
 
