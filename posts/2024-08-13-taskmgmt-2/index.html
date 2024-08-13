@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    
+    
+        
+    
+
+
+    <meta name="description" content="This post explores a markdown-based task management system designed for solo developers, balancing simplicity with effective project management." />
+    
+    
+
+    <script>
+        const storedTheme = localStorage.getItem('darkMode');
+        if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.style.backgroundColor = "#333333";
+            document.documentElement.style.color = "#E0E0E0";
+        }
+    </script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
+        
+        
+            
+        
+        
+            <link rel="preload" href="../../images/icon-192x192.png" as="image" />
+        
+    
+
+    
+    
+    
+        
+        <link rel="stylesheet" href="../../css/custom.min.82b617a66f0e841cb2d757a0ac41bce6a80d1cda91d0b33e28f9a29d409228f4.css" integrity="sha256-grYXpm8OhByy11egrEG85qgNHNqR0LM&#43;KPminUCSKPQ=" />
+    
+
+    
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto; position: relative;">
+    
+    <div style="position: absolute; top: 0.5em; left: 1em; z-index: 10;">
+        
+<button id="darkModeToggle" class="btn" style="background: transparent; border: none" aria-label="Toggle dark mode">
+    <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+    
+    <div class="row justify-content-center">
+        
+        
+        
+        
+        
+        <div class="col-sm-5 col-12 text-sm-end text-center pt-1">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    src="../../images/icon-192x192.png"
+                    alt="home-image"
+                />
+            </a>
+        </div>
+        
+        <div class="col-sm-7 col-12 text-sm-start text-center">
+        
+            <h2 class="m-0 mt-2">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../tags/" title="Tags">Tags</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../movies/" title="Movies">Movies</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../breathing/" title="Breathing">Breathing</a>
+                </li>
+                
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+    <ul id="breadcrumbs" style="list-style: none; padding: 0;">
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <a class="text-muted" href="../../" aria-label="home"
+                        ><i class="fas fa-home"></i
+                    ></a>
+                </li>
+            
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <span>&gt;</span>
+                    <a class="text-muted" href="../../posts/">Posts</a>
+                </li>
+            
+        
+        
+            <li class="text-muted" style="display: inline;">
+                <span>&gt;</span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="mx-auto">
+                <div class="container">
+                    <form
+    id="search"
+    action="https://pankajpipada.com/search/"
+    method="get"
+    class="d-flex justify-content-center mt-2 mb-4"
+>
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 90%">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input
+            type="text"
+            class="form-control rounded-pill"
+            id="search-input"
+            name="query"
+            placeholder="Type here to search..."
+            aria-label="Search"
+        />
+        <button class="btn border-0 bg-transparent" type="submit" aria-label="search">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+
+    <div class="pl-sm-4 ml-sm-5">
+        <div style="margin-bottom: 2rem">
+            <h1 style="text-align: center">Refining the Flow: A Streamlined Markdown/Git-Based Task Management System for Solo Developers</h1>
+            <div
+                class="text-muted"
+                style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
+            >
+                <div>Aug 13, 2024 | Reading Time: 7 min</div>
+                <div>
+                    <i class="fa fa-tags"></i>
+                    
+                        <a class="text-muted" href="../../tags/life">life</a
+                        >
+                    
+                </div>
+            </div>
+        </div><div class="mt-1 mb-5">
+    
+        <aside>
+            <h4>Table of contents</h4>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#task-management-a-constant-evolution">Task Management: A Constant Evolution</a></li>
+    <li><a href="#the-workflow">The Workflow</a></li>
+    <li><a href="#the-system">The System</a>
+      <ul>
+        <li><a href="#ideasbrainstorminghigh-level-deliberations">Ideas/Brainstorming/High-Level Deliberations</a></li>
+        <li><a href="#project-specific-tasks">Project-Specific Tasks</a></li>
+      </ul>
+    </li>
+    <li><a href="#challenges-and-adjustments">Challenges and Adjustments</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</nav>
+        </aside>
+    
+</div>
+<h2 id="task-management-a-constant-evolution">Task Management: A Constant Evolution</h2>
+<p>Effective task management is crucial in software development, particularly for solo developers who manage all aspects of
+a project. Over the years, I&rsquo;ve experimented with various systems—Zettelkasten, Eisenhower Matrix, Agile methodologies,
+and more—each offering unique benefits. In my  
+
+
+
+<a
+    href="../../posts/2023-07-30-taskmgmt/"
+    title=""
+    
+>
+    previous blog post
+</a>
+, I
+detailed a structured prioritization system that balanced immediate tasks with longer-term goals. While this approach
+was effective for managing multiple responsibilities, it became clear that a more streamlined system was necessary as my
+focus shifted toward solo software projects.</p>
+<p>In solo projects, where you serve as the developer, project manager, and sometimes even the client, task management
+needs to be as simple and fluid as possible. The goal is to maintain focus on coding and problem-solving rather than
+managing too many tools. This realization led me to refine my system, integrating task management directly into my
+coding workflow using a simple, markdown-based approach.</p>
+<h2 id="the-workflow">The Workflow</h2>
+<p>To streamline my workflow, I categorize tasks into four main priorities (as described in my previous post), a system
+that has proven effective across different contexts:</p>
+<ul>
+<li><strong>P-0 (Immediate Tasks)</strong>: The most urgent tasks that needed to be tackled right away. This list is kept very short
+to avoid overwhelming stress and serves as a critical indicator of workload and pressure.</li>
+<li><strong>P-1 (Sooner than Later)</strong>: Important but not immediate tasks that are next in line after P-0. These tasks
+typically feed into P-0 during calmer periods.</li>
+<li><strong>P-2 (Obligations)</strong>: A catch-all for tasks with no pressing urgency. These are often obligatory tasks that lack
+clear motivation, leading them to become &ldquo;write and forget&rdquo; items.</li>
+<li><strong>P-X (Excitements)</strong>: A short list of tasks that genuinely excite me, crucial for maintaining motivation. Tasks
+here had to be interesting enough to merit their inclusion.</li>
+</ul>
+<p>Each day, I draw from these categories to form (at least in my head) two lists:</p>
+<ul>
+<li><strong>Do</strong>: What I plan to accomplish that day.</li>
+<li><strong>Look forward to</strong>: Tasks that spark enthusiasm.</li>
+</ul>
+<p>This daily focus ensures that I stay on top of urgent work while also engaging with tasks that keep me motivated. The
+workflow works well for managing multiple streams of work, balancing motivation, and handling obligations.</p>
+<h2 id="the-system">The System</h2>
+<ul>
+<li>
+<p>Challenges with previous MS OneNote based system</p>
+<ul>
+<li>As I transitioned to solo development, the need for a more integrated and fluid execution system became
+apparent.</li>
+<li>Managing tasks through MS OneNote caused frequent context switches, often disrupting my flow state.</li>
+<li>Also, the subpar support for Linux was a bit problematic.</li>
+</ul>
+</li>
+<li>
+<p>Switch to Markdown+Git:</p>
+<ul>
+<li>I had experimented with markdown-based task management before, but it wasn’t until I faced these challenges that
+I fully embraced it.</li>
+<li>Markdown, combined with Git, became the system that brought everything together. This approach integrates task
+management directly into the coding environment, minimizing context switches and keeping me in a productive flow
+state.</li>
+<li>With markdown, I manage different types of notes and tasks in a way that aligns with my workflow but is more
+streamlined.</li>
+</ul>
+</li>
+</ul>
+<h3 id="ideasbrainstorminghigh-level-deliberations">Ideas/Brainstorming/High-Level Deliberations</h3>
+<p>For non-project-specific tasks or high-level ideas, I follow this implementation:</p>
+<ul>
+<li>Inbox: Everything starts in an <code>inbox.md</code> file, which acts as a simple task list. Items here are sourced from random
+notes in Google Keep, spontaneous thoughts, or ad-hoc notes taken with pen and paper.</li>
+<li>Todo: Items move from <code>inbox.md</code> to a <code>/todo.md</code> which is a prioritized task list according to the previous workflow
+P0/PX/P1/P2. Ideas or refinements of thoughts or brainstorming&rsquo;s dont move here.</li>
+<li>Ideas: These items are moved to specific files like <code>ideaOrNoteTypeTitle/someFileName.md</code> or
+<code>/notes/ideaOrNoteTypeTitle.md</code>. These files are generally similar to P-X lists, focusing on ideas that excite me
+but aren’t immediately actionable. These files are created as needed, and generic catch-all files (e.g., <code>notes.md</code>)
+are avoided.</li>
+</ul>
+<p>I experimented with  
+
+
+
+<a
+    href="https://github.com/foambubble/foam"
+    title=""
+    
+        target="_blank"
+    
+>
+    Foam Bubble
+</a>
+, a tool that enhances markdown files with features
+like back-linking and graph visualization. However, in practice, I found that a well-organized files and folders graph
+was sufficient for my needs. Non-actionable items or notes kept for the sake of it tend to clutter my mind. Over time,
+I’ve realized that I’m <em>truly</em> interested in only a handful of topics. Fleeting thoughts often accumulate in my
+<code>inbox.md</code> (previously the P-X or P-2 box), but I rarely act on them. Discarding these after a period has helped me
+maintain a clear head-space.</p>
+<p>Also, I have kept these files in my private GitHub that contains my blogs content. This has had its additional benefits,
+with one of the main advantages being keeping all my content in one place.</p>
+<h3 id="project-specific-tasks">Project-Specific Tasks</h3>
+<p>For project-related tasks, I maintain a single <code>/todo.md</code> file within each project’s repository. This approach
+eliminates the need for context switching, allowing me to manage tasks directly within the development environment.
+Markdown’s simplicity—just plain text with minimal formatting—makes it an ideal tool for this purpose.</p>
+<p>The new system maintains the core principles of my workflow but is more integrated and efficient for project management.</p>
+<ol>
+<li>
+<p>Project Overview:</p>
+<ul>
+<li>Each project begins with a high-level overview in the <code>todo.md</code> file. This section serves as a brief,
+bullet-pointed design document, outlining the project’s goals and scope, particularly focusing on what’s necessary
+to reach the MVP (Minimum Viable Product).</li>
+<li>This overview is the foundation, and categorized as P-0 and P-1 system, but it is now directly tied to the
+project’s progression.</li>
+<li>Aim is to first burn through these tasks first and at speed without a lot of distractions.</li>
+<li>During this run, the subsequent sections get populated.</li>
+<li>Again, until this is done, nothing from next things get worked on.</li>
+</ul>
+</li>
+<li>
+<p>Running Laundry List:</p>
+<ul>
+<li>As development progresses, new tasks naturally arise.</li>
+<li>These tasks are added to a &ldquo;running laundry list&rdquo; within the markdown file.</li>
+<li>This list is dynamic, constantly evolving as the project moves forward.</li>
+<li>It is categorized as P-0/P-1 only and anything P-2 is added to the next section.</li>
+<li>I tend to mix/re-prioritize things that are P-1 as P-0 if they excite me to some extent (i.e my original P-X).</li>
+</ul>
+</li>
+<li>
+<p>Pushed Out (i.e Backlog / Future Unknown):</p>
+<ul>
+<li>Tasks that are still relevant but not immediately actionable are moved to a &ldquo;Pushed Out&rdquo; section—similar to a
+backlog but with a more critical filter.</li>
+<li>This section corresponds to P-2, focusing on future possibilities that excite me or hold significant potential.</li>
+<li>I tend to visit this section at some larger interval. Like my inbox, I have preferred to completely discard things
+from here if they have accumulated for quite some time. This avoids overthinking and enables a clean head-space.</li>
+</ul>
+</li>
+</ol>
+<h2 id="challenges-and-adjustments">Challenges and Adjustments</h2>
+<ol>
+<li>
+<p>Mobile support:</p>
+<ul>
+<li>One significant issue is mobile support. Editing markdown files on mobile devices, especially within Git
+repositories, can be awkward and frustrating. I experimented with  
+
+
+
+<a
+    href="https://gitjournal.io/"
+    title=""
+    
+        target="_blank"
+    
+>
+    GitJournal
+</a>
+ and other
+similar tools designed to manage Git-based markdown files on mobile, but the experience was not great.</li>
+<li>Editing in a mobile environment often felt jittery and unreliable, which disrupted the otherwise smooth
+workflow.</li>
+<li>Also, editing markdown text on mobile and running the git workflow with it, just doesn&rsquo;t feel right.</li>
+<li>For quick, on-the-go notes, I use Google Keep, which I later transfer to markdown files. These notes are later
+transferred to the appropriate markdown files on my desktop, maintaining a single source of truth for all my
+tasks and ideas.</li>
+<li>For reading my current notes, GitHub mobile app is more than sufficient.</li>
+<li>Maybe there will be some bridge that will block a lot of git updates etc from mobile but still allow a smooth
+inbox population. While a more refined mobile solution would be helpful, this current setup is sufficient and
+doesn’t pose a significant barrier to my productivity.</li>
+</ul>
+</li>
+<li>
+<p>Daily list</p>
+<ul>
+<li>I have moved away from creating an actual list for daily things (i.e <em>Do</em> and <em>Look forward to</em>).</li>
+<li>It just sits as two bullets in my todo.md files so that I remind myself of the need to do it that way, but doing
+daily lists just doesn&rsquo;t work out well.</li>
+<li>The items are still present, but &ldquo;virtually&rdquo; in my head.</li>
+</ul>
+</li>
+<li>
+<p>Tool choice</p>
+<ul>
+<li>Lot of folks seem to suggest that Obsidian will give me best of all worlds, but that has not been the case for
+me as of now. May be I need to take a leap of faith at some point I suppose.</li>
+</ul>
+</li>
+<li>
+<p>Personal life</p>
+<ul>
+<li>Like last time, none of these systems have worked for my personal life.</li>
+<li>For personal tasks, I find an ad-hoc approach works best, with any minimal needs managed in Google Keep.</li>
+</ul>
+</li>
+</ol>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Markdown’s minimalism is its strength. Without the distraction of unnecessary features, I can organize tasks in a way
+that aligns perfectly with my workflow. It is just another text file with some styling indicators. The categories of
+P-0, P-1, P-2, and P-X are still present but simplified and their movement is more fluid.</p>
+<p>As my work continues to evolve, this system will likely adapt with it, but for now, it strikes the right balance between
+structure and simplicity, keeping me productive and in the flow. It somehow, &ldquo;feels right&rdquo;.</p>
+
+    </div>
+
+                </div>
+            </div>
+        <footer class="text-center pb-1">
+    <ul id="nav-social" class="list-inline mb-1">
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+                    <i class="fab fa-github fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+                    <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+                    <i class="fas fa-at fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+                    <i class="fas fa-rss fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <span class="text-muted" style="font-size: 0.8em">
+        
+            Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.
+        
+    </span>
+</footer>
+
+        <script src="https://pankajpipada.com/vendor/bootstrap/dist/js/bootstrap.bundle.min.0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC&#43;mjoJimHGw="></script>
+
+        
+            
+                
+                <script src="https://pankajpipada.com/js/darkmode.min.467c1f2703af90b4caf73908aec83e480947a92577fdfdaf0642d9f4afb47ce5.js" integrity="sha256-RnwfJwOvkLTK9zkIrsg&#43;SAlHqSV3/f2vBkLZ9K&#43;0fOU="></script>
+            
+        
+        
+
+
+
+
+
+    
+    
+
+
+        
+            
+            <script
+                async
+                src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js"
+                integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo="
+            ></script>
+        
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.visibility = 'visible';
+            });
+        </script>
+    </body>
+</html>
