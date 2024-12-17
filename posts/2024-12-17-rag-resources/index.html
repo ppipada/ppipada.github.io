@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light"><head>
+    <title>Scramblings</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    
+    
+        
+    
+
+
+    <meta name="description" content="Few great and free resources to learn about RAG and its usage in Generative AI." />
+    
+    
+
+    <script>
+        const storedTheme = localStorage.getItem('darkMode');
+        if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.style.backgroundColor = "#333333";
+            document.documentElement.style.color = "#E0E0E0";
+        }
+    </script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
+        
+        
+            
+        
+        
+            <link rel="preload" href="../../images/icon-192x192.png" as="image" />
+        
+    
+
+    
+    
+    
+        
+        <link rel="stylesheet" href="../../css/custom.min.e66ae8a128f4a7a9caee8fa2778c51f4824a9b29bb958970a3dee478431a64b2.css" integrity="sha256-5mrooSj0p6nK7o&#43;id4xR9IJKmym7lYlwo97keEMaZLI=" />
+    
+
+    
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF', { 'anonymize_ip': false });
+}
+</script>
+
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto; position: relative;">
+    
+    <div style="position: absolute; top: 0.5em; left: 1em; z-index: 10;">
+        
+<button id="darkModeToggle" class="btn" style="background: transparent; border: none" aria-label="Toggle dark mode">
+    <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+    
+    <div class="row justify-content-center">
+        
+        
+        
+        
+        
+        <div class="col-sm-5 col-12 text-sm-end text-center pt-1">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    src="../../images/icon-192x192.png"
+                    alt="home-image"
+                />
+            </a>
+        </div>
+        
+        <div class="col-sm-7 col-12 text-sm-start text-center">
+        
+            <h2 class="m-0 mt-2">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../tags/" title="Tags">Tags</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../movies/" title="Movies">Movies</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../breathing/" title="Breathing">Breathing</a>
+                </li>
+                
+                
+                
+                    <li class= "badge" style="display: inline;">
+                        <a href="https://flexigpt.site/" target="_blank" title="">
+                            FlexiGPT
+                            <i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+            <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+    <ul id="breadcrumbs" style="list-style: none; padding: 0;">
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <a class="text-muted" href="../../" aria-label="home"
+                        ><i class="fas fa-home"></i
+                    ></a>
+                </li>
+            
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <span>&gt;</span>
+                    <a class="text-muted" href="../../posts/">Posts</a>
+                </li>
+            
+        
+        
+            <li class="text-muted" style="display: inline;">
+                <span>&gt;</span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="mx-auto">
+                <div class="container">
+                    <form
+    id="search"
+    action="https://pankajpipada.com/search/"
+    method="get"
+    class="d-flex justify-content-center mt-2 mb-4"
+>
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 90%">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input
+            type="text"
+            class="form-control rounded-pill"
+            id="search-input"
+            name="query"
+            placeholder="Type here to search..."
+            aria-label="Search"
+        />
+        <button class="btn border-0 bg-transparent" type="submit" aria-label="search">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+
+    <div class="pl-sm-4 ml-sm-5">
+        <div style="margin-bottom: 2rem">
+            <h1 style="text-align: center">Great Resources for Learning and Implementing Retrieval-Augmented Generation (RAG)</h1>
+            <div
+                class="text-muted"
+                style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
+            >
+                <div>Dec 17, 2024 | Reading Time: 2 min</div>
+                <div>
+                    <i class="fa fa-tags"></i>
+                    
+                        <a class="text-muted" href="../../tags/gpt">gpt</a
+                        >
+                    
+                </div>
+            </div>
+        </div><div class="mt-1 mb-5">
+    
+</div>
+<p>In this post, we will explore several excellent resources for understanding Retrieval-Augmented Generation (RAG). The
+post is structured as a step-by-step learning journey. This is intended to be a regularly updated list.</p>
+<h2 id="101---basic-introductions">101 - Basic introductions</h2>
+<p>a) Microsoft&rsquo;s
+ 
+
+
+
+<a
+    href="https://microsoft.github.io/generative-ai-for-beginners/#/15-rag-and-vector-databases/README?wt.mc_id=academic-105485-koreyst"
+    title=""
+    
+        target="_blank"
+    
+>
+    Generative AI for Beginners RAG chapter
+</a>
+</p>
+<p>b) AWS short article  
+
+
+
+<a
+    href="https://aws.amazon.com/what-is/retrieval-augmented-generation/"
+    title=""
+    
+        target="_blank"
+    
+>
+    What is RAG
+</a>
+</p>
+<p>c) NVidia&rsquo;s introduction  
+
+
+
+<a
+    href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/"
+    title=""
+    
+        target="_blank"
+    
+>
+    blog
+</a>
+</p>
+<h2 id="201---depth-over-introductions">201 - Depth over introductions</h2>
+<p>a) NVidia&rsquo;s  
+
+
+
+<a
+    href="https://docs.nvidia.com/ai-enterprise/workflow/generative-ai/latest/technical-brief.html"
+    title=""
+    
+        target="_blank"
+    
+>
+    Technical Brief
+</a>
+</p>
+<p>b) NVidia&rsquo;s
+ 
+
+
+
+<a
+    href="https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI&#43;S-FX-15&#43;V1"
+    title=""
+    
+        target="_blank"
+    
+>
+    Building RAG Agents with LLMs
+</a>
+</p>
+<p>c) Google&rsquo;s  
+
+
+
+<a
+    href="https://www.cloudskillsboost.google/paths/1284/course_templates/939"
+    title=""
+    
+        target="_blank"
+    
+>
+    Cloud Skills Boost course
+</a>
+</p>
+<p>d) LLamaIndex  
+
+
+
+<a
+    href="https://docs.llamaindex.ai/en/stable/understanding/rag/"
+    title=""
+    
+        target="_blank"
+    
+>
+    Understanding RAG
+</a>
+</p>
+<h2 id="301---in-depth-explorations">301 - In depth explorations</h2>
+<ul>
+<li>
+<p>Blogs</p>
+<ul>
+<li>Systematically Improving Your RAG
+ 
+
+
+
+<a
+    href="https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/#balance-latency-and-performance"
+    title=""
+    
+        target="_blank"
+    
+>
+    blog
+</a>
+</li>
+<li>LLMs and Graphs Part 1  
+
+
+
+<a
+    href="https://blog.kuzudb.com/post/llms-graphs-part-1/"
+    title=""
+    
+        target="_blank"
+    
+>
+    blog
+</a>
+</li>
+<li>LLMs and Graphs Part 2  
+
+
+
+<a
+    href="https://blog.kuzudb.com/post/llms-graphs-part-2/"
+    title=""
+    
+        target="_blank"
+    
+>
+    blog
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenRAG  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2410.01782"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>Output Evaluation  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2404.01037"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>Data to SQL  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2311.07509"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>ReACT  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2210.03629"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>ReWoo  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2305.18323"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>Tree retrievals</p>
+<ul>
+<li>Raptor Tree retrieval  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2401.18059v1"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</li>
+<li>RAGFlow  
+
+
+
+<a
+    href="https://github.com/infiniflow/ragflow"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Knowledge graphs</p>
+<ul>
+<li>
+<p>KG Retriever  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2412.05547v1"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>GraphRAG Survey  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2408.08921"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</p>
+</li>
+<li>
+<p>Microsoft GraphRag</p>
+<ul>
+<li>Intro -  
+
+
+
+<a
+    href="https://microsoft.github.io/graphrag/"
+    title=""
+    
+        target="_blank"
+    
+>
+    blog
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://github.com/microsoft/graphrag"
+    title=""
+    
+        target="_blank"
+    
+>
+    Github repo
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Fast GraphRAG  
+
+
+
+<a
+    href="https://github.com/circlemind-ai/fast-graphrag"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</p>
+</li>
+<li>
+<p>LightRAG  
+
+
+
+<a
+    href="https://github.com/HKUDS/LightRAG"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</p>
+</li>
+<li>
+<p>NanoGraph  
+
+
+
+<a
+    href="https://github.com/gusye1234/nano-graphrag"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</p>
+</li>
+<li>
+<p>GraphDB backends</p>
+<ul>
+<li>Neo4j NaLLM  
+
+
+
+<a
+    href="https://github.com/neo4j/NaLLM"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>HippoRAG (graph + pagerank)</p>
+<ul>
+<li>HippoRAG  
+
+
+
+<a
+    href="https://github.com/OSU-NLP-Group/HippoRAG"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+<li>HippoRAG  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2405.14831"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Interleaving Retrieval with Chain-of-Thought Reasoning</p>
+<ul>
+<li>IRCoT  
+
+
+
+<a
+    href="https://github.com/StonyBrookNLP/ircot"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+<li>IRCoT  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2212.10509"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Memory based RAG</p>
+<ul>
+<li>Paper at  
+
+
+
+<a
+    href="https://arxiv.org/pdf/2409.05591"
+    title=""
+    
+        target="_blank"
+    
+>
+    arxiv
+</a>
+</li>
+<li>MemoRAG  
+
+
+
+<a
+    href="https://github.com/qhjqhj00/MemoRAG"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>File document processing</p>
+<ul>
+<li>WDoc  
+
+
+
+<a
+    href="https://github.com/thiswillbeyourgithub/WDoc"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+<li>Paperless-NGX  
+
+
+
+<a
+    href="https://docs.paperless-ngx.com/"
+    title=""
+    
+        target="_blank"
+    
+>
+    docs
+</a>
+</li>
+<li>Docling  
+
+
+
+<a
+    href="https://github.com/DS4SD/docling"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>ReRank</p>
+<ul>
+<li>FlashRank  
+
+
+
+<a
+    href="https://github.com/PrithivirajDamodaran/FlashRank"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Code Search</p>
+<ul>
+<li>Sourcegraph  
+
+
+
+<a
+    href="https://sourcegraph.com/code-search"
+    title=""
+    
+        target="_blank"
+    
+>
+    website
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Frameworks: UI/API</p>
+<ul>
+<li>RAG to Riches
+<ul>
+<li>R2R  
+
+
+
+<a
+    href="https://github.com/SciPhi-AI/R2R"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+<li>R2R Docs  
+
+
+
+<a
+    href="https://r2r-docs.sciphi.ai/introduction"
+    title=""
+    
+        target="_blank"
+    
+>
+    website
+</a>
+</li>
+</ul>
+</li>
+<li>Doc Chat with UI
+<ul>
+<li>Kotaemon  
+
+
+
+<a
+    href="https://github.com/Cinnamon/kotaemon"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+<li>Timescale PostGreSQL AI  
+
+
+
+<a
+    href="https://github.com/timescale/pgai"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Collections</p>
+<ul>
+<li>Retrieval LM Papers  
+
+
+
+<a
+    href="https://github.com/Timothyxxx/RetrivalLMPapers"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+<li>Awesome RAG  
+
+
+
+<a
+    href="https://github.com/coree/awesome-rag"
+    title=""
+    
+        target="_blank"
+    
+>
+    github repo
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="semantic-search-companies">Semantic search companies</h2>
+<ul>
+<li> 
+
+
+
+<a
+    href="https://www.glean.com/product/knowledge-management"
+    title=""
+    
+        target="_blank"
+    
+>
+    Glean
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://www.getguru.com/"
+    title=""
+    
+        target="_blank"
+    
+>
+    Guru
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://quench.ai/knowledge-management/"
+    title=""
+    
+        target="_blank"
+    
+>
+    Quench
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://www.coveo.com/en/platform/intelligent-search"
+    title=""
+    
+        target="_blank"
+    
+>
+    Coveo
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://www.yext.com/platform/content"
+    title=""
+    
+        target="_blank"
+    
+>
+    Yext
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://bloomfire.com/platform/ai-enterprise-search/"
+    title=""
+    
+        target="_blank"
+    
+>
+    BloomFire
+</a>
+</li>
+<li> 
+
+
+
+<a
+    href="https://qatalog.com/product/"
+    title=""
+    
+        target="_blank"
+    
+>
+    Qatalog
+</a>
+</li>
+</ul>
+
+    </div>
+
+                </div>
+            </div>
+        <footer class="text-center pb-1">
+    <ul id="nav-social" class="list-inline mb-1">
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+                    <i class="fab fa-github fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+                    <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+                    <i class="fas fa-at fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+                    <i class="fas fa-rss fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <span class="text-muted" style="font-size: 0.8em">
+        
+            Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.
+        
+    </span>
+</footer>
+
+        <script src="https://pankajpipada.com/vendor/bootstrap/dist/js/bootstrap.bundle.min.0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC&#43;mjoJimHGw="></script>
+
+        
+            
+                
+                <script src="https://pankajpipada.com/js/darkmode.min.467c1f2703af90b4caf73908aec83e480947a92577fdfdaf0642d9f4afb47ce5.js" integrity="sha256-RnwfJwOvkLTK9zkIrsg&#43;SAlHqSV3/f2vBkLZ9K&#43;0fOU="></script>
+            
+        
+        
+
+
+
+
+
+    
+    
+
+
+        
+            
+            <script
+                async
+                src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js"
+                integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo="
+            ></script>
+        
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.visibility = 'visible';
+            });
+        </script>
+    </body>
+</html>

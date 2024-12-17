@@ -2,20 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pankajpipada.com/posts/2024-12-17-emotion-and-design/</loc>
-    <lastmod>2024-12-17T11:06:43+05:30</lastmod>
+    <loc>https://pankajpipada.com/tags/gpt/</loc>
+    <lastmod>2024-12-17T17:47:32+05:30</lastmod>
   </url><url>
-    <loc>https://pankajpipada.com/tags/papers/</loc>
-    <lastmod>2024-12-17T11:06:43+05:30</lastmod>
+    <loc>https://pankajpipada.com/posts/2024-12-17-rag-resources/</loc>
+    <lastmod>2024-12-17T17:47:32+05:30</lastmod>
   </url><url>
     <loc>https://pankajpipada.com/posts/</loc>
-    <lastmod>2024-12-17T11:06:43+05:30</lastmod>
+    <lastmod>2024-12-17T17:47:32+05:30</lastmod>
   </url><url>
     <loc>https://pankajpipada.com/</loc>
-    <lastmod>2024-12-17T11:06:43+05:30</lastmod>
+    <lastmod>2024-12-17T17:47:32+05:30</lastmod>
   </url><url>
     <loc>https://pankajpipada.com/tags/</loc>
-    <lastmod>2024-12-17T11:06:43+05:30</lastmod>
+    <lastmod>2024-12-17T17:47:32+05:30</lastmod>
+  </url><url>
+    <loc>https://pankajpipada.com/posts/2024-12-17-emotion-and-design/</loc>
+    <lastmod>2024-12-17T11:49:47+05:30</lastmod>
+  </url><url>
+    <loc>https://pankajpipada.com/tags/papers/</loc>
+    <lastmod>2024-12-17T11:49:47+05:30</lastmod>
   </url><url>
     <loc>https://pankajpipada.com/tags/life/</loc>
     <lastmod>2024-12-17T09:52:15+05:30</lastmod>
@@ -42,9 +48,6 @@
     <lastmod>2024-12-17T09:52:15+05:30</lastmod>
   </url><url>
     <loc>https://pankajpipada.com/posts/2024-05-27-hugo-copy/</loc>
-    <lastmod>2024-12-17T09:52:15+05:30</lastmod>
-  </url><url>
-    <loc>https://pankajpipada.com/tags/gpt/</loc>
     <lastmod>2024-12-17T09:52:15+05:30</lastmod>
   </url><url>
     <loc>https://pankajpipada.com/posts/2024-04-15-genai-resources/</loc>

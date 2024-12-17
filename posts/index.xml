@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2024 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 17 Dec 2024 11:06:43 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2024 17:47:32 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Great Resources for Learning and Implementing Retrieval-Augmented Generation (RAG)</title>
+      <link>https://pankajpipada.com/posts/2024-12-17-rag-resources/</link>
+      <pubDate>Tue, 17 Dec 2024 16:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2024-12-17-rag-resources/</guid>
+      <description>Few great and free resources to learn about RAG and its usage in Generative AI.</description>
+    </item>
     <item>
       <title>Emotional Design Article by Donald Norman</title>
       <link>https://pankajpipada.com/posts/2024-12-17-emotion-and-design/</link>
