@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light"><head>
-    <title>Linux-Utils</title>
+    <title>Linux - Ubuntu AppImage Desktop Application Menu Setup</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -10,7 +10,7 @@
     
 
 
-    <meta name="description" content="Articles tagged under Linux-Utils in tags" />
+    <meta name="description" content="How to make your AppImage show up in your application menu (Launcher, Dash, Activities, etc.)." />
     
     
 
@@ -165,7 +165,7 @@
             
                 <li class="text-muted" style="display: inline;">
                     <span>&gt;</span>
-                    <a class="text-muted" href="../../tags/">Tags</a>
+                    <a class="text-muted" href="../../posts/">Posts</a>
                 </li>
             
         
@@ -209,111 +209,173 @@
 </form>
 
     <div class="pl-sm-4 ml-sm-5">
-        <h1 style="text-align: center; margin-bottom: 1rem">Linux-Utils</h1>
-        
-        <ul class="list-unstyled">
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2025-06-08-ubuntu-appimage/">Linux - Ubuntu AppImage Desktop Application Menu Setup</a>
-    </div>
+        <div style="margin-bottom: 2rem">
+            <h1 style="text-align: center">Linux - Ubuntu AppImage Desktop Application Menu Setup</h1>
+            <div
+                class="text-muted"
+                style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
+            >
+                <div>Jun 8, 2025 | Reading Time: 3 min</div>
+                <div>
+                    <i class="fa fa-tags"></i>
+                    
+                        <a class="text-muted" href="../../tags/linux-utils">linux-utils</a
+                        >
+                    
+                </div>
+            </div>
+        </div><div class="mt-1 mb-5">
+    
+</div>
+<h2 id="what-is-an-appimage">What is an AppImage?</h2>
+<ul>
+<li>AppImage is a <em>universal</em> software packaging format for Linux.</li>
+<li>It allows developers to distribute portable applications that run on most Linux distributions without installation or
+root permissions.</li>
+<li>Each AppImage bundles the application and <em>all</em> its dependencies into a single executable file.</li>
+<li>Benefits of AppImages:
+<ul>
+<li>No installation required: just download, make executable, and run.</li>
+<li>No need for root access.</li>
+<li>Easy to remove: just delete the file.</li>
+</ul>
 </li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Jun 8, 2025</div>
+</ul>
+<h2 id="the-application-menu-issue">The Application Menu Issue</h2>
+<ul>
+<li>By default, AppImages are launched by double-clicking the file or running it from the terminal.</li>
+<li>However, this isn&rsquo;t as seamless as launching applications installed via your package manager, which appear in your
+desktop environment&rsquo;s application menu (Dash, Activities, etc.).</li>
+<li>Also, without the application menu integration, when you launch the AppImage a default icon (Setting Gear in Ubuntu)
+is shown and not the app icon.</li>
+</ul>
+<h2 id="how-to-integrate-an-appimage-in-your-menu">How to integrate an AppImage in your Menu</h2>
+<ol>
+<li>
+<p>Download and place the appimage</p>
+<ul>
+<li>You can create a dedicated folder in your home directory for placing all AppImages. E.g: <code>mkdir -p ~/Applications</code></li>
+</ul>
 </li>
+<li>
+<p>Make the image executable: <code>chmod +x ~/Applications/YourApp.AppImage</code></p>
 </li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2020-07-24-ubuntu-setup/">Linux - Ubuntu initial dev setup</a>
-    </div>
+<li>
+<p>Download an icon (optional)</p>
+<ul>
+<li>For a seamless look, download an official icon for the app (a <code>.png</code> file).</li>
+<li>Save it as <code>~/Applications/YourApp.png</code>.</li>
+</ul>
 </li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Jul 24, 2020</div>
+<li>
+<p>Create a desktop entry file</p>
+<ul>
+<li>
+<p>Desktop entry files (<code>.desktop</code>) tell your desktop environment how to launch an application and what icon to use.</p>
 </li>
+<li>
+<p>Create a new file as <code>~/Applications/YourApp.desktop</code></p>
 </li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2020-04-28-vscode/">VSCode basic helpers</a>
-    </div>
+<li>
+<p>The specification can be found on the
+ 
+
+
+
+<a
+    href="https://specifications.freedesktop.org/desktop-entry-spec/latest/"
+    title=""
+    
+        target="_blank"
+    
+>
+    freedesktop site
+</a>
+</p>
 </li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Apr 28, 2020</div>
+<li>
+<p>Minimally you need:</p>
+<ul>
+<li><code>Type=Application</code> - Specifies this is an application launcher.</li>
+<li><code>Name=Your App Name</code> - The name shown in the menu.</li>
+<li><code>Exec=/path/to/your/executable</code> - The command to run your app.</li>
+<li><code>Icon=/path/to/icon.png</code> - For a visible icon (optional, but recommended).</li>
+<li><code>Categories=Utility;</code> - For proper menu placement.</li>
+<li><code>Terminal=false</code> - If your app does not need a terminal.</li>
+<li><code>StartupWMClass=yourappclass</code> - See below for details.</li>
+</ul>
 </li>
+<li>
+<p>Example desktop file for  
+
+
+
+<a
+    href="https://github.com/sqlitebrowser/sqlitebrowser/tree/master"
+    title=""
+    
+        target="_blank"
+    
+>
+    DB Browser for SQLite
+</a>
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">[Desktop Entry]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">DB Browser for SQLite</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">DB Browser for SQLite is a light GUI editor for SQLite databases</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/YOUR_USERNAME/Applications/DB.Browser.for.SQLite-v3.13.1-x86.64-v2.AppImage --no-sandbox</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/YOUR_USERNAME/Applications/sqlitebrowser.png</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#a6e22e">X-MultipleArgs</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">Development;Utility;Database;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#a6e22e">StartupWMClass</span><span style="color:#f92672">=</span><span style="color:#e6db74">sqlitebrowser</span>
+</span></span></code></pre></div></li>
+</ul>
 </li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2020-03-27-git-commands/">Linux - Git commands</a>
-    </div>
+<li>
+<p>The <code>StartupWMClass</code> field</p>
+<ul>
+<li><code>StartupWMClass</code> is a key you can add to your <code>.desktop</code> file.</li>
+<li>It helps your desktop environment associate a running application window with its launcher entry.</li>
+<li>If you dont add this entry, you might see duplicate icons in your dock/taskbar when the app is running. Also, The
+running app might not be highlighted as launched.</li>
+<li>If you are not aware of the class name you can detect the Correct <code>StartupWMClass</code> as:
+<ul>
+<li>Launch the AppImage (e.g., run it from terminal or double-click).</li>
+<li>Open a terminal and run the following command: <code>xprop | grep WM_CLASS</code></li>
+<li>Click on the opened <em>application window</em>.</li>
+<li>Read the terminal output, which will look like: <code>WM_CLASS(STRING) = &quot;sqlitebrowser&quot;, &quot;DB Browser for SQLite&quot;</code></li>
+<li>You can add this to the desktop entry</li>
+</ul>
 </li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Mar 27, 2020</div>
+</ul>
 </li>
+<li>
+<p>Copy the desktop file to local apps folder:
+<code>cp ~/Applications/YourApp.desktop ~/.local/share/applications/YourApp.desktop</code></p>
 </li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2020-03-17-organizing/">Movies - Organizing a largish movie collection</a>
-    </div>
+<li>
+<p>Make it executable: <code>chmod +x ~/.local/share/applications/YourApp.desktop</code></p>
 </li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Mar 17, 2020</div>
+<li>
+<p>Refresh system databases</p>
+<ul>
+<li>Refresh the application desktop: <code>update-desktop-database ~/.local/share/applications/</code></li>
+<li>Refresh the icons cache: <code>sudo update-icon-caches /usr/share/icons/*</code></li>
+</ul>
 </li>
+<li>
+<p>Launch from your application menu</p>
+<ul>
+<li>Now, search for your application in your application menu (Launcher, Dash, Activities, etc.).</li>
+<li>E.g By pressing the window key in Ubuntu.</li>
+<li>You should see your new entry, complete with icon</li>
+<li>Click to launch!</li>
+</ul>
 </li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2020-01-30-samba-setup/">Samba setup</a>
-    </div>
-</li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Jan 30, 2020</div>
-</li>
-</li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2020-01-30-ubuntu-1804-server-debug/">Linux - Ubuntu 18.04 server setup debug</a>
-    </div>
-</li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Jan 30, 2020</div>
-</li>
-</li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2019-11-11-docker-commands/">Docker - Commands</a>
-    </div>
-</li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Nov 11, 2019</div>
-</li>
-</li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2019-11-10-commands/">Linux - Ubuntu - Random commands</a>
-    </div>
-</li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Nov 10, 2019</div>
-</li>
-</li>
-            
-                <li><li>
-    <div style="text-align: left">
-        <a href="https://pankajpipada.com/posts/2019-11-09-screen/">GNU Screen helpers</a>
-    </div>
-</li>
-<li class="text-muted" style="font-size: 0.8em; margin-bottom: 0.8rem">
-    <div style="text-align: left">Nov 9, 2019</div>
-</li>
-</li>
-            
-        </ul>
+</ol>
+
     </div>
 
                 </div>

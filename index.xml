@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 05 May 2025 10:47:40 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jun 2025 15:00:00 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux - Ubuntu AppImage Desktop Application Menu Setup</title>
+      <link>https://pankajpipada.com/posts/2025-06-08-ubuntu-appimage/</link>
+      <pubDate>Sun, 08 Jun 2025 15:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2025-06-08-ubuntu-appimage/</guid>
+      <description>How to make your AppImage show up in your application menu (Launcher, Dash, Activities, etc.).</description>
+    </item>
     <item>
       <title>Winter Honey From Himachal Pradesh</title>
       <link>https://pankajpipada.com/posts/2025-05-05-winter-honey/</link>
