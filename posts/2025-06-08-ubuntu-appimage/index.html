@@ -329,7 +329,7 @@ is shown and not the app icon.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#a6e22e">X-MultipleArgs</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">Development;Utility;Database;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#a6e22e">StartupWMClass</span><span style="color:#f92672">=</span><span style="color:#e6db74">sqlitebrowser</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#a6e22e">StartupWMClass</span><span style="color:#f92672">=</span><span style="color:#e6db74">DB Browser for SQLite</span>
 </span></span></code></pre></div></li>
 </ul>
 </li>
@@ -338,14 +338,20 @@ is shown and not the app icon.</li>
 <ul>
 <li><code>StartupWMClass</code> is a key you can add to your <code>.desktop</code> file.</li>
 <li>It helps your desktop environment associate a running application window with its launcher entry.</li>
-<li>If you dont add this entry, you might see duplicate icons in your dock/taskbar when the app is running. Also, The
-running app might not be highlighted as launched.</li>
+<li>If you dont add this entry or add an incorrect entry:
+<ul>
+<li>The apps icon will be visible in the Activity area, but may not be visible in the dash/dock area (it will
+fallback to the default gear icon).</li>
+<li>You might see duplicate icons in your dock/taskbar when the app is running.</li>
+<li>Also, the running app might not be highlighted as launched.</li>
+</ul>
+</li>
 <li>If you are not aware of the class name you can detect the Correct <code>StartupWMClass</code> as:
 <ul>
 <li>Launch the AppImage (e.g., run it from terminal or double-click).</li>
 <li>Open a terminal and run the following command: <code>xprop | grep WM_CLASS</code></li>
 <li>Click on the opened <em>application window</em>.</li>
-<li>Read the terminal output, which will look like: <code>WM_CLASS(STRING) = &quot;sqlitebrowser&quot;, &quot;DB Browser for SQLite&quot;</code></li>
+<li>Read the terminal output, which will look like: <code>WM_CLASS(STRING) = &quot;xyz&quot;, &quot;DB Browser for SQLite&quot;</code></li>
 <li>You can add this to the desktop entry</li>
 </ul>
 </li>
