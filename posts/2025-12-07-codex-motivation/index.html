@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light"><head>
+    <title>Codex CLI vs Chat - Tokens, Output Quality, and Motivation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    
+    
+        
+    
+
+
+    <meta name="description" content="My experience comparing OpenAI Codex CLI vs a chat&#43;files workflow, associated token usage, output quality comparisons, and a very real dip in motivation." />
+    
+    
+
+    <script>
+        const storedTheme = localStorage.getItem('darkMode');
+        if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.style.backgroundColor = "#333333";
+            document.documentElement.style.color = "#E0E0E0";
+        }
+    </script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
+        
+        
+            
+        
+        
+            <link rel="preload" href="../../images/icon-192x192.png" as="image" />
+        
+    
+
+    
+    
+    
+        
+        <link rel="stylesheet" href="../../css/custom.min.2bc54cdd0a8089103b6563f5a0f2e425db8a8f509eeeeb42d14ad15109372879.css" integrity="sha256-K8VM3QqAiRA7ZWP1oPLkJduKj1Ce7utC0UrRUQk3KHk=" />
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PVSXVYRTKF');
+        </script>
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 650px; margin: auto; position: relative;">
+    
+    <div style="position: absolute; top: 0.5em; left: 1em; z-index: 10;">
+        
+<button id="darkModeToggle" class="btn" style="background: transparent; border: none" aria-label="Toggle dark mode">
+    <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+    
+    <div class="row justify-content-center">
+        
+        
+        
+        
+        
+        <div class="col-sm-5 col-12 text-sm-end text-center pt-1">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    src="../../images/icon-192x192.png"
+                    alt="home-image"
+                />
+            </a>
+        </div>
+        
+        <div class="col-sm-7 col-12 text-sm-start text-center">
+        
+            <h2 class="m-0 mt-2">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; height: 1.2em; line-height: 1em; font-size: medium;">
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../tags/" title="Tags">Tags</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../quotes/" title="Quotes">Quotes</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../movies/" title="Movies">Movies</a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="badge" style="display: inline;">
+                    <a class="" href="../../breathing/" title="Breathing">Breathing</a>
+                </li>
+                
+                
+
+                <li class="badge dropdown" style="display: inline; position: relative;">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Projects
+                    </a>
+                    <ul class="dropdown-menu" style="padding: 0.5em;">
+                        
+                            <li class="badge" style="display: block; margin: 0em;">
+                                <a href="https://flexigpt.site/" target="_blank" title="" style="display: block; padding: 0.5em; text-decoration: none;">
+                                    <i class="fa fa-external-link-square-alt"></i> FlexiGPT
+                                </a>
+                            </li>
+                        
+                            <li class="badge" style="display: block; margin: 0em;">
+                                <a href="../../tech-interview-prep/" target="_blank" title="" style="display: block; padding: 0.5em; text-decoration: none;">
+                                    <i class="fa fa-link"></i> Tech Interview Prep
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+    <ul id="breadcrumbs" style="list-style: none; padding: 0;">
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <a class="text-muted" href="../../" aria-label="home"
+                        ><i class="fas fa-home"></i
+                    ></a>
+                </li>
+            
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <span>&gt;</span>
+                    <a class="text-muted" href="../../posts/">Posts</a>
+                </li>
+            
+        
+        
+            <li class="text-muted" style="display: inline;">
+                <span>&gt;</span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="mx-auto">
+                <div class="container">
+                    <form
+    id="search"
+    action="https://pankajpipada.com/search/"
+    method="get"
+    class="d-flex justify-content-center mt-2 mb-4"
+>
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 90%">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input
+            type="text"
+            class="form-control rounded-pill"
+            id="search-input"
+            name="query"
+            placeholder="Type here to search..."
+            aria-label="Search"
+        />
+        <button class="btn border-0 bg-transparent" type="submit" aria-label="search">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+
+    <div class="pl-sm-4 ml-sm-5">
+        <div style="margin-bottom: 2rem">
+            <h1 style="text-align: center">Codex CLI vs Chat - Tokens, Output Quality, and Motivation</h1>
+            <div
+                class="text-muted"
+                style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
+            >
+                <div>Dec 7, 2025 | Reading Time: 12 min</div>
+                <div>
+                    <i class="fa fa-tags"></i>
+                    
+                        <a class="text-muted" href="../../tags/gpt">gpt</a
+                        >
+                    
+                </div>
+            </div>
+        </div><div class="mt-1 mb-5">
+    
+        <aside>
+            <h4>Table of contents</h4>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-im-writing-this">Why I&rsquo;m Writing This</a></li>
+    <li><a href="#experience-with-codex">Experience With Codex</a>
+      <ul>
+        <li><a href="#usage-pattern">Usage Pattern</a></li>
+        <li><a href="#token-profile">Token Profile</a></li>
+        <li><a href="#what-ive-tried-to-improve-codex-output">What I&rsquo;ve Tried To Improve Codex Output</a></li>
+      </ul>
+    </li>
+    <li><a href="#experience-with-chat--files">Experience With Chat + Files</a>
+      <ul>
+        <li><a href="#usage-pattern-1">Usage Pattern</a></li>
+        <li><a href="#token-profile-1">Token Profile</a></li>
+      </ul>
+    </li>
+    <li><a href="#specific-usecase-comparison">Specific Use‑Case Comparison</a>
+      <ul>
+        <li><a href="#go-tests">Go Tests</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+        <li><a href="#db-design-db-interactions-and-api-dtos">DB Design, DB Interactions, and API DTOs</a></li>
+        <li><a href="#incremental-functions-in-a-single-file">Incremental Functions in a Single File</a></li>
+        <li><a href="#tooling-lint-tseslintprettierknip-packagejson-github-actions">Tooling: Lint, TS/ESLint/Prettier/Knip, package.json, GitHub Actions</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-i-use-llms-for-codegen-now">How I Use LLMs For Codegen Now</a></li>
+  </ul>
+</nav>
+        </aside>
+    
+</div>
+<p>Tl;dr: Codex‑style CLIs look powerful but don&rsquo;t work for me for anything beyond small, local edits. In one Codex‑heavy
+week I averaged 4.9M input tokens/day; in a later chat+files week I averaged 0.33M/day and shipped more and better
+features. Codex burns tokens, blurs boundaries, and leaves me with large patches of code that I am not really mentally
+ready to own and with very little motivation to clean it up. A separate chat+files workflow gives me better output and
+keeps my motivation and sense of control intact.</p>
+<h2 id="why-im-writing-this">Why I&rsquo;m Writing This</h2>
+<p>I write software for a living. My main usage patterns:</p>
+<ul>
+<li>
+<p><em>Chat+files (FlexiGPT)</em>: I dogfood my own  
+
+
+
+<a
+    href="https://github.com/ppipada/flexigpt-app"
+    title=""
+    
+        target="_blank"
+    
+>
+    FlexiGPT
+</a>
+. It&rsquo;s a standalone chat
+app where I can attach specific files and get back code blocks, diagrams, explanations, etc.</p>
+</li>
+<li>
+<p>Codex CLI / IDE: I&rsquo;ve used OpenAI&rsquo;s Codex‑style CLI and VS Code integrations.</p>
+<ul>
+<li>With autocontext (it scans the repo and pushes in context).</li>
+<li>With manual file selection (I tell it which files to look at).</li>
+</ul>
+</li>
+</ul>
+<p>I&rsquo;ve briefly looked at Claude Code and Gemini CLIs. My limited experience there felt similar enough (too much code at
+once, not my style) that I didn&rsquo;t go deep. I tried CoPilot some time back (long time in LLM world I suppose), but tabbed
+autocomplete was not really for me.</p>
+<p>With some heavy usage of Codex, I have noticed my motivation to produce software take a big hit, especially in sessions
+where I am trying to build a feature. When I searched for any studies detailing how people get most out of these tools,
+most content is about productivity (for example, this  
+
+
+
+<a
+    href="https://arxiv.org/abs/2507.09089"
+    title=""
+    
+        target="_blank"
+    
+>
+    paper
+</a>
+ is interesting), not
+about what it does to your head when you&rsquo;re staring at 3000 lines of LLM‑written code that you don&rsquo;t really want to own.</p>
+<h2 id="experience-with-codex">Experience With Codex</h2>
+<h3 id="usage-pattern">Usage Pattern</h3>
+<p>The pattern for me with Codex CLI, especially with autocontext, looks like this:</p>
+<ol>
+<li>I want to build a feature.</li>
+<li>I write a spec (often from a prior  
+
+
+
+<a
+    href="https://github.com/ppipada/flexigpt-app"
+    title=""
+    
+        target="_blank"
+    
+>
+    FlexiGPT
+</a>
+ chat).</li>
+<li>I hand that to Codex CLI and tell it to &ldquo;implement it&rdquo;, mostly with autocontext on.</li>
+<li>It generates a lot of code across multiple files. (And consumes a lot of tokens)</li>
+<li>On first look it feels like progress: several new files, updated modules, proper naming.</li>
+</ol>
+<p>Then I look closely:</p>
+<ul>
+<li>
+<p><em>Domain boundaries get blurred.</em></p>
+<ul>
+<li>Logic that clearly belongs in the backend turns up in frontend helpers.</li>
+<li>UI components start managing business rules.</li>
+<li>Backend packages mix responsibilities that I prefer clearly separated.</li>
+</ul>
+</li>
+<li>
+<p><em>Separation of concerns collapses easily.</em></p>
+<ul>
+<li>Data access leaks into handlers.</li>
+<li>Validation logic is scattered.</li>
+<li>Shared concerns get duplicated in random places.</li>
+</ul>
+</li>
+<li>
+<p><em>Very real bugs creeping into the system.</em></p>
+<ul>
+<li>Either under or over compensation wrt concurrency control.</li>
+<li>Allocation and reallocation of same resources.</li>
+<li>Heavy computations pushed into tight loops (the code did look clean though &hellip;/s).</li>
+</ul>
+</li>
+</ul>
+<p>Even when I give it explicit structure and separation rules (like a Claude.md/Context.md), Codex still tends to mix
+concerns when the context window is large. It looks at everything and tries to &ldquo;optimize&rdquo; or &ldquo;simplify&rdquo; at the wrong
+layer. Roughly half the patch was structurally wrong for how I wanted the system to look. Not &ldquo;style differences&rdquo;, but
+wrong at the design level.</p>
+<p>Now, I had to choose between:</p>
+<ul>
+<li>
+<p>Keep the patch and refactor.</p>
+<ul>
+<li>I&rsquo;m now holding a large, alien codebase that I didn&rsquo;t really design.</li>
+<li><em>I have to decide</em> what to keep, what to move, what to drop.</li>
+<li>My focus needs to be ultra high in review mode.</li>
+<li>It is highly uninteresting; it&rsquo;s clean‑up of someone else&rsquo;s work and of a design I don&rsquo;t like.</li>
+</ul>
+</li>
+<li>
+<p>Throw the patch away.</p>
+<ul>
+<li>I&rsquo;ve burned a chunk of time and tokens.</li>
+<li>I end up back where I started, with much less energy than when I began.</li>
+</ul>
+</li>
+</ul>
+<p>In both cases my mind ends up scattered. And above is one more decision I have to make. Getting back into a calm,
+incremental development flow after that is <em>very</em> hard. It doesn&rsquo;t take many of these cycles to poison your willingness
+to even invoke the tool.</p>
+<p>I also saw (and heard rants) about a similar pattern in a team environment:</p>
+<ul>
+<li>Juniors feeding Codex a spec,</li>
+<li>getting a big chunk of code back,</li>
+<li>then struggling to: understand it, debug it, or adapt it when requirements changed.</li>
+</ul>
+<p>Some teams responded by running quick low‑level design sessions with:</p>
+<ul>
+<li>Small prep time.</li>
+<li>Present data structures, flows, module responsibilities.</li>
+<li>Team debate afterwards.</li>
+</ul>
+<p>The consistent observation was: if the thinking is fuzzy, Codex just creates large, fuzzy code. That&rsquo;s demotivating to
+clean up, both for individuals and teams.</p>
+<h3 id="token-profile">Token Profile</h3>
+<p>From my account usage, for one Codex‑heavy week across my account:</p>
+<ul>
+<li>Total input tokens: ~34.26 million; Average per day: ~4.89 million input tokens/day.</li>
+<li>Of those per day (on average): ~4.56 million tokens/day cached; ~340 thousand tokens/day uncached.</li>
+<li>So roughly: 93% cached, 7% uncached, but still millions of tokens per day going through the system.</li>
+</ul>
+<p>In that week, the actual outcome:</p>
+<ul>
+<li>I shipped a few (~3) relatively simple features.</li>
+<li>Most of my time was spent: reading and reviewing generated code, deciding what to keep, and cleaning up structural
+issues.</li>
+</ul>
+<h3 id="what-ive-tried-to-improve-codex-output">What I&rsquo;ve Tried To Improve Codex Output</h3>
+<ul>
+<li>
+<p>With autocontext on, the behavior seen is:</p>
+<ul>
+<li>The CLI pulls in a lot of irrelevant files.</li>
+<li>Token usage goes through the roof.</li>
+<li>Quality does not go up in line with tokens. Often it gets worse because the model tries to be &ldquo;global&rdquo; and
+overreaches.</li>
+<li>So I&rsquo;m paying in tokens and attention for the model to stare at things it should ignore.</li>
+</ul>
+</li>
+<li>
+<p>To get better control/coherence and reduce tokens, I&rsquo;ve tried:</p>
+<ul>
+<li>
+<p>Manually attaching only the files I care about.</p>
+</li>
+<li>
+<p><em>Claude‑style project MD files</em>:</p>
+<ul>
+<li>Architecture overview,</li>
+<li>Domain language,</li>
+<li>Explicit boundaries (&ldquo;this stays in backend&rdquo;, &ldquo;this belongs in frontend&rdquo;, etc.).</li>
+<li>Issue with this is same as any documentation, you can only keep so much here.</li>
+</ul>
+</li>
+<li>
+<p><em>Tight prompts</em>:</p>
+<ul>
+<li>Clear separation of concerns,</li>
+<li>Rules about where each piece of logic should live.</li>
+</ul>
+</li>
+<li>
+<p><em>Stepwise instructions</em>:</p>
+<ul>
+<li>&ldquo;Change only A.&rdquo;</li>
+<li>&ldquo;Now adjust B to match A.&rdquo;</li>
+<li>&ldquo;Now update C.&rdquo;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>I experimented with the above in both autocontext on and off mode, but it has not helped much in autocontext-on mode. In
+autocontext-off mode, this does improve <em>correctness</em> to a degree and gives me:</p>
+<ul>
+<li>Much lesser token usage.</li>
+<li>Fewer hallucinated APIs.</li>
+<li>Slightly better alignment with my structure.</li>
+<li>Less random movement of logic across layers.</li>
+<li>I get more controlled output, which is easier to review.</li>
+</ul>
+<p>But, the output quality when compared to a clean vanilla chat prompt is <em>worse</em>, for the same task. My guess is the
+CLI&rsquo;s built‑in system prompts and assumptions push Codex into a very &ldquo;aggressively code&rdquo; mode. It tends to: Over‑touch
+files, Rewrite patterns I didn&rsquo;t ask it to touch, Introduce layout or style that I don&rsquo;t use elsewhere.</p>
+<p>Also, it does <em>not</em> solve the motivation problem:</p>
+<ul>
+<li>Codex still tends to generate too much at once.</li>
+<li>It still mixes concerns under large context.</li>
+<li>I still face the same decision to some extent: Keep a big patch I don&rsquo;t fully like and refactor it, or throw it away
+and feel like I wasted the session.</li>
+</ul>
+<p>The small side bar inside VS Code makes this worse:</p>
+<ul>
+<li>Tiny space to review large diffs.</li>
+<li>Weak code browsing compared to a full chat window.</li>
+<li>Hard to see the &ldquo;shape&rdquo; of the change.</li>
+</ul>
+<h2 id="experience-with-chat--files">Experience With Chat + Files</h2>
+<h3 id="usage-pattern-1">Usage Pattern</h3>
+<p>The workflow is pretty simple here:</p>
+<ol>
+<li>I attach <em>exactly</em> the files I want the model to see.</li>
+<li>I often feed the same spec I used with Codex. I prefer not to have an elaborate system prompt. The same tricks I used
+to improve Codex output (tight prompts, stepwise changes) work here too.</li>
+<li>The model returns code in a big, readable chat pane. The UX for reading/reviewing code is much nicer.</li>
+<li>I decide what to paste, what to ignore, and I do the integration myself.</li>
+</ol>
+<p>The energy required to review is still there, but because the flow is much more controlled, it’s not as bad as with the
+Codex agent. Motivation levels are much better when things feel in control.</p>
+<h3 id="token-profile-1">Token Profile</h3>
+<p>For a chat+files‑heavy week, my logs show:</p>
+<ul>
+<li>Total input tokens: ~2.35 million; Average per day: 330 thousand input tokens/day.</li>
+<li>Of those per day (on average): ~118 thousand tokens/day cached; ~218 thousand tokens/day uncached.</li>
+</ul>
+<p>So:</p>
+<ul>
+<li>Absolute usage was about 14–15X lower than the Codex week (0.33M vs 4.89M per day).</li>
+<li>A smaller fraction was cached (~35% cached, ~65% uncached), because I was intentionally giving only the relevant files
+instead of pouring the whole repo into the context.</li>
+</ul>
+<p>In that week: I shipped more features (~8), including a couple of complex, multi‑language features, plus several smaller
+ones.</p>
+<ul>
+<li>Subjectively, I had:
+<ul>
+<li>fewer motivation dips,</li>
+<li>less &ldquo;what do I do with this giant patch&rdquo; anxiety.</li>
+</ul>
+</li>
+</ul>
+<p>Same underlying models, very different way of driving them.</p>
+<h2 id="specific-usecase-comparison">Specific Use‑Case Comparison</h2>
+<h3 id="go-tests">Go Tests</h3>
+<p>For <em>tests</em>, especially <em>Go tests</em>, my experience is clear:</p>
+<ul>
+<li>
+<p><em>Codex</em></p>
+<ul>
+<li>Acceptance rate maybe <em>50–60%</em>, sometimes <em>70%</em> on a good day.</li>
+<li>It often:
+<ul>
+<li>misses good table‑driven patterns,</li>
+<li>overcomplicates setups,</li>
+<li>or guesses too much about how I structure tests.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Chat+files</em></p>
+<ul>
+<li>Acceptance is closer to <em>95%</em>. Good days go to <em>99%</em> acceptance.</li>
+<li>My typical prompt is simple: &ldquo;Use stdlib only.&rdquo;, &ldquo;Use table‑driven tests.&rdquo;, &ldquo;Cover N happy cases, N positive border
+cases, N negative border cases, empty and nil cases.&rdquo;, etc.</li>
+<li>I attach:
+<ul>
+<li>the implementation file,</li>
+<li>any relevant interfaces or helpers.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>In chat mode, the main issues I see are due to model training lag, not misunderstanding:</p>
+<ul>
+<li>Old Go patterns (e.g. <code>for _, tc := range tcs { tc := tc; ... }</code>). Almost all
+ 
+
+
+
+<a
+    href="https://pkg.go.dev/golang.org/x/tools/gopls/internal/analysis/modernize"
+    title=""
+    
+        target="_blank"
+    
+>
+    modernize
+</a>
+ issues.</li>
+<li>Slightly outdated file permission constants (e.g. writing files with permissions broader than <code>0o600</code>).</li>
+<li>Minor style differences from my current lint rules.</li>
+</ul>
+<p>Those are easy enough to clean up. Bottom line: <em>my days of writing tests are objectively better with chat+files</em>. It
+saves time, has great output, without destroying my motivation.</p>
+<h3 id="frontend">Frontend</h3>
+<p>My frontend stack on these projects is: React, Tailwind CSS, DaisyUI, React Router, Vite.</p>
+<p>In a <em>chat+files</em> workflow:</p>
+<ul>
+<li>The models do a good job:
+<ul>
+<li>JSX structure is fine.</li>
+<li>Tailwind and DaisyUI usage is generally correct.</li>
+<li>Routing with React Router is reasonable.</li>
+</ul>
+</li>
+</ul>
+<p>My loop looks like:</p>
+<ol>
+<li>Attach the key page components and related files.</li>
+<li>Ask for: a new page, or a refactor, or a state change, with <em>dummy API implementations</em>.</li>
+<li>Get the code, fix linting and static analysis issues myself.</li>
+<li>Review <em>state management</em> carefully:
+<ul>
+<li>Where state lives.</li>
+<li>How props flow.</li>
+<li>How side‑effects are triggered.</li>
+</ul>
+</li>
+<li>If I&rsquo;m not happy with state boundaries:
+<ul>
+<li>Update the spec,</li>
+<li>Ask for a revised version.</li>
+</ul>
+</li>
+<li>Run dev server, tweak styling and alignment, then commit.</li>
+</ol>
+<p>In this mode, the models are useful. The mistakes are fixable, and I stay in control.</p>
+<p>With <em>Codex CLI + autocontext</em> on the <em>same</em> stack:</p>
+<ul>
+<li>It tends to:
+<ul>
+<li>Over‑pull context (maybe includes things from <code>node_modules</code>?).</li>
+<li>Try to be &ldquo;smart&rdquo; about global patterns and state management.</li>
+<li>Blow up token usage.</li>
+</ul>
+</li>
+<li>State handling gets messy:
+<ul>
+<li>State is placed in weird components.</li>
+<li>Responsibilities jump between layers.</li>
+<li>Local view logic and shared logic are mixed.</li>
+</ul>
+</li>
+</ul>
+<p>CSS and basic alignment still come out okay, but the <em>state management</em> is often bad enough that I don&rsquo;t want to keep
+it.</p>
+<p>So again:</p>
+<ul>
+<li><em>Chat+files</em>: I get usable frontend code with some targeted cleanup.</li>
+<li><em>Codex CLI with autocontext</em>: too much noise, too much code to unpick, and a noticeable motivation drop.</li>
+</ul>
+<h3 id="db-design-db-interactions-and-api-dtos">DB Design, DB Interactions, and API DTOs</h3>
+<p>For <em>DB schema design</em>, <em>DB interactions</em>, and <em>API DTO design</em>, my acceptance rate is low in both Codex and chat:</p>
+<ul>
+<li>I&rsquo;d put it around <em>30–40%</em> in either mode.</li>
+</ul>
+<p>For these tasks:</p>
+<ul>
+<li>I care a lot about: naming, consistency across layers, how changes will age over time.</li>
+<li>By the time I describe all that clearly enough in a prompt:
+<ul>
+<li>in many cases, I might as well write the schema and core DTOs myself.</li>
+</ul>
+</li>
+</ul>
+<p>So for core DB and API design:</p>
+<ul>
+<li>
+<p>I now prefer to:</p>
+<ul>
+<li>design the schema manually,</li>
+<li>write the main DTOs,</li>
+<li>then use LLMs to generate repository boilerplate, simple mapping functions, and trivial handlers.</li>
+</ul>
+</li>
+</ul>
+<p>Once I <em>already have DB models</em>, generating <em>API DTOs</em> is much safer.</p>
+<p>Both Codex and chat do better here because:</p>
+<ul>
+<li>The data shape is fixed.</li>
+<li>The model has less room to &ldquo;invent&rdquo; structure.</li>
+</ul>
+<p>I still prefer chat+files:</p>
+<ul>
+<li>I attach the schema / models.</li>
+<li>I ask for: DTO structs, mappers, basic validation stubs.</li>
+</ul>
+<p>Quality is usually acceptable, and I only need to adjust details.</p>
+<h3 id="incremental-functions-in-a-single-file">Incremental Functions in a Single File</h3>
+<p>For <em>incremental work in a single file</em> (small helpers, refactors, etc.):</p>
+<ul>
+<li>Codex CLI and chat are both <em>technically fine</em>.</li>
+<li>The big difference is <em>process</em> and <em>motivation</em>.</li>
+</ul>
+<p>With Codex CLI:</p>
+<ul>
+<li>It often wants to touch more than I asked for.</li>
+<li>I end up reviewing larger diffs than I&rsquo;d like.</li>
+<li>After several iterations, I feel like I&rsquo;m chasing it instead of using it.</li>
+</ul>
+<p>With a <em>chat window</em>:</p>
+<ul>
+<li>I paste or attach a single file.</li>
+<li>I say: &ldquo;Change only this function,&rdquo; or &ldquo;Add a helper for X, do not modify Y and Z.&rdquo;</li>
+<li>The output is usually: more scoped, easier to diff, less mentally draining.</li>
+</ul>
+<p>So even when <em>output quality</em> is similar, I strongly prefer chat because it doesn&rsquo;t push me to get into reading and
+debating about large code blocks.</p>
+<h3 id="tooling-lint-tseslintprettierknip-packagejson-github-actions">Tooling: Lint, TS/ESLint/Prettier/Knip, package.json, GitHub Actions</h3>
+<p>For <em>tooling enhancements</em>:</p>
+<ul>
+<li>Lint rules <code>tsconfig</code>, ESLint, Prettier, Knip, <code>package.json</code> cleanup.</li>
+<li>GitHub Actions workflows.</li>
+</ul>
+<p>I&rsquo;ve found both Codex and chat <em>not very reliable</em>.</p>
+<p>Reasons:</p>
+<ul>
+<li>These ecosystems move fast.</li>
+<li>There are always new: lint rules, plugin versions, GitHub Action variants.</li>
+<li>Models often: propose outdated patterns, overcomplicate configs, or change things I don&rsquo;t want changed.</li>
+</ul>
+<p>The common pattern:</p>
+<ol>
+<li>The model &ldquo;does something&rdquo; that superficially looks sophisticated.</li>
+<li>I don&rsquo;t like: the approach, the trade‑offs, or the level of magic.</li>
+<li>I end up rewriting or heavily editing it.</li>
+</ol>
+<p>At that point, I might as well do it myself from the start or copy from current docs and adapt.</p>
+<p>So for tooling, I treat LLM suggestions as <em>ideas</em>, not code I&rsquo;m likely to accept directly.</p>
+<h2 id="how-i-use-llms-for-codegen-now">How I Use LLMs For Codegen Now</h2>
+<p>Given all this, my current rules of thumb are:</p>
+<ol>
+<li>
+<p><em>Avoid Codex CLI for whole‑feature generation.</em></p>
+<ul>
+<li>It burns tokens, rewrites too much, and I don’t like the code I get.</li>
+</ul>
+</li>
+<li>
+<p><em>Use a separate chat window with file attachments.</em></p>
+<ul>
+<li>Better UI.</li>
+<li>Better control over what the model sees.</li>
+<li>Easier to review and reason about.</li>
+</ul>
+</li>
+<li>
+<p><em>Use LLMs where it clearly works for me.</em></p>
+<ul>
+<li>Go tests (unit and integration) with simple, strict prompts.</li>
+<li>Frontend JSX + Tailwind + DaisyUI + routing, as long as I own state design.</li>
+<li>DTOs on top of already‑defined DB models.</li>
+<li>Small incremental changes in single files.</li>
+</ul>
+</li>
+<li>
+<p><em>Be very cautious for:</em></p>
+<ul>
+<li>DB schema design.</li>
+<li>Cross‑layer API and DTO design.</li>
+<li>Tooling and CI configuration.</li>
+</ul>
+</li>
+<li>
+<p><em>Keep design ownership.</em></p>
+<ul>
+<li>LLMs fill in code around a design I already trust.</li>
+</ul>
+</li>
+</ol>
+<p>Under this approach:</p>
+<ul>
+<li>My <em>motivation stays more stable</em>.</li>
+<li>Token usage is still non‑trivial, but it&rsquo;s tied to real progress.</li>
+<li>I&rsquo;m not constantly stuck choosing between refactoring code I don&rsquo;t like or deleting a big LLM‑generated patch and
+killing my mood.</li>
+</ul>
+<p>Other people will have different thresholds and workflows. For me, the key is simple: <em>I have to feel like I still own
+the design and the code.</em></p>
+<p>When the tool helps with that, I use it. When it fights that, I stop, because the hidden cost is my motivation, and
+that&rsquo;s not something I&rsquo;m willing to burn for the sake of a big code dump that looks like progress but doesn&rsquo;t feel like
+it.</p>
+
+    </div>
+
+                </div>
+            </div>
+        <footer class="text-center pb-1">
+    <ul id="nav-social" class="list-inline mb-1">
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+                    <i class="fab fa-github fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+                    <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://letterboxd.com/ppipada" target="_blank" aria-label="letterboxd">
+                    <i class="fab fa-letterboxd fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+                    <i class="fas fa-at fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+                    <i class="fas fa-rss fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <span class="text-muted" style="font-size: 0.8em">
+        
+            Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.
+        
+    </span>
+</footer>
+
+        <script src="https://pankajpipada.com/vendor/bootstrap/dist/js/bootstrap.bundle.min.0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC&#43;mjoJimHGw="></script>
+
+        
+            
+                
+                <script src="https://pankajpipada.com/js/darkmode.min.467c1f2703af90b4caf73908aec83e480947a92577fdfdaf0642d9f4afb47ce5.js" integrity="sha256-RnwfJwOvkLTK9zkIrsg&#43;SAlHqSV3/f2vBkLZ9K&#43;0fOU="></script>
+            
+        
+        
+
+
+
+
+
+    
+    
+
+
+        
+            
+            <script
+                async
+                src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js"
+                integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo="
+            ></script>
+        
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.visibility = 'visible';
+            });
+        </script>
+    </body>
+</html>

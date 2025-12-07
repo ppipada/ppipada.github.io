@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 30 Sep 2025 12:51:56 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 20:33:12 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex CLI vs Chat - Tokens, Output Quality, and Motivation</title>
+      <link>https://pankajpipada.com/posts/2025-12-07-codex-motivation/</link>
+      <pubDate>Sun, 07 Dec 2025 20:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2025-12-07-codex-motivation/</guid>
+      <description>My experience comparing OpenAI Codex CLI vs a chat+files workflow, associated token usage, output quality comparisons, and a very real dip in motivation.</description>
+    </item>
     <item>
       <title>The Nature of Lisp, Code Generation and Wieldable Programming Power</title>
       <link>https://pankajpipada.com/posts/2025-06-25-generation-systems/</link>
