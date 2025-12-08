@@ -259,16 +259,16 @@
         </aside>
     
 </div>
-<p>Tl;dr: Codex‑style CLIs look powerful but don&rsquo;t work for me for anything beyond small, local edits. In one Codex‑heavy
-week I averaged 4.9M input tokens/day; in a later chat+files week I averaged 0.33M/day and shipped more and better
-features. Codex burns tokens, blurs boundaries, and leaves me with large patches of code that I am not really mentally
-ready to own and with very little motivation to clean it up. A separate chat+files workflow gives me better output and
-keeps my motivation and sense of control intact.</p>
+<p>Tl;dr: Codex‑style CLIs look powerful but don&rsquo;t work for me for anything beyond small, local/single file edits. In one
+Codex‑heavy week I averaged 4.9M input tokens/day; in a later chat+files week I averaged 0.33M/day and shipped more and
+better features. Codex burns tokens, blurs boundaries, and leaves me with large patches of code that I am not really
+mentally ready to own and with very little motivation to clean it up. A separate chat+files workflow gives me better
+output and keeps my motivation and sense of control intact.</p>
 <h2 id="why-im-writing-this">Why I&rsquo;m Writing This</h2>
 <p>I write software for a living. My main usage patterns:</p>
 <ul>
 <li>
-<p><em>Chat+files (FlexiGPT)</em>: I dogfood my own  
+<p><em>Chat+files</em>: I dogfood my own  
 
 
 
@@ -281,8 +281,9 @@ keeps my motivation and sense of control intact.</p>
 >
     FlexiGPT
 </a>
-. It&rsquo;s a standalone chat
-app where I can attach specific files and get back code blocks, diagrams, explanations, etc.</p>
+. It&rsquo;s a standalone chat app where I
+can attach specific files and get back code blocks, diagrams, explanations, etc. The comparison below would be valid
+for any chat app I think, nothing very special about FlexiGPT here, its just my preference.</p>
 </li>
 <li>
 <p>Codex CLI / IDE: I&rsquo;ve used OpenAI&rsquo;s Codex‑style CLI and VS Code integrations.</p>
@@ -470,19 +471,12 @@ autocontext-off mode, this does improve <em>correctness</em> to a degree and giv
 <li>I get more controlled output, which is easier to review.</li>
 </ul>
 <p>But, the output quality when compared to a clean vanilla chat prompt is <em>worse</em>, for the same task. My guess is the
-CLI&rsquo;s built‑in system prompts and assumptions push Codex into a very &ldquo;aggressively code&rdquo; mode. It tends to: Over‑touch
-files, Rewrite patterns I didn&rsquo;t ask it to touch, Introduce layout or style that I don&rsquo;t use elsewhere.</p>
-<p>Also, it does <em>not</em> solve the motivation problem:</p>
-<ul>
-<li>Codex still tends to generate too much at once.</li>
-<li>It still mixes concerns under large context.</li>
-<li>I still face the same decision to some extent: Keep a big patch I don&rsquo;t fully like and refactor it, or throw it away
-and feel like I wasted the session.</li>
-</ul>
+CLI&rsquo;s built‑in system prompts and assumptions push Codex into a direction that I am not really comfortable with.</p>
 <p>The small side bar inside VS Code makes this worse:</p>
 <ul>
-<li>Tiny space to review large diffs.</li>
-<li>Weak code browsing compared to a full chat window.</li>
+<li>Tiny space to review large diffs in the side pane.</li>
+<li>I have to open each file in diff mode in VSCode editor pane and see for the file, rather than getting to see the
+&ldquo;full&rdquo; change and not a single file.</li>
 <li>Hard to see the &ldquo;shape&rdquo; of the change.</li>
 </ul>
 <h2 id="experience-with-chat--files">Experience With Chat + Files</h2>
