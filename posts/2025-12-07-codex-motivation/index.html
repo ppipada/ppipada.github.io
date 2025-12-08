@@ -367,7 +367,7 @@ about what it does to your head when you&rsquo;re staring at 3000 lines of LLM�
 concerns when the context window is large. It looks at everything and tries to &ldquo;optimize&rdquo; or &ldquo;simplify&rdquo; at the wrong
 layer. Roughly half the patch was structurally wrong for how I wanted the system to look. Not &ldquo;style differences&rdquo;, but
 wrong at the design level.</p>
-<p>Now, I had to choose between:</p>
+<p>Now, I have to choose between:</p>
 <ul>
 <li>
 <p>Keep the patch and refactor.</p>
@@ -464,7 +464,7 @@ overreaches.</li>
 <p>I experimented with the above in both autocontext on and off mode, but it has not helped much in autocontext-on mode. In
 autocontext-off mode, this does improve <em>correctness</em> to a degree and gives me:</p>
 <ul>
-<li>Much lesser token usage.</li>
+<li>Much lower token usage.</li>
 <li>Fewer hallucinated APIs.</li>
 <li>Slightly better alignment with my structure.</li>
 <li>Less random movement of logic across layers.</li>
@@ -499,7 +499,7 @@ Codex agent. Motivation levels are much better when things feel in control.</p>
 </ul>
 <p>So:</p>
 <ul>
-<li>Absolute usage was about 14–15X lower than the Codex week (0.33M vs 4.89M per day).</li>
+<li>Absolute usage was about 14-15X lower than the Codex week (0.33M vs 4.89M per day).</li>
 <li>A smaller fraction was cached (~35% cached, ~65% uncached), because I was intentionally giving only the relevant files
 instead of pouring the whole repo into the context.</li>
 </ul>
@@ -521,7 +521,7 @@ ones.</p>
 <li>
 <p><em>Codex</em></p>
 <ul>
-<li>Acceptance rate maybe <em>50–60%</em>, sometimes <em>70%</em> on a good day.</li>
+<li>Acceptance rate maybe <em>50-60%</em>, sometimes <em>70%</em> on a good day.</li>
 <li>It often:
 <ul>
 <li>misses good table‑driven patterns,</li>
@@ -534,7 +534,7 @@ ones.</p>
 <li>
 <p><em>Chat+files</em></p>
 <ul>
-<li>Acceptance is closer to <em>95%</em>. Good days go to <em>99%</em> acceptance.</li>
+<li>Acceptance is closer to <em>90%</em>. Good days go to <em>95%</em> acceptance.</li>
 <li>My typical prompt is simple: &ldquo;Use stdlib only.&rdquo;, &ldquo;Use table‑driven tests.&rdquo;, &ldquo;Cover N happy cases, N positive border
 cases, N negative border cases, empty and nil cases.&rdquo;, etc.</li>
 <li>I attach:
@@ -628,7 +628,7 @@ it.</p>
 <h3 id="db-design-db-interactions-and-api-dtos">DB Design, DB Interactions, and API DTOs</h3>
 <p>For <em>DB schema design</em>, <em>DB interactions</em>, and <em>API DTO design</em>, my acceptance rate is low in both Codex and chat:</p>
 <ul>
-<li>I&rsquo;d put it around <em>30–40%</em> in either mode.</li>
+<li>I&rsquo;d put it around <em>30-40%</em> in either mode.</li>
 </ul>
 <p>For these tasks:</p>
 <ul>
