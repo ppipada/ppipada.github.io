@@ -208,23 +208,23 @@
     </div>
 </form>
 
-    <div class="pl-sm-4 ml-sm-5">
-        <div style="margin-bottom: 2rem">
-            <h1 style="text-align: center">Go introductory primer</h1>
-            <div
-                class="text-muted"
-                style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
-            >
-                <div>Nov 17, 2019 | Reading Time: 3 min</div>
-                <div>
-                    <i class="fa fa-tags"></i>
-                    
-                        <a class="text-muted" href="../../tags/golang">golang</a
-                        >
-                    
-                </div>
-            </div>
-        </div><div class="mt-1 mb-5">
+	<div class="pl-sm-4 ml-sm-5">
+		<div style="margin-bottom: 2rem">
+			<h1 style="text-align: center">Go introductory primer</h1>
+			<div
+				class="text-muted"
+				style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
+			>
+				<div>Nov 17, 2019 | Reading Time: 3 min</div>
+				<div>
+					<i class="fa fa-tags"></i>
+					
+						<a class="text-muted" href="../../tags/golang/">golang</a
+						>
+					
+				</div>
+			</div>
+		</div><div class="mt-1 mb-5">
     
         <aside>
             <h4>Table of contents</h4>
@@ -409,8 +409,10 @@
 <li>Package names are singular, short, clear, lower case, with NO under_scores or mixedCaps.</li>
 <li>Package content: Avoid stutter, simplify function names.</li>
 <li><strong>Avoid</strong> meaningless package names such as util, lib, common, or misc.</li>
-<li>Function and variable names: The convention in Go is to use MixedCaps or mixedCaps rather than underscores to write multiword names.</li>
-<li>Keep local variables short. Common variable/type combinations can use really short names. E.g: ‘i’ - for index, ‘r’ for reader, ‘b’ for buffer.</li>
+<li>Function and variable names: The convention in Go is to use MixedCaps or mixedCaps rather than underscores to write
+multiword names.</li>
+<li>Keep local variables short. Common variable/type combinations can use really short names. E.g: ‘i’ - for index, ‘r’
+for reader, ‘b’ for buffer.</li>
 <li>Acronyms should be all capitals: E.g: ServeHTTP and IDProcessor</li>
 </ul>
 </li>
@@ -479,18 +481,21 @@
 </li>
 <li>Few important rules:
 <ul>
-<li>The convention is simple: to document a type, variable, constant, function, or even a package, write a regular comment directly preceding its declaration, with no intervening blank line. Godoc will then present that comment as text alongside the item it documents.</li>
+<li>The convention is simple: to document a type, variable, constant, function, or even a package, write a regular
+comment directly preceding its declaration, with no intervening blank line. Godoc will then present that comment as
+text alongside the item it documents.</li>
 <li>The comment is a complete sentence that begins with the name of the element it describes.</li>
 <li>Comments on package declarations should provide general package documentation.</li>
 <li>Use doc.go for packages that need large amount of introductory documentation.</li>
 </ul>
 </li>
-<li>Swagger documentation for APIs: Can use code annotations as described at  
+<li>Swagger documentation for APIs: Can use code annotations as described at
+ 
 
 
 
 <a
-    href="https://goswagger.io/use/spec.html"
+    href="https://goswagger.io/go-swagger/generate-spec/"
     title=""
     
         target="_blank"
@@ -594,7 +599,10 @@
 <ul>
 <li>Go provides command <code>go test</code> for running tests in <code>\*\_test.go</code> files. It also has support for benchmarking.</li>
 <li><code>go test</code> has support for race detector using <code>- race</code>. Use it while running tests.</li>
-<li>Test file containing component tests should specify the build constraints so that files can be identifiable whether it has Unit or Component or Integration test. The build constraints will be helpful to exclusively run only UT or Component tests or Integration tests. Command “go test ./… -tags UT” will only run unit test file and will exclude file component_test.go as it as define build constraint “!UT”
+<li>Test file containing component tests should specify the build constraints so that files can be identifiable whether
+it has Unit or Component or Integration test. The build constraints will be helpful to exclusively run only UT or
+Component tests or Integration tests. Command “go test ./… -tags UT” will only run unit test file and will exclude
+file component_test.go as it as define build constraint “!UT”
 <ul>
 <li>E.g File component_test.go <code>// +build !UT … some tests</code></li>
 </ul>
@@ -668,7 +676,8 @@
 <li>Measuring code coverage
 <ul>
 <li>Go test can be configured <code>-cover</code> to collect code coverage information.</li>
-<li>It does not have support to find code coverage in workflow testing. But can be  
+<li>It does not have support to find code coverage in workflow testing. But can be
+ 
 
 
 
@@ -681,12 +690,13 @@
 >
     tweaked
 </a>
- to collect coverage information by writing test for entry point function of binary.</li>
+ to collect coverage information by
+writing test for entry point function of binary.</li>
 </ul>
 </li>
 </ul>
 
-    </div>
+	</div>
 
                 </div>
             </div>
@@ -700,13 +710,13 @@
             </li>
         
             <li class="list-inline-item mr-3">
-                <a href="https://www.linkedin.com/in/ppipada" target="_blank" aria-label="linkedin">
+                <a href="https://www.linkedin.com/in/ppipada/" target="_blank" aria-label="linkedin">
                     <i class="fab fa-linkedin-in fa-1x text-muted"></i>
                 </a>
             </li>
         
             <li class="list-inline-item mr-3">
-                <a href="https://letterboxd.com/ppipada" target="_blank" aria-label="letterboxd">
+                <a href="https://letterboxd.com/ppipada/" target="_blank" aria-label="letterboxd">
                     <i class="fab fa-letterboxd fa-1x text-muted"></i>
                 </a>
             </li>
