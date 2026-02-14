@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algos on Tech Interview Prep</title>
+    <link>https://pankajpipada.com/tech-interview-prep/algos/</link>
+    <description>Recent content in Algos on Tech Interview Prep</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</copyright>
+    <atom:link href="https://pankajpipada.com/tech-interview-prep/algos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bfs</title>
+      <link>https://pankajpipada.com/tech-interview-prep/algos/bfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/algos/bfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Binary-Search</title>
+      <link>https://pankajpipada.com/tech-interview-prep/algos/binary-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/algos/binary-search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dfs</title>
+      <link>https://pankajpipada.com/tech-interview-prep/algos/dfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/algos/dfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Divide-and-Conquer</title>
+      <link>https://pankajpipada.com/tech-interview-prep/algos/divide-and-conquer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/algos/divide-and-conquer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamic-Programming</title>
+      <link>https://pankajpipada.com/tech-interview-prep/algos/dynamic-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/algos/dynamic-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Greedy</title>
+      <link>https://pankajpipada.com/tech-interview-prep/algos/greedy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/algos/greedy/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

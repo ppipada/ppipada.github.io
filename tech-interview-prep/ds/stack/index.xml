@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stack on Tech Interview Prep</title>
+    <link>https://pankajpipada.com/tech-interview-prep/ds/stack/</link>
+    <description>Recent content in Stack on Tech Interview Prep</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</copyright>
+    <atom:link href="https://pankajpipada.com/tech-interview-prep/ds/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Valid parentheses</title>
+      <link>https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/</guid>
+      <description>&lt;div style=&#34;margin: .5rem 0 1rem 0;&#34;&gt;&lt;div&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;strong&gt;Levels:&amp;ensp;&lt;/strong&gt;&lt;a href=&#34;https://pankajpipada.com/tech-interview-prep/levels/problems/#level-1&#34;&gt;level-1&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;strong&gt;Data structures:&amp;ensp;&lt;/strong&gt;&lt;a href=&#34;https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string&#34;&gt;string&lt;/a&gt;,&amp;ensp;&lt;a href=&#34;https://pankajpipada.com/tech-interview-prep/data-structures/problems/#stack&#34;&gt;stack&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Practice Link: &lt;a href=&#34;https://leetcode.com/problems/valid-parentheses/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Description:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.&lt;/li&gt;&#xA;&lt;li&gt;An input string is valid if:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Open brackets must be closed by the same type of brackets.&lt;/li&gt;&#xA;&lt;li&gt;Open brackets must be closed in the correct order.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Example 1:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;Input: &amp;#34;()[]{}&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;&lt;span&gt;Output: true&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example 2:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

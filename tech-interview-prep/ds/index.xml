@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ds on Tech Interview Prep</title>
+    <link>https://pankajpipada.com/tech-interview-prep/ds/</link>
+    <description>Recent content in Ds on Tech Interview Prep</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</copyright>
+    <atom:link href="https://pankajpipada.com/tech-interview-prep/ds/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Array</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/array/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bits</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/bits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/bits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graph</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/graph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hash-Table</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/hash-table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/hash-table/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Heap</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/heap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/heap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linkedlist</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/linkedlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/linkedlist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stack</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>String</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/string/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/string/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trie</title>
+      <link>https://pankajpipada.com/tech-interview-prep/ds/trie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pankajpipada.com/tech-interview-prep/ds/trie/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/algos/dynamic-programming/">
+  <meta property="og:site_name" content="Tech Interview Prep">
+  <meta property="og:title" content="Dynamic-Programming">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Dynamic-Programming">
+
+<title>Dynamic-Programming | Tech Interview Prep</title>
+<link rel="icon" href="/tech-interview-prep/favicon.ico" >
+<link rel="manifest" href="/tech-interview-prep/manifest.json">
+<link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/algos/dynamic-programming/">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+
+
+  <script defer src="/tech-interview-prep/fuse.min.js"></script>
+  <script defer src="/tech-interview-prep/en.search.min.d61a0888f5a21ee6fe48b9f4cd1d03058044b059b6df255b0e98cfab8db1518b.js" integrity="sha256-1hoIiPWiHub&#43;SLn0zR0DBYBEsFm23yVbDpjPq42xUYs=" crossorigin="anonymous"></script>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PVSXVYRTKF');
+        </script>
+
+<link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/algos/dynamic-programming/index.xml" title="Tech Interview Prep" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-term book-type-algos">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h4 class="scramblings-brand">
+	<a
+		class="flex align-center"
+		href="/tech-interview-prep/"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+	</a>
+</h4>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/levels/problems/" class="">
+			Path: Levels</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/levels/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/patterns/problems/" class="">
+			Path: Patterns</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/patterns/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/quick-notes/" class="">
+			Path: Data Structures</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/quick-notes/" class="">
+			Quick Notes</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Path: Algorithms</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Quick Notes</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<input type="checkbox" id="section-3c802e3927c98f404195e940fc79e4bc" class="toggle"  />
+		<label for="section-3c802e3927c98f404195e940fc79e4bc" class="flex">
+			<a
+				
+					href="/tech-interview-prep/problems/"
+				
+				class=""
+			>
+				All Problems</a>
+			<img
+				src="/tech-interview-prep/icons/chevron-right.svg"
+				class="book-icon"
+				alt="Expand"
+			/>
+		</label>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/add-and-search-word/" class="">
+			Add and search word - data structure design</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/alien-dictionary/" class="">
+			Alien dictionary</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/" class="">
+			Best time to buy and sell stock</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/binary-tree-level-order-traversal/" class="">
+			Binary tree level order traversal</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/binary-tree-maximum-path-sum/" class="">
+			Binary tree maximum path sum</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/climbing-stairs/" class="">
+			Climbing stairs</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/clone-graph/" class="">
+			Clone graph</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/coin-change/" class="">
+			Coin change</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/combination-sum-iv/" class="">
+			Combination sum IV</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" class="">
+			Construct binary tree from preorder and inorder traversal</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/container-with-most-water/" class="">
+			Container with most water</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/contains-duplicate/" class="">
+			Contains duplicate</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/counting-bits/" class="">
+			Counting bits</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/course-schedule/" class="">
+			Course schedule</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/decode-ways/" class="">
+			Decode ways</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
+			Encode and decode strings</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/find-median-from-data-stream/" class="">
+			Find median from data stream</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/" class="">
+			Find minimum in rotated sorted array</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/graph-valid-tree/" class="">
+			Graph valid tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/group-anagrams/" class="">
+			Group anagrams</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/house-robber/" class="">
+			House robber</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/house-robber-ii/" class="">
+			House robber II</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/implement-trie-prefix-tree/" class="">
+			Implement trie (prefix tree)</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/insert-interval/" class="">
+			Insert interval</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/invert-binary-tree/" class="">
+			Invert a binary tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/jump-game/" class="">
+			Jump game</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/kth-smallest-element-in-a-bst/" class="">
+			Kth smallest element in a BST</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/linked-list-cycle/" class="">
+			Linked list cycle</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-consecutive-sequence/" class="">
+			Longest consecutive sequence</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-increasing-subsequence/" class="">
+			Longest increasing subsequence</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-palindromic-substring/" class="">
+			Longest palindromic substring</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-repeating-character-replacement/" class="">
+			Longest repeating character replacement</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-substring-without-repeating-characters/" class="">
+			Longest substring without repeating characters</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/lowest-common-ancestor-of-a-bst/" class="">
+			Lowest common ancestor of a binary search tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-depth-of-binary-tree/" class="">
+			Maximum depth of binary tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-product-subarray/" class="">
+			Maximum product subarray</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-subarray/" class="">
+			Maximum subarray</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/meeting-rooms/" class="">
+			Meeting rooms</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/meeting-rooms-ii/" class="">
+			Meeting rooms II</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/merge-intervals/" class="">
+			Merge intervals</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/merge-k-sorted-lists/" class="">
+			Merge k sorted lists</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/minimum-window-substring/" class="">
+			Minimum window substring</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/missing-number/" class="">
+			Missing number</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/non-overlapping-intervals/" class="">
+			Non overlapping intervals</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-1-bits/" class="">
+			Number of 1 bits</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/" class="">
+			Number of connected components in an undirected graph</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-islands/" class="">
+			Number of islands</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/pacific-atlantic-water-flow/" class="">
+			Pacific-Atlantic water flow</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/palindromic-substrings/" class="">
+			Palindromic substrings</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/product-of-array-except-self/" class="">
+			Product of array except self</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/remove-nth-node-from-end-of-list/" class="">
+			Remove n&#39;th node from end of list</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reorder-list/" class="">
+			Reorder list</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reverse-bits/" class="">
+			Reverse bits</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reverse-linked-list/" class="">
+			Reverse linked list</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/rotate-image/" class="">
+			Rotate image</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/same-tree/" class="">
+			Same tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/search-in-rotated-sorted-array/" class="">
+			Search in rotated sorted array</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/serialize-and-deserialize-binary-tree/" class="">
+			Serialize and deserialize a binary tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/set-matrix-zeroes/" class="">
+			Set matrix zeroes</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/spiral-matrix/" class="">
+			Spiral matrix</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/subtree-of-another-tree/" class="">
+			Subtree of another tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/sum-of-two-integers/" class="">
+			Sum of two integers</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/three-sum/" class="">
+			Three sum</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/top-k-frequent-elements/" class="">
+			Top k frequent elements</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/two-sum/" class="">
+			Two sum</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/unique-paths/" class="">
+			Unique paths</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-anagram/" class="">
+			Valid anagram</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-palindrome/" class="">
+			Valid palindrome</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-parentheses/" class="">
+			Valid parentheses</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/validate-binary-search-tree/" class="">
+			Validate a binary search tree</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-break/" class="">
+			Word break</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-search/" class="">
+			Word search</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-search-ii/" class="">
+			Word search II</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/system-design/" class="">
+			System Design</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/external/" class="">
+			External References</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/tech-interview-prep/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Dynamic-Programming</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/climbing-stairs/">Climbing stairs</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-3/">Level-3</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/climbing-stairs/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>You are climbing a stair case. It takes n steps to reach to the top.</li>
+<li>Each time you can either climb 1 or 2 steps.</li>
+<li>In how many distinct ways can you climb to the top?</li>
+</ul>
+<p>Example 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There are two ways to climb to the top.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>1. 1 step + 1 step
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>2. 2 steps</span></span></code></pre></div><p>Example 2:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/coin-change/">Coin change</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-3/">Level-3</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/coin-change/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>You are given coins of different denominations and a total amount of money amount.</li>
+<li>Write a function to compute the fewest number of coins that you need to make up that amount.</li>
+<li>If that amount of money cannot be made up by any combination of the coins, return -1.</li>
+</ul>
+<p>Example 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: coins = [1, 2, 5], amount = 11
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 3
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: 11 = 5 + 5 + 1</span></span></code></pre></div><p>Example 2:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/combination-sum-iv/">Combination sum IV</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/combination-sum-iv/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add
+up to a positive integer target.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>nums = [1, 2, 3]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>target = 4
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>The possible combination ways are:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>(1, 1, 1, 1)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>(1, 1, 2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>(1, 2, 1)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>(1, 3)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>(2, 1, 1)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>(2, 2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>(3, 1)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>Note that different sequences are counted as different combinations.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>Therefore the output is 7.</span></span></code></pre></div><p>Follow up:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/counting-bits/">Counting bits</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/bits/">Bits</a>, 
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#bits">bits</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/counting-bits/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1&rsquo;s in
+their binary representation and return them as an array.</li>
+</ul>
+<p>Example 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [0,1,1]</span></span></code></pre></div><p>Example 2:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [0,1,1,2,1,2]</span></span></code></pre></div><p>Follow up:</p>
+<ul>
+<li>It is very easy to come up with a solution with run time O(n*sizeof(integer)). But can you do it in linear time O(n)
+/possibly in a single pass?</li>
+<li>Space complexity should be O(n).</li>
+</ul>
+<p>Thinking:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/decode-ways/">Decode ways</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/string/">String</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/decode-ways/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>
+<p>A message containing letters from A-Z is being encoded to numbers using the following mapping:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&#39;A&#39; -&gt; 1
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&#39;B&#39; -&gt; 2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>&#39;Z&#39; -&gt; 26</span></span></code></pre></div></li>
+<li>
+<p>Given a non-empty string containing only digits, determine the total number of ways to decode it.</p>
+</li>
+</ul>
+<p>Example 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;12&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: It could be decoded as &#34;AB&#34; (1 2) or &#34;L&#34; (12).</span></span></code></pre></div><p>Example 2:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/house-robber/">House robber</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-3/">Level-3</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/house-robber/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>You are a professional robber planning to rob houses along a street.</li>
+<li>Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that
+adjacent houses have security system connected and it will automatically contact the police if two adjacent houses
+were broken into on the same night.</li>
+<li>Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of
+money you can rob tonight without alerting the police.</li>
+</ul>
+<p>Example 1:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/house-robber-ii/">House robber II</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/house-robber-ii/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>You are a professional robber planning to rob houses along a street.</li>
+<li>Each house has a certain amount of money stashed.</li>
+<li>All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one.
+Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent
+houses were broken into on the same night.</li>
+<li>Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of
+money you can rob tonight without alerting the police.</li>
+</ul>
+<p>Example 1:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/jump-game/">Jump game</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/jump-game/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>Given an array of non-negative integers, you are initially positioned at the first index of the array.</li>
+<li>Each element in the array represents your maximum jump length at that position.</li>
+<li>Determine if you are able to reach the last index.</li>
+</ul>
+<p>Example 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [2,3,1,1,4]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.</span></span></code></pre></div><p>Example 2:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/longest-increasing-subsequence/">Longest increasing subsequence</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>, 
+      <a href="/tech-interview-prep/algos/binary-search/">Binary-Search</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#binary-search">binary-search</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/longest-increasing-subsequence/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>Given an unsorted array of integers, find the length of longest increasing subsequence.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [10,9,2,5,3,7,101,18]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 4
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</span></span></code></pre></div><p>Note:</p>
+<ul>
+<li>There may be more than one LIS combination, it is only necessary for you to return the length.</li>
+<li>Your algorithm should run in O(n2) complexity.</li>
+</ul>
+<p>Follow up:</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/longest-palindromic-substring/">Longest palindromic substring</a>
+    </h2>
+    
+
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/string/">String</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a></div><div>
+				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
+
+<p>Practice Link: <a href="https://leetcode.com/problems/longest-palindromic-substring/">LeetCode</a></p>
+<p>Description:</p>
+<ul>
+<li>Given a string s, find the longest palindromic substring in s.</li>
+<li>You may assume that the maximum length of s is 1000.</li>
+</ul>
+<p>Example 1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;babad&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: &#34;bab&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Note: &#34;aba&#34; is also a valid answer.</span></span></code></pre></div><p>Example 2:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;cbbd&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: &#34;bb&#34;</span></span></code></pre></div><p>Python Solution:</p>
+<!-- tabs:start -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestPalindrome</span>(self, s):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#e6db74">        :type s: str
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#e6db74">        :rtype: str
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>            <span style="color:#75715e"># odd case, like &#34;aba&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>            tmp <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>helper(s, i, i)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>            <span style="color:#66d9ef">if</span> len(tmp) <span style="color:#f92672">&gt;</span> len(res):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>                res <span style="color:#f92672">=</span> tmp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>            <span style="color:#75715e"># even case, like &#34;abba&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>            tmp <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>helper(s, i, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>            <span style="color:#66d9ef">if</span> len(tmp) <span style="color:#f92672">&gt;</span> len(res):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>                res <span style="color:#f92672">=</span> tmp
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>        <span style="color:#66d9ef">return</span> res
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    <span style="color:#75715e"># get the longest palindrome, l, r are the middle indexes</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    <span style="color:#75715e"># from inner to outer</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helper</span>(self, s, l, r):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        <span style="color:#66d9ef">while</span> l <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> r <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> s[l] <span style="color:#f92672">==</span> s[r]:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>            l <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>            r <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>        <span style="color:#66d9ef">return</span> s[l <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:r]
+</span></span></code></pre></div>
+
+<!-- tabs:end --></div>
+  </article>
+  
+
+  
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/tech-interview-prep/algos/dynamic-programming/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/tech-interview-prep/algos/dynamic-programming/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tech-interview-prep/algos/dynamic-programming/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+  
+
+
+
+  
+  
+  
+
+
+ 
+        
+  
+ 
+        <div class="text-center p-0">
+	<ul id="nav-social" class="list-inline">
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://github.com/ppipada" target="_blank" aria-label="github">
+					<i class="fab fa-github fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://www.linkedin.com/in/ppipada/" target="_blank" aria-label="linkedin">
+					<i class="fab fa-linkedin-in fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://letterboxd.com/ppipada/" target="_blank" aria-label="letterboxd">
+					<i class="fab fa-letterboxd fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+					<i class="fas fa-at fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+					<i class="fas fa-rss fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+	</ul>
+</div>
+
+        
+  
+  <div class="book-copyright flex justify-center">
+    <small>Tech Interview Prep - Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</small>
+  </div>
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Algos</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/bfs/">Bfs</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/binary-search/">Binary-Search</a>
+          <span>4</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/dfs/">Dfs</a>
+          <span>9</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/divide-and-conquer/">Divide-and-Conquer</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/greedy/">Greedy</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Ds</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/array/">Array</a>
+          <span>29</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/bits/">Bits</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/graph/">Graph</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/hash-table/">Hash-Table</a>
+          <span>8</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/heap/">Heap</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/linkedlist/">Linkedlist</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/stack/">Stack</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/string/">String</a>
+          <span>12</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/tree/">Tree</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/trie/">Trie</a>
+          <span>3</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Lvls</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-0/">Level-0</a>
+          <span>4</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-1/">Level-1</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-2/">Level-2</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-3/">Level-3</a>
+          <span>18</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+          <span>22</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-5/">Level-5</a>
+          <span>11</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Ptrns</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/backtracking/">Backtracking</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/intervals/">Intervals</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/sliding-window/">Sliding-Window</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/union-find/">Union-Find</a>
+          <span>2</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+	
+	<script src="https://pankajpipada.com/tech-interview-prep/js/copybutton.min.eb1935355b430030f89358fc7901ef972a3973b27cf70b5efba79813702b47ac.js" integrity="sha256-6xk1NVtDADD4k1j8eQHvlyo5c7J89wte&#43;6eYE3ArR6w=" defer></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

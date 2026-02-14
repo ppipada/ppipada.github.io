@@ -1,0 +1,15 @@
+{
+  "name": "Tech Interview Prep",
+  "short_name": "Tech Interview Prep",
+  "start_url": "/tech-interview-prep/",
+  "scope": "/tech-interview-prep/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/tech-interview-prep/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}
