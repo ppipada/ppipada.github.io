@@ -26,8 +26,7 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 1Input: &#34;cbbd&#34; 2Output: &#34;bb&#34;Python Solution:
 1class Solution(object): 2 def longestPalindrome(self, s): 3 &#34;&#34;&#34; 4 :type s: str 5 :rtype: str 6 &#34;&#34;&#34; 7 8 res = &#34;&#34; 9 for i in range(len(s)): 10 # odd case, like &#34;aba&#34; 11 tmp = self.helper(s, i, i) 12 if len(tmp) &gt; len(res): 13 res = tmp 14 # even case, like &#34;abba&#34; 15 tmp = self.helper(s, i, i &#43; 1) 16 if len(tmp) &gt; len(res): 17 res = tmp 18 return res 19 20 # get the longest palindrome, l, r are the middle indexes 21 # from inner to outer 22 def helper(self, s, l, r): 23 while l &gt;= 0 and r &lt; len(s) and s[l] == s[r]: 24 l -= 1 25 r &#43;= 1 26 return s[l &#43; 1:r]">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="problems">
+  <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Longest palindromic substring">
@@ -48,7 +47,7 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.d61a0888f5a21ee6fe48b9f4cd1d03058044b059b6df255b0e98cfab8db1518b.js" integrity="sha256-1hoIiPWiHub&#43;SLn0zR0DBYBEsFm23yVbDpjPq42xUYs=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -58,10 +57,11 @@ Given a string s, find the longest palindromic substring in s. You may assume th
             gtag('config', 'G-PVSXVYRTKF');
         </script>
 
+<link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/longest-palindromic-substring/index.xml" title="Tech Interview Prep" />
 
   
 </head>
-<body dir="ltr" class="book-kind-page book-type-problems">
+<body dir="ltr" class="book-kind-section book-type-problems">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
@@ -322,6 +322,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Add and search word - data structure design</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -336,6 +342,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/alien-dictionary/" class="">
 			Alien dictionary</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -352,6 +364,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Best time to buy and sell stock</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -366,6 +384,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/binary-tree-level-order-traversal/" class="">
 			Binary tree level order traversal</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -382,6 +406,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Binary tree maximum path sum</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -396,6 +426,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/climbing-stairs/" class="">
 			Climbing stairs</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -412,6 +448,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Clone graph</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -426,6 +468,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/coin-change/" class="">
 			Coin change</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -442,6 +490,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Combination sum IV</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -456,6 +510,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" class="">
 			Construct binary tree from preorder and inorder traversal</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -472,6 +532,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Container with most water</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -486,6 +552,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/contains-duplicate/" class="">
 			Contains duplicate</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -502,6 +574,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Counting bits</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -516,6 +594,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/course-schedule/" class="">
 			Course schedule</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -532,6 +616,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Decode ways</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -546,6 +636,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
 			Encode and decode strings</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -562,6 +658,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Find median from data stream</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -576,6 +678,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/" class="">
 			Find minimum in rotated sorted array</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -592,6 +700,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Graph valid tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -606,6 +720,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/group-anagrams/" class="">
 			Group anagrams</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -622,6 +742,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			House robber</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -636,6 +762,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/house-robber-ii/" class="">
 			House robber II</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -652,6 +784,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Implement trie (prefix tree)</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -666,6 +804,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/insert-interval/" class="">
 			Insert interval</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -682,6 +826,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Invert a binary tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -696,6 +846,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/jump-game/" class="">
 			Jump game</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -712,6 +868,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Kth smallest element in a BST</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -726,6 +888,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/linked-list-cycle/" class="">
 			Linked list cycle</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -742,6 +910,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Longest consecutive sequence</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -756,6 +930,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/longest-increasing-subsequence/" class="">
 			Longest increasing subsequence</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -772,6 +952,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Longest palindromic substring</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -786,6 +972,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/longest-repeating-character-replacement/" class="">
 			Longest repeating character replacement</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -802,6 +994,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Longest substring without repeating characters</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -816,6 +1014,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/lowest-common-ancestor-of-a-bst/" class="">
 			Lowest common ancestor of a binary search tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -832,6 +1036,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Maximum depth of binary tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -846,6 +1056,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/maximum-product-subarray/" class="">
 			Maximum product subarray</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -862,6 +1078,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Maximum subarray</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -876,6 +1098,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/meeting-rooms/" class="">
 			Meeting rooms</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -892,6 +1120,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Meeting rooms II</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -906,6 +1140,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/merge-intervals/" class="">
 			Merge intervals</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -922,6 +1162,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Merge k sorted lists</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -936,6 +1182,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/minimum-window-substring/" class="">
 			Minimum window substring</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -952,6 +1204,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Missing number</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -966,6 +1224,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/non-overlapping-intervals/" class="">
 			Non overlapping intervals</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -982,6 +1246,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Number of 1 bits</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -996,6 +1266,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/" class="">
 			Number of connected components in an undirected graph</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1012,6 +1288,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Number of islands</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1026,6 +1308,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/pacific-atlantic-water-flow/" class="">
 			Pacific-Atlantic water flow</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1042,6 +1330,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Palindromic substrings</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1056,6 +1350,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/product-of-array-except-self/" class="">
 			Product of array except self</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1072,6 +1372,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Remove n&#39;th node from end of list</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1086,6 +1392,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/reorder-list/" class="">
 			Reorder list</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1102,6 +1414,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Reverse bits</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1116,6 +1434,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/reverse-linked-list/" class="">
 			Reverse linked list</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1132,6 +1456,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Rotate image</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1146,6 +1476,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/same-tree/" class="">
 			Same tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1162,6 +1498,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Search in rotated sorted array</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1176,6 +1518,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/serialize-and-deserialize-binary-tree/" class="">
 			Serialize and deserialize a binary tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1192,6 +1540,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Set matrix zeroes</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1206,6 +1560,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/spiral-matrix/" class="">
 			Spiral matrix</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1222,6 +1582,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Subtree of another tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1236,6 +1602,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/sum-of-two-integers/" class="">
 			Sum of two integers</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1252,6 +1624,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Three sum</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1266,6 +1644,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/top-k-frequent-elements/" class="">
 			Top k frequent elements</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1282,6 +1666,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Two sum</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1296,6 +1686,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/unique-paths/" class="">
 			Unique paths</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1312,6 +1708,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Valid anagram</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1326,6 +1728,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/valid-palindrome/" class="">
 			Valid palindrome</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1342,6 +1750,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Valid parentheses</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1356,6 +1770,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/validate-binary-search-tree/" class="">
 			Validate a binary search tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1372,6 +1792,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Word break</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1387,6 +1813,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 			Word search</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1401,6 +1833,12 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 		<a href="/tech-interview-prep/problems/word-search-ii/" class="">
 			Word search II</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1507,7 +1945,7 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;cbbd&#34;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: &#34;bb&#34;</span></span></code></pre></div><p>Python Solution:</p>
 <!-- tabs:start -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestPalindrome</span>(self, s):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#e6db74">        :type s: str
@@ -1532,9 +1970,7 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        <span style="color:#66d9ef">while</span> l <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> r <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> s[l] <span style="color:#f92672">==</span> s[r]:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>            l <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>            r <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>        <span style="color:#66d9ef">return</span> s[l <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:r]
-</span></span></code></pre></div>
-
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>        <span style="color:#66d9ef">return</span> s[l <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:r]</span></span></code></pre></div>
 <!-- tabs:end -->
 </article>
  

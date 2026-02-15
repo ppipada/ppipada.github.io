@@ -24,8 +24,7 @@ Given an array nums of n integers where n &gt; 1, return an array output such th
 Please solve it without division and in O(n). Python Solution:
 1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r)">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="problems">
+  <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Product of array except self">
@@ -45,7 +44,7 @@ Please solve it without division and in O(n). Python Solution:
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.d61a0888f5a21ee6fe48b9f4cd1d03058044b059b6df255b0e98cfab8db1518b.js" integrity="sha256-1hoIiPWiHub&#43;SLn0zR0DBYBEsFm23yVbDpjPq42xUYs=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -55,10 +54,11 @@ Please solve it without division and in O(n). Python Solution:
             gtag('config', 'G-PVSXVYRTKF');
         </script>
 
+<link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/product-of-array-except-self/index.xml" title="Tech Interview Prep" />
 
   
 </head>
-<body dir="ltr" class="book-kind-page book-type-problems">
+<body dir="ltr" class="book-kind-section book-type-problems">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
@@ -319,6 +319,12 @@ Please solve it without division and in O(n). Python Solution:
 			Add and search word - data structure design</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -333,6 +339,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/alien-dictionary/" class="">
 			Alien dictionary</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -349,6 +361,12 @@ Please solve it without division and in O(n). Python Solution:
 			Best time to buy and sell stock</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -363,6 +381,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/binary-tree-level-order-traversal/" class="">
 			Binary tree level order traversal</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -379,6 +403,12 @@ Please solve it without division and in O(n). Python Solution:
 			Binary tree maximum path sum</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -393,6 +423,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/climbing-stairs/" class="">
 			Climbing stairs</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -409,6 +445,12 @@ Please solve it without division and in O(n). Python Solution:
 			Clone graph</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -423,6 +465,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/coin-change/" class="">
 			Coin change</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -439,6 +487,12 @@ Please solve it without division and in O(n). Python Solution:
 			Combination sum IV</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -453,6 +507,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" class="">
 			Construct binary tree from preorder and inorder traversal</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -469,6 +529,12 @@ Please solve it without division and in O(n). Python Solution:
 			Container with most water</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -483,6 +549,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/contains-duplicate/" class="">
 			Contains duplicate</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -499,6 +571,12 @@ Please solve it without division and in O(n). Python Solution:
 			Counting bits</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -513,6 +591,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/course-schedule/" class="">
 			Course schedule</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -529,6 +613,12 @@ Please solve it without division and in O(n). Python Solution:
 			Decode ways</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -543,6 +633,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
 			Encode and decode strings</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -559,6 +655,12 @@ Please solve it without division and in O(n). Python Solution:
 			Find median from data stream</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -573,6 +675,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/" class="">
 			Find minimum in rotated sorted array</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -589,6 +697,12 @@ Please solve it without division and in O(n). Python Solution:
 			Graph valid tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -603,6 +717,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/group-anagrams/" class="">
 			Group anagrams</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -619,6 +739,12 @@ Please solve it without division and in O(n). Python Solution:
 			House robber</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -633,6 +759,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/house-robber-ii/" class="">
 			House robber II</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -649,6 +781,12 @@ Please solve it without division and in O(n). Python Solution:
 			Implement trie (prefix tree)</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -663,6 +801,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/insert-interval/" class="">
 			Insert interval</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -679,6 +823,12 @@ Please solve it without division and in O(n). Python Solution:
 			Invert a binary tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -693,6 +843,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/jump-game/" class="">
 			Jump game</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -709,6 +865,12 @@ Please solve it without division and in O(n). Python Solution:
 			Kth smallest element in a BST</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -723,6 +885,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/linked-list-cycle/" class="">
 			Linked list cycle</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -739,6 +907,12 @@ Please solve it without division and in O(n). Python Solution:
 			Longest consecutive sequence</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -753,6 +927,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/longest-increasing-subsequence/" class="">
 			Longest increasing subsequence</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -769,6 +949,12 @@ Please solve it without division and in O(n). Python Solution:
 			Longest palindromic substring</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -783,6 +969,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/longest-repeating-character-replacement/" class="">
 			Longest repeating character replacement</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -799,6 +991,12 @@ Please solve it without division and in O(n). Python Solution:
 			Longest substring without repeating characters</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -813,6 +1011,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/lowest-common-ancestor-of-a-bst/" class="">
 			Lowest common ancestor of a binary search tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -829,6 +1033,12 @@ Please solve it without division and in O(n). Python Solution:
 			Maximum depth of binary tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -843,6 +1053,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/maximum-product-subarray/" class="">
 			Maximum product subarray</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -859,6 +1075,12 @@ Please solve it without division and in O(n). Python Solution:
 			Maximum subarray</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -873,6 +1095,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/meeting-rooms/" class="">
 			Meeting rooms</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -889,6 +1117,12 @@ Please solve it without division and in O(n). Python Solution:
 			Meeting rooms II</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -903,6 +1137,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/merge-intervals/" class="">
 			Merge intervals</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -919,6 +1159,12 @@ Please solve it without division and in O(n). Python Solution:
 			Merge k sorted lists</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -933,6 +1179,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/minimum-window-substring/" class="">
 			Minimum window substring</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -949,6 +1201,12 @@ Please solve it without division and in O(n). Python Solution:
 			Missing number</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -963,6 +1221,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/non-overlapping-intervals/" class="">
 			Non overlapping intervals</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -979,6 +1243,12 @@ Please solve it without division and in O(n). Python Solution:
 			Number of 1 bits</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -993,6 +1263,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/" class="">
 			Number of connected components in an undirected graph</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1009,6 +1285,12 @@ Please solve it without division and in O(n). Python Solution:
 			Number of islands</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1023,6 +1305,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/pacific-atlantic-water-flow/" class="">
 			Pacific-Atlantic water flow</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1039,6 +1327,12 @@ Please solve it without division and in O(n). Python Solution:
 			Palindromic substrings</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1053,6 +1347,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/product-of-array-except-self/" class="active">
 			Product of array except self</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1069,6 +1369,12 @@ Please solve it without division and in O(n). Python Solution:
 			Remove n&#39;th node from end of list</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1083,6 +1389,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/reorder-list/" class="">
 			Reorder list</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1099,6 +1411,12 @@ Please solve it without division and in O(n). Python Solution:
 			Reverse bits</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1113,6 +1431,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/reverse-linked-list/" class="">
 			Reverse linked list</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1129,6 +1453,12 @@ Please solve it without division and in O(n). Python Solution:
 			Rotate image</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1143,6 +1473,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/same-tree/" class="">
 			Same tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1159,6 +1495,12 @@ Please solve it without division and in O(n). Python Solution:
 			Search in rotated sorted array</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1173,6 +1515,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/serialize-and-deserialize-binary-tree/" class="">
 			Serialize and deserialize a binary tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1189,6 +1537,12 @@ Please solve it without division and in O(n). Python Solution:
 			Set matrix zeroes</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1203,6 +1557,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/spiral-matrix/" class="">
 			Spiral matrix</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1219,6 +1579,12 @@ Please solve it without division and in O(n). Python Solution:
 			Subtree of another tree</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1233,6 +1599,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/sum-of-two-integers/" class="">
 			Sum of two integers</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1249,6 +1621,12 @@ Please solve it without division and in O(n). Python Solution:
 			Three sum</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1263,6 +1641,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/top-k-frequent-elements/" class="">
 			Top k frequent elements</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1279,6 +1663,12 @@ Please solve it without division and in O(n). Python Solution:
 			Two sum</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1293,6 +1683,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/unique-paths/" class="">
 			Unique paths</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1309,6 +1705,12 @@ Please solve it without division and in O(n). Python Solution:
 			Valid anagram</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1323,6 +1725,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/valid-palindrome/" class="">
 			Valid palindrome</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1339,6 +1747,12 @@ Please solve it without division and in O(n). Python Solution:
 			Valid parentheses</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1353,6 +1767,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/validate-binary-search-tree/" class="">
 			Validate a binary search tree</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1369,6 +1789,12 @@ Please solve it without division and in O(n). Python Solution:
 			Word break</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1384,6 +1810,12 @@ Please solve it without division and in O(n). Python Solution:
 			Word search</a>
 	
 
+					
+	
+	<ul>
+		
+	</ul>
+
 				</li>
 			
 		
@@ -1398,6 +1830,12 @@ Please solve it without division and in O(n). Python Solution:
 		<a href="/tech-interview-prep/problems/word-search-ii/" class="">
 			Word search II</a>
 	
+
+					
+	
+	<ul>
+		
+	</ul>
 
 				</li>
 			
@@ -1502,7 +1940,7 @@ all the elements of nums except nums[i].</li>
 </ul>
 <p>Python Solution:</p>
 <!-- tabs:start -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">productExceptSelf</span>(self, nums):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#e6db74">        :type nums: List[int]
@@ -1572,9 +2010,7 @@ all the elements of nums except nums[i].</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68</span><span>    sol <span style="color:#f92672">=</span> Solution2()
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span><span>    <span style="color:#66d9ef">for</span> nin <span style="color:#f92672">in</span> in_arrs:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span><span>        r <span style="color:#f92672">=</span> sol<span style="color:#f92672">.</span>productExceptSelf(nin)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span><span>        print(r)
-</span></span></code></pre></div>
-
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span><span>        print(r)</span></span></code></pre></div>
 <!-- tabs:end -->
 </article>
  
