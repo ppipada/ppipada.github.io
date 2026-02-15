@@ -8,38 +8,35 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: graph Algorithms: dfs, bfs Description:
-Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. Test case format:
-For simplicity sake, each node’s value is the same as the node’s index (1-indexed). For example, the first node with val = 1, the second node with val = 2, and so on. The graph is represented in the test case using an adjacency list. Adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph. The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph. Example 1:
+<meta name="description" content="Clone graph# Levels: level-3 Data structures: graph Algorithms: dfs, bfs Description# Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. Test case format:
+For simplicity sake, each node’s value is the same as the node’s index (1-indexed). For example, the first node with val = 1, the second node with val = 2, and so on. The graph is represented in the test case using an adjacency list. Adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph. The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph. Constraints:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/clone-graph/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Clone graph">
-  <meta property="og:description" content="Levels: level-3 Data structures: graph Algorithms: dfs, bfs Description:
-Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. Test case format:
-For simplicity sake, each node’s value is the same as the node’s index (1-indexed). For example, the first node with val = 1, the second node with val = 2, and so on. The graph is represented in the test case using an adjacency list. Adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph. The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph. Example 1:">
+  <meta property="og:description" content="Clone graph# Levels: level-3 Data structures: graph Algorithms: dfs, bfs Description# Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. Test case format:
+For simplicity sake, each node’s value is the same as the node’s index (1-indexed). For example, the first node with val = 1, the second node with val = 2, and so on. The graph is represented in the test case using an adjacency list. Adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph. The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph. Constraints:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Clone graph">
-  <meta itemprop="description" content="Levels: level-3 Data structures: graph Algorithms: dfs, bfs Description:
-Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. Test case format:
-For simplicity sake, each node’s value is the same as the node’s index (1-indexed). For example, the first node with val = 1, the second node with val = 2, and so on. The graph is represented in the test case using an adjacency list. Adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph. The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph. Example 1:">
-  <meta itemprop="wordCount" content="386">
+  <meta itemprop="description" content="Clone graph# Levels: level-3 Data structures: graph Algorithms: dfs, bfs Description# Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. Test case format:
+For simplicity sake, each node’s value is the same as the node’s index (1-indexed). For example, the first node with val = 1, the second node with val = 2, and so on. The graph is represented in the test case using an adjacency list. Adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph. The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph. Constraints:">
+  <meta itemprop="wordCount" content="385">
   <meta itemprop="keywords" content="Dfs,Bfs,Graph,Level-3">
 
 <title>Clone graph | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/clone-graph/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -62,11 +59,12 @@ For simplicity sake, each node’s value is the same as the node’s index (1-in
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -84,6 +82,13 @@ For simplicity sake, each node’s value is the same as the node’s index (1-in
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1919,12 +1924,13 @@ For simplicity sake, each node’s value is the same as the node’s index (1-in
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="clone-graph">Clone graph<a class="anchor" href="#clone-graph">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#graph">graph</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dfs">dfs</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#bfs">bfs</a></div></div>
 
-<p>Description:</p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a reference of a node in a connected undirected graph.</li>
 <li>Return a deep copy (clone) of the graph.</li>
@@ -1940,17 +1946,7 @@ neighbors of a node in the graph.</li>
 <li>The given node will always be the first node with <code>val = 1</code>. You must return the copy of the given node as a reference
 to the cloned graph.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [[2,4],[1,3],[2,4],[1,3]]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There are 4 nodes in the graph.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>1st node (val = 1)&#39;s neighbors are 2nd node (val = 2) and 4th node (val = 4).
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>2nd node (val = 2)&#39;s neighbors are 1st node (val = 1) and 3rd node (val = 3).
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>3rd node (val = 3)&#39;s neighbors are 2nd node (val = 2) and 4th node (val = 4).
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>4th node (val = 4)&#39;s neighbors are 1st node (val = 1) and 3rd node (val = 3).</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: adjList = [[]]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [[]]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.</span></span></code></pre></div><p>Constraints:</p>
+<p>Constraints:</p>
 <ul>
 <li>1 &lt;= Node.val &lt;= 100</li>
 <li>Node.val is unique for each node.</li>
@@ -1958,8 +1954,16 @@ to the cloned graph.</li>
 <li>There is no repeated edges and no self-loops in the graph.</li>
 <li>The Graph is connected and all nodes can be visited starting from the given node.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [[2,4],[1,3],[2,4],[1,3]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There are 4 nodes in the graph.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>1st node (val = 1)&#39;s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>2nd node (val = 2)&#39;s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>3rd node (val = 3)&#39;s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>4th node (val = 4)&#39;s neighbors are 1st node (val = 1) and 3rd node (val = 3).</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: adjList = [[]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [[]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, val<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, neighbors<span style="color:#f92672">=</span>[]):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> val
@@ -1984,7 +1988,6 @@ to the cloned graph.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>                <span style="color:#66d9ef">return</span> node_copy
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        <span style="color:#66d9ef">return</span> dfs(node)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

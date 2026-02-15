@@ -24,11 +24,11 @@ https://github.com/alex-shpak/hugo-book
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/ds/linkedlist/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -51,11 +51,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -73,6 +74,13 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1935,22 +1943,42 @@ https://github.com/alex-shpak/hugo-book
   
 
 
-    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+    <div class="book-post-content"><h1 id="linked-list-cycle">Linked list cycle<a class="anchor" href="#linked-list-cycle">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-1">level-1</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#linkedlist">linkedlist</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/linked-list-cycle/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/linked-list-cycle/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a linked list, determine if it has a cycle in it.</li>
 <li>To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the
 linked list where tail connects to.</li>
 <li>If pos is -1, then there is no cycle in the linked list.</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: head = [3,2,0,-4], pos = 1
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There is a cycle in the linked list, where tail connects to the second node.</span></span></code></pre></div><p>Example 2:</p></div>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There is a cycle in the linked list, where tail connects to the second node.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: head = [1,2], pos = 0
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There is a cycle in the linked list, where tail connects to the first node.</span></span></code></pre></div><h2 id="thinking">Thinking<a class="anchor" href="#thinking">#</a></h2>
+<ul>
+<li>This can be solved using tortoise and hare approach or using hashtable.</li>
+</ul>
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#75715e"># Tortise and hare approach</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hasCycle</span>(self, head):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>            slow <span style="color:#f92672">=</span> head
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>            fast <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            <span style="color:#66d9ef">while</span> slow <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> fast:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>                slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>                fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span></span></span></code></pre></div></div>
   </article>
   
   <article class="markdown book-post">
@@ -1985,26 +2013,27 @@ linked list where tail connects to.</li>
   
 
 
-    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+    <div class="book-post-content"><h1 id="merge-k-sorted-lists">Merge k sorted lists<a class="anchor" href="#merge-k-sorted-lists">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-5">level-5</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#linkedlist">linkedlist</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#heap">heap</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#divide-and-conquer">divide-and-conquer</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/merge-k-sorted-lists/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/merge-k-sorted-lists/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Merge k sorted linked lists and return it as one sorted list.</li>
 <li>Analyze and describe its complexity.</li>
 </ul>
-<p>Example:</p>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  1-&gt;4-&gt;5,
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  1-&gt;3-&gt;4,
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  2-&gt;6
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListNode</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> x
@@ -2041,8 +2070,7 @@ linked list where tail connects to.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>            point<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> l2
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>        <span style="color:#66d9ef">else</span>:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>            point<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> l1
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>        <span style="color:#66d9ef">return</span> head<span style="color:#f92672">.</span>next</span></span></code></pre></div>
-<!-- tabs:end --></div>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>        <span style="color:#66d9ef">return</span> head<span style="color:#f92672">.</span>next</span></span></code></pre></div></div>
   </article>
   
   <article class="markdown book-post">
@@ -2071,26 +2099,24 @@ linked list where tail connects to.</li>
   
 
 
-    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+    <div class="book-post-content"><h1 id="remove-nth-node-from-end-of-list">Remove n&rsquo;th node from end of list<a class="anchor" href="#remove-nth-node-from-end-of-list">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#linkedlist">linkedlist</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a linked list, remove the n-th node from the end of list and return its head.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</span></span></code></pre></div><p>Note:</p>
+<p>Note:</p>
 <ul>
 <li>Given n will always be valid.</li>
 </ul>
-<p>Follow up:</p>
-<ul>
-<li>Could you do this in one pass?</li>
-</ul>
-<p>Python Solution:</p></div>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</span></span></code></pre></div><p>Follow up:</p></div>
   </article>
   
   <article class="markdown book-post">
@@ -2119,20 +2145,20 @@ linked list where tail connects to.</li>
   
 
 
-    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+    <div class="book-post-content"><h1 id="reorder-list">Reorder list<a class="anchor" href="#reorder-list">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#linkedlist">linkedlist</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/reorder-list/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/reorder-list/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a singly linked list <code>L: L0→L1→…→Ln-1→Ln</code>, reorder it to: <code>L0→Ln→L1→Ln-1→L2→Ln-2→…</code></li>
 <li>You may not modify the values in the list&rsquo;s nodes, only nodes itself may be changed.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListNode</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> x
@@ -2164,8 +2190,7 @@ linked list where tail connects to.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>        <span style="color:#66d9ef">while</span> second<span style="color:#f92672">.</span>next:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>            first<span style="color:#f92672">.</span>next, first <span style="color:#f92672">=</span> second, first<span style="color:#f92672">.</span>next
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>            second<span style="color:#f92672">.</span>next, second <span style="color:#f92672">=</span> first, second<span style="color:#f92672">.</span>next
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>        <span style="color:#66d9ef">return</span></span></span></code></pre></div>
-<!-- tabs:end --></div>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>        <span style="color:#66d9ef">return</span></span></span></code></pre></div></div>
   </article>
   
   <article class="markdown book-post">
@@ -2194,23 +2219,24 @@ linked list where tail connects to.</li>
   
 
 
-    <div class="book-post-content"><div style="margin: .5rem 0 1rem 0;"><div>
+    <div class="book-post-content"><h1 id="reverse-linked-list">Reverse linked list<a class="anchor" href="#reverse-linked-list">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-1">level-1</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#linkedlist">linkedlist</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/reverse-linked-list/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/reverse-linked-list/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Reverse a singly linked list.</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span></span></code></pre></div><p>Follow up:</p>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span></span></code></pre></div><h2 id="follow-up">Follow up<a class="anchor" href="#follow-up">#</a></h2>
 <ul>
 <li>A linked list can be reversed either iteratively or recursively. Could you implement both?</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListNode</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> x
@@ -2234,8 +2260,7 @@ linked list where tail connects to.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>        p <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>reverseList_v1(head<span style="color:#f92672">.</span>next)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>        head<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        <span style="color:#66d9ef">return</span> p</span></span></code></pre></div>
-<!-- tabs:end --></div>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        <span style="color:#66d9ef">return</span> p</span></span></code></pre></div></div>
   </article>
   
 

@@ -8,40 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-2 Data structures: array Algorithms: binary-search Practice Link: LeetCode
-Description:
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution:
-1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r) ">
+<meta name="description" content="Find minimum in rotated sorted array# Levels: level-2 Data structures: array Algorithms: binary-search Practice Link# LeetCode
+Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution# 1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Find minimum in rotated sorted array">
-  <meta property="og:description" content="Levels: level-2 Data structures: array Algorithms: binary-search Practice Link: LeetCode
-Description:
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution:
-1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
+  <meta property="og:description" content="Find minimum in rotated sorted array# Levels: level-2 Data structures: array Algorithms: binary-search Practice Link# LeetCode
+Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution# 1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Find minimum in rotated sorted array">
-  <meta itemprop="description" content="Levels: level-2 Data structures: array Algorithms: binary-search Practice Link: LeetCode
-Description:
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution:
-1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
-  <meta itemprop="wordCount" content="294">
+  <meta itemprop="description" content="Find minimum in rotated sorted array# Levels: level-2 Data structures: array Algorithms: binary-search Practice Link# LeetCode
+Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution# 1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
+  <meta itemprop="wordCount" content="300">
   <meta itemprop="keywords" content="Binary-Search,Array,Level-2">
 
 <title>Find minimum in rotated sorted array | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -64,11 +58,12 @@ Suppose an array sorted in ascending order is rotated at some pivot unknown to y
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -86,6 +81,13 @@ Suppose an array sorted in ascending order is rotated at some pivot unknown to y
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1921,21 +1923,22 @@ Suppose an array sorted in ascending order is rotated at some pivot unknown to y
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="find-minimum-in-rotated-sorted-array">Find minimum in rotated sorted array<a class="anchor" href="#find-minimum-in-rotated-sorted-array">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-2">level-2</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#binary-search">binary-search</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7]
 might become [4,5,6,7,0,1,2]).</li>
 <li>Find the minimum element.</li>
 <li>You may assume no duplicate exists in the array.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findMin</span>(self, nums):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -2007,7 +2010,6 @@ might become [4,5,6,7,0,1,2]).</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span><span>        print(exp_out[idx] <span style="color:#f92672">==</span> r, r)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span><span>        r <span style="color:#f92672">=</span> sol2<span style="color:#f92672">.</span>findMin(nin)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span><span>        print(exp_out[idx] <span style="color:#f92672">==</span> r, r)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

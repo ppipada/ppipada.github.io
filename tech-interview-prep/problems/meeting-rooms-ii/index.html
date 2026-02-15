@@ -8,40 +8,31 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-4 Data structures: array Patterns: intervals Description:
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required. i.e Find the maximum number of overlapped intervals Example 1:
-1Input: [[0, 30],[5, 10],[15, 20]], 2Output: 2Python Solution:
-1import heapq 2import operator 3 4 5class Interval: 6 def __init__(self, s=0, e=0): 7 self.start = s 8 self.end = e 9 10 11class Solution(object): 12 def minMeetingRooms(self, intervals): 13 &#34;&#34;&#34; 14 :type intervals: list[Interval] 15 :rtype: int 16 &#34;&#34;&#34; 17 maxa = 0 18 19 intervals.sort(key=operator.attrgetter(&#34;start&#34;)) 20 h_end = [] 21 for itvl in intervals: 22 heapq.heappush(h_end, itvl.end) 23 while h_end and h_end[0] &lt;= itvl.start: 24 heapq.heappop(h_end) 25 26 maxa = max(maxa, len(h_end)) 27 28 return maxa ">
+<meta name="description" content="Meeting rooms II# Levels: level-4 Data structures: array Patterns: intervals Description# Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required. i.e Find the maximum number of overlapped intervals Example# 1Input: [[0, 30],[5, 10],[15, 20]], 2Output: 2Python Solution# 1import heapq 2import operator 3 4 5class Interval: 6 def __init__(self, s=0, e=0): 7 self.start = s 8 self.end = e 9 10 11class Solution(object): 12 def minMeetingRooms(self, intervals): 13 &#34;&#34;&#34; 14 :type intervals: list[Interval] 15 :rtype: int 16 &#34;&#34;&#34; 17 maxa = 0 18 19 intervals.sort(key=operator.attrgetter(&#34;start&#34;)) 20 h_end = [] 21 for itvl in intervals: 22 heapq.heappush(h_end, itvl.end) 23 while h_end and h_end[0] &lt;= itvl.start: 24 heapq.heappop(h_end) 25 26 maxa = max(maxa, len(h_end)) 27 28 return maxa">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/meeting-rooms-ii/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Meeting rooms II">
-  <meta property="og:description" content="Levels: level-4 Data structures: array Patterns: intervals Description:
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required. i.e Find the maximum number of overlapped intervals Example 1:
-1Input: [[0, 30],[5, 10],[15, 20]], 2Output: 2Python Solution:
-1import heapq 2import operator 3 4 5class Interval: 6 def __init__(self, s=0, e=0): 7 self.start = s 8 self.end = e 9 10 11class Solution(object): 12 def minMeetingRooms(self, intervals): 13 &#34;&#34;&#34; 14 :type intervals: list[Interval] 15 :rtype: int 16 &#34;&#34;&#34; 17 maxa = 0 18 19 intervals.sort(key=operator.attrgetter(&#34;start&#34;)) 20 h_end = [] 21 for itvl in intervals: 22 heapq.heappush(h_end, itvl.end) 23 while h_end and h_end[0] &lt;= itvl.start: 24 heapq.heappop(h_end) 25 26 maxa = max(maxa, len(h_end)) 27 28 return maxa">
+  <meta property="og:description" content="Meeting rooms II# Levels: level-4 Data structures: array Patterns: intervals Description# Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required. i.e Find the maximum number of overlapped intervals Example# 1Input: [[0, 30],[5, 10],[15, 20]], 2Output: 2Python Solution# 1import heapq 2import operator 3 4 5class Interval: 6 def __init__(self, s=0, e=0): 7 self.start = s 8 self.end = e 9 10 11class Solution(object): 12 def minMeetingRooms(self, intervals): 13 &#34;&#34;&#34; 14 :type intervals: list[Interval] 15 :rtype: int 16 &#34;&#34;&#34; 17 maxa = 0 18 19 intervals.sort(key=operator.attrgetter(&#34;start&#34;)) 20 h_end = [] 21 for itvl in intervals: 22 heapq.heappush(h_end, itvl.end) 23 while h_end and h_end[0] &lt;= itvl.start: 24 heapq.heappop(h_end) 25 26 maxa = max(maxa, len(h_end)) 27 28 return maxa">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Meeting rooms II">
-  <meta itemprop="description" content="Levels: level-4 Data structures: array Patterns: intervals Description:
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required. i.e Find the maximum number of overlapped intervals Example 1:
-1Input: [[0, 30],[5, 10],[15, 20]], 2Output: 2Python Solution:
-1import heapq 2import operator 3 4 5class Interval: 6 def __init__(self, s=0, e=0): 7 self.start = s 8 self.end = e 9 10 11class Solution(object): 12 def minMeetingRooms(self, intervals): 13 &#34;&#34;&#34; 14 :type intervals: list[Interval] 15 :rtype: int 16 &#34;&#34;&#34; 17 maxa = 0 18 19 intervals.sort(key=operator.attrgetter(&#34;start&#34;)) 20 h_end = [] 21 for itvl in intervals: 22 heapq.heappush(h_end, itvl.end) 23 while h_end and h_end[0] &lt;= itvl.start: 24 heapq.heappop(h_end) 25 26 maxa = max(maxa, len(h_end)) 27 28 return maxa">
-  <meta itemprop="wordCount" content="126">
+  <meta itemprop="description" content="Meeting rooms II# Levels: level-4 Data structures: array Patterns: intervals Description# Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required. i.e Find the maximum number of overlapped intervals Example# 1Input: [[0, 30],[5, 10],[15, 20]], 2Output: 2Python Solution# 1import heapq 2import operator 3 4 5class Interval: 6 def __init__(self, s=0, e=0): 7 self.start = s 8 self.end = e 9 10 11class Solution(object): 12 def minMeetingRooms(self, intervals): 13 &#34;&#34;&#34; 14 :type intervals: list[Interval] 15 :rtype: int 16 &#34;&#34;&#34; 17 maxa = 0 18 19 intervals.sort(key=operator.attrgetter(&#34;start&#34;)) 20 h_end = [] 21 for itvl in intervals: 22 heapq.heappush(h_end, itvl.end) 23 while h_end and h_end[0] &lt;= itvl.start: 24 heapq.heappop(h_end) 25 26 maxa = max(maxa, len(h_end)) 27 28 return maxa">
+  <meta itemprop="wordCount" content="128">
   <meta itemprop="keywords" content="Array,Level-4,Intervals">
 
 <title>Meeting rooms II | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/meeting-rooms-ii/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -64,11 +55,12 @@ Given an array of meeting time intervals consisting of start and end times [[s1,
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -86,6 +78,13 @@ Given an array of meeting time intervals consisting of start and end times [[s1,
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1921,21 +1920,21 @@ Given an array of meeting time intervals consisting of start and end times [[s1,
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="meeting-rooms-ii">Meeting rooms II<a class="anchor" href="#meeting-rooms-ii">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
 				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#intervals">intervals</a></div></div>
 
-<p>Description:</p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given an array of meeting time intervals consisting of start and end times <code>[[s1,e1],[s2,e2],...]</code> <code>(si &lt; ei)</code>, find
 the minimum number of conference rooms required.</li>
 <li>i.e Find the maximum number of overlapped intervals</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [[0, 30],[5, 10],[15, 20]],
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 2</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 2</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">import</span> heapq
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">import</span> operator
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
@@ -1964,7 +1963,6 @@ the minimum number of conference rooms required.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>            maxa <span style="color:#f92672">=</span> max(maxa, len(h_end))
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>        <span style="color:#66d9ef">return</span> maxa</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

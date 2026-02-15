@@ -8,41 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-1 Data structures: string, stack Practice Link: LeetCode
-Description:
-Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Example 1:
-1Input: &#34;()[]{}&#34; 2Output: trueExample 2:
-">
+<meta name="description" content="Valid parentheses# Levels: level-1 Data structures: string, stack Practice Link# LeetCode
+Description# Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note:
+An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Output: true1# Input: &#34;([)]&#34; 2# Output: falsePython Solution# 1class Solution(object): 2 def isValid(self, s): 3 &#34;&#34;&#34; 4 :type s: str 5 :rtype: bool 6 &#34;&#34;&#34; 7 8 # The stack to keep track of opening brackets. 9 stack = [] 10 11 # Hash map for keeping track of mappings. This keeps the code very clean. 12 # Also makes adding more types of parenthesis easier 13 mapping = {&#34;)&#34;: &#34;(&#34;, &#34;}&#34;: &#34;{&#34;, &#34;]&#34;: &#34;[&#34;} 14 15 # For every bracket in the expression. 16 for char in s: 17 18 # If the character is an closing bracket 19 if char in mapping: 20 21 # Pop the topmost element from the stack, if it is non empty 22 # Otherwise assign a dummy value of &#39;#&#39; to the top_element variable 23 top_element = stack.pop() if stack else &#39;#&#39; 24 25 # The mapping for the opening bracket in our hash and the top 26 # element of the stack don&#39;t match, return False 27 if mapping[char] != top_element: 28 return False 29 else: 30 # We have an opening bracket, simply push it onto the stack. 31 stack.append(char) 32 33 # In the end, if the stack is empty, then we have a valid expression. 34 # The stack won&#39;t be empty for cases like ((() 35 return not stack">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Valid parentheses">
-  <meta property="og:description" content="Levels: level-1 Data structures: string, stack Practice Link: LeetCode
-Description:
-Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Example 1:
-1Input: &#34;()[]{}&#34; 2Output: trueExample 2:">
+  <meta property="og:description" content="Valid parentheses# Levels: level-1 Data structures: string, stack Practice Link# LeetCode
+Description# Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note:
+An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Output: true1# Input: &#34;([)]&#34; 2# Output: falsePython Solution# 1class Solution(object): 2 def isValid(self, s): 3 &#34;&#34;&#34; 4 :type s: str 5 :rtype: bool 6 &#34;&#34;&#34; 7 8 # The stack to keep track of opening brackets. 9 stack = [] 10 11 # Hash map for keeping track of mappings. This keeps the code very clean. 12 # Also makes adding more types of parenthesis easier 13 mapping = {&#34;)&#34;: &#34;(&#34;, &#34;}&#34;: &#34;{&#34;, &#34;]&#34;: &#34;[&#34;} 14 15 # For every bracket in the expression. 16 for char in s: 17 18 # If the character is an closing bracket 19 if char in mapping: 20 21 # Pop the topmost element from the stack, if it is non empty 22 # Otherwise assign a dummy value of &#39;#&#39; to the top_element variable 23 top_element = stack.pop() if stack else &#39;#&#39; 24 25 # The mapping for the opening bracket in our hash and the top 26 # element of the stack don&#39;t match, return False 27 if mapping[char] != top_element: 28 return False 29 else: 30 # We have an opening bracket, simply push it onto the stack. 31 stack.append(char) 32 33 # In the end, if the stack is empty, then we have a valid expression. 34 # The stack won&#39;t be empty for cases like ((() 35 return not stack">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Valid parentheses">
-  <meta itemprop="description" content="Levels: level-1 Data structures: string, stack Practice Link: LeetCode
-Description:
-Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Example 1:
-1Input: &#34;()[]{}&#34; 2Output: trueExample 2:">
-  <meta itemprop="wordCount" content="290">
+  <meta itemprop="description" content="Valid parentheses# Levels: level-1 Data structures: string, stack Practice Link# LeetCode
+Description# Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note:
+An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Output: true1# Input: &#34;([)]&#34; 2# Output: falsePython Solution# 1class Solution(object): 2 def isValid(self, s): 3 &#34;&#34;&#34; 4 :type s: str 5 :rtype: bool 6 &#34;&#34;&#34; 7 8 # The stack to keep track of opening brackets. 9 stack = [] 10 11 # Hash map for keeping track of mappings. This keeps the code very clean. 12 # Also makes adding more types of parenthesis easier 13 mapping = {&#34;)&#34;: &#34;(&#34;, &#34;}&#34;: &#34;{&#34;, &#34;]&#34;: &#34;[&#34;} 14 15 # For every bracket in the expression. 16 for char in s: 17 18 # If the character is an closing bracket 19 if char in mapping: 20 21 # Pop the topmost element from the stack, if it is non empty 22 # Otherwise assign a dummy value of &#39;#&#39; to the top_element variable 23 top_element = stack.pop() if stack else &#39;#&#39; 24 25 # The mapping for the opening bracket in our hash and the top 26 # element of the stack don&#39;t match, return False 27 if mapping[char] != top_element: 28 return False 29 else: 30 # We have an opening bracket, simply push it onto the stack. 31 stack.append(char) 32 33 # In the end, if the stack is empty, then we have a valid expression. 34 # The stack won&#39;t be empty for cases like ((() 35 return not stack">
+  <meta itemprop="wordCount" content="289">
   <meta itemprop="keywords" content="String,Stack,Level-1">
 
 <title>Valid parentheses | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -65,11 +61,12 @@ Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -87,6 +84,13 @@ Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1922,12 +1926,14 @@ Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="valid-parentheses">Valid parentheses<a class="anchor" href="#valid-parentheses">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-1">level-1</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#stack">stack</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/valid-parentheses/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/valid-parentheses/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a string containing just the characters &lsquo;(&rsquo;, &lsquo;)&rsquo;, &lsquo;{&rsquo;, &lsquo;}&rsquo;, &lsquo;[&rsquo; and &lsquo;]&rsquo;, determine if the input string is valid.</li>
 <li>An input string is valid if:
@@ -1937,16 +1943,14 @@ Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’
 </ul>
 </li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;()[]{}&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># Input: &#34;([)]&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span># Output: false</span></span></code></pre></div><p>Note:</p>
+<p>Note:</p>
 <ul>
 <li>An empty string is also considered valid.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;()[]{}&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># Input: &#34;([)]&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span># Output: false</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isValid</span>(self, s):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -1982,7 +1986,6 @@ Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>        <span style="color:#75715e"># In the end, if the stack is empty, then we have a valid expression.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>        <span style="color:#75715e"># The stack won&#39;t be empty for cases like ((()</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">not</span> stack</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

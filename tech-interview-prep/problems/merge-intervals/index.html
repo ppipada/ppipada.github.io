@@ -8,46 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: array Patterns: intervals Practice Link: LeetCode
-Description:
-Given a collection of intervals, merge all overlapping intervals. Example 1:
-1Input: [[1,3],[2,6],[8,10],[15,18]] 2Output: [[1,6],[8,10],[15,18]] 3Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].Example 2:
-1Input: [[1,4],[4,5]] 2Output: [[1,5]] 3Explanation: Intervals [1,4] and [4,5] are considered overlapping.Python Solution:
-1from typing import List 2 3 4class Solution: 5 def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: 6 7 intervals.sort(key=lambda x: x[0]) 8 9 merged = [] 10 for interval in intervals: 11 # if the list of merged intervals is empty or if the current 12 # interval does not overlap with the previous, simply append it. 13 if not merged or merged[-1][1] &lt; interval[0]: 14 merged.append(interval) 15 else: 16 # otherwise, there is overlap, so we merge the current and previous 17 # intervals. 18 merged[-1][1] = max(merged[-1][1], interval[1]) 19 20 return merged ">
+<meta name="description" content="Merge intervals# Levels: level-3 Data structures: array Patterns: intervals Practice Link# LeetCode
+Description# Given a collection of intervals, merge all overlapping intervals. Examples# 1Input: [[1,3],[2,6],[8,10],[15,18]] 2Output: [[1,6],[8,10],[15,18]] 3Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].1Input: [[1,4],[4,5]] 2Output: [[1,5]] 3Explanation: Intervals [1,4] and [4,5] are considered overlapping.Python Solution# 1from typing import List 2 3 4class Solution: 5 def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: 6 7 intervals.sort(key=lambda x: x[0]) 8 9 merged = [] 10 for interval in intervals: 11 # if the list of merged intervals is empty or if the current 12 # interval does not overlap with the previous, simply append it. 13 if not merged or merged[-1][1] &lt; interval[0]: 14 merged.append(interval) 15 else: 16 # otherwise, there is overlap, so we merge the current and previous 17 # intervals. 18 merged[-1][1] = max(merged[-1][1], interval[1]) 19 20 return merged">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/merge-intervals/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Merge intervals">
-  <meta property="og:description" content="Levels: level-3 Data structures: array Patterns: intervals Practice Link: LeetCode
-Description:
-Given a collection of intervals, merge all overlapping intervals. Example 1:
-1Input: [[1,3],[2,6],[8,10],[15,18]] 2Output: [[1,6],[8,10],[15,18]] 3Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].Example 2:
-1Input: [[1,4],[4,5]] 2Output: [[1,5]] 3Explanation: Intervals [1,4] and [4,5] are considered overlapping.Python Solution:
-1from typing import List 2 3 4class Solution: 5 def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: 6 7 intervals.sort(key=lambda x: x[0]) 8 9 merged = [] 10 for interval in intervals: 11 # if the list of merged intervals is empty or if the current 12 # interval does not overlap with the previous, simply append it. 13 if not merged or merged[-1][1] &lt; interval[0]: 14 merged.append(interval) 15 else: 16 # otherwise, there is overlap, so we merge the current and previous 17 # intervals. 18 merged[-1][1] = max(merged[-1][1], interval[1]) 19 20 return merged">
+  <meta property="og:description" content="Merge intervals# Levels: level-3 Data structures: array Patterns: intervals Practice Link# LeetCode
+Description# Given a collection of intervals, merge all overlapping intervals. Examples# 1Input: [[1,3],[2,6],[8,10],[15,18]] 2Output: [[1,6],[8,10],[15,18]] 3Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].1Input: [[1,4],[4,5]] 2Output: [[1,5]] 3Explanation: Intervals [1,4] and [4,5] are considered overlapping.Python Solution# 1from typing import List 2 3 4class Solution: 5 def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: 6 7 intervals.sort(key=lambda x: x[0]) 8 9 merged = [] 10 for interval in intervals: 11 # if the list of merged intervals is empty or if the current 12 # interval does not overlap with the previous, simply append it. 13 if not merged or merged[-1][1] &lt; interval[0]: 14 merged.append(interval) 15 else: 16 # otherwise, there is overlap, so we merge the current and previous 17 # intervals. 18 merged[-1][1] = max(merged[-1][1], interval[1]) 19 20 return merged">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Merge intervals">
-  <meta itemprop="description" content="Levels: level-3 Data structures: array Patterns: intervals Practice Link: LeetCode
-Description:
-Given a collection of intervals, merge all overlapping intervals. Example 1:
-1Input: [[1,3],[2,6],[8,10],[15,18]] 2Output: [[1,6],[8,10],[15,18]] 3Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].Example 2:
-1Input: [[1,4],[4,5]] 2Output: [[1,5]] 3Explanation: Intervals [1,4] and [4,5] are considered overlapping.Python Solution:
-1from typing import List 2 3 4class Solution: 5 def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: 6 7 intervals.sort(key=lambda x: x[0]) 8 9 merged = [] 10 for interval in intervals: 11 # if the list of merged intervals is empty or if the current 12 # interval does not overlap with the previous, simply append it. 13 if not merged or merged[-1][1] &lt; interval[0]: 14 merged.append(interval) 15 else: 16 # otherwise, there is overlap, so we merge the current and previous 17 # intervals. 18 merged[-1][1] = max(merged[-1][1], interval[1]) 19 20 return merged">
-  <meta itemprop="wordCount" content="141">
+  <meta itemprop="description" content="Merge intervals# Levels: level-3 Data structures: array Patterns: intervals Practice Link# LeetCode
+Description# Given a collection of intervals, merge all overlapping intervals. Examples# 1Input: [[1,3],[2,6],[8,10],[15,18]] 2Output: [[1,6],[8,10],[15,18]] 3Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].1Input: [[1,4],[4,5]] 2Output: [[1,5]] 3Explanation: Intervals [1,4] and [4,5] are considered overlapping.Python Solution# 1from typing import List 2 3 4class Solution: 5 def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: 6 7 intervals.sort(key=lambda x: x[0]) 8 9 merged = [] 10 for interval in intervals: 11 # if the list of merged intervals is empty or if the current 12 # interval does not overlap with the previous, simply append it. 13 if not merged or merged[-1][1] &lt; interval[0]: 14 merged.append(interval) 15 else: 16 # otherwise, there is overlap, so we merge the current and previous 17 # intervals. 18 merged[-1][1] = max(merged[-1][1], interval[1]) 19 20 return merged">
+  <meta itemprop="wordCount" content="140">
   <meta itemprop="keywords" content="Array,Level-3,Intervals">
 
 <title>Merge intervals | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/merge-intervals/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -70,11 +58,12 @@ Given a collection of intervals, merge all overlapping intervals. Example 1:
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -92,6 +81,13 @@ Given a collection of intervals, merge all overlapping intervals. Example 1:
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1927,24 +1923,24 @@ Given a collection of intervals, merge all overlapping intervals. Example 1:
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="merge-intervals">Merge intervals<a class="anchor" href="#merge-intervals">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
 				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#intervals">intervals</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/merge-intervals/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/merge-intervals/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a collection of intervals, merge all overlapping intervals.</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [[1,3],[2,6],[8,10],[15,18]]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [[1,6],[8,10],[15,18]]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [[1,4],[4,5]]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [[1,4],[4,5]]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [[1,5]]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Intervals [1,4] and [4,5] are considered overlapping.</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Intervals [1,4] and [4,5] are considered overlapping.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
@@ -1965,7 +1961,6 @@ Given a collection of intervals, merge all overlapping intervals. Example 1:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>                merged[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> max(merged[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>], interval[<span style="color:#ae81ff">1</span>])
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>        <span style="color:#66d9ef">return</span> merged</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

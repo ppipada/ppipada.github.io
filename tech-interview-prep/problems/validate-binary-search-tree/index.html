@@ -8,38 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-2 Data structures: tree Algorithms: dfs Practice Link: LeetCode
-Description:
-Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees. Example 1:
-">
+<meta name="description" content="Validate a binary search tree# Levels: level-2 Data structures: tree Algorithms: dfs Practice Link# LeetCode
+Description# Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees. Examples# 1 2 2 / \ 3 1 3 4 5Input: [2,1,3] 6Output: true1 5 2 / \ 3 1 4 4 / \ 5 3 6 6 7Input: [5,1,4,null,null,3,6] 8Output: false 9Explanation: The root node&#39;s value is 5 but its right child&#39;s value is 4.Python Solution# 1# Definition for a binary tree node. 2class TreeNode(object): 3 def __init__(self, x): 4 self.val = x 5 self.left = None 6 self.right = None 7 8 9class Solution: 10 # Recursive solution 11 def isValidBST(self, root): 12 &#34;&#34;&#34; 13 :type root: TreeNode 14 :rtype: bool 15 &#34;&#34;&#34; 16 def helper(node, lower=float(&#39;-inf&#39;), upper=float(&#39;inf&#39;)): 17 if not node: 18 return True 19 20 val = node.val 21 if val &lt;= lower or val &gt;= upper: 22 return False 23 24 if not helper(node.right, val, upper): 25 return False 26 if not helper(node.left, lower, val): 27 return False 28 return True 29 30 return helper(root) 31 32 # Use inorder traversal 33 def isValidBSTInorder(self, root): 34 &#34;&#34;&#34; 35 :type root: TreeNode 36 :rtype: bool 37 &#34;&#34;&#34; 38 stack, inorder = [], float(&#39;-inf&#39;) 39 40 while stack or root: 41 while root: 42 stack.append(root) 43 root = root.left 44 root = stack.pop() 45 # If next element in inorder traversal 46 # is smaller than the previous one 47 # that&#39;s not BST. 48 if root.val &lt;= inorder: 49 return False 50 inorder = root.val 51 root = root.right 52 53 return True">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/validate-binary-search-tree/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Validate a binary search tree">
-  <meta property="og:description" content="Levels: level-2 Data structures: tree Algorithms: dfs Practice Link: LeetCode
-Description:
-Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees. Example 1:">
+  <meta property="og:description" content="Validate a binary search tree# Levels: level-2 Data structures: tree Algorithms: dfs Practice Link# LeetCode
+Description# Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees. Examples# 1 2 2 / \ 3 1 3 4 5Input: [2,1,3] 6Output: true1 5 2 / \ 3 1 4 4 / \ 5 3 6 6 7Input: [5,1,4,null,null,3,6] 8Output: false 9Explanation: The root node&#39;s value is 5 but its right child&#39;s value is 4.Python Solution# 1# Definition for a binary tree node. 2class TreeNode(object): 3 def __init__(self, x): 4 self.val = x 5 self.left = None 6 self.right = None 7 8 9class Solution: 10 # Recursive solution 11 def isValidBST(self, root): 12 &#34;&#34;&#34; 13 :type root: TreeNode 14 :rtype: bool 15 &#34;&#34;&#34; 16 def helper(node, lower=float(&#39;-inf&#39;), upper=float(&#39;inf&#39;)): 17 if not node: 18 return True 19 20 val = node.val 21 if val &lt;= lower or val &gt;= upper: 22 return False 23 24 if not helper(node.right, val, upper): 25 return False 26 if not helper(node.left, lower, val): 27 return False 28 return True 29 30 return helper(root) 31 32 # Use inorder traversal 33 def isValidBSTInorder(self, root): 34 &#34;&#34;&#34; 35 :type root: TreeNode 36 :rtype: bool 37 &#34;&#34;&#34; 38 stack, inorder = [], float(&#39;-inf&#39;) 39 40 while stack or root: 41 while root: 42 stack.append(root) 43 root = root.left 44 root = stack.pop() 45 # If next element in inorder traversal 46 # is smaller than the previous one 47 # that&#39;s not BST. 48 if root.val &lt;= inorder: 49 return False 50 inorder = root.val 51 root = root.right 52 53 return True">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Validate a binary search tree">
-  <meta itemprop="description" content="Levels: level-2 Data structures: tree Algorithms: dfs Practice Link: LeetCode
-Description:
-Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees. Example 1:">
-  <meta itemprop="wordCount" content="313">
+  <meta itemprop="description" content="Validate a binary search tree# Levels: level-2 Data structures: tree Algorithms: dfs Practice Link# LeetCode
+Description# Given a binary tree, determine if it is a valid binary search tree (BST). Assume a BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees. Examples# 1 2 2 / \ 3 1 3 4 5Input: [2,1,3] 6Output: true1 5 2 / \ 3 1 4 4 / \ 5 3 6 6 7Input: [5,1,4,null,null,3,6] 8Output: false 9Explanation: The root node&#39;s value is 5 but its right child&#39;s value is 4.Python Solution# 1# Definition for a binary tree node. 2class TreeNode(object): 3 def __init__(self, x): 4 self.val = x 5 self.left = None 6 self.right = None 7 8 9class Solution: 10 # Recursive solution 11 def isValidBST(self, root): 12 &#34;&#34;&#34; 13 :type root: TreeNode 14 :rtype: bool 15 &#34;&#34;&#34; 16 def helper(node, lower=float(&#39;-inf&#39;), upper=float(&#39;inf&#39;)): 17 if not node: 18 return True 19 20 val = node.val 21 if val &lt;= lower or val &gt;= upper: 22 return False 23 24 if not helper(node.right, val, upper): 25 return False 26 if not helper(node.left, lower, val): 27 return False 28 return True 29 30 return helper(root) 31 32 # Use inorder traversal 33 def isValidBSTInorder(self, root): 34 &#34;&#34;&#34; 35 :type root: TreeNode 36 :rtype: bool 37 &#34;&#34;&#34; 38 stack, inorder = [], float(&#39;-inf&#39;) 39 40 while stack or root: 41 while root: 42 stack.append(root) 43 root = root.left 44 root = stack.pop() 45 # If next element in inorder traversal 46 # is smaller than the previous one 47 # that&#39;s not BST. 48 if root.val &lt;= inorder: 49 return False 50 inorder = root.val 51 root = root.right 52 53 return True">
+  <meta itemprop="wordCount" content="315">
   <meta itemprop="keywords" content="Dfs,Tree,Level-2">
 
 <title>Validate a binary search tree | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/validate-binary-search-tree/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -62,11 +58,12 @@ Given a binary tree, determine if it is a valid binary search tree (BST). Assume
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -84,6 +81,13 @@ Given a binary tree, determine if it is a valid binary search tree (BST). Assume
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1919,13 +1923,15 @@ Given a binary tree, determine if it is a valid binary search tree (BST). Assume
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="validate-a-binary-search-tree">Validate a binary search tree<a class="anchor" href="#validate-a-binary-search-tree">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-2">level-2</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#tree">tree</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dfs">dfs</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/validate-binary-search-tree/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/validate-binary-search-tree/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a binary tree, determine if it is a valid binary search tree (BST).</li>
 <li>Assume a BST is defined as follows:
@@ -1936,14 +1942,13 @@ Given a binary tree, determine if it is a valid binary search tree (BST). Assume
 </ul>
 </li>
 </ul>
-<p>Example 1:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    2
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>   / \
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  1   3
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Input: [2,1,3]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Output: true</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    5
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Output: true</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    5
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>   / \
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  1   4
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>     / \
@@ -1951,8 +1956,7 @@ Given a binary tree, determine if it is a valid binary search tree (BST). Assume
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>Input: [5,1,4,null,null,3,6]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>Output: false
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>Explanation: The root node&#39;s value is 5 but its right child&#39;s value is 4.</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>Explanation: The root node&#39;s value is 5 but its right child&#39;s value is 4.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#75715e"># Definition for a binary tree node.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TreeNode</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x):
@@ -2006,7 +2010,6 @@ Given a binary tree, determine if it is a valid binary search tree (BST). Assume
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>            root <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>right
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span></span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

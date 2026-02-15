@@ -8,38 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-5 Data structures: graph Description:
-Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Example 1:
-1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.Example 2:
-">
+<meta name="description" content="Number of connected components in an undirected graph# Levels: level-5 Data structures: graph Description# Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Note:
+You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges. Examples# 1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.1 0 4 2 | | 3 1 --- 2 --- 3 4 5Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.Python Solution# 1class Solution(object): 2 def countComponents(self, n, edges): 3 &#34;&#34;&#34; 4 :type n: int 5 :type edges: List[List[int]] 6 :rtype: int 7 &#34;&#34;&#34; 8 V = [[] for _ in range(n)] 9 for e in edges: 10 V[e[0]].append(e[1]) 11 V[e[1]].append(e[0]) 12 13 visited = [False for _ in range(n)] 14 cnt = 0 15 for v in range(n): 16 if not visited[v]: 17 cnt &#43;= 1 18 self.dfs(V, v, visited) 19 20 return cnt 21 22 def dfs(self, V, v, visited): 23 visited[v] = True 24 for nbr in V[v]: 25 if not visited[nbr]: 26 self.dfs(V, nbr, visited)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Number of connected components in an undirected graph">
-  <meta property="og:description" content="Levels: level-5 Data structures: graph Description:
-Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Example 1:
-1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.Example 2:">
+  <meta property="og:description" content="Number of connected components in an undirected graph# Levels: level-5 Data structures: graph Description# Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Note:
+You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges. Examples# 1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.1 0 4 2 | | 3 1 --- 2 --- 3 4 5Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.Python Solution# 1class Solution(object): 2 def countComponents(self, n, edges): 3 &#34;&#34;&#34; 4 :type n: int 5 :type edges: List[List[int]] 6 :rtype: int 7 &#34;&#34;&#34; 8 V = [[] for _ in range(n)] 9 for e in edges: 10 V[e[0]].append(e[1]) 11 V[e[1]].append(e[0]) 12 13 visited = [False for _ in range(n)] 14 cnt = 0 15 for v in range(n): 16 if not visited[v]: 17 cnt &#43;= 1 18 self.dfs(V, v, visited) 19 20 return cnt 21 22 def dfs(self, V, v, visited): 23 visited[v] = True 24 for nbr in V[v]: 25 if not visited[nbr]: 26 self.dfs(V, nbr, visited)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Number of connected components in an undirected graph">
-  <meta itemprop="description" content="Levels: level-5 Data structures: graph Description:
-Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Example 1:
-1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.Example 2:">
-  <meta itemprop="wordCount" content="233">
+  <meta itemprop="description" content="Number of connected components in an undirected graph# Levels: level-5 Data structures: graph Description# Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Note:
+You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges. Examples# 1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.1 0 4 2 | | 3 1 --- 2 --- 3 4 5Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.Python Solution# 1class Solution(object): 2 def countComponents(self, n, edges): 3 &#34;&#34;&#34; 4 :type n: int 5 :type edges: List[List[int]] 6 :rtype: int 7 &#34;&#34;&#34; 8 V = [[] for _ in range(n)] 9 for e in edges: 10 V[e[0]].append(e[1]) 11 V[e[1]].append(e[0]) 12 13 visited = [False for _ in range(n)] 14 cnt = 0 15 for v in range(n): 16 if not visited[v]: 17 cnt &#43;= 1 18 self.dfs(V, v, visited) 19 20 return cnt 21 22 def dfs(self, V, v, visited): 23 visited[v] = True 24 for nbr in V[v]: 25 if not visited[nbr]: 26 self.dfs(V, nbr, visited)">
+  <meta itemprop="wordCount" content="238">
   <meta itemprop="keywords" content="Graph,Level-5">
 
 <title>Number of connected components in an undirected graph | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -62,11 +58,12 @@ Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge 
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -84,6 +81,13 @@ Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge 
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1919,33 +1923,32 @@ Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge 
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="number-of-connected-components-in-an-undirected-graph">Number of connected components in an undirected graph<a class="anchor" href="#number-of-connected-components-in-an-undirected-graph">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-5">level-5</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#graph">graph</a></div></div>
 
-<p>Description:</p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function
 to find the number of connected components in an undirected graph.</li>
 </ul>
-<p>Example 1:</p>
+<p>Note:</p>
+<ul>
+<li>You can assume that no duplicate edges will appear in edges.</li>
+<li>Since all edges are undirected, <code>[0, 1]</code> is the same as <code>[1, 0]</code> and thus will not appear together in edges.</li>
+</ul>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>     0          3
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>     |          |
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>     1 --- 2    4
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>     0           4
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>     0           4
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>     |           |
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>     1 --- 2 --- 3
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.</span></span></code></pre></div><p>Note:</p>
-<ul>
-<li>You can assume that no duplicate edges will appear in edges.</li>
-<li>Since all edges are undirected, <code>[0, 1]</code> is the same as <code>[1, 0]</code> and thus will not appear together in edges.</li>
-</ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">countComponents</span>(self, n, edges):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -1972,7 +1975,6 @@ to find the number of connected components in an undirected graph.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        <span style="color:#66d9ef">for</span> nbr <span style="color:#f92672">in</span> V[v]:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> visited[nbr]:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>                self<span style="color:#f92672">.</span>dfs(V, nbr, visited)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

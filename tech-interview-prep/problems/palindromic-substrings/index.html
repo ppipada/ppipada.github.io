@@ -8,44 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Example 1:
-1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.Example 2:
-1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Note:
-">
+<meta name="description" content="Palindromic substrings# Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link# LeetCode
+Description# Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Note:
+The input string length won’t exceed 1000. Examples# 1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Python Solution# 1class Solution(object): 2 # Let N be the length of the string. The middle of the palindrome could be in one of 2N - 1 positions: either at letter or between two letters. 3 # For each center, let&#39;s count all the palindromes that have this center. Notice that if [a, b] is a palindromic interval (meaning S[a], S[a&#43;1], ..., S[b] is a palindrome), then [a&#43;1, b-1] is one too. 4 # Algorithm 5 # For each possible palindrome center, 6 # let&#39;s expand our candidate palindrome on the interval [left, right] as long as we can. 7 # The condition for expanding is left &gt;= 0 and right &lt; N and S[left] == S[right]. 8 # That means we want to count a new palindrome S[left], S[left&#43;1], ..., S[right]. 9 def countSubstrings(self, S): 10 N = len(S) 11 ans = 0 12 for center in range(2 * N - 1): 13 left = center / 2 14 right = left &#43; center % 2 15 while left &gt;= 0 and right &lt; N and S[left] == S[right]: 16 ans &#43;= 1 17 left -= 1 18 right &#43;= 1 19 return ans">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/palindromic-substrings/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Palindromic substrings">
-  <meta property="og:description" content="Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Example 1:
-1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.Example 2:
-1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Note:">
+  <meta property="og:description" content="Palindromic substrings# Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link# LeetCode
+Description# Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Note:
+The input string length won’t exceed 1000. Examples# 1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Python Solution# 1class Solution(object): 2 # Let N be the length of the string. The middle of the palindrome could be in one of 2N - 1 positions: either at letter or between two letters. 3 # For each center, let&#39;s count all the palindromes that have this center. Notice that if [a, b] is a palindromic interval (meaning S[a], S[a&#43;1], ..., S[b] is a palindrome), then [a&#43;1, b-1] is one too. 4 # Algorithm 5 # For each possible palindrome center, 6 # let&#39;s expand our candidate palindrome on the interval [left, right] as long as we can. 7 # The condition for expanding is left &gt;= 0 and right &lt; N and S[left] == S[right]. 8 # That means we want to count a new palindrome S[left], S[left&#43;1], ..., S[right]. 9 def countSubstrings(self, S): 10 N = len(S) 11 ans = 0 12 for center in range(2 * N - 1): 13 left = center / 2 14 right = left &#43; center % 2 15 while left &gt;= 0 and right &lt; N and S[left] == S[right]: 16 ans &#43;= 1 17 left -= 1 18 right &#43;= 1 19 return ans">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Palindromic substrings">
-  <meta itemprop="description" content="Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Example 1:
-1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.Example 2:
-1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Note:">
-  <meta itemprop="wordCount" content="273">
+  <meta itemprop="description" content="Palindromic substrings# Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link# LeetCode
+Description# Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Note:
+The input string length won’t exceed 1000. Examples# 1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Python Solution# 1class Solution(object): 2 # Let N be the length of the string. The middle of the palindrome could be in one of 2N - 1 positions: either at letter or between two letters. 3 # For each center, let&#39;s count all the palindromes that have this center. Notice that if [a, b] is a palindromic interval (meaning S[a], S[a&#43;1], ..., S[b] is a palindrome), then [a&#43;1, b-1] is one too. 4 # Algorithm 5 # For each possible palindrome center, 6 # let&#39;s expand our candidate palindrome on the interval [left, right] as long as we can. 7 # The condition for expanding is left &gt;= 0 and right &lt; N and S[left] == S[right]. 8 # That means we want to count a new palindrome S[left], S[left&#43;1], ..., S[right]. 9 def countSubstrings(self, S): 10 N = len(S) 11 ans = 0 12 for center in range(2 * N - 1): 13 left = center / 2 14 right = left &#43; center % 2 15 while left &gt;= 0 and right &lt; N and S[left] == S[right]: 16 ans &#43;= 1 17 left -= 1 18 right &#43;= 1 19 return ans">
+  <meta itemprop="wordCount" content="272">
   <meta itemprop="keywords" content="Dynamic-Programming,String,Level-4">
 
 <title>Palindromic substrings | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/palindromic-substrings/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -68,11 +61,12 @@ Given a string, your task is to count how many palindromic substrings in this st
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -90,6 +84,13 @@ Given a string, your task is to count how many palindromic substrings in this st
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1925,30 +1926,30 @@ Given a string, your task is to count how many palindromic substrings in this st
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="palindromic-substrings">Palindromic substrings<a class="anchor" href="#palindromic-substrings">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/palindromic-substrings/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/palindromic-substrings/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a string, your task is to count how many palindromic substrings in this string.</li>
 <li>The substrings with different start indexes or end indexes are counted as different substrings even they consist of
 same characters.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;abc&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 3
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;aaa&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 6
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.</span></span></code></pre></div><p>Note:</p>
+<p>Note:</p>
 <ul>
 <li>The input string length won&rsquo;t exceed 1000.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;abc&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 3
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: &#34;aaa&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 6
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#75715e"># Let N be the length of the string. The middle of the palindrome could be in one of 2N - 1 positions: either at letter or between two letters.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#75715e"># For each center, let&#39;s count all the palindromes that have this center. Notice that if [a, b] is a palindromic interval (meaning S[a], S[a+1], ..., S[b] is a palindrome), then [a+1, b-1] is one too.</span>
@@ -1968,7 +1969,6 @@ same characters.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>                left <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>                right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>        <span style="color:#66d9ef">return</span> ans</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

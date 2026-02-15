@@ -8,44 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link: LeetCode
-Description:
-Given an unsorted array of integers, find the length of longest increasing subsequence. Example:
-1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Note:
-There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up:
-">
+<meta name="description" content="Longest increasing subsequence# Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link# LeetCode
+Description# Given an unsorted array of integers, find the length of longest increasing subsequence. Note:
+There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Example# 1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Follow up# Could you improve it to O(n log n) time complexity? Python Solution# 1class Solution(object): 2 def lengthOfLIS(self, nums): 3 tails = [0] * len(nums) 4 size = 0 5 for x in nums: 6 i, j = 0, size 7 while i != j: 8 m = (i &#43; j) / 2 9 if tails[m] &lt; x: 10 i = m &#43; 1 11 else: 12 j = m 13 tails[i] = x 14 size = max(i &#43; 1, size) 15 return size">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/longest-increasing-subsequence/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Longest increasing subsequence">
-  <meta property="og:description" content="Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link: LeetCode
-Description:
-Given an unsorted array of integers, find the length of longest increasing subsequence. Example:
-1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Note:
-There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up:">
+  <meta property="og:description" content="Longest increasing subsequence# Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link# LeetCode
+Description# Given an unsorted array of integers, find the length of longest increasing subsequence. Note:
+There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Example# 1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Follow up# Could you improve it to O(n log n) time complexity? Python Solution# 1class Solution(object): 2 def lengthOfLIS(self, nums): 3 tails = [0] * len(nums) 4 size = 0 5 for x in nums: 6 i, j = 0, size 7 while i != j: 8 m = (i &#43; j) / 2 9 if tails[m] &lt; x: 10 i = m &#43; 1 11 else: 12 j = m 13 tails[i] = x 14 size = max(i &#43; 1, size) 15 return size">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Longest increasing subsequence">
-  <meta itemprop="description" content="Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link: LeetCode
-Description:
-Given an unsorted array of integers, find the length of longest increasing subsequence. Example:
-1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Note:
-There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up:">
-  <meta itemprop="wordCount" content="148">
+  <meta itemprop="description" content="Longest increasing subsequence# Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link# LeetCode
+Description# Given an unsorted array of integers, find the length of longest increasing subsequence. Note:
+There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Example# 1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Follow up# Could you improve it to O(n log n) time complexity? Python Solution# 1class Solution(object): 2 def lengthOfLIS(self, nums): 3 tails = [0] * len(nums) 4 size = 0 5 for x in nums: 6 i, j = 0, size 7 while i != j: 8 m = (i &#43; j) / 2 9 if tails[m] &lt; x: 10 i = m &#43; 1 11 else: 12 j = m 13 tails[i] = x 14 size = max(i &#43; 1, size) 15 return size">
+  <meta itemprop="wordCount" content="151">
   <meta itemprop="keywords" content="Dynamic-Programming,Binary-Search,Array,Level-4">
 
 <title>Longest increasing subsequence | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/longest-increasing-subsequence/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -68,11 +61,12 @@ There may be more than one LIS combination, it is only necessary for you to retu
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -90,6 +84,13 @@ There may be more than one LIS combination, it is only necessary for you to retu
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1925,30 +1926,31 @@ There may be more than one LIS combination, it is only necessary for you to retu
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="longest-increasing-subsequence">Longest increasing subsequence<a class="anchor" href="#longest-increasing-subsequence">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#binary-search">binary-search</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/longest-increasing-subsequence/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/longest-increasing-subsequence/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given an unsorted array of integers, find the length of longest increasing subsequence.</li>
 </ul>
-<p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [10,9,2,5,3,7,101,18]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 4
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</span></span></code></pre></div><p>Note:</p>
+<p>Note:</p>
 <ul>
 <li>There may be more than one LIS combination, it is only necessary for you to return the length.</li>
 <li>Your algorithm should run in O(n2) complexity.</li>
 </ul>
-<p>Follow up:</p>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [10,9,2,5,3,7,101,18]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 4
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</span></span></code></pre></div><h2 id="follow-up">Follow up<a class="anchor" href="#follow-up">#</a></h2>
 <ul>
 <li>Could you improve it to O(n log n) time complexity?</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        tails <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> len(nums)
@@ -1964,7 +1966,6 @@ There may be more than one LIS combination, it is only necessary for you to retu
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>            tails[i] <span style="color:#f92672">=</span> x
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>            size <span style="color:#f92672">=</span> max(i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, size)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        <span style="color:#66d9ef">return</span> size</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

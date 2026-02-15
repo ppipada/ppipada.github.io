@@ -8,41 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-1 Data structures: array Practice Link: LeetCode
-Description:
-Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
-You cannot sell a stock before you buy one. Python Solution:
-">
+<meta name="description" content="Best time to buy and sell stock# Levels: level-1 Data structures: array Practice Link# LeetCode
+Description# Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
+You cannot sell a stock before you buy one. Python Solution# 1class Solution(object): 2 def maxProfit(self, prices): 3 &#34;&#34;&#34; 4 :type prices: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 l = len(prices) 8 if l &lt; 2: 9 return 0 10 profit = 0 11 cmin = 0 12 i = 1 13 while i &lt; l: 14 if prices[i] &lt; prices[cmin]: 15 cmin = i 16 newp = prices[i] - prices[cmin] 17 if newp &gt; profit: 18 profit = newp 19 # print(i, cmin, profit) 20 i &#43;= 1 21 return profit 22 23 24if __name__ == &#34;__main__&#34;: 25 p = [2, 1, 2, 1, 0, 1, 2] 26 #p = [3,3,5,0,0,3,1,4] 27 sol = Solution() 28 r = sol.maxProfit(p) 29 print(r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Best time to buy and sell stock">
-  <meta property="og:description" content="Levels: level-1 Data structures: array Practice Link: LeetCode
-Description:
-Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
-You cannot sell a stock before you buy one. Python Solution:">
+  <meta property="og:description" content="Best time to buy and sell stock# Levels: level-1 Data structures: array Practice Link# LeetCode
+Description# Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
+You cannot sell a stock before you buy one. Python Solution# 1class Solution(object): 2 def maxProfit(self, prices): 3 &#34;&#34;&#34; 4 :type prices: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 l = len(prices) 8 if l &lt; 2: 9 return 0 10 profit = 0 11 cmin = 0 12 i = 1 13 while i &lt; l: 14 if prices[i] &lt; prices[cmin]: 15 cmin = i 16 newp = prices[i] - prices[cmin] 17 if newp &gt; profit: 18 profit = newp 19 # print(i, cmin, profit) 20 i &#43;= 1 21 return profit 22 23 24if __name__ == &#34;__main__&#34;: 25 p = [2, 1, 2, 1, 0, 1, 2] 26 #p = [3,3,5,0,0,3,1,4] 27 sol = Solution() 28 r = sol.maxProfit(p) 29 print(r)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Best time to buy and sell stock">
-  <meta itemprop="description" content="Levels: level-1 Data structures: array Practice Link: LeetCode
-Description:
-Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
-You cannot sell a stock before you buy one. Python Solution:">
-  <meta itemprop="wordCount" content="180">
+  <meta itemprop="description" content="Best time to buy and sell stock# Levels: level-1 Data structures: array Practice Link# LeetCode
+Description# Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
+You cannot sell a stock before you buy one. Python Solution# 1class Solution(object): 2 def maxProfit(self, prices): 3 &#34;&#34;&#34; 4 :type prices: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 l = len(prices) 8 if l &lt; 2: 9 return 0 10 profit = 0 11 cmin = 0 12 i = 1 13 while i &lt; l: 14 if prices[i] &lt; prices[cmin]: 15 cmin = i 16 newp = prices[i] - prices[cmin] 17 if newp &gt; profit: 18 profit = newp 19 # print(i, cmin, profit) 20 i &#43;= 1 21 return profit 22 23 24if __name__ == &#34;__main__&#34;: 25 p = [2, 1, 2, 1, 0, 1, 2] 26 #p = [3,3,5,0,0,3,1,4] 27 sol = Solution() 28 r = sol.maxProfit(p) 29 print(r)">
+  <meta itemprop="wordCount" content="187">
   <meta itemprop="keywords" content="Array,Level-1">
 
 <title>Best time to buy and sell stock | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -65,11 +61,12 @@ You cannot sell a stock before you buy one. Python Solution:">
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -87,6 +84,13 @@ You cannot sell a stock before you buy one. Python Solution:">
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1922,12 +1926,14 @@ You cannot sell a stock before you buy one. Python Solution:">
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="best-time-to-buy-and-sell-stock">Best time to buy and sell stock<a class="anchor" href="#best-time-to-buy-and-sell-stock">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-1">level-1</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Say you have an array for which the ith element is the price of a given stock on day <code>i</code>.</li>
 <li>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design
@@ -1937,8 +1943,7 @@ an algorithm to find the maximum profit.</li>
 <ul>
 <li>You cannot sell a stock before you buy one.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxProfit</span>(self, prices):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -1968,7 +1973,6 @@ an algorithm to find the maximum profit.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    sol <span style="color:#f92672">=</span> Solution()
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>    r <span style="color:#f92672">=</span> sol<span style="color:#f92672">.</span>maxProfit(p)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>    print(r)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

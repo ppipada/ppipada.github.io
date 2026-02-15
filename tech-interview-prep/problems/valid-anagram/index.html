@@ -8,47 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-1 Data structures: string, hash-table Practice Link: LeetCode
-Description:
-Given two strings s and t, write a function to determine if t is an anagram of s. Example 1:
-1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: trueExample 2:
-1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseNote:
-You may assume the string contains only lowercase alphabets. Follow up:
-">
+<meta name="description" content="Valid anagram# Levels: level-1 Data structures: string, hash-table Practice Link# LeetCode
+Description# Given two strings s and t, write a function to determine if t is an anagram of s. Note:
+You may assume the string contains only lowercase alphabets. Examples# 1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: true1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseFollow up# What if the inputs contain unicode characters? How would you adapt your solution to such case? Thinking# This can be solved either by Sorting or hashing. Python Solution# 1import collections 2 3 4# Sorting solution 5def isAnagram(self, s, t): 6 if len(s) != len(t): 7 return False 8 return sorted(s) == sorted(t) 9 10 11# One liner with using counter 12def isAnagramCounter(self, s, t): 13 return collections.Counter(s) == collections.Counter(t) 14 15 16# using dicts 17def isAnagramDict(self, s, t): 18 dic1, dic2 = [0] * 26, [0] * 26 19 for item in s: 20 dic1[ord(item) - ord(&#39;a&#39;)] &#43;= 1 21 for item in t: 22 dic2[ord(item) - ord(&#39;a&#39;)] &#43;= 1 23 return dic1 == dic2">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/valid-anagram/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Valid anagram">
-  <meta property="og:description" content="Levels: level-1 Data structures: string, hash-table Practice Link: LeetCode
-Description:
-Given two strings s and t, write a function to determine if t is an anagram of s. Example 1:
-1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: trueExample 2:
-1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseNote:
-You may assume the string contains only lowercase alphabets. Follow up:">
+  <meta property="og:description" content="Valid anagram# Levels: level-1 Data structures: string, hash-table Practice Link# LeetCode
+Description# Given two strings s and t, write a function to determine if t is an anagram of s. Note:
+You may assume the string contains only lowercase alphabets. Examples# 1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: true1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseFollow up# What if the inputs contain unicode characters? How would you adapt your solution to such case? Thinking# This can be solved either by Sorting or hashing. Python Solution# 1import collections 2 3 4# Sorting solution 5def isAnagram(self, s, t): 6 if len(s) != len(t): 7 return False 8 return sorted(s) == sorted(t) 9 10 11# One liner with using counter 12def isAnagramCounter(self, s, t): 13 return collections.Counter(s) == collections.Counter(t) 14 15 16# using dicts 17def isAnagramDict(self, s, t): 18 dic1, dic2 = [0] * 26, [0] * 26 19 for item in s: 20 dic1[ord(item) - ord(&#39;a&#39;)] &#43;= 1 21 for item in t: 22 dic2[ord(item) - ord(&#39;a&#39;)] &#43;= 1 23 return dic1 == dic2">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Valid anagram">
-  <meta itemprop="description" content="Levels: level-1 Data structures: string, hash-table Practice Link: LeetCode
-Description:
-Given two strings s and t, write a function to determine if t is an anagram of s. Example 1:
-1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: trueExample 2:
-1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseNote:
-You may assume the string contains only lowercase alphabets. Follow up:">
-  <meta itemprop="wordCount" content="172">
+  <meta itemprop="description" content="Valid anagram# Levels: level-1 Data structures: string, hash-table Practice Link# LeetCode
+Description# Given two strings s and t, write a function to determine if t is an anagram of s. Note:
+You may assume the string contains only lowercase alphabets. Examples# 1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: true1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseFollow up# What if the inputs contain unicode characters? How would you adapt your solution to such case? Thinking# This can be solved either by Sorting or hashing. Python Solution# 1import collections 2 3 4# Sorting solution 5def isAnagram(self, s, t): 6 if len(s) != len(t): 7 return False 8 return sorted(s) == sorted(t) 9 10 11# One liner with using counter 12def isAnagramCounter(self, s, t): 13 return collections.Counter(s) == collections.Counter(t) 14 15 16# using dicts 17def isAnagramDict(self, s, t): 18 dic1, dic2 = [0] * 26, [0] * 26 19 for item in s: 20 dic1[ord(item) - ord(&#39;a&#39;)] &#43;= 1 21 for item in t: 22 dic2[ord(item) - ord(&#39;a&#39;)] &#43;= 1 23 return dic1 == dic2">
+  <meta itemprop="wordCount" content="171">
   <meta itemprop="keywords" content="String,Hash-Table,Level-1">
 
 <title>Valid anagram | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/valid-anagram/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -71,11 +61,12 @@ You may assume the string contains only lowercase alphabets. Follow up:">
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -93,6 +84,13 @@ You may assume the string contains only lowercase alphabets. Follow up:">
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1928,33 +1926,33 @@ You may assume the string contains only lowercase alphabets. Follow up:">
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="valid-anagram">Valid anagram<a class="anchor" href="#valid-anagram">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-1">level-1</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#hash-table">hash-table</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/valid-anagram/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/valid-anagram/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given two strings <code>s</code> and <code>t</code>, write a function to determine if t is an anagram of s.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: s = &#34;rat&#34;, t = &#34;car&#34;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: false</span></span></code></pre></div><p>Note:</p>
+<p>Note:</p>
 <ul>
 <li>You may assume the string contains only lowercase alphabets.</li>
 </ul>
-<p>Follow up:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: s = &#34;rat&#34;, t = &#34;car&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: false</span></span></code></pre></div><h2 id="follow-up">Follow up<a class="anchor" href="#follow-up">#</a></h2>
 <ul>
 <li>What if the inputs contain unicode characters? How would you adapt your solution to such case?</li>
 </ul>
-<p>Thinking:</p>
+<h2 id="thinking">Thinking<a class="anchor" href="#thinking">#</a></h2>
 <ul>
 <li>This can be solved either by Sorting or hashing.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">import</span> collections
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
@@ -1978,7 +1976,6 @@ You may assume the string contains only lowercase alphabets. Follow up:">
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> t:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>        dic2[ord(item) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>)] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    <span style="color:#66d9ef">return</span> dic1 <span style="color:#f92672">==</span> dic2</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

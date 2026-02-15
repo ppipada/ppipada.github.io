@@ -8,41 +8,40 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: tree, array Algorithms: dfs Practice Link: LeetCode
-Description:
-Given preorder and inorder traversal of a tree, construct the binary tree. Example:
-1preorder = [3,9,20,15,7] 2inorder = [9,3,15,20,7] 3 4Return the following binary tree: 5 6 3 7 / \ 8 9 20 9 / \ 10 15 7Note:
-">
+<meta name="description" content="Construct binary tree from preorder and inorder traversal# Levels: level-3 Data structures: tree, array Algorithms: dfs Practice Link# LeetCode
+Description# Given preorder and inorder traversal of a tree, construct the binary tree. Note:
+You may assume that duplicates do not exist in the tree.
+Example# 1preorder = [3,9,20,15,7] 2inorder = [9,3,15,20,7] 3 4Return the following binary tree: 5 6 3 7 / \ 8 9 20 9 / \ 10 15 7Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def buildTree(self, preorder, inorder): 10 &#34;&#34;&#34; 11 :type preorder: List[int] 12 :type inorder: List[int] 13 :rtype: TreeNode 14 &#34;&#34;&#34; 15 if inorder: 16 ind = inorder.index(preorder.pop(0)) 17 root = TreeNode(inorder[ind]) 18 root.left = self.buildTree(preorder, inorder[0:ind]) 19 root.right = self.buildTree(preorder, inorder[ind &#43; 1:]) 20 return root">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Construct binary tree from preorder and inorder traversal">
-  <meta property="og:description" content="Levels: level-3 Data structures: tree, array Algorithms: dfs Practice Link: LeetCode
-Description:
-Given preorder and inorder traversal of a tree, construct the binary tree. Example:
-1preorder = [3,9,20,15,7] 2inorder = [9,3,15,20,7] 3 4Return the following binary tree: 5 6 3 7 / \ 8 9 20 9 / \ 10 15 7Note:">
+  <meta property="og:description" content="Construct binary tree from preorder and inorder traversal# Levels: level-3 Data structures: tree, array Algorithms: dfs Practice Link# LeetCode
+Description# Given preorder and inorder traversal of a tree, construct the binary tree. Note:
+You may assume that duplicates do not exist in the tree.
+Example# 1preorder = [3,9,20,15,7] 2inorder = [9,3,15,20,7] 3 4Return the following binary tree: 5 6 3 7 / \ 8 9 20 9 / \ 10 15 7Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def buildTree(self, preorder, inorder): 10 &#34;&#34;&#34; 11 :type preorder: List[int] 12 :type inorder: List[int] 13 :rtype: TreeNode 14 &#34;&#34;&#34; 15 if inorder: 16 ind = inorder.index(preorder.pop(0)) 17 root = TreeNode(inorder[ind]) 18 root.left = self.buildTree(preorder, inorder[0:ind]) 19 root.right = self.buildTree(preorder, inorder[ind &#43; 1:]) 20 return root">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Construct binary tree from preorder and inorder traversal">
-  <meta itemprop="description" content="Levels: level-3 Data structures: tree, array Algorithms: dfs Practice Link: LeetCode
-Description:
-Given preorder and inorder traversal of a tree, construct the binary tree. Example:
-1preorder = [3,9,20,15,7] 2inorder = [9,3,15,20,7] 3 4Return the following binary tree: 5 6 3 7 / \ 8 9 20 9 / \ 10 15 7Note:">
-  <meta itemprop="wordCount" content="129">
+  <meta itemprop="description" content="Construct binary tree from preorder and inorder traversal# Levels: level-3 Data structures: tree, array Algorithms: dfs Practice Link# LeetCode
+Description# Given preorder and inorder traversal of a tree, construct the binary tree. Note:
+You may assume that duplicates do not exist in the tree.
+Example# 1preorder = [3,9,20,15,7] 2inorder = [9,3,15,20,7] 3 4Return the following binary tree: 5 6 3 7 / \ 8 9 20 9 / \ 10 15 7Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def buildTree(self, preorder, inorder): 10 &#34;&#34;&#34; 11 :type preorder: List[int] 12 :type inorder: List[int] 13 :rtype: TreeNode 14 &#34;&#34;&#34; 15 if inorder: 16 ind = inorder.index(preorder.pop(0)) 17 root = TreeNode(inorder[ind]) 18 root.left = self.buildTree(preorder, inorder[0:ind]) 19 root.right = self.buildTree(preorder, inorder[ind &#43; 1:]) 20 return root">
+  <meta itemprop="wordCount" content="137">
   <meta itemprop="keywords" content="Dfs,Tree,Array,Level-3">
 
 <title>Construct binary tree from preorder and inorder traversal | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -65,11 +64,12 @@ Given preorder and inorder traversal of a tree, construct the binary tree. Examp
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -87,6 +87,13 @@ Given preorder and inorder traversal of a tree, construct the binary tree. Examp
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1922,17 +1929,24 @@ Given preorder and inorder traversal of a tree, construct the binary tree. Examp
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="construct-binary-tree-from-preorder-and-inorder-traversal">Construct binary tree from preorder and inorder traversal<a class="anchor" href="#construct-binary-tree-from-preorder-and-inorder-traversal">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#tree">tree</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dfs">dfs</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
-<li>Given preorder and inorder traversal of a tree, construct the binary tree.</li>
+<li>
+<p>Given preorder and inorder traversal of a tree, construct the binary tree. Note:</p>
+</li>
+<li>
+<p>You may assume that duplicates do not exist in the tree.</p>
+</li>
 </ul>
-<p>Example:</p>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>preorder = [3,9,20,15,7]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>inorder = [9,3,15,20,7]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
@@ -1942,12 +1956,7 @@ Given preorder and inorder traversal of a tree, construct the binary tree. Examp
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>   / \
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  9  20
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    /  \
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>   15   7</span></span></code></pre></div><p>Note:</p>
-<ul>
-<li>You may assume that duplicates do not exist in the tree.</li>
-</ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>   15   7</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TreeNode</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> x
@@ -1968,7 +1977,6 @@ Given preorder and inorder traversal of a tree, construct the binary tree. Examp
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>            root<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>buildTree(preorder, inorder[<span style="color:#ae81ff">0</span>:ind])
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>            root<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>buildTree(preorder, inorder[ind <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:])
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>            <span style="color:#66d9ef">return</span> root</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

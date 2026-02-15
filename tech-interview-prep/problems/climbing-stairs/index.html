@@ -8,41 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Example 1:
-1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 stepsExample 2:
-">
+<meta name="description" content="Climbing stairs# Levels: level-3 Algorithms: dynamic-programming Practice Link# LeetCode
+Description# You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note:
+Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 steps1Input: 3 2Output: 3 3Explanation: There are three ways to climb to the top. 41. 1 step &#43; 1 step &#43; 1 step 52. 1 step &#43; 2 steps 63. 2 steps &#43; 1 stepPython Solution# 1class Solution1(object): 2 def climbStairs(self, n): 3 &#34;&#34;&#34; 4 :type n: int 5 :rtype: int 6 &#34;&#34;&#34; 7 if not n: 8 return 0 9 if n == 1: 10 return 1 11 f = 1 12 s = 2 13 for _ in range(3, n &#43; 1): 14 t = f &#43; s 15 f = s 16 s = t 17 return s 18 19 20class Solution2(object): 21 def climbStairs(self, n): 22 &#34;&#34;&#34; 23 :type n: int 24 :rtype: int 25 &#34;&#34;&#34; 26 if not n: 27 return 0 28 if n == 1: 29 return 1 30 dp = [0 for _ in range(n &#43; 1)] 31 dp[1] = 1 32 dp[2] = 2 33 for i in range(3, n &#43; 1): 34 dp[i] = dp[i - 1] &#43; dp[i - 2] 35 return dp[n] 36 37 38tm = [ 39 (1, 1), 40 (2, 2), 41 (3, 3), 42 (0, 0), 43 (None, 0), 44] 45 46if __name__ == &#34;__main__&#34;: 47 48 sol1 = Solution1() 49 sol2 = Solution2() 50 51 for idx, nin in enumerate(tm): 52 resout = sol1.climbStairs(nin[0]) 53 print(nin, resout, resout == nin[1]) 54 resout = sol2.climbStairs(nin[0]) 55 print(nin, resout, resout == nin[1])">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/climbing-stairs/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Climbing stairs">
-  <meta property="og:description" content="Levels: level-3 Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Example 1:
-1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 stepsExample 2:">
+  <meta property="og:description" content="Climbing stairs# Levels: level-3 Algorithms: dynamic-programming Practice Link# LeetCode
+Description# You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note:
+Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 steps1Input: 3 2Output: 3 3Explanation: There are three ways to climb to the top. 41. 1 step &#43; 1 step &#43; 1 step 52. 1 step &#43; 2 steps 63. 2 steps &#43; 1 stepPython Solution# 1class Solution1(object): 2 def climbStairs(self, n): 3 &#34;&#34;&#34; 4 :type n: int 5 :rtype: int 6 &#34;&#34;&#34; 7 if not n: 8 return 0 9 if n == 1: 10 return 1 11 f = 1 12 s = 2 13 for _ in range(3, n &#43; 1): 14 t = f &#43; s 15 f = s 16 s = t 17 return s 18 19 20class Solution2(object): 21 def climbStairs(self, n): 22 &#34;&#34;&#34; 23 :type n: int 24 :rtype: int 25 &#34;&#34;&#34; 26 if not n: 27 return 0 28 if n == 1: 29 return 1 30 dp = [0 for _ in range(n &#43; 1)] 31 dp[1] = 1 32 dp[2] = 2 33 for i in range(3, n &#43; 1): 34 dp[i] = dp[i - 1] &#43; dp[i - 2] 35 return dp[n] 36 37 38tm = [ 39 (1, 1), 40 (2, 2), 41 (3, 3), 42 (0, 0), 43 (None, 0), 44] 45 46if __name__ == &#34;__main__&#34;: 47 48 sol1 = Solution1() 49 sol2 = Solution2() 50 51 for idx, nin in enumerate(tm): 52 resout = sol1.climbStairs(nin[0]) 53 print(nin, resout, resout == nin[1]) 54 resout = sol2.climbStairs(nin[0]) 55 print(nin, resout, resout == nin[1])">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Climbing stairs">
-  <meta itemprop="description" content="Levels: level-3 Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Example 1:
-1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 stepsExample 2:">
-  <meta itemprop="wordCount" content="312">
+  <meta itemprop="description" content="Climbing stairs# Levels: level-3 Algorithms: dynamic-programming Practice Link# LeetCode
+Description# You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note:
+Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 steps1Input: 3 2Output: 3 3Explanation: There are three ways to climb to the top. 41. 1 step &#43; 1 step &#43; 1 step 52. 1 step &#43; 2 steps 63. 2 steps &#43; 1 stepPython Solution# 1class Solution1(object): 2 def climbStairs(self, n): 3 &#34;&#34;&#34; 4 :type n: int 5 :rtype: int 6 &#34;&#34;&#34; 7 if not n: 8 return 0 9 if n == 1: 10 return 1 11 f = 1 12 s = 2 13 for _ in range(3, n &#43; 1): 14 t = f &#43; s 15 f = s 16 s = t 17 return s 18 19 20class Solution2(object): 21 def climbStairs(self, n): 22 &#34;&#34;&#34; 23 :type n: int 24 :rtype: int 25 &#34;&#34;&#34; 26 if not n: 27 return 0 28 if n == 1: 29 return 1 30 dp = [0 for _ in range(n &#43; 1)] 31 dp[1] = 1 32 dp[2] = 2 33 for i in range(3, n &#43; 1): 34 dp[i] = dp[i - 1] &#43; dp[i - 2] 35 return dp[n] 36 37 38tm = [ 39 (1, 1), 40 (2, 2), 41 (3, 3), 42 (0, 0), 43 (None, 0), 44] 45 46if __name__ == &#34;__main__&#34;: 47 48 sol1 = Solution1() 49 sol2 = Solution2() 50 51 for idx, nin in enumerate(tm): 52 resout = sol1.climbStairs(nin[0]) 53 print(nin, resout, resout == nin[1]) 54 resout = sol2.climbStairs(nin[0]) 55 print(nin, resout, resout == nin[1])">
+  <meta itemprop="wordCount" content="311">
   <meta itemprop="keywords" content="Dynamic-Programming,Level-3">
 
 <title>Climbing stairs | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/climbing-stairs/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -65,11 +61,12 @@ You are climbing a stair case. It takes n steps to reach to the top. Each time y
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -87,6 +84,13 @@ You are climbing a stair case. It takes n steps to reach to the top. Each time y
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1922,34 +1926,34 @@ You are climbing a stair case. It takes n steps to reach to the top. Each time y
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="climbing-stairs">Climbing stairs<a class="anchor" href="#climbing-stairs">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/climbing-stairs/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/climbing-stairs/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>You are climbing a stair case. It takes n steps to reach to the top.</li>
 <li>Each time you can either climb 1 or 2 steps.</li>
 <li>In how many distinct ways can you climb to the top?</li>
 </ul>
-<p>Example 1:</p>
+<p>Note:</p>
+<ul>
+<li>Given n will be a positive integer.</li>
+</ul>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 2
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 2
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There are two ways to climb to the top.
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>1. 1 step + 1 step
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>2. 2 steps</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 3
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>2. 2 steps</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: 3
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 3
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: There are three ways to climb to the top.
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>1. 1 step + 1 step + 1 step
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>2. 1 step + 2 steps
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>3. 2 steps + 1 step</span></span></code></pre></div><p>Note:</p>
-<ul>
-<li>Given n will be a positive integer.</li>
-</ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>3. 2 steps + 1 step</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution1</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">climbStairs</span>(self, n):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -2005,7 +2009,6 @@ You are climbing a stair case. It takes n steps to reach to the top. Each time y
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>        print(nin, resout, resout <span style="color:#f92672">==</span> nin[<span style="color:#ae81ff">1</span>])
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>        resout <span style="color:#f92672">=</span> sol2<span style="color:#f92672">.</span>climbStairs(nin[<span style="color:#ae81ff">0</span>])
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span>        print(nin, resout, resout <span style="color:#f92672">==</span> nin[<span style="color:#ae81ff">1</span>])</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

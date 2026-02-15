@@ -8,43 +8,37 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: array Practice Link: LeetCode
-Description:
-Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Note:
-Please solve it without division and in O(n). Python Solution:
-1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r) ">
+<meta name="description" content="Product of array except self# Levels: level-3 Data structures: array Practice Link# LeetCode
+Description# Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Note:
+Please solve it without division and in O(n). Python Solution# 1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/product-of-array-except-self/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Product of array except self">
-  <meta property="og:description" content="Levels: level-3 Data structures: array Practice Link: LeetCode
-Description:
-Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Note:
-Please solve it without division and in O(n). Python Solution:
-1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r)">
+  <meta property="og:description" content="Product of array except self# Levels: level-3 Data structures: array Practice Link# LeetCode
+Description# Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Note:
+Please solve it without division and in O(n). Python Solution# 1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Product of array except self">
-  <meta itemprop="description" content="Levels: level-3 Data structures: array Practice Link: LeetCode
-Description:
-Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Note:
-Please solve it without division and in O(n). Python Solution:
-1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r)">
-  <meta itemprop="wordCount" content="497">
+  <meta itemprop="description" content="Product of array except self# Levels: level-3 Data structures: array Practice Link# LeetCode
+Description# Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Note:
+Please solve it without division and in O(n). Python Solution# 1class Solution(object): 2 def productExceptSelf(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: List[int] 6 &#34;&#34;&#34; 7 out = [1 for idx in range(len(nums))] 8 for idx, _ in enumerate(nums): 9 outp = 1 10 for jdx, n in enumerate(nums): 11 if idx != jdx: 12 outp *= n 13 out[idx] = outp 14 return out 15 16 17class Solution2(object): 18 def productExceptSelf(self, nums): 19 20 # The length of the input array 21 length = len(nums) 22 23 # The left and right arrays as described in the algorithm 24 L, R, answer = [0] * length, [0] * length, [0] * length 25 26 # L[i] contains the product of all the elements to the left 27 # Note: for the element at index &#39;0&#39;, there are no elements to the left, 28 # so the L[0] would be 1 29 L[0] = 1 30 for i in range(1, length): 31 32 # L[i - 1] already contains the product of elements to the left of &#39;i - 1&#39; 33 # Simply multiplying it with nums[i - 1] would give the product of all 34 # elements to the left of index &#39;i&#39; 35 L[i] = nums[i - 1] * L[i - 1] 36 37 # R[i] contains the product of all the elements to the right 38 # Note: for the element at index &#39;length - 1&#39;, there are no elements to the right, 39 # so the R[length - 1] would be 1 40 R[length - 1] = 1 41 for i in reversed(range(length - 1)): 42 43 # R[i &#43; 1] already contains the product of elements to the right of &#39;i &#43; 1&#39; 44 # Simply multiplying it with nums[i &#43; 1] would give the product of all 45 # elements to the right of index &#39;i&#39; 46 R[i] = nums[i &#43; 1] * R[i &#43; 1] 47 48 # Constructing the answer array 49 for i in range(length): 50 # For the first element, R[i] would be product except self 51 # For the last element of the array, product except self would be L[i] 52 # Else, multiple product of all elements to the left and to the right 53 answer[i] = L[i] * R[i] 54 55 return answer 56 57 58in_arrs = [ 59 [2, 1, 2, 1, 0, 1, 2], 60 [3, 3, 5, 0, 0, 3, 1, 4], 61 [3, 5, 0, 1, 4], 62 [1, 2, 3, 1], 63 [1, 2, 3, 4], 64 [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 65] 66if __name__ == &#34;__main__&#34;: 67 68 sol = Solution2() 69 for nin in in_arrs: 70 r = sol.productExceptSelf(nin) 71 print(r)">
+  <meta itemprop="wordCount" content="502">
   <meta itemprop="keywords" content="Array,Level-3">
 
 <title>Product of array except self | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/product-of-array-except-self/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -67,11 +61,12 @@ Please solve it without division and in O(n). Python Solution:
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -89,6 +84,13 @@ Please solve it without division and in O(n). Python Solution:
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1924,12 +1926,14 @@ Please solve it without division and in O(n). Python Solution:
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="product-of-array-except-self">Product of array except self<a class="anchor" href="#product-of-array-except-self">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/product-of-array-except-self/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/product-of-array-except-self/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given an array nums of n integers where n &gt; 1, return an array output such that output[i] is equal to the product of
 all the elements of nums except nums[i].</li>
@@ -1938,8 +1942,7 @@ all the elements of nums except nums[i].</li>
 <ul>
 <li>Please solve it without division and in O(n).</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">productExceptSelf</span>(self, nums):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -2011,7 +2014,6 @@ all the elements of nums except nums[i].</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span><span>    <span style="color:#66d9ef">for</span> nin <span style="color:#f92672">in</span> in_arrs:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span><span>        r <span style="color:#f92672">=</span> sol<span style="color:#f92672">.</span>productExceptSelf(nin)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span><span>        print(r)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

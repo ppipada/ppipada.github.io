@@ -8,41 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-4 Data structures: array Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Example 1:
-1Input: [2,3,1,1,4] 2Output: true 3Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.Example 2:
-">
+<meta name="description" content="Jump game# Levels: level-4 Data structures: array Algorithms: dynamic-programming Practice Link# LeetCode
+Description# Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Examples# 1Input: [2,3,1,1,4] 2Output: true 3Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.1Input: [3,2,1,0,4] 2Output: false 3Explanation: You will always arrive at index 3 no matter what. Its maximum 4 jump length is 0, which makes it impossible to reach the last index.Python Solution# 1class Solution: 2 def canJump(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: bool 6 &#34;&#34;&#34; 7 if len(nums) &lt;= 1: 8 return True 9 jumps = 1 10 n = len(nums) - 2 11 for i in range(n, -1, -1): 12 if nums[i] &gt;= jumps: 13 jumps = 1 14 else: 15 jumps &#43;= 1 16 return nums[0] &gt;= jumps">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/jump-game/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Jump game">
-  <meta property="og:description" content="Levels: level-4 Data structures: array Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Example 1:
-1Input: [2,3,1,1,4] 2Output: true 3Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.Example 2:">
+  <meta property="og:description" content="Jump game# Levels: level-4 Data structures: array Algorithms: dynamic-programming Practice Link# LeetCode
+Description# Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Examples# 1Input: [2,3,1,1,4] 2Output: true 3Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.1Input: [3,2,1,0,4] 2Output: false 3Explanation: You will always arrive at index 3 no matter what. Its maximum 4 jump length is 0, which makes it impossible to reach the last index.Python Solution# 1class Solution: 2 def canJump(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: bool 6 &#34;&#34;&#34; 7 if len(nums) &lt;= 1: 8 return True 9 jumps = 1 10 n = len(nums) - 2 11 for i in range(n, -1, -1): 12 if nums[i] &gt;= jumps: 13 jumps = 1 14 else: 15 jumps &#43;= 1 16 return nums[0] &gt;= jumps">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Jump game">
-  <meta itemprop="description" content="Levels: level-4 Data structures: array Algorithms: dynamic-programming Practice Link: LeetCode
-Description:
-Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Example 1:
-1Input: [2,3,1,1,4] 2Output: true 3Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.Example 2:">
-  <meta itemprop="wordCount" content="165">
+  <meta itemprop="description" content="Jump game# Levels: level-4 Data structures: array Algorithms: dynamic-programming Practice Link# LeetCode
+Description# Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Examples# 1Input: [2,3,1,1,4] 2Output: true 3Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.1Input: [3,2,1,0,4] 2Output: false 3Explanation: You will always arrive at index 3 no matter what. Its maximum 4 jump length is 0, which makes it impossible to reach the last index.Python Solution# 1class Solution: 2 def canJump(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: bool 6 &#34;&#34;&#34; 7 if len(nums) &lt;= 1: 8 return True 9 jumps = 1 10 n = len(nums) - 2 11 for i in range(n, -1, -1): 12 if nums[i] &gt;= jumps: 13 jumps = 1 14 else: 15 jumps &#43;= 1 16 return nums[0] &gt;= jumps">
+  <meta itemprop="wordCount" content="164">
   <meta itemprop="keywords" content="Dynamic-Programming,Array,Level-4">
 
 <title>Jump game | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/jump-game/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -65,11 +58,12 @@ Given an array of non-negative integers, you are initially positioned at the fir
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -87,6 +81,13 @@ Given an array of non-negative integers, you are initially positioned at the fir
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1922,27 +1923,27 @@ Given an array of non-negative integers, you are initially positioned at the fir
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="jump-game">Jump game<a class="anchor" href="#jump-game">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dynamic-programming">dynamic-programming</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/jump-game/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/jump-game/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given an array of non-negative integers, you are initially positioned at the first index of the array.</li>
 <li>Each element in the array represents your maximum jump length at that position.</li>
 <li>Determine if you are able to reach the last index.</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [2,3,1,1,4]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: true
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [3,2,1,0,4]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [3,2,1,0,4]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: false
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: You will always arrive at index 3 no matter what. Its maximum
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>             jump length is 0, which makes it impossible to reach the last index.</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>             jump length is 0, which makes it impossible to reach the last index.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">canJump</span>(self, nums):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -1959,7 +1960,6 @@ Given an array of non-negative integers, you are initially positioned at the fir
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>            <span style="color:#66d9ef">else</span>:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>                jumps <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>        <span style="color:#66d9ef">return</span> nums[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&gt;=</span> jumps</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

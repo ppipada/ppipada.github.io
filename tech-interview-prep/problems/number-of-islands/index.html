@@ -8,29 +8,22 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link: LeetCode
-Description:
-Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Example 1:
-1Input: 211110 311010 411000 500000 6Output: 1Example 2:
-">
+<meta name="description" content="Number of islands# Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link# LeetCode
+Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Examples# 1Input: 211110 311010 411000 500000 6Output: 11Input: 211000 311000 400100 500011 6Output: 3Python Solution# 1class Solution(object): 2 # Iterate through each of the cell and if it is an island, 3 # do dfs to mark all adjacent islands, 4 # then increase the counter by 1. 5 def numIslands(self, grid): 6 if not grid: 7 return 0 8 9 count = 0 10 for i in range(len(grid)): 11 for j in range(len(grid[0])): 12 if grid[i][j] == &#39;1&#39;: 13 self.dfs(grid, i, j) 14 count &#43;= 1 15 return count 16 17 def dfs(self, grid, i, j): 18 if i &lt; 0 or j &lt; 0 or i &gt;= len(grid) or j &gt;= len( 19 grid[0]) or grid[i][j] != &#39;1&#39;: 20 return 21 grid[i][j] = &#39;#&#39; 22 self.dfs(grid, i &#43; 1, j) 23 self.dfs(grid, i - 1, j) 24 self.dfs(grid, i, j &#43; 1) 25 self.dfs(grid, i, j - 1)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/number-of-islands/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Number of islands">
-  <meta property="og:description" content="Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link: LeetCode
-Description:
-Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Example 1:
-1Input: 211110 311010 411000 500000 6Output: 1Example 2:">
+  <meta property="og:description" content="Number of islands# Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link# LeetCode
+Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Examples# 1Input: 211110 311010 411000 500000 6Output: 11Input: 211000 311000 400100 500011 6Output: 3Python Solution# 1class Solution(object): 2 # Iterate through each of the cell and if it is an island, 3 # do dfs to mark all adjacent islands, 4 # then increase the counter by 1. 5 def numIslands(self, grid): 6 if not grid: 7 return 0 8 9 count = 0 10 for i in range(len(grid)): 11 for j in range(len(grid[0])): 12 if grid[i][j] == &#39;1&#39;: 13 self.dfs(grid, i, j) 14 count &#43;= 1 15 return count 16 17 def dfs(self, grid, i, j): 18 if i &lt; 0 or j &lt; 0 or i &gt;= len(grid) or j &gt;= len( 19 grid[0]) or grid[i][j] != &#39;1&#39;: 20 return 21 grid[i][j] = &#39;#&#39; 22 self.dfs(grid, i &#43; 1, j) 23 self.dfs(grid, i - 1, j) 24 self.dfs(grid, i, j &#43; 1) 25 self.dfs(grid, i, j - 1)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Number of islands">
-  <meta itemprop="description" content="Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link: LeetCode
-Description:
-Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Example 1:
-1Input: 211110 311010 411000 500000 6Output: 1Example 2:">
+  <meta itemprop="description" content="Number of islands# Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link# LeetCode
+Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Examples# 1Input: 211110 311010 411000 500000 6Output: 11Input: 211000 311000 400100 500011 6Output: 3Python Solution# 1class Solution(object): 2 # Iterate through each of the cell and if it is an island, 3 # do dfs to mark all adjacent islands, 4 # then increase the counter by 1. 5 def numIslands(self, grid): 6 if not grid: 7 return 0 8 9 count = 0 10 for i in range(len(grid)): 11 for j in range(len(grid[0])): 12 if grid[i][j] == &#39;1&#39;: 13 self.dfs(grid, i, j) 14 count &#43;= 1 15 return count 16 17 def dfs(self, grid, i, j): 18 if i &lt; 0 or j &lt; 0 or i &gt;= len(grid) or j &gt;= len( 19 grid[0]) or grid[i][j] != &#39;1&#39;: 20 return 21 grid[i][j] = &#39;#&#39; 22 self.dfs(grid, i &#43; 1, j) 23 self.dfs(grid, i - 1, j) 24 self.dfs(grid, i, j &#43; 1) 25 self.dfs(grid, i, j - 1)">
   <meta itemprop="wordCount" content="208">
   <meta itemprop="keywords" content="Dfs,Bfs,Graph,Level-4,Union-Find">
 
@@ -38,11 +31,11 @@ Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-islands/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -65,11 +58,12 @@ Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -87,6 +81,13 @@ Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1922,33 +1923,33 @@ Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="number-of-islands">Number of islands<a class="anchor" href="#number-of-islands">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#graph">graph</a></div><div>
 				<strong>Algorithms:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#dfs">dfs</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/algorithms/problems/#bfs">bfs</a></div><div>
 				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#union-find">union-find</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/number-of-islands/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/number-of-islands/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a 2d grid map of &lsquo;1&rsquo;s (land) and &lsquo;0&rsquo;s (water), count the number of islands.</li>
 <li>An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.</li>
 <li>You may assume all four edges of the grid are all surrounded by water.</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>11110
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>11010
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>11000
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>00000
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Output: 1</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Output: 1</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>11000
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>11000
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>00100
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>00011
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Output: 3</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>Output: 3</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#75715e"># Iterate through each of the cell and if it is an island,</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#75715e"># do dfs to mark all adjacent islands,</span>
@@ -1974,7 +1975,6 @@ Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        self<span style="color:#f92672">.</span>dfs(grid, i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, j)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        self<span style="color:#f92672">.</span>dfs(grid, i, j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>        self<span style="color:#f92672">.</span>dfs(grid, i, j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

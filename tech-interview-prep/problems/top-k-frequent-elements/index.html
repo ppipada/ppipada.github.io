@@ -8,44 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: heap, hash-table Description:
-Given a non-empty array of integers, return the k most frequent elements. Example 1:
-1Input: nums = [1,1,1,2,2,3], k = 2 2Output: [1,2]Example 2:
-1Input: nums = [1], k = 1 2Output: [1]Note:
-You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Python Solution:
-">
+<meta name="description" content="Top k frequent elements# Levels: level-3 Data structures: heap, hash-table Description# Given a non-empty array of integers, return the k most frequent elements. Note:
+You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Examples# 1Input: nums = [1,1,1,2,2,3], k = 2 2Output: [1,2]1Input: nums = [1], k = 1 2Output: [1]Python Solution# 1import collections 2import heapq 3 4 5class Solution(object): 6 def topKFrequent(self, nums, k): 7 &#34;&#34;&#34; 8 :type nums: List[int] 9 :type k: int 10 :rtype: List[int] 11 &#34;&#34;&#34; 12 count = collections.Counter(nums) 13 return heapq.nlargest(k, list(count.keys()), key=count.get)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/top-k-frequent-elements/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Top k frequent elements">
-  <meta property="og:description" content="Levels: level-3 Data structures: heap, hash-table Description:
-Given a non-empty array of integers, return the k most frequent elements. Example 1:
-1Input: nums = [1,1,1,2,2,3], k = 2 2Output: [1,2]Example 2:
-1Input: nums = [1], k = 1 2Output: [1]Note:
-You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Python Solution:">
+  <meta property="og:description" content="Top k frequent elements# Levels: level-3 Data structures: heap, hash-table Description# Given a non-empty array of integers, return the k most frequent elements. Note:
+You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Examples# 1Input: nums = [1,1,1,2,2,3], k = 2 2Output: [1,2]1Input: nums = [1], k = 1 2Output: [1]Python Solution# 1import collections 2import heapq 3 4 5class Solution(object): 6 def topKFrequent(self, nums, k): 7 &#34;&#34;&#34; 8 :type nums: List[int] 9 :type k: int 10 :rtype: List[int] 11 &#34;&#34;&#34; 12 count = collections.Counter(nums) 13 return heapq.nlargest(k, list(count.keys()), key=count.get)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Top k frequent elements">
-  <meta itemprop="description" content="Levels: level-3 Data structures: heap, hash-table Description:
-Given a non-empty array of integers, return the k most frequent elements. Example 1:
-1Input: nums = [1,1,1,2,2,3], k = 2 2Output: [1,2]Example 2:
-1Input: nums = [1], k = 1 2Output: [1]Note:
-You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Python Solution:">
-  <meta itemprop="wordCount" content="108">
+  <meta itemprop="description" content="Top k frequent elements# Levels: level-3 Data structures: heap, hash-table Description# Given a non-empty array of integers, return the k most frequent elements. Note:
+You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Examples# 1Input: nums = [1,1,1,2,2,3], k = 2 2Output: [1,2]1Input: nums = [1], k = 1 2Output: [1]Python Solution# 1import collections 2import heapq 3 4 5class Solution(object): 6 def topKFrequent(self, nums, k): 7 &#34;&#34;&#34; 8 :type nums: List[int] 9 :type k: int 10 :rtype: List[int] 11 &#34;&#34;&#34; 12 count = collections.Counter(nums) 13 return heapq.nlargest(k, list(count.keys()), key=count.get)">
+  <meta itemprop="wordCount" content="109">
   <meta itemprop="keywords" content="Heap,Hash-Table,Level-3">
 
 <title>Top k frequent elements | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/top-k-frequent-elements/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -68,11 +58,12 @@ You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your al
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -90,6 +81,13 @@ You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your al
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1925,25 +1923,24 @@ You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your al
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="top-k-frequent-elements">Top k frequent elements<a class="anchor" href="#top-k-frequent-elements">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#heap">heap</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#hash-table">hash-table</a></div></div>
 
-<p>Description:</p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a non-empty array of integers, return the k most frequent elements.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: nums = [1,1,1,2,2,3], k = 2
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [1,2]</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: nums = [1], k = 1
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [1]</span></span></code></pre></div><p>Note:</p>
+<p>Note:</p>
 <ul>
 <li>You may assume k is always valid, 1 ≤ k ≤ number of unique elements.</li>
 <li>Your algorithm&rsquo;s time complexity must be better than O(n log n), where n is the array&rsquo;s size.</li>
 </ul>
-<p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: nums = [1,1,1,2,2,3], k = 2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [1,2]</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: nums = [1], k = 1
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: [1]</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">import</span> collections
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">import</span> heapq
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
@@ -1957,7 +1954,6 @@ You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your al
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        count <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>Counter(nums)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>        <span style="color:#66d9ef">return</span> heapq<span style="color:#f92672">.</span>nlargest(k, list(count<span style="color:#f92672">.</span>keys()), key<span style="color:#f92672">=</span>count<span style="color:#f92672">.</span>get)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

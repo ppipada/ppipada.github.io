@@ -8,46 +8,34 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: linkedlist Practice Link: LeetCode
-Description:
-Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Example 1:
-1Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.Example 2:
-1Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.Python Solution:
-1class ListNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.next = None 5 6 7class Solution(object): 8 def reorderList(self, head): 9 &#34;&#34;&#34; 10 :type head: ListNode 11 :rtype: None Do not return anything, modify head in-place instead. 12 &#34;&#34;&#34; 13 if not head: 14 return 15 16 # find the mid point 17 slow = fast = head 18 while fast and fast.next: 19 slow = slow.next 20 fast = fast.next.next 21 22 # reverse the second half in-place 23 pre, node = None, slow 24 while node: 25 pre, node.next, node = node, pre, node.next 26 27 # Merge in-place; Note : the last node of &#34;first&#34; and &#34;second&#34; are the same 28 first, second = head, pre 29 while second.next: 30 first.next, first = second, first.next 31 second.next, second = first, second.next 32 return ">
+<meta name="description" content="Reorder list# Levels: level-3 Data structures: linkedlist Practice Link# LeetCode
+Description# Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Examples# 1Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.1Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.Python Solution# 1class ListNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.next = None 5 6 7class Solution(object): 8 def reorderList(self, head): 9 &#34;&#34;&#34; 10 :type head: ListNode 11 :rtype: None Do not return anything, modify head in-place instead. 12 &#34;&#34;&#34; 13 if not head: 14 return 15 16 # find the mid point 17 slow = fast = head 18 while fast and fast.next: 19 slow = slow.next 20 fast = fast.next.next 21 22 # reverse the second half in-place 23 pre, node = None, slow 24 while node: 25 pre, node.next, node = node, pre, node.next 26 27 # Merge in-place; Note : the last node of &#34;first&#34; and &#34;second&#34; are the same 28 first, second = head, pre 29 while second.next: 30 first.next, first = second, first.next 31 second.next, second = first, second.next 32 return">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/reorder-list/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Reorder list">
-  <meta property="og:description" content="Levels: level-3 Data structures: linkedlist Practice Link: LeetCode
-Description:
-Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Example 1:
-1Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.Example 2:
-1Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.Python Solution:
-1class ListNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.next = None 5 6 7class Solution(object): 8 def reorderList(self, head): 9 &#34;&#34;&#34; 10 :type head: ListNode 11 :rtype: None Do not return anything, modify head in-place instead. 12 &#34;&#34;&#34; 13 if not head: 14 return 15 16 # find the mid point 17 slow = fast = head 18 while fast and fast.next: 19 slow = slow.next 20 fast = fast.next.next 21 22 # reverse the second half in-place 23 pre, node = None, slow 24 while node: 25 pre, node.next, node = node, pre, node.next 26 27 # Merge in-place; Note : the last node of &#34;first&#34; and &#34;second&#34; are the same 28 first, second = head, pre 29 while second.next: 30 first.next, first = second, first.next 31 second.next, second = first, second.next 32 return">
+  <meta property="og:description" content="Reorder list# Levels: level-3 Data structures: linkedlist Practice Link# LeetCode
+Description# Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Examples# 1Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.1Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.Python Solution# 1class ListNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.next = None 5 6 7class Solution(object): 8 def reorderList(self, head): 9 &#34;&#34;&#34; 10 :type head: ListNode 11 :rtype: None Do not return anything, modify head in-place instead. 12 &#34;&#34;&#34; 13 if not head: 14 return 15 16 # find the mid point 17 slow = fast = head 18 while fast and fast.next: 19 slow = slow.next 20 fast = fast.next.next 21 22 # reverse the second half in-place 23 pre, node = None, slow 24 while node: 25 pre, node.next, node = node, pre, node.next 26 27 # Merge in-place; Note : the last node of &#34;first&#34; and &#34;second&#34; are the same 28 first, second = head, pre 29 while second.next: 30 first.next, first = second, first.next 31 second.next, second = first, second.next 32 return">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Reorder list">
-  <meta itemprop="description" content="Levels: level-3 Data structures: linkedlist Practice Link: LeetCode
-Description:
-Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Example 1:
-1Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.Example 2:
-1Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.Python Solution:
-1class ListNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.next = None 5 6 7class Solution(object): 8 def reorderList(self, head): 9 &#34;&#34;&#34; 10 :type head: ListNode 11 :rtype: None Do not return anything, modify head in-place instead. 12 &#34;&#34;&#34; 13 if not head: 14 return 15 16 # find the mid point 17 slow = fast = head 18 while fast and fast.next: 19 slow = slow.next 20 fast = fast.next.next 21 22 # reverse the second half in-place 23 pre, node = None, slow 24 while node: 25 pre, node.next, node = node, pre, node.next 26 27 # Merge in-place; Note : the last node of &#34;first&#34; and &#34;second&#34; are the same 28 first, second = head, pre 29 while second.next: 30 first.next, first = second, first.next 31 second.next, second = first, second.next 32 return">
-  <meta itemprop="wordCount" content="188">
+  <meta itemprop="description" content="Reorder list# Levels: level-3 Data structures: linkedlist Practice Link# LeetCode
+Description# Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Examples# 1Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.1Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.Python Solution# 1class ListNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.next = None 5 6 7class Solution(object): 8 def reorderList(self, head): 9 &#34;&#34;&#34; 10 :type head: ListNode 11 :rtype: None Do not return anything, modify head in-place instead. 12 &#34;&#34;&#34; 13 if not head: 14 return 15 16 # find the mid point 17 slow = fast = head 18 while fast and fast.next: 19 slow = slow.next 20 fast = fast.next.next 21 22 # reverse the second half in-place 23 pre, node = None, slow 24 while node: 25 pre, node.next, node = node, pre, node.next 26 27 # Merge in-place; Note : the last node of &#34;first&#34; and &#34;second&#34; are the same 28 first, second = head, pre 29 while second.next: 30 first.next, first = second, first.next 31 second.next, second = first, second.next 32 return">
+  <meta itemprop="wordCount" content="187">
   <meta itemprop="keywords" content="Linkedlist,Level-3">
 
 <title>Reorder list | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/reorder-list/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -70,11 +58,12 @@ Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln�
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -92,6 +81,13 @@ Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln�
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1927,20 +1923,20 @@ Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln�
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="reorder-list">Reorder list<a class="anchor" href="#reorder-list">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#linkedlist">linkedlist</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/reorder-list/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/reorder-list/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given a singly linked list <code>L: L0→L1→…→Ln-1→Ln</code>, reorder it to: <code>L0→Ln→L1→Ln-1→L2→Ln-2→…</code></li>
 <li>You may not modify the values in the list&rsquo;s nodes, only nodes itself may be changed.</li>
 </ul>
-<p>Example 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListNode</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, x):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> x
@@ -1973,7 +1969,6 @@ Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to: L0→Ln�
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>            first<span style="color:#f92672">.</span>next, first <span style="color:#f92672">=</span> second, first<span style="color:#f92672">.</span>next
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>            second<span style="color:#f92672">.</span>next, second <span style="color:#f92672">=</span> first, second<span style="color:#f92672">.</span>next
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>        <span style="color:#66d9ef">return</span></span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       

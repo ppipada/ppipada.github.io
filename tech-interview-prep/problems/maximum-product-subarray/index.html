@@ -8,32 +8,22 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Levels: level-3 Data structures: array Practice Link: LeetCode
-Description:
-Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Example 1:
-1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.Example 2:
-1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution:
-">
+<meta name="description" content="Maximum product subarray# Levels: level-3 Data structures: array Practice Link# LeetCode
+Description# Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Examples# 1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution# 1class Solution(object): 2 def maxProduct(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return 0 9 best = nums[0] 10 current_max = nums[0] 11 current_min = nums[0] 12 for x in range(1, len(nums)): 13 n = (nums[x], nums[x] * current_max, nums[x] * current_min) 14 current_max = max(n) 15 current_min = min(n) 16 best = max(current_max, best) 17 print(nums[x], current_max, current_min, best) 18 return best 19 20 21in_arrs = [ 22 # [2, 1, 2, 1, 0, 1, 2], 23 # [3, 3, 5, 0, 0, 3, 1, 4], 24 # [3, 5, 0, 1, 4], 25 # [1, 2, -1, 1], 26 # [1, 2, 3, 4], 27 # [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 28 # [-2, 1, -3, 4, -1, 2, 1, -5, 4], 29 [2, 3, -2, 4], 30 [-2, 0, -1], 31 [-2], 32 [-4, -3], 33 [-2, 3, -4], 34 [2, -3, 4], 35 [0, -2, -3], 36 [0, -2], 37 [2, -3, 4, 0], 38 [2, -5, -2, -4, 3], 39] 40 41if __name__ == &#34;__main__&#34;: 42 43 sol = Solution() 44 for nin in in_arrs: 45 print(nin) 46 r = sol.maxProduct(nin) 47 print(r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/maximum-product-subarray/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Maximum product subarray">
-  <meta property="og:description" content="Levels: level-3 Data structures: array Practice Link: LeetCode
-Description:
-Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Example 1:
-1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.Example 2:
-1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution:">
+  <meta property="og:description" content="Maximum product subarray# Levels: level-3 Data structures: array Practice Link# LeetCode
+Description# Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Examples# 1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution# 1class Solution(object): 2 def maxProduct(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return 0 9 best = nums[0] 10 current_max = nums[0] 11 current_min = nums[0] 12 for x in range(1, len(nums)): 13 n = (nums[x], nums[x] * current_max, nums[x] * current_min) 14 current_max = max(n) 15 current_min = min(n) 16 best = max(current_max, best) 17 print(nums[x], current_max, current_min, best) 18 return best 19 20 21in_arrs = [ 22 # [2, 1, 2, 1, 0, 1, 2], 23 # [3, 3, 5, 0, 0, 3, 1, 4], 24 # [3, 5, 0, 1, 4], 25 # [1, 2, -1, 1], 26 # [1, 2, 3, 4], 27 # [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 28 # [-2, 1, -3, 4, -1, 2, 1, -5, 4], 29 [2, 3, -2, 4], 30 [-2, 0, -1], 31 [-2], 32 [-4, -3], 33 [-2, 3, -4], 34 [2, -3, 4], 35 [0, -2, -3], 36 [0, -2], 37 [2, -3, 4, 0], 38 [2, -5, -2, -4, 3], 39] 40 41if __name__ == &#34;__main__&#34;: 42 43 sol = Solution() 44 for nin in in_arrs: 45 print(nin) 46 r = sol.maxProduct(nin) 47 print(r)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="Maximum product subarray">
-  <meta itemprop="description" content="Levels: level-3 Data structures: array Practice Link: LeetCode
-Description:
-Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Example 1:
-1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.Example 2:
-1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution:">
+  <meta itemprop="description" content="Maximum product subarray# Levels: level-3 Data structures: array Practice Link# LeetCode
+Description# Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Examples# 1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution# 1class Solution(object): 2 def maxProduct(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return 0 9 best = nums[0] 10 current_max = nums[0] 11 current_min = nums[0] 12 for x in range(1, len(nums)): 13 n = (nums[x], nums[x] * current_max, nums[x] * current_min) 14 current_max = max(n) 15 current_min = min(n) 16 best = max(current_max, best) 17 print(nums[x], current_max, current_min, best) 18 return best 19 20 21in_arrs = [ 22 # [2, 1, 2, 1, 0, 1, 2], 23 # [3, 3, 5, 0, 0, 3, 1, 4], 24 # [3, 5, 0, 1, 4], 25 # [1, 2, -1, 1], 26 # [1, 2, 3, 4], 27 # [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 28 # [-2, 1, -3, 4, -1, 2, 1, -5, 4], 29 [2, 3, -2, 4], 30 [-2, 0, -1], 31 [-2], 32 [-4, -3], 33 [-2, 3, -4], 34 [2, -3, 4], 35 [0, -2, -3], 36 [0, -2], 37 [2, -3, 4, 0], 38 [2, -5, -2, -4, 3], 39] 40 41if __name__ == &#34;__main__&#34;: 42 43 sol = Solution() 44 for nin in in_arrs: 45 print(nin) 46 r = sol.maxProduct(nin) 47 print(r)">
   <meta itemprop="wordCount" content="263">
   <meta itemprop="keywords" content="Array,Level-3">
 
@@ -41,11 +31,11 @@ Given an integer array nums, find the contiguous subarray within an array (conta
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/maximum-product-subarray/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.4e1873df4291eedbd370617dd1d531ac334c5134551ce8391c88ad79e47f2718.css" integrity="sha256-Thhz30KR7tvTcGF90dUxrDNMUTRVHOg5HIiteeR/Jxg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.ed29832d8e119894e20a2f47e8e57c6d8d5a443e86f78c54cb21ba2536e4d6f3.js" integrity="sha256-7SmDLY4RmJTiCi9H6OV8bY1aRD6G94xUyyG6JTbk1vM=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -68,11 +58,12 @@ Given an integer array nums, find the contiguous subarray within an array (conta
   <div class="book-menu-content">
     
   <nav>
-<h4 class="scramblings-brand">
-	<a
+<h4 class="scramblings-brand"><a
 		class="flex align-center"
-		href="/tech-interview-prep/"
-	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Tech Interview Prep</span>
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
 	</a>
 </h4>
 
@@ -90,6 +81,13 @@ Given an integer array nums, find the contiguous subarray within an array (conta
 
 
 
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
 
 
 
@@ -1925,24 +1923,24 @@ Given an integer array nums, find the contiguous subarray within an array (conta
 
       
       
-  <article class="markdown book-article"><div style="margin: .5rem 0 1rem 0;"><div>
+  <article class="markdown book-article"><h1 id="maximum-product-subarray">Maximum product subarray<a class="anchor" href="#maximum-product-subarray">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
 				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
 				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div></div>
 
-<p>Practice Link: <a href="https://leetcode.com/problems/maximum-product-subarray/">LeetCode</a></p>
-<p>Description:</p>
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/maximum-product-subarray/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
 <ul>
 <li>Given an integer array <code>nums</code>, find the contiguous subarray within an array (containing at least one number) which has
 the largest product.</li>
 </ul>
-<p>Example 1:</p>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [2,3,-2,4]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 6
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: [2,3] has the largest product 6.</span></span></code></pre></div><p>Example 2:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [-2,0,-1]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: [2,3] has the largest product 6.</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input: [-2,0,-1]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>Output: 0
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: The result cannot be 2, because [-2,-1] is not a subarray.</span></span></code></pre></div><p>Python Solution:</p>
-<!-- tabs:start -->
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Explanation: The result cannot be 2, because [-2,-1] is not a subarray.</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxProduct</span>(self, nums):
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#e6db74">&#34;&#34;&#34;
@@ -1990,7 +1988,6 @@ the largest product.</li>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>        print(nin)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>        r <span style="color:#f92672">=</span> sol<span style="color:#f92672">.</span>maxProduct(nin)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>        print(r)</span></span></code></pre></div>
-<!-- tabs:end -->
 </article>
  
       
