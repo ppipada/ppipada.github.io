@@ -9,14 +9,14 @@ https://github.com/alex-shpak/hugo-book
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Patterns: Problems# Patterns cut across data structures and show up frequently in interviews.
-Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Add and search word - data structure designWord searchWord search IIIntervals Insert intervalMeeting roomsMeeting rooms IIMerge intervalsNon overlapping intervalsSliding Window Longest repeating character replacementLongest substring without repeating charactersMinimum window substringUnion Find Longest consecutive sequenceNumber of islands">
+Backtracking (3) Bfs (1) Dynamic Programming (1) Hashing (3) Intervals (5) Mark and Sweep (2) Sliding Window (3) Two Pointers (1) Union Find (2) Backtracking Add and search word - data structure designWord searchWord search IIBfs Insert Into Complete Binary Tree (Level-Order)Dynamic Programming Count Distinct SubsequencesHashing Bigram Model - Next Word PredictionSET Card Game - Validate Set And Find SetVerify Lexicographic Sort With Custom AlphabetIntervals Insert intervalMeeting roomsMeeting rooms IIMerge intervalsNon overlapping intervalsMark and Sweep Evaluate Precedence Expression With &#43; And *Minimum Remove To Make Parentheses ValidSliding Window Longest repeating character replacementLongest substring without repeating charactersMinimum window substringTwo Pointers Is SubsequenceUnion Find Longest consecutive sequenceNumber of islands">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/patterns/problems/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Problems">
   <meta property="og:description" content="Patterns: Problems# Patterns cut across data structures and show up frequently in interviews.
-Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Add and search word - data structure designWord searchWord search IIIntervals Insert intervalMeeting roomsMeeting rooms IIMerge intervalsNon overlapping intervalsSliding Window Longest repeating character replacementLongest substring without repeating charactersMinimum window substringUnion Find Longest consecutive sequenceNumber of islands">
+Backtracking (3) Bfs (1) Dynamic Programming (1) Hashing (3) Intervals (5) Mark and Sweep (2) Sliding Window (3) Two Pointers (1) Union Find (2) Backtracking Add and search word - data structure designWord searchWord search IIBfs Insert Into Complete Binary Tree (Level-Order)Dynamic Programming Count Distinct SubsequencesHashing Bigram Model - Next Word PredictionSET Card Game - Validate Set And Find SetVerify Lexicographic Sort With Custom AlphabetIntervals Insert intervalMeeting roomsMeeting rooms IIMerge intervalsNon overlapping intervalsMark and Sweep Evaluate Precedence Expression With &#43; And *Minimum Remove To Make Parentheses ValidSliding Window Longest repeating character replacementLongest substring without repeating charactersMinimum window substringTwo Pointers Is SubsequenceUnion Find Longest consecutive sequenceNumber of islands">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="patterns">
@@ -24,8 +24,8 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 
   <meta itemprop="name" content="Problems">
   <meta itemprop="description" content="Patterns: Problems# Patterns cut across data structures and show up frequently in interviews.
-Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Add and search word - data structure designWord searchWord search IIIntervals Insert intervalMeeting roomsMeeting rooms IIMerge intervalsNon overlapping intervalsSliding Window Longest repeating character replacementLongest substring without repeating charactersMinimum window substringUnion Find Longest consecutive sequenceNumber of islands">
-  <meta itemprop="wordCount" content="60">
+Backtracking (3) Bfs (1) Dynamic Programming (1) Hashing (3) Intervals (5) Mark and Sweep (2) Sliding Window (3) Two Pointers (1) Union Find (2) Backtracking Add and search word - data structure designWord searchWord search IIBfs Insert Into Complete Binary Tree (Level-Order)Dynamic Programming Count Distinct SubsequencesHashing Bigram Model - Next Word PredictionSET Card Game - Validate Set And Find SetVerify Lexicographic Sort With Custom AlphabetIntervals Insert intervalMeeting roomsMeeting rooms IIMerge intervalsNon overlapping intervalsMark and Sweep Evaluate Precedence Expression With &#43; And *Minimum Remove To Make Parentheses ValidSliding Window Longest repeating character replacementLongest substring without repeating charactersMinimum window substringTwo Pointers Is SubsequenceUnion Find Longest consecutive sequenceNumber of islands">
+  <meta itemprop="wordCount" content="120">
 
 <title>Problems | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
@@ -35,7 +35,7 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.941eed89b65f430a96f666af959158f500e503203c41814278ef61eb71f2af60.js" integrity="sha256-lB7tibZfQwqW9mavlZFY9QDlAyA8QYFCeO9h63Hyr2A=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -249,8 +249,8 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 
 	
-		<a href="/tech-interview-prep/algorithms/problems/" class="">
-			Problems</a>
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Quick Notes</a>
 	
 
 				</li>
@@ -264,8 +264,8 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 
 	
-		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
-			Quick Notes</a>
+		<a href="/tech-interview-prep/algorithms/problems/" class="">
+			Problems</a>
 	
 
 				</li>
@@ -357,6 +357,27 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 		<a href="/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/" class="">
 			Best time to buy and sell stock</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/bigram-model-next-word-prediction/" class="">
+			Bigram Model - Next Word Prediction</a>
 	
 
 					
@@ -565,6 +586,27 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 
 	
+		<a href="/tech-interview-prep/problems/count-distinct-subsequences/" class="">
+			Count Distinct Subsequences</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/counting-bits/" class="">
 			Counting bits</a>
 	
@@ -630,6 +672,27 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
 			Encode and decode strings</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/eval-precedence-expression/" class="">
+			Evaluate Precedence Expression With &#43; And *</a>
 	
 
 					
@@ -817,8 +880,50 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 
 	
+		<a href="/tech-interview-prep/problems/level-order-binary-tree-insert/" class="">
+			Insert Into Complete Binary Tree (Level-Order)</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/invert-binary-tree/" class="">
 			Invert a binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/string-is-subsequence/" class="">
+			Is Subsequence</a>
 	
 
 					
@@ -1155,6 +1260,27 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 		<a href="/tech-interview-prep/problems/merge-k-sorted-lists/" class="">
 			Merge k sorted lists</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/make-parentheses-valid/" class="">
+			Minimum Remove To Make Parentheses Valid</a>
 	
 
 					
@@ -1531,6 +1657,27 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 
 	
+		<a href="/tech-interview-prep/problems/set-card-game-validate-find/" class="">
+			SET Card Game - Validate Set And Find Set</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/set-matrix-zeroes/" class="">
 			Set matrix zeroes</a>
 	
@@ -1783,6 +1930,27 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 	
 
 	
+		<a href="/tech-interview-prep/problems/verify-lexicographic-sort-custom/" class="">
+			Verify Lexicographic Sort With Custom Alphabet</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/word-break/" class="">
 			Word break</a>
 	
@@ -1927,11 +2095,26 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
         <a href="#backtracking">Backtracking</a>
         (3)
       </li><li>
+        <a href="#bfs">Bfs</a>
+        (1)
+      </li><li>
+        <a href="#dynamic-programming">Dynamic Programming</a>
+        (1)
+      </li><li>
+        <a href="#hashing">Hashing</a>
+        (3)
+      </li><li>
         <a href="#intervals">Intervals</a>
         (5)
       </li><li>
+        <a href="#mark-and-sweep">Mark and Sweep</a>
+        (2)
+      </li><li>
         <a href="#sliding-window">Sliding Window</a>
         (3)
+      </li><li>
+        <a href="#two-pointers">Two Pointers</a>
+        (1)
       </li><li>
         <a href="#union-find">Union Find</a>
         (2)
@@ -1939,11 +2122,21 @@ Backtracking (3) Intervals (5) Sliding Window (3) Union Find (2) Backtracking Ad
 
   <h2 id="backtracking">Backtracking</h2>
 
-    <ul><li><a href="/tech-interview-prep/problems/add-and-search-word/">Add and search word - data structure design</a></li><li><a href="/tech-interview-prep/problems/word-search/">Word search</a></li><li><a href="/tech-interview-prep/problems/word-search-ii/">Word search II</a></li></ul><h2 id="intervals">Intervals</h2>
+    <ul><li><a href="/tech-interview-prep/problems/add-and-search-word/">Add and search word - data structure design</a></li><li><a href="/tech-interview-prep/problems/word-search/">Word search</a></li><li><a href="/tech-interview-prep/problems/word-search-ii/">Word search II</a></li></ul><h2 id="bfs">Bfs</h2>
 
-    <ul><li><a href="/tech-interview-prep/problems/insert-interval/">Insert interval</a></li><li><a href="/tech-interview-prep/problems/meeting-rooms/">Meeting rooms</a></li><li><a href="/tech-interview-prep/problems/meeting-rooms-ii/">Meeting rooms II</a></li><li><a href="/tech-interview-prep/problems/merge-intervals/">Merge intervals</a></li><li><a href="/tech-interview-prep/problems/non-overlapping-intervals/">Non overlapping intervals</a></li></ul><h2 id="sliding-window">Sliding Window</h2>
+    <ul><li><a href="/tech-interview-prep/problems/level-order-binary-tree-insert/">Insert Into Complete Binary Tree (Level-Order)</a></li></ul><h2 id="dynamic-programming">Dynamic Programming</h2>
 
-    <ul><li><a href="/tech-interview-prep/problems/longest-repeating-character-replacement/">Longest repeating character replacement</a></li><li><a href="/tech-interview-prep/problems/longest-substring-without-repeating-characters/">Longest substring without repeating characters</a></li><li><a href="/tech-interview-prep/problems/minimum-window-substring/">Minimum window substring</a></li></ul><h2 id="union-find">Union Find</h2>
+    <ul><li><a href="/tech-interview-prep/problems/count-distinct-subsequences/">Count Distinct Subsequences</a></li></ul><h2 id="hashing">Hashing</h2>
+
+    <ul><li><a href="/tech-interview-prep/problems/bigram-model-next-word-prediction/">Bigram Model - Next Word Prediction</a></li><li><a href="/tech-interview-prep/problems/set-card-game-validate-find/">SET Card Game - Validate Set And Find Set</a></li><li><a href="/tech-interview-prep/problems/verify-lexicographic-sort-custom/">Verify Lexicographic Sort With Custom Alphabet</a></li></ul><h2 id="intervals">Intervals</h2>
+
+    <ul><li><a href="/tech-interview-prep/problems/insert-interval/">Insert interval</a></li><li><a href="/tech-interview-prep/problems/meeting-rooms/">Meeting rooms</a></li><li><a href="/tech-interview-prep/problems/meeting-rooms-ii/">Meeting rooms II</a></li><li><a href="/tech-interview-prep/problems/merge-intervals/">Merge intervals</a></li><li><a href="/tech-interview-prep/problems/non-overlapping-intervals/">Non overlapping intervals</a></li></ul><h2 id="mark-and-sweep">Mark and Sweep</h2>
+
+    <ul><li><a href="/tech-interview-prep/problems/eval-precedence-expression/">Evaluate Precedence Expression With &#43; And *</a></li><li><a href="/tech-interview-prep/problems/make-parentheses-valid/">Minimum Remove To Make Parentheses Valid</a></li></ul><h2 id="sliding-window">Sliding Window</h2>
+
+    <ul><li><a href="/tech-interview-prep/problems/longest-repeating-character-replacement/">Longest repeating character replacement</a></li><li><a href="/tech-interview-prep/problems/longest-substring-without-repeating-characters/">Longest substring without repeating characters</a></li><li><a href="/tech-interview-prep/problems/minimum-window-substring/">Minimum window substring</a></li></ul><h2 id="two-pointers">Two Pointers</h2>
+
+    <ul><li><a href="/tech-interview-prep/problems/string-is-subsequence/">Is Subsequence</a></li></ul><h2 id="union-find">Union Find</h2>
 
     <ul><li><a href="/tech-interview-prep/problems/longest-consecutive-sequence/">Longest consecutive sequence</a></li><li><a href="/tech-interview-prep/problems/number-of-islands/">Number of islands</a></li></ul>
 </article>

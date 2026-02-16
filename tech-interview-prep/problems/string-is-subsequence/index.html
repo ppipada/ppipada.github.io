@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Is Subsequence# Levels: level-2 Data structures: string Patterns: two-pointers Practice Link# LeetCode Description# Given two strings s (source) and t (target), return True if t is a subsequence of s, else False. Order must be preserved. Edge cases: (&#34;&#34;, &#34;&#34;) -&gt; True (&#34;abcd&#34;, &#34;&#34;) -&gt; True (&#34;&#34;, &#34;a&#34;) -&gt; False Examples# 1(&#34;abcd&#34;, &#34;bd&#34;) -&gt; True 2(&#34;abcd&#34;, &#34;be&#34;) -&gt; FalsePython Solution# 1def is_subsequence(s: str, t: str) -&gt; bool: 2 &#34;&#34;&#34; 3 Returns True if t is a subsequence of s. 4 5 Time: O(len(s)) 6 Space: O(1) 7 &#34;&#34;&#34; 8 i = 0 # pointer in t 9 for ch in s: 10 if i &lt; len(t) and ch == t[i]: 11 i &#43;= 1 12 if i == len(t): 13 return True 14 return i == len(t)">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/string-is-subsequence/">
+  <meta property="og:site_name" content="Tech Interview Prep">
+  <meta property="og:title" content="Is Subsequence">
+  <meta property="og:description" content="Is Subsequence# Levels: level-2 Data structures: string Patterns: two-pointers Practice Link# LeetCode Description# Given two strings s (source) and t (target), return True if t is a subsequence of s, else False. Order must be preserved. Edge cases: (&#34;&#34;, &#34;&#34;) -&gt; True (&#34;abcd&#34;, &#34;&#34;) -&gt; True (&#34;&#34;, &#34;a&#34;) -&gt; False Examples# 1(&#34;abcd&#34;, &#34;bd&#34;) -&gt; True 2(&#34;abcd&#34;, &#34;be&#34;) -&gt; FalsePython Solution# 1def is_subsequence(s: str, t: str) -&gt; bool: 2 &#34;&#34;&#34; 3 Returns True if t is a subsequence of s. 4 5 Time: O(len(s)) 6 Space: O(1) 7 &#34;&#34;&#34; 8 i = 0 # pointer in t 9 for ch in s: 10 if i &lt; len(t) and ch == t[i]: 11 i &#43;= 1 12 if i == len(t): 13 return True 14 return i == len(t)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Is Subsequence">
+  <meta itemprop="description" content="Is Subsequence# Levels: level-2 Data structures: string Patterns: two-pointers Practice Link# LeetCode Description# Given two strings s (source) and t (target), return True if t is a subsequence of s, else False. Order must be preserved. Edge cases: (&#34;&#34;, &#34;&#34;) -&gt; True (&#34;abcd&#34;, &#34;&#34;) -&gt; True (&#34;&#34;, &#34;a&#34;) -&gt; False Examples# 1(&#34;abcd&#34;, &#34;bd&#34;) -&gt; True 2(&#34;abcd&#34;, &#34;be&#34;) -&gt; FalsePython Solution# 1def is_subsequence(s: str, t: str) -&gt; bool: 2 &#34;&#34;&#34; 3 Returns True if t is a subsequence of s. 4 5 Time: O(len(s)) 6 Space: O(1) 7 &#34;&#34;&#34; 8 i = 0 # pointer in t 9 for ch in s: 10 if i &lt; len(t) and ch == t[i]: 11 i &#43;= 1 12 if i == len(t): 13 return True 14 return i == len(t)">
+  <meta itemprop="wordCount" content="124">
+  <meta itemprop="keywords" content="String,Level-2,Two-Pointers">
+
+<title>Is Subsequence | Tech Interview Prep</title>
+<link rel="icon" href="/tech-interview-prep/favicon.ico" >
+<link rel="manifest" href="/tech-interview-prep/manifest.json">
+<link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/string-is-subsequence/">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+
+
+  <script defer src="/tech-interview-prep/fuse.min.js"></script>
+  <script defer src="/tech-interview-prep/en.search.min.941eed89b65f430a96f666af959158f500e503203c41814278ef61eb71f2af60.js" integrity="sha256-lB7tibZfQwqW9mavlZFY9QDlAyA8QYFCeO9h63Hyr2A=" crossorigin="anonymous"></script>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PVSXVYRTKF');
+        </script>
+
+<link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/string-is-subsequence/index.xml" title="Tech Interview Prep" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-problems">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h4 class="scramblings-brand"><a
+		class="flex align-center"
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
+	</a>
+</h4>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
+
+
+
+
+
+
+
+  
+
+
+
+  
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/levels/problems/" class="">
+			Path: Levels</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/levels/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/patterns/problems/" class="">
+			Path: Patterns</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/patterns/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/quick-notes/" class="">
+			Path: Data Structures</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/quick-notes/" class="">
+			Quick Notes</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Path: Algorithms</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Quick Notes</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<input type="checkbox" id="section-3c802e3927c98f404195e940fc79e4bc" class="toggle" checked />
+		<label for="section-3c802e3927c98f404195e940fc79e4bc" class="flex">
+			<a
+				
+					href="/tech-interview-prep/problems/"
+				
+				class=""
+			>
+				All Problems</a>
+			<img
+				src="/tech-interview-prep/icons/chevron-right.svg"
+				class="book-icon"
+				alt="Expand"
+			/>
+		</label>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/add-and-search-word/" class="">
+			Add and search word - data structure design</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/alien-dictionary/" class="">
+			Alien dictionary</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/" class="">
+			Best time to buy and sell stock</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/bigram-model-next-word-prediction/" class="">
+			Bigram Model - Next Word Prediction</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/binary-tree-level-order-traversal/" class="">
+			Binary tree level order traversal</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/binary-tree-maximum-path-sum/" class="">
+			Binary tree maximum path sum</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/climbing-stairs/" class="">
+			Climbing stairs</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/clone-graph/" class="">
+			Clone graph</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/coin-change/" class="">
+			Coin change</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/combination-sum-iv/" class="">
+			Combination sum IV</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" class="">
+			Construct binary tree from preorder and inorder traversal</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/container-with-most-water/" class="">
+			Container with most water</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/contains-duplicate/" class="">
+			Contains duplicate</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/count-distinct-subsequences/" class="">
+			Count Distinct Subsequences</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/counting-bits/" class="">
+			Counting bits</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/course-schedule/" class="">
+			Course schedule</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/decode-ways/" class="">
+			Decode ways</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
+			Encode and decode strings</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/eval-precedence-expression/" class="">
+			Evaluate Precedence Expression With &#43; And *</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/find-median-from-data-stream/" class="">
+			Find median from data stream</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/" class="">
+			Find minimum in rotated sorted array</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/graph-valid-tree/" class="">
+			Graph valid tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/group-anagrams/" class="">
+			Group anagrams</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/house-robber/" class="">
+			House robber</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/house-robber-ii/" class="">
+			House robber II</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/implement-trie-prefix-tree/" class="">
+			Implement trie (prefix tree)</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/insert-interval/" class="">
+			Insert interval</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/level-order-binary-tree-insert/" class="">
+			Insert Into Complete Binary Tree (Level-Order)</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/invert-binary-tree/" class="">
+			Invert a binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/string-is-subsequence/" class="active">
+			Is Subsequence</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/jump-game/" class="">
+			Jump game</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/kth-smallest-element-in-a-bst/" class="">
+			Kth smallest element in a BST</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/linked-list-cycle/" class="">
+			Linked list cycle</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-consecutive-sequence/" class="">
+			Longest consecutive sequence</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-increasing-subsequence/" class="">
+			Longest increasing subsequence</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-palindromic-substring/" class="">
+			Longest palindromic substring</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-repeating-character-replacement/" class="">
+			Longest repeating character replacement</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-substring-without-repeating-characters/" class="">
+			Longest substring without repeating characters</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/lowest-common-ancestor-of-a-bst/" class="">
+			Lowest common ancestor of a binary search tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-depth-of-binary-tree/" class="">
+			Maximum depth of binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-product-subarray/" class="">
+			Maximum product subarray</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-subarray/" class="">
+			Maximum subarray</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/meeting-rooms/" class="">
+			Meeting rooms</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/meeting-rooms-ii/" class="">
+			Meeting rooms II</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/merge-intervals/" class="">
+			Merge intervals</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/merge-k-sorted-lists/" class="">
+			Merge k sorted lists</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/make-parentheses-valid/" class="">
+			Minimum Remove To Make Parentheses Valid</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/minimum-window-substring/" class="">
+			Minimum window substring</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/missing-number/" class="">
+			Missing number</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/non-overlapping-intervals/" class="">
+			Non overlapping intervals</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-1-bits/" class="">
+			Number of 1 bits</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/" class="">
+			Number of connected components in an undirected graph</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-islands/" class="">
+			Number of islands</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/pacific-atlantic-water-flow/" class="">
+			Pacific-Atlantic water flow</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/palindromic-substrings/" class="">
+			Palindromic substrings</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/product-of-array-except-self/" class="">
+			Product of array except self</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/remove-nth-node-from-end-of-list/" class="">
+			Remove n&#39;th node from end of list</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reorder-list/" class="">
+			Reorder list</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reverse-bits/" class="">
+			Reverse bits</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reverse-linked-list/" class="">
+			Reverse linked list</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/rotate-image/" class="">
+			Rotate image</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/same-tree/" class="">
+			Same tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/search-in-rotated-sorted-array/" class="">
+			Search in rotated sorted array</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/serialize-and-deserialize-binary-tree/" class="">
+			Serialize and deserialize a binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/set-card-game-validate-find/" class="">
+			SET Card Game - Validate Set And Find Set</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/set-matrix-zeroes/" class="">
+			Set matrix zeroes</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/spiral-matrix/" class="">
+			Spiral matrix</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/subtree-of-another-tree/" class="">
+			Subtree of another tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/sum-of-two-integers/" class="">
+			Sum of two integers</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/three-sum/" class="">
+			Three sum</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/top-k-frequent-elements/" class="">
+			Top k frequent elements</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/two-sum/" class="">
+			Two sum</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/unique-paths/" class="">
+			Unique paths</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-anagram/" class="">
+			Valid anagram</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-palindrome/" class="">
+			Valid palindrome</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-parentheses/" class="">
+			Valid parentheses</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/validate-binary-search-tree/" class="">
+			Validate a binary search tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/verify-lexicographic-sort-custom/" class="">
+			Verify Lexicographic Sort With Custom Alphabet</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-break/" class="">
+			Word break</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-search/" class="">
+			Word search</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-search-ii/" class="">
+			Word search II</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/system-design/" class="">
+			System Design</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/external/" class="">
+			External References</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+	<label for="menu-control">
+		<img src="/tech-interview-prep/icons/menu.svg" class="book-icon" alt="Menu" />
+	</label>
+
+	<label for="toc-control">
+		
+	</label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="is-subsequence">Is Subsequence<a class="anchor" href="#is-subsequence">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-2">level-2</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a></div><div>
+				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#two-pointers">two-pointers</a></div></div>
+
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<ul>
+<li><a href="https://leetcode.com/problems/is-subsequence/">LeetCode</a></li>
+</ul>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
+<ul>
+<li>Given two strings <code>s</code> (source) and <code>t</code> (target), return <code>True</code> if <code>t</code> is a subsequence of <code>s</code>, else <code>False</code>.</li>
+<li>Order must be preserved.</li>
+<li>Edge cases:
+<ul>
+<li><code>(&quot;&quot;, &quot;&quot;) -&gt; True</code></li>
+<li><code>(&quot;abcd&quot;, &quot;&quot;) -&gt; True</code></li>
+<li><code>(&quot;&quot;, &quot;a&quot;) -&gt; False</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>(&#34;abcd&#34;, &#34;bd&#34;) -&gt; True
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>(&#34;abcd&#34;, &#34;be&#34;) -&gt; False</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_subsequence</span>(s: str, t: str) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#e6db74">    Returns True if t is a subsequence of s.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#e6db74">    Time:  O(len(s))
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#e6db74">    Space: O(1)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># pointer in t</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#66d9ef">for</span> ch <span style="color:#f92672">in</span> s:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span> len(t) <span style="color:#f92672">and</span> ch <span style="color:#f92672">==</span> t[i]:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> len(t):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    <span style="color:#66d9ef">return</span> i <span style="color:#f92672">==</span> len(t)</span></span></code></pre></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+  
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/tech-interview-prep/problems/invert-binary-tree/" class="flex align-center">
+        <img src="/tech-interview-prep/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Invert a binary tree</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/tech-interview-prep/problems/jump-game/" class="flex align-center">
+        <span>Jump game</span>
+        <img src="/tech-interview-prep/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        <div class="text-center p-0">
+	<ul id="nav-social" class="list-inline">
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://github.com/ppipada" target="_blank" aria-label="github">
+					<i class="fab fa-github fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://www.linkedin.com/in/ppipada/" target="_blank" aria-label="linkedin">
+					<i class="fab fa-linkedin-in fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://letterboxd.com/ppipada/" target="_blank" aria-label="letterboxd">
+					<i class="fab fa-letterboxd fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+					<i class="fas fa-at fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+					<i class="fas fa-rss fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+	</ul>
+</div>
+
+        
+  
+  <div class="book-copyright flex justify-center">
+    <small>Tech Interview Prep - Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</small>
+  </div>
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+ 
+  </main>
+
+  
+	
+	<script src="https://pankajpipada.com/tech-interview-prep/js/copybutton.min.eb1935355b430030f89358fc7901ef972a3973b27cf70b5efba79813702b47ac.js" integrity="sha256-6xk1NVtDADD4k1j8eQHvlyo5c7J89wte&#43;6eYE3ArR6w=" defer></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

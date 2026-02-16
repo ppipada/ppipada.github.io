@@ -8,25 +8,25 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Data Structures: Quick Notes# Complexity summary# Worst case time and space complexity:
-Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n) O(n) O(n) O(n) Stack O(n) O(n) O(1) O(1) O(n) Queue O(n) O(n) O(1) O(1) O(n) Singly-Linked List O(n) O(n) O(1) O(1) O(n) Doubly-Linked List O(n) O(n) O(1) O(1) O(n) Skip List O(n) O(n) O(n) O(n) O(n log(n)) Hash Table N/A O(n) O(n) O(n) O(n) Binary Search Tree O(n) O(n) O(n) O(n) O(n) B-Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) Red-Black Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) AVL Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) Linked List# A linked list is a linear collection of nodes, each pointing to the next node. Singly-linked list: each node points to the next node; last points to null. Doubly-linked list: nodes have pointers to previous and next nodes. Circular-linked list: last node points back to first. Stack# Push / pop LIFO (last in, first out) Queue# Enqueue / dequeue FIFO (first in, first out) Tree# A tree is an undirected, connected, acyclic graph.
+<meta name="description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
+Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/data-structures/quick-notes/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Quick Notes">
-  <meta property="og:description" content="Data Structures: Quick Notes# Complexity summary# Worst case time and space complexity:
-Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n) O(n) O(n) O(n) Stack O(n) O(n) O(1) O(1) O(n) Queue O(n) O(n) O(1) O(1) O(n) Singly-Linked List O(n) O(n) O(1) O(1) O(n) Doubly-Linked List O(n) O(n) O(1) O(1) O(n) Skip List O(n) O(n) O(n) O(n) O(n log(n)) Hash Table N/A O(n) O(n) O(n) O(n) Binary Search Tree O(n) O(n) O(n) O(n) O(n) B-Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) Red-Black Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) AVL Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) Linked List# A linked list is a linear collection of nodes, each pointing to the next node. Singly-linked list: each node points to the next node; last points to null. Doubly-linked list: nodes have pointers to previous and next nodes. Circular-linked list: last node points back to first. Stack# Push / pop LIFO (last in, first out) Queue# Enqueue / dequeue FIFO (first in, first out) Tree# A tree is an undirected, connected, acyclic graph.">
+  <meta property="og:description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
+Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="data-structures">
 
 
   <meta itemprop="name" content="Quick Notes">
-  <meta itemprop="description" content="Data Structures: Quick Notes# Complexity summary# Worst case time and space complexity:
-Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n) O(n) O(n) O(n) Stack O(n) O(n) O(1) O(1) O(n) Queue O(n) O(n) O(1) O(1) O(n) Singly-Linked List O(n) O(n) O(1) O(1) O(n) Doubly-Linked List O(n) O(n) O(1) O(1) O(n) Skip List O(n) O(n) O(n) O(n) O(n log(n)) Hash Table N/A O(n) O(n) O(n) O(n) Binary Search Tree O(n) O(n) O(n) O(n) O(n) B-Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) Red-Black Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) AVL Tree O(log(n)) O(log(n)) O(log(n)) O(log(n)) O(n) Linked List# A linked list is a linear collection of nodes, each pointing to the next node. Singly-linked list: each node points to the next node; last points to null. Doubly-linked list: nodes have pointers to previous and next nodes. Circular-linked list: last node points back to first. Stack# Push / pop LIFO (last in, first out) Queue# Enqueue / dequeue FIFO (first in, first out) Tree# A tree is an undirected, connected, acyclic graph.">
-  <meta itemprop="wordCount" content="290">
+  <meta itemprop="description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
+Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:">
+  <meta itemprop="wordCount" content="607">
 
 <title>Quick Notes | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
@@ -36,7 +36,7 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.92b4fd5b75a796a1d057cbb8630cf783758bba04971ea54989508d6c0fcb881f.js" integrity="sha256-krT9W3WnlqHQV8u4Ywz3g3WLugSXHqVJiVCNbA/LiB8=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.941eed89b65f430a96f666af959158f500e503203c41814278ef61eb71f2af60.js" integrity="sha256-lB7tibZfQwqW9mavlZFY9QDlAyA8QYFCeO9h63Hyr2A=" crossorigin="anonymous"></script>
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
         <script>
@@ -250,8 +250,8 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 
 	
-		<a href="/tech-interview-prep/algorithms/problems/" class="">
-			Problems</a>
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Quick Notes</a>
 	
 
 				</li>
@@ -265,8 +265,8 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 
 	
-		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
-			Quick Notes</a>
+		<a href="/tech-interview-prep/algorithms/problems/" class="">
+			Problems</a>
 	
 
 				</li>
@@ -358,6 +358,27 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 		<a href="/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/" class="">
 			Best time to buy and sell stock</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/bigram-model-next-word-prediction/" class="">
+			Bigram Model - Next Word Prediction</a>
 	
 
 					
@@ -566,6 +587,27 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 
 	
+		<a href="/tech-interview-prep/problems/count-distinct-subsequences/" class="">
+			Count Distinct Subsequences</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/counting-bits/" class="">
 			Counting bits</a>
 	
@@ -631,6 +673,27 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
 			Encode and decode strings</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/eval-precedence-expression/" class="">
+			Evaluate Precedence Expression With &#43; And *</a>
 	
 
 					
@@ -818,8 +881,50 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 
 	
+		<a href="/tech-interview-prep/problems/level-order-binary-tree-insert/" class="">
+			Insert Into Complete Binary Tree (Level-Order)</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/invert-binary-tree/" class="">
 			Invert a binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/string-is-subsequence/" class="">
+			Is Subsequence</a>
 	
 
 					
@@ -1156,6 +1261,27 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 		<a href="/tech-interview-prep/problems/merge-k-sorted-lists/" class="">
 			Merge k sorted lists</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/make-parentheses-valid/" class="">
+			Minimum Remove To Make Parentheses Valid</a>
 	
 
 					
@@ -1532,6 +1658,27 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 
 	
+		<a href="/tech-interview-prep/problems/set-card-game-validate-find/" class="">
+			SET Card Game - Validate Set And Find Set</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/set-matrix-zeroes/" class="">
 			Set matrix zeroes</a>
 	
@@ -1784,6 +1931,27 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
 	
 
 	
+		<a href="/tech-interview-prep/problems/verify-lexicographic-sort-custom/" class="">
+			Verify Lexicographic Sort With Custom Alphabet</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
 		<a href="/tech-interview-prep/problems/word-break/" class="">
 			Word break</a>
 	
@@ -1927,18 +2095,19 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#complexity-summary">Complexity summary</a></li>
+    <li><a href="#complexity-summary-typical">Complexity summary (typical)</a></li>
     <li><a href="#linked-list">Linked List</a></li>
     <li><a href="#stack">Stack</a></li>
-    <li><a href="#queue">Queue</a></li>
-    <li><a href="#tree">Tree</a></li>
+    <li><a href="#queue--deque">Queue / Deque</a></li>
+    <li><a href="#tree-graph-view">Tree (graph view)</a></li>
     <li><a href="#binary-tree">Binary Tree</a></li>
-    <li><a href="#binary-search-tree">Binary Search Tree</a></li>
-    <li><a href="#trie">Trie</a></li>
+    <li><a href="#binary-search-tree-bst">Binary Search Tree (BST)</a></li>
+    <li><a href="#balanced-bsts-avl--red-black">Balanced BSTs (AVL / Red-Black)</a></li>
+    <li><a href="#trie-prefix-tree">Trie (Prefix Tree)</a></li>
+    <li><a href="#heap-priority-queue">Heap (Priority Queue)</a></li>
+    <li><a href="#hash-map-hash-table">Hash Map (Hash Table)</a></li>
     <li><a href="#fenwick-tree-binary-indexed-tree">Fenwick Tree (Binary Indexed Tree)</a></li>
     <li><a href="#segment-tree">Segment Tree</a></li>
-    <li><a href="#heap">Heap</a></li>
-    <li><a href="#hash-map">Hash map</a></li>
     <li><a href="#graph">Graph</a></li>
   </ul>
 </nav>
@@ -1953,162 +2122,305 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
       
       
   <article class="markdown book-article"><h1 id="data-structures-quick-notes">Data Structures: Quick Notes<a class="anchor" href="#data-structures-quick-notes">#</a></h1>
-<h2 id="complexity-summary">Complexity summary<a class="anchor" href="#complexity-summary">#</a></h2>
-<p>Worst case time and space complexity:</p>
-<table>
+<h2 id="complexity-summary-typical">Complexity summary (typical)<a class="anchor" href="#complexity-summary-typical">#</a></h2>
+<blockquote class='book-hint '>
+<p>Many structures have good <strong>average</strong> performance but bad <strong>worst-case</strong>. Interviews often want both.</p>
+</blockquote><table>
   <thead>
       <tr>
           <th>Data Structure</th>
-          <th>Access</th>
-          <th>Search</th>
-          <th>Insertion</th>
-          <th>Deletion</th>
-          <th>Space complexity</th>
+          <th style="text-align: right">Access</th>
+          <th style="text-align: right">Search</th>
+          <th style="text-align: right">Insert</th>
+          <th style="text-align: right">Delete</th>
+          <th style="text-align: right">Space</th>
+          <th>Notes</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Array_data_structure">Array</a></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
+          <td>Array</td>
+          <td style="text-align: right"><code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>insert/delete in middle shifts</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29">Stack</a></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(n)</code></td>
+          <td>Dynamic Array (vector/list)</td>
+          <td style="text-align: right"><code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right">amort. <code>O(1)</code> append</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>occasional resize</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Queue_%28abstract_data_type%29">Queue</a></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(n)</code></td>
+          <td>Stack</td>
+          <td style="text-align: right">top <code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(1)</code></td>
+          <td style="text-align: right"><code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>LIFO</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_lists">Singly-Linked List</a></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(n)</code></td>
+          <td>Queue / Deque</td>
+          <td style="text-align: right">front/back <code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(1)</code></td>
+          <td style="text-align: right"><code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>FIFO / double-ended</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Doubly_linked_list">Doubly-Linked List</a></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(1)</code></td>
-          <td><code>O(n)</code></td>
+          <td>Singly Linked List</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(1)</code>*</td>
+          <td style="text-align: right"><code>O(1)</code>*</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>*if pointer to node/prev is known</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Skip_list">Skip List</a></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n log(n))</code></td>
+          <td>Doubly Linked List</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(1)</code>*</td>
+          <td style="text-align: right"><code>O(1)</code>*</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>easy delete given node</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Hash_table">Hash Table</a></td>
-          <td><code>N/A</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
+          <td>Hash Table / Hash Map</td>
+          <td style="text-align: right">N/A</td>
+          <td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
+          <td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
+          <td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>depends on hashing + resizing</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Binary_search_tree">Binary Search Tree</a></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
-          <td><code>O(n)</code></td>
+          <td>BST (unbalanced)</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>can degrade to linked list</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/B_tree">B-Tree</a></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(n)</code></td>
+          <td>AVL / Red-Black Tree</td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>guaranteed height <code>O(log n)</code></td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/Red-black_tree">Red-Black Tree</a></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(n)</code></td>
+          <td>B-Tree / B+Tree</td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>great for disks/DBs</td>
       </tr>
       <tr>
-          <td><a href="http://en.wikipedia.org/wiki/AVL_tree">AVL Tree</a></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(log(n))</code></td>
-          <td><code>O(n)</code></td>
+          <td>Binary Heap</td>
+          <td style="text-align: right">peek <code>O(1)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(log n)</code></td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>priority queue</td>
+      </tr>
+      <tr>
+          <td>Trie</td>
+          <td style="text-align: right"><code>O(L)</code></td>
+          <td style="text-align: right"><code>O(L)</code></td>
+          <td style="text-align: right"><code>O(L)</code></td>
+          <td style="text-align: right"><code>O(L)</code></td>
+          <td style="text-align: right">large</td>
+          <td><code>L</code> = key length</td>
+      </tr>
+      <tr>
+          <td>Fenwick Tree (BIT)</td>
+          <td style="text-align: right">N/A</td>
+          <td style="text-align: right">range sum <code>O(log n)</code></td>
+          <td style="text-align: right">update <code>O(log n)</code></td>
+          <td style="text-align: right">N/A</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>prefix sums</td>
+      </tr>
+      <tr>
+          <td>Segment Tree</td>
+          <td style="text-align: right">N/A</td>
+          <td style="text-align: right">query <code>O(log n)</code></td>
+          <td style="text-align: right">update <code>O(log n)</code></td>
+          <td style="text-align: right">N/A</td>
+          <td style="text-align: right"><code>O(n)</code></td>
+          <td>flexible aggregates</td>
       </tr>
   </tbody>
 </table>
 <h2 id="linked-list">Linked List<a class="anchor" href="#linked-list">#</a></h2>
 <ul>
-<li>A linked list is a linear collection of nodes, each pointing to the next node.</li>
-<li>Singly-linked list: each node points to the next node; last points to null.</li>
-<li>Doubly-linked list: nodes have pointers to previous and next nodes.</li>
-<li>Circular-linked list: last node points back to first.</li>
+<li>Linear collection of nodes; each node points to next (and possibly prev).</li>
+<li>Good for:
+<ul>
+<li>frequent inserts/deletes when you already have a node reference,</li>
+<li>building other structures (LRU list).</li>
+</ul>
+</li>
+<li>Bad for:
+<ul>
+<li>random access,</li>
+<li>cache locality.</li>
+</ul>
+</li>
+</ul>
+<p>Variants:</p>
+<ul>
+<li>Singly-linked: <code>next</code></li>
+<li>Doubly-linked: <code>prev</code>, <code>next</code></li>
+<li>Circular: last points to first</li>
 </ul>
 <h2 id="stack">Stack<a class="anchor" href="#stack">#</a></h2>
 <ul>
-<li>Push / pop</li>
+<li>Operations: <code>push</code>, <code>pop</code>, <code>peek</code></li>
 <li>LIFO (last in, first out)</li>
-</ul>
-<h2 id="queue">Queue<a class="anchor" href="#queue">#</a></h2>
+<li>Use cases:
 <ul>
-<li>Enqueue / dequeue</li>
-<li>FIFO (first in, first out)</li>
+<li>recursion simulation, DFS</li>
+<li>parentheses matching</li>
+<li>monotonic stack (next greater element, histogram)</li>
 </ul>
-<h2 id="tree">Tree<a class="anchor" href="#tree">#</a></h2>
+</li>
+</ul>
+<h2 id="queue--deque">Queue / Deque<a class="anchor" href="#queue--deque">#</a></h2>
+<ul>
+<li>Queue: enqueue at back, dequeue at front (FIFO).</li>
+<li>Deque: insert/delete at both ends.</li>
+<li>Use cases:
+<ul>
+<li>BFS (queue)</li>
+<li>sliding window max (deque)</li>
+</ul>
+</li>
+</ul>
+<h2 id="tree-graph-view">Tree (graph view)<a class="anchor" href="#tree-graph-view">#</a></h2>
 <p>A tree is an undirected, connected, acyclic graph.</p>
+<ul>
+<li>For <code>n</code> nodes: exactly <code>n-1</code> edges.</li>
+<li>Unique simple path between any two nodes.</li>
+</ul>
 <h2 id="binary-tree">Binary Tree<a class="anchor" href="#binary-tree">#</a></h2>
 <ul>
-<li>Node has at most two children: left and right</li>
-<li>Full tree: every node has 0 or 2 children</li>
-<li>Perfect binary tree: all interior nodes have two children and all leaves have the same depth</li>
-<li>Complete tree: all levels full except possibly last; last is left-packed</li>
-</ul>
-<h2 id="binary-search-tree">Binary Search Tree<a class="anchor" href="#binary-search-tree">#</a></h2>
-<p>A BST maintains: left subtree values ≤ node ≤ right subtree values.</p>
-<p><img src="/tech-interview-prep/data-structures/images/bst-search.svg" alt="BST search" title="BST search"/></p>
-<h2 id="trie">Trie<a class="anchor" href="#trie">#</a></h2>
-<p>A trie (prefix tree) stores a set of strings by shared prefixes.</p>
-<p><img src="/tech-interview-prep/data-structures/images/trie-example.svg" alt="Trie" title="Trie"/></p>
-<h2 id="fenwick-tree-binary-indexed-tree">Fenwick Tree (Binary Indexed Tree)<a class="anchor" href="#fenwick-tree-binary-indexed-tree">#</a></h2>
-<p>Range sum / update in <code>O(log n)</code>.</p>
-<p><img src="/tech-interview-prep/data-structures/images/fenwick-tree-demo.gif" alt="Fenwick tree" title="Fenwick tree"/></p>
-<h2 id="segment-tree">Segment Tree<a class="anchor" href="#segment-tree">#</a></h2>
-<p>Range queries / updates in <code>O(log n)</code>.</p>
-<p><img src="/tech-interview-prep/data-structures/images/segment-tree.png" alt="Segment tree" title="Segment tree"/></p>
-<h2 id="heap">Heap<a class="anchor" href="#heap">#</a></h2>
+<li>Each node has ≤ 2 children: left/right.</li>
+<li>Common types:
 <ul>
-<li>Max heap / min heap</li>
-<li>Insert / remove in <code>O(log n)</code>, peek in <code>O(1)</code></li>
+<li><strong>Full</strong>: each node has 0 or 2 children</li>
+<li><strong>Perfect</strong>: all internal nodes have 2 children; all leaves same depth</li>
+<li><strong>Complete</strong>: all levels filled except possibly last; last is left-packed</li>
+</ul>
+</li>
+</ul>
+<h2 id="binary-search-tree-bst">Binary Search Tree (BST)<a class="anchor" href="#binary-search-tree-bst">#</a></h2>
+<p>Invariant:</p>
+<ul>
+<li>left subtree values ≤ node ≤ right subtree values (or strict <code>&lt;</code> depending on definition)</li>
+</ul>
+<p>Operations are <code>O(h)</code> where <code>h</code> is height.</p>
+<ul>
+<li>Balanced BST: <code>h = O(log n)</code></li>
+<li>Worst case: <code>h = O(n)</code> (sorted insertion)</li>
+</ul>
+<p><img src="/tech-interview-prep/data-structures/images/bst-search.svg" alt="BST search" title="BST search"/></p>
+<h2 id="balanced-bsts-avl--red-black">Balanced BSTs (AVL / Red-Black)<a class="anchor" href="#balanced-bsts-avl--red-black">#</a></h2>
+<ul>
+<li>Guarantee <code>O(log n)</code> search/insert/delete.</li>
+<li>AVL: stricter balance (faster lookups, more rotations).</li>
+<li>Red-Black: looser balance (fewer rotations; widely used).</li>
+</ul>
+<h2 id="trie-prefix-tree">Trie (Prefix Tree)<a class="anchor" href="#trie-prefix-tree">#</a></h2>
+<ul>
+<li>Stores strings by shared prefixes.</li>
+<li>Search/insert/delete: <code>O(L)</code> where <code>L</code> is key length.</li>
+<li>Great for:
+<ul>
+<li>prefix queries (“startsWith”),</li>
+<li>autocomplete,</li>
+<li>dictionary word checks.</li>
+</ul>
+</li>
+<li>Space heavy: optimize with compact tries / ternary search trees.</li>
+</ul>
+<p><img src="/tech-interview-prep/data-structures/images/trie-example.svg" alt="Trie" title="Trie"/></p>
+<h2 id="heap-priority-queue">Heap (Priority Queue)<a class="anchor" href="#heap-priority-queue">#</a></h2>
+<ul>
+<li>Min-heap / max-heap</li>
+<li>Operations:
+<ul>
+<li><code>peek</code>: <code>O(1)</code></li>
+<li><code>push</code>: <code>O(log n)</code></li>
+<li><code>pop</code>: <code>O(log n)</code></li>
+</ul>
+</li>
+<li>Use cases:
+<ul>
+<li>Dijkstra / Prim</li>
+<li>scheduling, top-k</li>
+<li>streaming median (two heaps)</li>
+</ul>
+</li>
 </ul>
 <p><img src="/tech-interview-prep/data-structures/images/max-heap.svg" alt="Max heap" title="Max heap"/></p>
-<h2 id="hash-map">Hash map<a class="anchor" href="#hash-map">#</a></h2>
-<p>Collision resolution:</p>
+<h2 id="hash-map-hash-table">Hash Map (Hash Table)<a class="anchor" href="#hash-map-hash-table">#</a></h2>
+<p>Average <code>O(1)</code> search/insert/delete; worst <code>O(n)</code> (pathological collisions). Collision resolution:</p>
 <ul>
-<li>Separate chaining</li>
-<li>Open addressing</li>
+<li>Separate chaining (buckets are lists/trees)</li>
+<li>Open addressing (linear/quadratic probing, double hashing)</li>
 </ul>
-<p><img src="/tech-interview-prep/data-structures/images/hash-table-separate-chianing.svg" alt="Hash table" title="Hash table"/></p>
+<p>Pitfalls:</p>
+<ul>
+<li>need good hash function,</li>
+<li>load factor + resizing affects performance,</li>
+<li>iteration order usually not sorted.</li>
+</ul>
+<p><img src="/tech-interview-prep/images/hash-table-separate-chaining.svg" alt="Hash table" title="Hash table"/></p>
+<h2 id="fenwick-tree-binary-indexed-tree">Fenwick Tree (Binary Indexed Tree)<a class="anchor" href="#fenwick-tree-binary-indexed-tree">#</a></h2>
+<p>Supports:</p>
+<ul>
+<li>point update</li>
+<li>prefix sum query Both in <code>O(log n)</code>.</li>
+</ul>
+<p>Common trick:</p>
+<ul>
+<li>range sum <code>[l..r] = prefix(r) - prefix(l-1)</code></li>
+</ul>
+<p><img src="/tech-interview-prep/data-structures/images/fenwick-tree-demo.gif" alt="Fenwick tree" title="Fenwick tree"/></p>
+<ul>
+<li>Suggested reading: <a href="https://en.wikipedia.org/wiki/Fenwick_tree">Wiki</a></li>
+</ul>
+<h2 id="segment-tree">Segment Tree<a class="anchor" href="#segment-tree">#</a></h2>
+<p>Supports range queries + point/range updates in <code>O(log n)</code>.</p>
+<ul>
+<li>More flexible than Fenwick (min/max/gcd, lazy propagation for range updates).</li>
+<li>Typical memory: <code>~4n</code>.</li>
+</ul>
+<p><img src="/tech-interview-prep/data-structures/images/segment-tree.png" alt="Segment tree" title="Segment tree"/></p>
+<ul>
+<li>Suggested reading: <a href="https://en.wikipedia.org/wiki/Segment_tree">Wiki</a></li>
+</ul>
 <h2 id="graph">Graph<a class="anchor" href="#graph">#</a></h2>
+<p>Representations:</p>
+<ul>
+<li>Adjacency list: good for sparse graphs (<code>O(V+E)</code> memory)</li>
+<li>Adjacency matrix: good for dense graphs (<code>O(V^2)</code> memory)</li>
+</ul>
 <p><img src="/tech-interview-prep/data-structures/images/directed-graph.svg" alt="Directed graph" title="Directed graph"/></p>
 </article>
  
@@ -2228,18 +2540,19 @@ Data Structure Access Search Insertion Deletion Space complexity Array O(1) O(n)
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#complexity-summary">Complexity summary</a></li>
+    <li><a href="#complexity-summary-typical">Complexity summary (typical)</a></li>
     <li><a href="#linked-list">Linked List</a></li>
     <li><a href="#stack">Stack</a></li>
-    <li><a href="#queue">Queue</a></li>
-    <li><a href="#tree">Tree</a></li>
+    <li><a href="#queue--deque">Queue / Deque</a></li>
+    <li><a href="#tree-graph-view">Tree (graph view)</a></li>
     <li><a href="#binary-tree">Binary Tree</a></li>
-    <li><a href="#binary-search-tree">Binary Search Tree</a></li>
-    <li><a href="#trie">Trie</a></li>
+    <li><a href="#binary-search-tree-bst">Binary Search Tree (BST)</a></li>
+    <li><a href="#balanced-bsts-avl--red-black">Balanced BSTs (AVL / Red-Black)</a></li>
+    <li><a href="#trie-prefix-tree">Trie (Prefix Tree)</a></li>
+    <li><a href="#heap-priority-queue">Heap (Priority Queue)</a></li>
+    <li><a href="#hash-map-hash-table">Hash Map (Hash Table)</a></li>
     <li><a href="#fenwick-tree-binary-indexed-tree">Fenwick Tree (Binary Indexed Tree)</a></li>
     <li><a href="#segment-tree">Segment Tree</a></li>
-    <li><a href="#heap">Heap</a></li>
-    <li><a href="#hash-map">Hash map</a></li>
     <li><a href="#graph">Graph</a></li>
   </ul>
 </nav>

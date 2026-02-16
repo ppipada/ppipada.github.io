@@ -20,11 +20,11 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/algorithms/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/algorithms/quick-notes/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/algorithms/problems/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/</loc>
-  </url><url>
-    <loc>https://pankajpipada.com/tech-interview-prep/algorithms/quick-notes/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/system-design/</loc>
   </url><url>
@@ -43,6 +43,10 @@
     <loc>https://pankajpipada.com/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/algos/bfs/</loc>
+  </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/ptrns/bfs/</loc>
+  </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/bigram-model-next-word-prediction/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/binary-tree-level-order-traversal/</loc>
   </url><url>
@@ -66,6 +70,8 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/contains-duplicate/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/count-distinct-subsequences/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/counting-bits/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/course-schedule/</loc>
@@ -80,7 +86,11 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/algos/dynamic-programming/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/ptrns/dynamic-programming/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/encode-and-decode-strings/</loc>
+  </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/eval-precedence-expression/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/find-median-from-data-stream/</loc>
   </url><url>
@@ -96,6 +106,8 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/ds/hash-table/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/ptrns/hashing/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/ds/heap/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/house-robber/</loc>
@@ -106,9 +118,13 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/insert-interval/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/level-order-binary-tree-insert/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/ptrns/intervals/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/invert-binary-tree/</loc>
+  </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/string-is-subsequence/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/jump-game/</loc>
   </url><url>
@@ -144,6 +160,8 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/lvls/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/ptrns/mark-and-sweep/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/maximum-depth-of-binary-tree/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/maximum-product-subarray/</loc>
@@ -157,6 +175,8 @@
     <loc>https://pankajpipada.com/tech-interview-prep/problems/merge-intervals/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/merge-k-sorted-lists/</loc>
+  </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/make-parentheses-valid/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/minimum-window-substring/</loc>
   </url><url>
@@ -194,6 +214,8 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/serialize-and-deserialize-binary-tree/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/set-card-game-validate-find/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/set-matrix-zeroes/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/ptrns/sliding-window/</loc>
@@ -218,6 +240,8 @@
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/two-sum/</loc>
   </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/ptrns/two-pointers/</loc>
+  </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/ptrns/union-find/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/unique-paths/</loc>
@@ -229,6 +253,8 @@
     <loc>https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/validate-binary-search-tree/</loc>
+  </url><url>
+    <loc>https://pankajpipada.com/tech-interview-prep/problems/verify-lexicographic-sort-custom/</loc>
   </url><url>
     <loc>https://pankajpipada.com/tech-interview-prep/problems/word-break/</loc>
   </url><url>

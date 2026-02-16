@@ -1,0 +1,2774 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/ptrns/hashing/">
+  <meta property="og:site_name" content="Tech Interview Prep">
+  <meta property="og:title" content="Hashing">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Hashing">
+
+<title>Hashing | Tech Interview Prep</title>
+<link rel="icon" href="/tech-interview-prep/favicon.ico" >
+<link rel="manifest" href="/tech-interview-prep/manifest.json">
+<link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/ptrns/hashing/">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+
+
+  <script defer src="/tech-interview-prep/fuse.min.js"></script>
+  <script defer src="/tech-interview-prep/en.search.min.941eed89b65f430a96f666af959158f500e503203c41814278ef61eb71f2af60.js" integrity="sha256-lB7tibZfQwqW9mavlZFY9QDlAyA8QYFCeO9h63Hyr2A=" crossorigin="anonymous"></script>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PVSXVYRTKF');
+        </script>
+
+<link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/ptrns/hashing/index.xml" title="Tech Interview Prep" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-term book-type-ptrns">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h4 class="scramblings-brand"><a
+		class="flex align-center"
+		href="
+			https://pankajpipada.com/
+		"
+	><img src="/tech-interview-prep/icon-32x32.png" alt="Logo" /><span class="text-sm">Scramblings</span>
+	</a>
+</h4>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+<ul>
+	<li>
+		<a href="/tech-interview-prep/">
+			<span>Tech Interview Prep</span>
+		</a>
+	</li>
+</ul>
+
+
+
+
+
+
+
+  
+
+
+
+  
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/levels/problems/" class="">
+			Path: Levels</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/levels/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/patterns/problems/" class="">
+			Path: Patterns</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/patterns/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/quick-notes/" class="">
+			Path: Data Structures</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/quick-notes/" class="">
+			Quick Notes</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/data-structures/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Path: Algorithms</a>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/quick-notes/" class="">
+			Quick Notes</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/algorithms/problems/" class="">
+			Problems</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<input type="checkbox" id="section-3c802e3927c98f404195e940fc79e4bc" class="toggle"  />
+		<label for="section-3c802e3927c98f404195e940fc79e4bc" class="flex">
+			<a
+				
+					href="/tech-interview-prep/problems/"
+				
+				class=""
+			>
+				All Problems</a>
+			<img
+				src="/tech-interview-prep/icons/chevron-right.svg"
+				class="book-icon"
+				alt="Expand"
+			/>
+		</label>
+	
+
+					
+	
+	<ul>
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/add-and-search-word/" class="">
+			Add and search word - data structure design</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/alien-dictionary/" class="">
+			Alien dictionary</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/" class="">
+			Best time to buy and sell stock</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/bigram-model-next-word-prediction/" class="">
+			Bigram Model - Next Word Prediction</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/binary-tree-level-order-traversal/" class="">
+			Binary tree level order traversal</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/binary-tree-maximum-path-sum/" class="">
+			Binary tree maximum path sum</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/climbing-stairs/" class="">
+			Climbing stairs</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/clone-graph/" class="">
+			Clone graph</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/coin-change/" class="">
+			Coin change</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/combination-sum-iv/" class="">
+			Combination sum IV</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" class="">
+			Construct binary tree from preorder and inorder traversal</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/container-with-most-water/" class="">
+			Container with most water</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/contains-duplicate/" class="">
+			Contains duplicate</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/count-distinct-subsequences/" class="">
+			Count Distinct Subsequences</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/counting-bits/" class="">
+			Counting bits</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/course-schedule/" class="">
+			Course schedule</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/decode-ways/" class="">
+			Decode ways</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/encode-and-decode-strings/" class="">
+			Encode and decode strings</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/eval-precedence-expression/" class="">
+			Evaluate Precedence Expression With &#43; And *</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/find-median-from-data-stream/" class="">
+			Find median from data stream</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/" class="">
+			Find minimum in rotated sorted array</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/graph-valid-tree/" class="">
+			Graph valid tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/group-anagrams/" class="">
+			Group anagrams</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/house-robber/" class="">
+			House robber</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/house-robber-ii/" class="">
+			House robber II</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/implement-trie-prefix-tree/" class="">
+			Implement trie (prefix tree)</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/insert-interval/" class="">
+			Insert interval</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/level-order-binary-tree-insert/" class="">
+			Insert Into Complete Binary Tree (Level-Order)</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/invert-binary-tree/" class="">
+			Invert a binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/string-is-subsequence/" class="">
+			Is Subsequence</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/jump-game/" class="">
+			Jump game</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/kth-smallest-element-in-a-bst/" class="">
+			Kth smallest element in a BST</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/linked-list-cycle/" class="">
+			Linked list cycle</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-consecutive-sequence/" class="">
+			Longest consecutive sequence</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-increasing-subsequence/" class="">
+			Longest increasing subsequence</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-palindromic-substring/" class="">
+			Longest palindromic substring</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-repeating-character-replacement/" class="">
+			Longest repeating character replacement</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/longest-substring-without-repeating-characters/" class="">
+			Longest substring without repeating characters</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/lowest-common-ancestor-of-a-bst/" class="">
+			Lowest common ancestor of a binary search tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-depth-of-binary-tree/" class="">
+			Maximum depth of binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-product-subarray/" class="">
+			Maximum product subarray</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/maximum-subarray/" class="">
+			Maximum subarray</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/meeting-rooms/" class="">
+			Meeting rooms</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/meeting-rooms-ii/" class="">
+			Meeting rooms II</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/merge-intervals/" class="">
+			Merge intervals</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/merge-k-sorted-lists/" class="">
+			Merge k sorted lists</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/make-parentheses-valid/" class="">
+			Minimum Remove To Make Parentheses Valid</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/minimum-window-substring/" class="">
+			Minimum window substring</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/missing-number/" class="">
+			Missing number</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/non-overlapping-intervals/" class="">
+			Non overlapping intervals</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-1-bits/" class="">
+			Number of 1 bits</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/" class="">
+			Number of connected components in an undirected graph</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/number-of-islands/" class="">
+			Number of islands</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/pacific-atlantic-water-flow/" class="">
+			Pacific-Atlantic water flow</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/palindromic-substrings/" class="">
+			Palindromic substrings</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/product-of-array-except-self/" class="">
+			Product of array except self</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/remove-nth-node-from-end-of-list/" class="">
+			Remove n&#39;th node from end of list</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reorder-list/" class="">
+			Reorder list</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reverse-bits/" class="">
+			Reverse bits</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/reverse-linked-list/" class="">
+			Reverse linked list</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/rotate-image/" class="">
+			Rotate image</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/same-tree/" class="">
+			Same tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/search-in-rotated-sorted-array/" class="">
+			Search in rotated sorted array</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/serialize-and-deserialize-binary-tree/" class="">
+			Serialize and deserialize a binary tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/set-card-game-validate-find/" class="">
+			SET Card Game - Validate Set And Find Set</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/set-matrix-zeroes/" class="">
+			Set matrix zeroes</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/spiral-matrix/" class="">
+			Spiral matrix</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/subtree-of-another-tree/" class="">
+			Subtree of another tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/sum-of-two-integers/" class="">
+			Sum of two integers</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/three-sum/" class="">
+			Three sum</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/top-k-frequent-elements/" class="">
+			Top k frequent elements</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/two-sum/" class="">
+			Two sum</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/unique-paths/" class="">
+			Unique paths</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-anagram/" class="">
+			Valid anagram</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-palindrome/" class="">
+			Valid palindrome</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/valid-parentheses/" class="">
+			Valid parentheses</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/validate-binary-search-tree/" class="">
+			Validate a binary search tree</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/verify-lexicographic-sort-custom/" class="">
+			Verify Lexicographic Sort With Custom Alphabet</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-break/" class="">
+			Word break</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-search/" class="">
+			Word search</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/problems/word-search-ii/" class="">
+			Word search II</a>
+	
+
+					
+	
+	<ul>
+		
+	</ul>
+
+				</li>
+			
+		
+	</ul>
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/system-design/" class="">
+			System Design</a>
+	
+
+				</li>
+			
+		
+			
+				<li>
+					
+	
+	
+	
+
+	
+		<a href="/tech-interview-prep/external/" class="">
+			External References</a>
+	
+
+				</li>
+			
+		
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+	<label for="menu-control">
+		<img src="/tech-interview-prep/icons/menu.svg" class="book-icon" alt="Menu" />
+	</label>
+
+	<label for="toc-control">
+		
+	</label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/bigram-model-next-word-prediction/">Bigram Model - Next Word Prediction</a>
+    </h2>
+    
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/hash-table/">Hash-Table</a>, 
+      <a href="/tech-interview-prep/ds/string/">String</a>, 
+      <a href="/tech-interview-prep/ds/array/">Array</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ptrns/hashing/">Hashing</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h1 id="bigram-model---next-word-prediction">Bigram Model - Next Word Prediction<a class="anchor" href="#bigram-model---next-word-prediction">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#hash-table">hash-table</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a></div><div>
+				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#hashing">hashing</a></div></div>
+
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<ul>
+<li>This is a standard “bigram / Markov chain” exercise (not a single canonical LeetCode).</li>
+</ul>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
+<ul>
+<li>Input: a list of sentences, where each sentence is a list of words/tokens.</li>
+<li>Build a model that counts which words follow a given word (a bigram frequency table).</li>
+<li>Query: given a word <code>w</code>, predict a next word:
+<ul>
+<li>Option A (deterministic): return the most frequent next word</li>
+<li>Option B (probabilistic): sample a next word proportional to its observed frequency</li>
+</ul>
+</li>
+<li>If <code>w</code> was never seen (or has no following word), return an empty string.</li>
+</ul>
+<h2 id="example">Example<a class="anchor" href="#example">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Training data:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  [&#34;I&#34;, &#34;am&#34;, &#34;sam&#34;],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  [&#34;sam&#34;, &#34;i&#34;, &#34;am&#34;],
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  [&#34;i&#34;, &#34;like&#34;, &#34;green&#34;, &#34;eggs&#34;, &#34;and&#34;, &#34;ham&#34;]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>Possible:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>most_common_next(&#34;i&#34;) -&gt; &#34;am&#34;</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> DefaultDict, Dict, List, Optional
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>BigramModel <span style="color:#f92672">=</span> DefaultDict[str, Counter]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train_bigrams</span>(sentences: List[List[str]]) <span style="color:#f92672">-&gt;</span> BigramModel:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#e6db74">    Build next-word counts:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#e6db74">      model[w][next_w] += 1
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#e6db74">    Time:  O(total tokens)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#e6db74">    Space: O(number of observed bigrams)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    model: BigramModel <span style="color:#f92672">=</span> defaultdict(Counter)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    <span style="color:#66d9ef">for</span> sent <span style="color:#f92672">in</span> sentences <span style="color:#f92672">or</span> []:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> sent:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(sent) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>            w, nxt <span style="color:#f92672">=</span> sent[i], sent[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>            model[w][nxt] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>    <span style="color:#66d9ef">return</span> model
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">most_common_next</span>(w: str, model: BigramModel) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#e6db74">    Return the most frequent next token after w, else &#34;&#34;.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> w <span style="color:#f92672">or</span> w <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> model <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> model[w]:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>    <span style="color:#75715e"># Counter.most_common(1) returns [(word, count)]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>    <span style="color:#66d9ef">return</span> model[w]<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sample_next</span>(w: str, model: BigramModel, rng: Optional[random<span style="color:#f92672">.</span>Random] <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span><span style="color:#e6db74">    Sample next token proportional to observed frequencies, else &#34;&#34;.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> w <span style="color:#f92672">or</span> w <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> model <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> model[w]:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span>    rng <span style="color:#f92672">=</span> rng <span style="color:#f92672">or</span> random<span style="color:#f92672">.</span>Random()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span>    counter <span style="color:#f92672">=</span> model[w]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span>    total <span style="color:#f92672">=</span> sum(counter<span style="color:#f92672">.</span>values())
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span>    r <span style="color:#f92672">=</span> rng<span style="color:#f92672">.</span>randrange(total)  <span style="color:#75715e"># integer in [0, total-1]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span>    cum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span>    <span style="color:#66d9ef">for</span> nxt, c <span style="color:#f92672">in</span> counter<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>        cum <span style="color:#f92672">+=</span> c
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>        <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&lt;</span> cum:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>            <span style="color:#66d9ef">return</span> nxt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>  <span style="color:#75715e"># defensive; shouldn&#39;t happen</span></span></span></code></pre></div></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/set-card-game-validate-find/">SET Card Game - Validate Set And Find Set</a>
+    </h2>
+    
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/array/">Array</a>, 
+      <a href="/tech-interview-prep/ds/hash-table/">Hash-Table</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ptrns/hashing/">Hashing</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h1 id="set-card-game---validate-set-and-find-set">SET Card Game - Validate Set And Find Set<a class="anchor" href="#set-card-game---validate-set-and-find-set">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-4">level-4</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#array">array</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#hash-table">hash-table</a></div><div>
+				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#hashing">hashing</a></div></div>
+
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<ul>
+<li>No single canonical LeetCode problem; this is a common interview / game-math problem.</li>
+</ul>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
+<ul>
+<li>Each card has <code>k</code> attributes (in the classic game, <code>k = 4</code>), each taking one of 3 values, typically encoded as
+<code>0/1/2</code>.</li>
+<li>Three cards form a valid set if <strong>for every attribute</strong>:
+<ul>
+<li>the values are <strong>all the same</strong>, OR</li>
+<li>the values are <strong>all different</strong></li>
+</ul>
+</li>
+<li>Tasks:
+<ol>
+<li><code>is_set(cards3) -&gt; bool</code>: given exactly 3 cards, return whether they form a set</li>
+<li><code>find_set(cards) -&gt; list[card]</code>: given a list of cards, return any one set (3 cards), else <code>[]</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>(1,0,1,2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>(1,2,0,2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>(1,1,2,1)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>-&gt; True</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>(1,0,1,2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>(1,0,1,2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>(1,0,1,2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>-&gt; True  (all attributes all same)</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List, Sequence, Tuple
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>Card <span style="color:#f92672">=</span> Tuple[int, <span style="color:#f92672">...</span>]  <span style="color:#75715e"># e.g. (1,0,1,2)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_set</span>(cards: Sequence[Card]) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#e6db74">    Check whether exactly 3 cards form a valid Set.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#e6db74">    Condition per attribute i:
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#e6db74">      len({c1[i], c2[i], c3[i]}) in {1, 3}
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#e6db74">    Time:  O(k)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#e6db74">    Space: O(1)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#66d9ef">if</span> len(cards) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    a, b, c <span style="color:#f92672">=</span> cards
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    <span style="color:#66d9ef">if</span> len(a) <span style="color:#f92672">!=</span> len(b) <span style="color:#f92672">or</span> len(b) <span style="color:#f92672">!=</span> len(c):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>    k <span style="color:#f92672">=</span> len(a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>        vals <span style="color:#f92672">=</span> {a[i], b[i], c[i]}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>        <span style="color:#66d9ef">if</span> len(vals) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_third_value_mod3</span>(x: int, y: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span><span style="color:#e6db74">    Values are in {0,1,2}.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#e6db74">    If x==y then third must be same.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#e6db74">    Else third is the remaining value: 0+1+2 - x - y
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>    <span style="color:#66d9ef">return</span> x <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> y <span style="color:#66d9ef">else</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> x <span style="color:#f92672">-</span> y)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_any_set</span>(cards: List[Card]) <span style="color:#f92672">-&gt;</span> List[Card]:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span><span style="color:#e6db74">    Find any set among the given cards (returns the 3 cards), else [].
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span><span style="color:#e6db74">    Efficient approach (classic SET trick):
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span><span style="color:#e6db74">    For any two cards A and B, the required third card C is uniquely determined
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span><span style="color:#e6db74">    attribute-wise (in mod 3 encoding).
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span><span style="color:#e6db74">    Handles duplicates by using counts.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span><span style="color:#e6db74">    Time:  O(n^2 * k)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span><span style="color:#e6db74">    Space: O(n)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>    n <span style="color:#f92672">=</span> len(cards)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>        <span style="color:#66d9ef">return</span> []
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span>    counts <span style="color:#f92672">=</span> Counter(cards)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span>    unique <span style="color:#f92672">=</span> list(counts<span style="color:#f92672">.</span>keys())
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span>    k <span style="color:#f92672">=</span> len(unique[<span style="color:#ae81ff">0</span>]) <span style="color:#66d9ef">if</span> unique <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span>    unique_set <span style="color:#f92672">=</span> set(unique)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>    <span style="color:#75715e"># Iterate over pairs of unique cards (still fine; counts handle duplicates)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(unique)):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i, len(unique)):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span><span>            a <span style="color:#f92672">=</span> unique[i]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span><span>            b <span style="color:#f92672">=</span> unique[j]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65</span><span>            need <span style="color:#f92672">=</span> tuple(_third_value_mod3(a[d], b[d]) <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> range(k))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66</span><span>            <span style="color:#66d9ef">if</span> need <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> unique_set:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67</span><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69</span><span>            <span style="color:#75715e"># Verify availability of 3 cards considering duplicates</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70</span><span>            <span style="color:#75715e"># Build multiset requirement</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71</span><span>            req <span style="color:#f92672">=</span> Counter([a, b, need])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72</span><span>            ok <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73</span><span>            <span style="color:#66d9ef">for</span> card, r <span style="color:#f92672">in</span> req<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74</span><span>                <span style="color:#66d9ef">if</span> counts[card] <span style="color:#f92672">&lt;</span> r:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75</span><span>                    ok <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76</span><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77</span><span>            <span style="color:#66d9ef">if</span> ok <span style="color:#f92672">and</span> is_set([a, b, need]):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78</span><span>                <span style="color:#66d9ef">return</span> [a, b, need]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80</span><span>    <span style="color:#66d9ef">return</span> []</span></span></code></pre></div></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/tech-interview-prep/problems/verify-lexicographic-sort-custom/">Verify Lexicographic Sort With Custom Alphabet</a>
+    </h2>
+    
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ds/string/">String</a>, 
+      <a href="/tech-interview-prep/ds/hash-table/">Hash-Table</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/lvls/level-3/">Level-3</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tech-interview-prep/ptrns/hashing/">Hashing</a>
+  </div>
+  
+
+
+    <div class="book-post-content"><h1 id="verify-lexicographic-sort-with-custom-alphabet">Verify Lexicographic Sort With Custom Alphabet<a class="anchor" href="#verify-lexicographic-sort-with-custom-alphabet">#</a></h1>
+<div style="margin: .5rem 0 1rem 0;"><div>
+				<strong>Levels:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/levels/problems/#level-3">level-3</a></div><div>
+				<strong>Data structures:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#string">string</a>,&ensp;<a href="https://pankajpipada.com/tech-interview-prep/data-structures/problems/#hash-table">hash-table</a></div><div>
+				<strong>Patterns:&ensp;</strong><a href="https://pankajpipada.com/tech-interview-prep/patterns/problems/#hashing">hashing</a></div></div>
+
+<h2 id="practice-link">Practice Link<a class="anchor" href="#practice-link">#</a></h2>
+<p><a href="https://leetcode.com/problems/verifying-an-alien-dictionary/">LeetCode</a></p>
+<h2 id="description">Description<a class="anchor" href="#description">#</a></h2>
+<ul>
+<li>You are given:
+<ul>
+<li><code>words</code>: a list of lowercase words.</li>
+<li><code>order</code>: a custom ordering of characters (e.g., <code>['c','b','a','t', ...]</code>).</li>
+</ul>
+</li>
+<li>Return <code>True</code> if <code>words</code> is sorted lexicographically according to <code>order</code>, else return <code>False</code>.</li>
+<li>Lexicographic rules:
+<ul>
+<li>Compare characters left-to-right using the custom order.</li>
+<li>If all characters match up to the shorter length, the shorter word must come first.</li>
+</ul>
+</li>
+</ul>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>words = [&#34;cat&#34;, &#34;bat&#34;, &#34;tab&#34;]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>order = [&#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;t&#39;]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Output: True</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Input:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>words = [&#34;cat&#34;, &#34;tab&#34;, &#34;car&#34;]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>order = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,...,&#39;z&#39;]   (normal alphabet)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Output: False</span></span></code></pre></div><h2 id="python-solution">Python Solution<a class="anchor" href="#python-solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Dict, List
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_sorted_alien</span>(words: List[str], order: List[str]) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#e6db74">    Returns True if `words` is sorted under the custom alphabet `order`.
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#e6db74">    Time:  O(total characters across comparisons) ~= O(sum(len(words[i])))
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#e6db74">    Space: O(|alphabet|)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> words:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    rank: Dict[str, int] <span style="color:#f92672">=</span> {ch: i <span style="color:#66d9ef">for</span> i, ch <span style="color:#f92672">in</span> enumerate(order)}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">in_correct_order</span>(a: str, b: str) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        <span style="color:#75715e"># Compare a vs b according to rank</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>        i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>        n, m <span style="color:#f92672">=</span> len(a), len(b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>        <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> i <span style="color:#f92672">&lt;</span> m:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>            ca, cb <span style="color:#f92672">=</span> a[i], b[i]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>            <span style="color:#66d9ef">if</span> ca <span style="color:#f92672">!=</span> cb:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>                <span style="color:#66d9ef">return</span> rank[ca] <span style="color:#f92672">&lt;</span> rank[cb]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>        <span style="color:#75715e"># All matched up to min length: shorter must come first</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>        <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&lt;=</span> m
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(words) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> in_correct_order(words[i], words[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span></span></span></code></pre></div></div>
+  </article>
+  
+
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+  
+
+
+
+  
+  
+  
+
+
+ 
+        
+  
+ 
+        <div class="text-center p-0">
+	<ul id="nav-social" class="list-inline">
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://github.com/ppipada" target="_blank" aria-label="github">
+					<i class="fab fa-github fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://www.linkedin.com/in/ppipada/" target="_blank" aria-label="linkedin">
+					<i class="fab fa-linkedin-in fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://letterboxd.com/ppipada/" target="_blank" aria-label="letterboxd">
+					<i class="fab fa-letterboxd fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+					<i class="fas fa-at fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+			<li class="list-inline-item my-0 mr-3 ml-0 p-0">
+				<a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+					<i class="fas fa-rss fa-1x text-muted"></i>
+				</a>
+			</li>
+		
+	</ul>
+</div>
+
+        
+  
+  <div class="book-copyright flex justify-center">
+    <small>Tech Interview Prep - Copyright © 2016-2025 Pankaj Pipada. All Rights Reserved.</small>
+  </div>
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Algos</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/bfs/">Bfs</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/binary-search/">Binary-Search</a>
+          <span>4</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/dfs/">Dfs</a>
+          <span>9</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/divide-and-conquer/">Divide-and-Conquer</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/dynamic-programming/">Dynamic-Programming</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/algos/greedy/">Greedy</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Ds</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/array/">Array</a>
+          <span>32</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/bits/">Bits</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/graph/">Graph</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/hash-table/">Hash-Table</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/heap/">Heap</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/linkedlist/">Linkedlist</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/stack/">Stack</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/string/">String</a>
+          <span>18</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/tree/">Tree</a>
+          <span>12</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ds/trie/">Trie</a>
+          <span>3</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Lvls</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-0/">Level-0</a>
+          <span>4</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-1/">Level-1</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-2/">Level-2</a>
+          <span>12</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-3/">Level-3</a>
+          <span>20</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-4/">Level-4</a>
+          <span>26</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/lvls/level-5/">Level-5</a>
+          <span>12</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Ptrns</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/backtracking/">Backtracking</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/bfs/">Bfs</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/dynamic-programming/">Dynamic-Programming</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/hashing/">Hashing</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/intervals/">Intervals</a>
+          <span>5</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/mark-and-sweep/">Mark-and-Sweep</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/sliding-window/">Sliding-Window</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/two-pointers/">Two-Pointers</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex align-center">
+          <a href="/tech-interview-prep/ptrns/union-find/">Union-Find</a>
+          <span>2</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+	
+	<script src="https://pankajpipada.com/tech-interview-prep/js/copybutton.min.eb1935355b430030f89358fc7901ef972a3973b27cf70b5efba79813702b47ac.js" integrity="sha256-6xk1NVtDADD4k1j8eQHvlyo5c7J89wte&#43;6eYE3ArR6w=" defer></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
