@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note:
 An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Output: true1# Input: &#34;([)]&#34; 2# Output: falsePython Solution# 1class Solution(object): 2 def isValid(self, s): 3 &#34;&#34;&#34; 4 :type s: str 5 :rtype: bool 6 &#34;&#34;&#34; 7 8 # The stack to keep track of opening brackets. 9 stack = [] 10 11 # Hash map for keeping track of mappings. This keeps the code very clean. 12 # Also makes adding more types of parenthesis easier 13 mapping = {&#34;)&#34;: &#34;(&#34;, &#34;}&#34;: &#34;{&#34;, &#34;]&#34;: &#34;[&#34;} 14 15 # For every bracket in the expression. 16 for char in s: 17 18 # If the character is an closing bracket 19 if char in mapping: 20 21 # Pop the topmost element from the stack, if it is non empty 22 # Otherwise assign a dummy value of &#39;#&#39; to the top_element variable 23 top_element = stack.pop() if stack else &#39;#&#39; 24 25 # The mapping for the opening bracket in our hash and the top 26 # element of the stack don&#39;t match, return False 27 if mapping[char] != top_element: 28 return False 29 else: 30 # We have an opening bracket, simply push it onto the stack. 31 stack.append(char) 32 33 # In the end, if the stack is empty, then we have a valid expression. 34 # The stack won&#39;t be empty for cases like ((() 35 return not stack">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Valid parentheses">
   <meta property="og:description" content="Valid parentheses# Levels: level-1 Data structures: string, stack Practice Link# LeetCode
 Description# Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note:
 An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Output: true1# Input: &#34;([)]&#34; 2# Output: falsePython Solution# 1class Solution(object): 2 def isValid(self, s): 3 &#34;&#34;&#34; 4 :type s: str 5 :rtype: bool 6 &#34;&#34;&#34; 7 8 # The stack to keep track of opening brackets. 9 stack = [] 10 11 # Hash map for keeping track of mappings. This keeps the code very clean. 12 # Also makes adding more types of parenthesis easier 13 mapping = {&#34;)&#34;: &#34;(&#34;, &#34;}&#34;: &#34;{&#34;, &#34;]&#34;: &#34;[&#34;} 14 15 # For every bracket in the expression. 16 for char in s: 17 18 # If the character is an closing bracket 19 if char in mapping: 20 21 # Pop the topmost element from the stack, if it is non empty 22 # Otherwise assign a dummy value of &#39;#&#39; to the top_element variable 23 top_element = stack.pop() if stack else &#39;#&#39; 24 25 # The mapping for the opening bracket in our hash and the top 26 # element of the stack don&#39;t match, return False 27 if mapping[char] != top_element: 28 return False 29 else: 30 # We have an opening bracket, simply push it onto the stack. 31 stack.append(char) 32 33 # In the end, if the stack is empty, then we have a valid expression. 34 # The stack won&#39;t be empty for cases like ((() 35 return not stack">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Ou
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/valid-parentheses/index.xml" title="Tech Interview Prep" />
 
@@ -515,6 +516,7 @@ An empty string is also considered valid. Examples# 1Input: &#34;()[]{}&#34; 2Ou
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

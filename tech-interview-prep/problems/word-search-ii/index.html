@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given a 2D board and a list of words from the dictionary, find all words in the board. Each word must be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word. Note:
 All inputs are consist of lowercase letters a-z. The values of words are distinct. Example# 1Input: 2board = [ 3 [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], 4 [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], 5 [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], 6 [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] 7] 8words = [&#34;oath&#34;,&#34;pea&#34;,&#34;eat&#34;,&#34;rain&#34;] 9 10Output: [&#34;eat&#34;,&#34;oath&#34;]Python Solution# 1import collections 2 3 4class TrieNode(): 5 def __init__(self): 6 self.children = collections.defaultdict(TrieNode) 7 self.isWord = False 8 9 10class Trie(): 11 def __init__(self): 12 self.root = TrieNode() 13 14 def insert(self, word): 15 node = self.root 16 for w in word: 17 node = node.children[w] 18 node.isWord = True 19 20 def search(self, word): 21 node = self.root 22 for w in word: 23 node = node.children.get(w) 24 if not node: 25 return False 26 return node.isWord 27 28 29class Solution(object): 30 def findWords(self, board, words): 31 res = [] 32 trie = Trie() 33 node = trie.root 34 for w in words: 35 trie.insert(w) 36 for i in range(len(board)): 37 for j in range(len(board[0])): 38 self.dfs(board, node, i, j, &#34;&#34;, res) 39 return res 40 41 def dfs(self, board, node, i, j, path, res): 42 if node.isWord: 43 res.append(path) 44 node.isWord = False 45 if i &lt; 0 or i &gt;= len(board) or j &lt; 0 or j &gt;= len(board[0]): 46 return 47 tmp = board[i][j] 48 node = node.children.get(tmp) 49 if not node: 50 return 51 board[i][j] = &#34;#&#34; 52 self.dfs(board, node, i &#43; 1, j, path &#43; tmp, res) 53 self.dfs(board, node, i - 1, j, path &#43; tmp, res) 54 self.dfs(board, node, i, j - 1, path &#43; tmp, res) 55 self.dfs(board, node, i, j &#43; 1, path &#43; tmp, res) 56 board[i][j] = tmp">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/word-search-ii/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Word search II">
   <meta property="og:description" content="Word search II# Levels: level-5 Data structures: trie Patterns: backtracking Practice Link# LeetCode
 Description# Given a 2D board and a list of words from the dictionary, find all words in the board. Each word must be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word. Note:
 All inputs are consist of lowercase letters a-z. The values of words are distinct. Example# 1Input: 2board = [ 3 [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], 4 [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], 5 [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], 6 [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] 7] 8words = [&#34;oath&#34;,&#34;pea&#34;,&#34;eat&#34;,&#34;rain&#34;] 9 10Output: [&#34;eat&#34;,&#34;oath&#34;]Python Solution# 1import collections 2 3 4class TrieNode(): 5 def __init__(self): 6 self.children = collections.defaultdict(TrieNode) 7 self.isWord = False 8 9 10class Trie(): 11 def __init__(self): 12 self.root = TrieNode() 13 14 def insert(self, word): 15 node = self.root 16 for w in word: 17 node = node.children[w] 18 node.isWord = True 19 20 def search(self, word): 21 node = self.root 22 for w in word: 23 node = node.children.get(w) 24 if not node: 25 return False 26 return node.isWord 27 28 29class Solution(object): 30 def findWords(self, board, words): 31 res = [] 32 trie = Trie() 33 node = trie.root 34 for w in words: 35 trie.insert(w) 36 for i in range(len(board)): 37 for j in range(len(board[0])): 38 self.dfs(board, node, i, j, &#34;&#34;, res) 39 return res 40 41 def dfs(self, board, node, i, j, path, res): 42 if node.isWord: 43 res.append(path) 44 node.isWord = False 45 if i &lt; 0 or i &gt;= len(board) or j &lt; 0 or j &gt;= len(board[0]): 46 return 47 tmp = board[i][j] 48 node = node.children.get(tmp) 49 if not node: 50 return 51 board[i][j] = &#34;#&#34; 52 self.dfs(board, node, i &#43; 1, j, path &#43; tmp, res) 53 self.dfs(board, node, i - 1, j, path &#43; tmp, res) 54 self.dfs(board, node, i, j - 1, path &#43; tmp, res) 55 self.dfs(board, node, i, j &#43; 1, path &#43; tmp, res) 56 board[i][j] = tmp">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ All inputs are consist of lowercase letters a-z. The values of words are distinc
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/word-search-ii/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/word-search-ii/index.xml" title="Tech Interview Prep" />
 
@@ -542,6 +543,7 @@ horizontally or vertically neighboring.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

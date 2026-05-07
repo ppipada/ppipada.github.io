@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Search in rotated sorted array# Levels: level-3 Data structures: array Algorithms: binary-search Practice Link# LeetCode
 Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). You are given a target value to search. If found in the array return its index, otherwise return -1. You may assume no duplicate exists in the array. Your algorithm’s runtime complexity must be in the order of O(log n). Python Solution# 1class Solution(object): 2 def search(self, nums, target): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :type target: int 6 :rtype: int 7 &#34;&#34;&#34; 8 if not nums: 9 return -1 10 return self.__search(nums, 0, len(nums) - 1, target) 11 12 def __binsearch(self, nums, i, j, target): 13 if i == j: 14 if nums[i] == target: 15 return i 16 return -1 17 18 if i &#43; 1 == j: 19 if nums[i] == target: 20 return i 21 if nums[j] == target: 22 return j 23 return -1 24 25 mid = int((i &#43; j) / 2) 26 if nums[mid] &lt; target: 27 return self.__binsearch(nums, mid, j, target) 28 return self.__binsearch(nums, i, mid, target) 29 30 def __search(self, nums, i, j, target): 31 if i == j: 32 if nums[i] == target: 33 return i 34 return -1 35 36 if i &#43; 1 == j: 37 if nums[i] == target: 38 return i 39 if nums[j] == target: 40 return j 41 return -1 42 43 if nums[i] &lt; nums[j]: 44 return self.__binsearch(nums, i, j, target) 45 46 mid = int((i &#43; j) / 2) 47 if nums[i] &lt; nums[mid]: 48 if (target &lt;= nums[mid]) and (target &gt;= nums[i]): 49 return self.__binsearch(nums, i, mid, target) 50 return self.__search(nums, mid, j, target) 51 if (target &gt;= nums[mid]) and (target &lt;= nums[j]): 52 return self.__binsearch(nums, mid, j, target) 53 return self.__search(nums, i, mid, target) 54 55 56class Solution2(object): 57 def find_min_index(self, nums): 58 &#34;&#34;&#34; 59 :type nums: List[int] 60 :rtype: int 61 &#34;&#34;&#34; 62 if not nums: 63 return None 64 lo = 0 65 hi = len(nums) - 1 66 while lo &lt; hi: 67 mid = (lo &#43; hi) / 2 68 if (nums[mid] &gt; nums[hi]): 69 lo = mid &#43; 1 70 else: 71 hi = mid 72 return lo 73 74 def search(self, nums, target): 75 &#34;&#34;&#34; 76 :type nums: List[int] 77 :type target: int 78 :rtype: int 79 &#34;&#34;&#34; 80 if not nums: 81 return -1 82 rot_index = self.find_min_index(nums) 83 hi = len(nums) - 1 84 if rot_index == 0: 85 return self.__binsearch(nums, rot_index, hi, target) 86 if target &gt;= nums[rot_index] and target &lt;= nums[hi]: 87 return self.__binsearch(nums, rot_index, hi, target) 88 return self.__binsearch(nums, 0, rot_index - 1, target) 89 90 def __binsearch(self, nums, i, j, target): 91 if i &gt; j: 92 return -1 93 if i == j: 94 if nums[i] == target: 95 return i 96 return -1 97 98 if i &#43; 1 == j: 99 if nums[i] == target: 100 return i 101 if nums[j] == target: 102 return j 103 return -1 104 105 mid = int((i &#43; j) / 2) 106 if nums[mid] &lt; target: 107 return self.__binsearch(nums, mid, j, target) 108 return self.__binsearch(nums, i, mid, target) 109 110 111in_arrs = [ 112 ([3, 4, 5, 1, 2], 4), 113 ([4, 5, 6, 7, 0, 1, 2], 1), 114 ([8, 1, 2, 3], 3), 115 ([1, 2, 3, 4], 5), 116 ([1], 1), 117 ([], 1), 118 (None, 1), 119 ([5, 1, 3, 4], 5), 120 ([8, 1, 2, 3], 1), 121 ([1, 2, 3, 4], 4), 122 ([1, 2, 3, 4], 1), 123 ([1], 0), 124] 125 126exp_out = [ 127 1, 128 5, 129 3, 130 -1, 131 0, 132 -1, 133 -1, 134 0, 135 1, 136 3, 137 0, 138 -1, 139] 140 141if __name__ == &#34;__main__&#34;: 142 143 sol = Solution() 144 sol2 = Solution() 145 for idx, nin in enumerate(in_arrs): 146 r = sol.search(nin[0], nin[1]) 147 print(exp_out[idx] == r, r) 148 r = sol2.search(nin[0], nin[1]) 149 print(exp_out[idx] == r, r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/search-in-rotated-sorted-array/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Search in rotated sorted array">
   <meta property="og:description" content="Search in rotated sorted array# Levels: level-3 Data structures: array Algorithms: binary-search Practice Link# LeetCode
 Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). You are given a target value to search. If found in the array return its index, otherwise return -1. You may assume no duplicate exists in the array. Your algorithm’s runtime complexity must be in the order of O(log n). Python Solution# 1class Solution(object): 2 def search(self, nums, target): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :type target: int 6 :rtype: int 7 &#34;&#34;&#34; 8 if not nums: 9 return -1 10 return self.__search(nums, 0, len(nums) - 1, target) 11 12 def __binsearch(self, nums, i, j, target): 13 if i == j: 14 if nums[i] == target: 15 return i 16 return -1 17 18 if i &#43; 1 == j: 19 if nums[i] == target: 20 return i 21 if nums[j] == target: 22 return j 23 return -1 24 25 mid = int((i &#43; j) / 2) 26 if nums[mid] &lt; target: 27 return self.__binsearch(nums, mid, j, target) 28 return self.__binsearch(nums, i, mid, target) 29 30 def __search(self, nums, i, j, target): 31 if i == j: 32 if nums[i] == target: 33 return i 34 return -1 35 36 if i &#43; 1 == j: 37 if nums[i] == target: 38 return i 39 if nums[j] == target: 40 return j 41 return -1 42 43 if nums[i] &lt; nums[j]: 44 return self.__binsearch(nums, i, j, target) 45 46 mid = int((i &#43; j) / 2) 47 if nums[i] &lt; nums[mid]: 48 if (target &lt;= nums[mid]) and (target &gt;= nums[i]): 49 return self.__binsearch(nums, i, mid, target) 50 return self.__search(nums, mid, j, target) 51 if (target &gt;= nums[mid]) and (target &lt;= nums[j]): 52 return self.__binsearch(nums, mid, j, target) 53 return self.__search(nums, i, mid, target) 54 55 56class Solution2(object): 57 def find_min_index(self, nums): 58 &#34;&#34;&#34; 59 :type nums: List[int] 60 :rtype: int 61 &#34;&#34;&#34; 62 if not nums: 63 return None 64 lo = 0 65 hi = len(nums) - 1 66 while lo &lt; hi: 67 mid = (lo &#43; hi) / 2 68 if (nums[mid] &gt; nums[hi]): 69 lo = mid &#43; 1 70 else: 71 hi = mid 72 return lo 73 74 def search(self, nums, target): 75 &#34;&#34;&#34; 76 :type nums: List[int] 77 :type target: int 78 :rtype: int 79 &#34;&#34;&#34; 80 if not nums: 81 return -1 82 rot_index = self.find_min_index(nums) 83 hi = len(nums) - 1 84 if rot_index == 0: 85 return self.__binsearch(nums, rot_index, hi, target) 86 if target &gt;= nums[rot_index] and target &lt;= nums[hi]: 87 return self.__binsearch(nums, rot_index, hi, target) 88 return self.__binsearch(nums, 0, rot_index - 1, target) 89 90 def __binsearch(self, nums, i, j, target): 91 if i &gt; j: 92 return -1 93 if i == j: 94 if nums[i] == target: 95 return i 96 return -1 97 98 if i &#43; 1 == j: 99 if nums[i] == target: 100 return i 101 if nums[j] == target: 102 return j 103 return -1 104 105 mid = int((i &#43; j) / 2) 106 if nums[mid] &lt; target: 107 return self.__binsearch(nums, mid, j, target) 108 return self.__binsearch(nums, i, mid, target) 109 110 111in_arrs = [ 112 ([3, 4, 5, 1, 2], 4), 113 ([4, 5, 6, 7, 0, 1, 2], 1), 114 ([8, 1, 2, 3], 3), 115 ([1, 2, 3, 4], 5), 116 ([1], 1), 117 ([], 1), 118 (None, 1), 119 ([5, 1, 3, 4], 5), 120 ([8, 1, 2, 3], 1), 121 ([1, 2, 3, 4], 4), 122 ([1, 2, 3, 4], 1), 123 ([1], 0), 124] 125 126exp_out = [ 127 1, 128 5, 129 3, 130 -1, 131 0, 132 -1, 133 -1, 134 0, 135 1, 136 3, 137 0, 138 -1, 139] 140 141if __name__ == &#34;__main__&#34;: 142 143 sol = Solution() 144 sol2 = Solution() 145 for idx, nin in enumerate(in_arrs): 146 r = sol.search(nin[0], nin[1]) 147 print(exp_out[idx] == r, r) 148 r = sol2.search(nin[0], nin[1]) 149 print(exp_out[idx] == r, r)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Suppose an array sorted in ascending order is rotated at some pivot
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/search-in-rotated-sorted-array/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/search-in-rotated-sorted-array/index.xml" title="Tech Interview Prep" />
 
@@ -619,6 +620,7 @@ might become [4,5,6,7,0,1,2]).</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

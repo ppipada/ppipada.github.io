@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Verify Lexicographic Sort With Custom Alphabet# Levels: level-3 Data structures: string, hash-table Patterns: hashing Practice Link# LeetCode
 Description# You are given: words: a list of lowercase words. order: a custom ordering of characters (e.g., [&#39;c&#39;,&#39;b&#39;,&#39;a&#39;,&#39;t&#39;, ...]). Return True if words is sorted lexicographically according to order, else return False. Lexicographic rules: Compare characters left-to-right using the custom order. If all characters match up to the shorter length, the shorter word must come first. Examples# 1Input: 2words = [&#34;cat&#34;, &#34;bat&#34;, &#34;tab&#34;] 3order = [&#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;t&#39;] 4Output: True1Input: 2words = [&#34;cat&#34;, &#34;tab&#34;, &#34;car&#34;] 3order = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,...,&#39;z&#39;] (normal alphabet) 4Output: FalsePython Solution# 1from typing import Dict, List 2 3 4def is_sorted_alien(words: List[str], order: List[str]) -&gt; bool: 5 &#34;&#34;&#34; 6 Returns True if `words` is sorted under the custom alphabet `order`. 7 8 Time: O(total characters across comparisons) ~= O(sum(len(words[i]))) 9 Space: O(|alphabet|) 10 &#34;&#34;&#34; 11 if not words: 12 return True 13 14 rank: Dict[str, int] = {ch: i for i, ch in enumerate(order)} 15 16 def in_correct_order(a: str, b: str) -&gt; bool: 17 # Compare a vs b according to rank 18 i = 0 19 n, m = len(a), len(b) 20 while i &lt; n and i &lt; m: 21 ca, cb = a[i], b[i] 22 if ca != cb: 23 return rank[ca] &lt; rank[cb] 24 i &#43;= 1 25 # All matched up to min length: shorter must come first 26 return n &lt;= m 27 28 for i in range(len(words) - 1): 29 if not in_correct_order(words[i], words[i &#43; 1]): 30 return False 31 return True">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/verify-lexicographic-sort-custom/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Verify Lexicographic Sort With Custom Alphabet">
   <meta property="og:description" content="Verify Lexicographic Sort With Custom Alphabet# Levels: level-3 Data structures: string, hash-table Patterns: hashing Practice Link# LeetCode
 Description# You are given: words: a list of lowercase words. order: a custom ordering of characters (e.g., [&#39;c&#39;,&#39;b&#39;,&#39;a&#39;,&#39;t&#39;, ...]). Return True if words is sorted lexicographically according to order, else return False. Lexicographic rules: Compare characters left-to-right using the custom order. If all characters match up to the shorter length, the shorter word must come first. Examples# 1Input: 2words = [&#34;cat&#34;, &#34;bat&#34;, &#34;tab&#34;] 3order = [&#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;t&#39;] 4Output: True1Input: 2words = [&#34;cat&#34;, &#34;tab&#34;, &#34;car&#34;] 3order = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,...,&#39;z&#39;] (normal alphabet) 4Output: FalsePython Solution# 1from typing import Dict, List 2 3 4def is_sorted_alien(words: List[str], order: List[str]) -&gt; bool: 5 &#34;&#34;&#34; 6 Returns True if `words` is sorted under the custom alphabet `order`. 7 8 Time: O(total characters across comparisons) ~= O(sum(len(words[i]))) 9 Space: O(|alphabet|) 10 &#34;&#34;&#34; 11 if not words: 12 return True 13 14 rank: Dict[str, int] = {ch: i for i, ch in enumerate(order)} 15 16 def in_correct_order(a: str, b: str) -&gt; bool: 17 # Compare a vs b according to rank 18 i = 0 19 n, m = len(a), len(b) 20 while i &lt; n and i &lt; m: 21 ca, cb = a[i], b[i] 22 if ca != cb: 23 return rank[ca] &lt; rank[cb] 24 i &#43;= 1 25 # All matched up to min length: shorter must come first 26 return n &lt;= m 27 28 for i in range(len(words) - 1): 29 if not in_correct_order(words[i], words[i &#43; 1]): 30 return False 31 return True">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# You are given: words: a list of lowercase words. order: a custom or
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/verify-lexicographic-sort-custom/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/verify-lexicographic-sort-custom/index.xml" title="Tech Interview Prep" />
 
@@ -515,6 +516,7 @@ Description# You are given: words: a list of lowercase words. order: a custom or
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

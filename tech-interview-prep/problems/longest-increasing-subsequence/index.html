@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given an unsorted array of integers, find the length of longest increasing subsequence. Note:
 There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Example# 1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Follow up# Could you improve it to O(n log n) time complexity? Python Solution# 1class Solution(object): 2 def lengthOfLIS(self, nums): 3 tails = [0] * len(nums) 4 size = 0 5 for x in nums: 6 i, j = 0, size 7 while i != j: 8 m = (i &#43; j) / 2 9 if tails[m] &lt; x: 10 i = m &#43; 1 11 else: 12 j = m 13 tails[i] = x 14 size = max(i &#43; 1, size) 15 return size">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/longest-increasing-subsequence/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Longest increasing subsequence">
   <meta property="og:description" content="Longest increasing subsequence# Levels: level-4 Data structures: array Algorithms: dynamic-programming, binary-search Practice Link# LeetCode
 Description# Given an unsorted array of integers, find the length of longest increasing subsequence. Note:
 There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Example# 1Input: [10,9,2,5,3,7,101,18] 2Output: 4 3Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.Follow up# Could you improve it to O(n log n) time complexity? Python Solution# 1class Solution(object): 2 def lengthOfLIS(self, nums): 3 tails = [0] * len(nums) 4 size = 0 5 for x in nums: 6 i, j = 0, size 7 while i != j: 8 m = (i &#43; j) / 2 9 if tails[m] &lt; x: 10 i = m &#43; 1 11 else: 12 j = m 13 tails[i] = x 14 size = max(i &#43; 1, size) 15 return size">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ There may be more than one LIS combination, it is only necessary for you to retu
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/longest-increasing-subsequence/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/longest-increasing-subsequence/index.xml" title="Tech Interview Prep" />
 
@@ -495,6 +496,7 @@ There may be more than one LIS combination, it is only necessary for you to retu
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

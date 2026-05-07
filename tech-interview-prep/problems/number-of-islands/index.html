@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Number of islands# Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link# LeetCode
 Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Examples# 1Input: 211110 311010 411000 500000 6Output: 11Input: 211000 311000 400100 500011 6Output: 3Python Solution# 1class Solution(object): 2 # Iterate through each of the cell and if it is an island, 3 # do dfs to mark all adjacent islands, 4 # then increase the counter by 1. 5 def numIslands(self, grid): 6 if not grid: 7 return 0 8 9 count = 0 10 for i in range(len(grid)): 11 for j in range(len(grid[0])): 12 if grid[i][j] == &#39;1&#39;: 13 self.dfs(grid, i, j) 14 count &#43;= 1 15 return count 16 17 def dfs(self, grid, i, j): 18 if i &lt; 0 or j &lt; 0 or i &gt;= len(grid) or j &gt;= len( 19 grid[0]) or grid[i][j] != &#39;1&#39;: 20 return 21 grid[i][j] = &#39;#&#39; 22 self.dfs(grid, i &#43; 1, j) 23 self.dfs(grid, i - 1, j) 24 self.dfs(grid, i, j &#43; 1) 25 self.dfs(grid, i, j - 1)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/number-of-islands/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Number of islands">
   <meta property="og:description" content="Number of islands# Levels: level-4 Data structures: graph Algorithms: dfs, bfs Patterns: union-find Practice Link# LeetCode
 Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Examples# 1Input: 211110 311010 411000 500000 6Output: 11Input: 211000 311000 400100 500011 6Output: 3Python Solution# 1class Solution(object): 2 # Iterate through each of the cell and if it is an island, 3 # do dfs to mark all adjacent islands, 4 # then increase the counter by 1. 5 def numIslands(self, grid): 6 if not grid: 7 return 0 8 9 count = 0 10 for i in range(len(grid)): 11 for j in range(len(grid[0])): 12 if grid[i][j] == &#39;1&#39;: 13 self.dfs(grid, i, j) 14 count &#43;= 1 15 return count 16 17 def dfs(self, grid, i, j): 18 if i &lt; 0 or j &lt; 0 or i &gt;= len(grid) or j &gt;= len( 19 grid[0]) or grid[i][j] != &#39;1&#39;: 20 return 21 grid[i][j] = &#39;#&#39; 22 self.dfs(grid, i &#43; 1, j) 23 self.dfs(grid, i - 1, j) 24 self.dfs(grid, i, j &#43; 1) 25 self.dfs(grid, i, j - 1)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count 
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-islands/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-islands/index.xml" title="Tech Interview Prep" />
 
@@ -504,6 +505,7 @@ Description# Given a 2d grid map of ‘1’s (land) and ‘0’s (water), count 
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

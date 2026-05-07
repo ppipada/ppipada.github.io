@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Number of 1 bits# Levels: level-1 Data structures: bits Practice Link# LeetCode
 Description# Write a function that takes an unsigned integer and return the number of ‘1’ bits it has (also known as the Hamming weight). Example# 1Input: 00000000000000000000000000001011 2Output: 3 3Explanation: The input binary string 00000000000000000000000000001011 has a total of three &#39;1&#39; bits.Python Solution# 1class Solution(object): 2 # Use inbuilt functions 3 def hammingWeightBuiltin(self, n): 4 &#34;&#34;&#34; 5 :type n: int 6 :rtype: int 7 &#34;&#34;&#34; 8 return bin(n).count(&#39;1&#39;) 9 10 # Using bit operation to cancel a 1 in each round 11 # Think of a number in binary `n = XXXXXX1000, n - 1 is XXXXXX0111`. 12 # `n &amp; (n - 1)` will be `XXXXXX0000` which just canceled the last `1` 13 def hammingWeightBitwise(self, n): 14 &#34;&#34;&#34; 15 :type n: int 16 :rtype: int 17 &#34;&#34;&#34; 18 c = 0 19 while n: 20 n &amp;= n - 1 21 c &#43;= 1 22 return c">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/number-of-1-bits/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Number of 1 bits">
   <meta property="og:description" content="Number of 1 bits# Levels: level-1 Data structures: bits Practice Link# LeetCode
 Description# Write a function that takes an unsigned integer and return the number of ‘1’ bits it has (also known as the Hamming weight). Example# 1Input: 00000000000000000000000000001011 2Output: 3 3Explanation: The input binary string 00000000000000000000000000001011 has a total of three &#39;1&#39; bits.Python Solution# 1class Solution(object): 2 # Use inbuilt functions 3 def hammingWeightBuiltin(self, n): 4 &#34;&#34;&#34; 5 :type n: int 6 :rtype: int 7 &#34;&#34;&#34; 8 return bin(n).count(&#39;1&#39;) 9 10 # Using bit operation to cancel a 1 in each round 11 # Think of a number in binary `n = XXXXXX1000, n - 1 is XXXXXX0111`. 12 # `n &amp; (n - 1)` will be `XXXXXX0000` which just canceled the last `1` 13 def hammingWeightBitwise(self, n): 14 &#34;&#34;&#34; 15 :type n: int 16 :rtype: int 17 &#34;&#34;&#34; 18 c = 0 19 while n: 20 n &amp;= n - 1 21 c &#43;= 1 22 return c">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Write a function that takes an unsigned integer and return the numb
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-1-bits/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-1-bits/index.xml" title="Tech Interview Prep" />
 
@@ -490,6 +491,7 @@ weight).</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

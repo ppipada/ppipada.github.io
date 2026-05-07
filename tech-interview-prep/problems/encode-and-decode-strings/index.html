@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Encode and decode strings# Levels: level-4 Data structures: string Description# Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings. Note:
 The string may contain any possible characters out of 256 valid ascii characters. Your algorithm should be generalized enough to work on any possible characters. Do not use class member/global/static variables to store states. Your encode and decode algorithms should be stateless. Do not rely on any library method such as eval or serialize methods. You should implement your own encode/decode algorithm. Python Solution# 1from functools import reduce 2 3 4class Codec(object): 5 def encode(self, strs): 6 &#34;&#34;&#34; 7 Encodes a list of strings to a single string. 8 9 Algorithm: Length info 10 11 :type strs: List[str] 12 :rtype: str 13 &#34;&#34;&#34; 14 strs = list(map(lambda x: str(len(x)) &#43; &#34;/&#34; &#43; x, strs)) 15 return reduce(lambda x, y: x &#43; y, strs, &#34;&#34;) # i.e. &#34;&#34;.join(strs) 16 17 def decode(self, s): 18 &#34;&#34;&#34; 19 Decodes a single string to a list of strings. 20 21 :type s: str 22 :rtype: List[str] 23 &#34;&#34;&#34; 24 strs = [] 25 i = 0 26 while i &lt; len(s): 27 j = s.index(&#34;/&#34;, i) 28 l = int(s[i:j]) 29 strs.append(s[j &#43; 1:j &#43; 1 &#43; l]) 30 i = j &#43; 1 &#43; l 31 32 return strs 33 34 35class CodecMethod2(object): 36 def encode(self, strs): 37 &#34;&#34;&#34; 38 Encodes a list of strings to a single string. 39 40 Algorithm: Escape 41 42 :type strs: List[str] 43 :rtype: str 44 &#34;&#34;&#34; 45 strs = list(map(lambda x: x.replace(&#34;\n&#34;, &#34;\n\n&#34;) &#43; &#34;_\n_&#34;, strs)) 46 return reduce(lambda x, y: x &#43; y, strs, &#34;&#34;) 47 48 def decode(self, s): 49 &#34;&#34;&#34; 50 Decodes a single string to a list of strings. 51 52 :type s: str 53 :rtype: List[str] 54 &#34;&#34;&#34; 55 strs = s.split(&#34;_\n_&#34;) 56 strs = strs[:-1] # clear the trailing delimiter 57 return list(map(lambda x: x.replace(&#34;\n\n&#34;, &#34;\n&#34;), strs))">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/encode-and-decode-strings/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Encode and decode strings">
   <meta property="og:description" content="Encode and decode strings# Levels: level-4 Data structures: string Description# Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings. Note:
 The string may contain any possible characters out of 256 valid ascii characters. Your algorithm should be generalized enough to work on any possible characters. Do not use class member/global/static variables to store states. Your encode and decode algorithms should be stateless. Do not rely on any library method such as eval or serialize methods. You should implement your own encode/decode algorithm. Python Solution# 1from functools import reduce 2 3 4class Codec(object): 5 def encode(self, strs): 6 &#34;&#34;&#34; 7 Encodes a list of strings to a single string. 8 9 Algorithm: Length info 10 11 :type strs: List[str] 12 :rtype: str 13 &#34;&#34;&#34; 14 strs = list(map(lambda x: str(len(x)) &#43; &#34;/&#34; &#43; x, strs)) 15 return reduce(lambda x, y: x &#43; y, strs, &#34;&#34;) # i.e. &#34;&#34;.join(strs) 16 17 def decode(self, s): 18 &#34;&#34;&#34; 19 Decodes a single string to a list of strings. 20 21 :type s: str 22 :rtype: List[str] 23 &#34;&#34;&#34; 24 strs = [] 25 i = 0 26 while i &lt; len(s): 27 j = s.index(&#34;/&#34;, i) 28 l = int(s[i:j]) 29 strs.append(s[j &#43; 1:j &#43; 1 &#43; l]) 30 i = j &#43; 1 &#43; l 31 32 return strs 33 34 35class CodecMethod2(object): 36 def encode(self, strs): 37 &#34;&#34;&#34; 38 Encodes a list of strings to a single string. 39 40 Algorithm: Escape 41 42 :type strs: List[str] 43 :rtype: str 44 &#34;&#34;&#34; 45 strs = list(map(lambda x: x.replace(&#34;\n&#34;, &#34;\n\n&#34;) &#43; &#34;_\n_&#34;, strs)) 46 return reduce(lambda x, y: x &#43; y, strs, &#34;&#34;) 47 48 def decode(self, s): 49 &#34;&#34;&#34; 50 Decodes a single string to a list of strings. 51 52 :type s: str 53 :rtype: List[str] 54 &#34;&#34;&#34; 55 strs = s.split(&#34;_\n_&#34;) 56 strs = strs[:-1] # clear the trailing delimiter 57 return list(map(lambda x: x.replace(&#34;\n\n&#34;, &#34;\n&#34;), strs))">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ The string may contain any possible characters out of 256 valid ascii characters
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/encode-and-decode-strings/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/encode-and-decode-strings/index.xml" title="Tech Interview Prep" />
 
@@ -529,6 +530,7 @@ algorithm.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

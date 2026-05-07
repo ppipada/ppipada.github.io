@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
 You cannot sell a stock before you buy one. Python Solution# 1class Solution(object): 2 def maxProfit(self, prices): 3 &#34;&#34;&#34; 4 :type prices: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 l = len(prices) 8 if l &lt; 2: 9 return 0 10 profit = 0 11 cmin = 0 12 i = 1 13 while i &lt; l: 14 if prices[i] &lt; prices[cmin]: 15 cmin = i 16 newp = prices[i] - prices[cmin] 17 if newp &gt; profit: 18 profit = newp 19 # print(i, cmin, profit) 20 i &#43;= 1 21 return profit 22 23 24if __name__ == &#34;__main__&#34;: 25 p = [2, 1, 2, 1, 0, 1, 2] 26 #p = [3,3,5,0,0,3,1,4] 27 sol = Solution() 28 r = sol.maxProfit(p) 29 print(r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Best time to buy and sell stock">
   <meta property="og:description" content="Best time to buy and sell stock# Levels: level-1 Data structures: array Practice Link# LeetCode
 Description# Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note:
 You cannot sell a stock before you buy one. Python Solution# 1class Solution(object): 2 def maxProfit(self, prices): 3 &#34;&#34;&#34; 4 :type prices: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 l = len(prices) 8 if l &lt; 2: 9 return 0 10 profit = 0 11 cmin = 0 12 i = 1 13 while i &lt; l: 14 if prices[i] &lt; prices[cmin]: 15 cmin = i 16 newp = prices[i] - prices[cmin] 17 if newp &gt; profit: 18 profit = newp 19 # print(i, cmin, profit) 20 i &#43;= 1 21 return profit 22 23 24if __name__ == &#34;__main__&#34;: 25 p = [2, 1, 2, 1, 0, 1, 2] 26 #p = [3,3,5,0,0,3,1,4] 27 sol = Solution() 28 r = sol.maxProfit(p) 29 print(r)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ You cannot sell a stock before you buy one. Python Solution# 1class Solution(obj
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/best-time-to-buy-and-sell-stock/index.xml" title="Tech Interview Prep" />
 
@@ -502,6 +503,7 @@ an algorithm to find the maximum profit.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

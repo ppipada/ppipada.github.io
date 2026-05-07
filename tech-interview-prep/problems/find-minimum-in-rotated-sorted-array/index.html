@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Find minimum in rotated sorted array# Levels: level-2 Data structures: array Algorithms: binary-search Practice Link# LeetCode
 Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution# 1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Find minimum in rotated sorted array">
   <meta property="og:description" content="Find minimum in rotated sorted array# Levels: level-2 Data structures: array Algorithms: binary-search Practice Link# LeetCode
 Description# Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). Find the minimum element. You may assume no duplicate exists in the array. Python Solution# 1class Solution(object): 2 def findMin(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return None 9 return self.__fmin(nums, 0, len(nums) - 1) 10 11 def __fmin(self, nums, i, j): 12 if i == j: 13 return nums[i] 14 if i &#43; 1 == j: 15 return min(nums[i], nums[j]) 16 if nums[i] &lt; nums[j]: 17 return nums[i] 18 mid = int((i &#43; j) / 2) 19 if nums[i] &lt; nums[mid]: 20 return self.__fmin(nums, mid, j) 21 return self.__fmin(nums, i, mid) 22 23 24class Solution2(object): 25 def findMin(self, nums): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :rtype: int 29 &#34;&#34;&#34; 30 if not nums: 31 return None 32 lo = 0 33 hi = len(nums) - 1 34 while lo &lt; hi: 35 mid = (lo &#43; hi) / 2 36 if (nums[mid] &gt; nums[hi]): 37 lo = mid &#43; 1 38 else: 39 hi = mid 40 return nums[lo] 41 42 43in_arrs = [ 44 [3, 4, 5, 1, 2], 45 [4, 5, 6, 7, 0, 1, 2], 46 [8, 1, 2, 3], 47 [1, 2, 3, 4], 48 [1], 49 [], 50 None, 51] 52 53exp_out = [ 54 1, 55 0, 56 1, 57 1, 58 1, 59 None, 60 None, 61] 62 63if __name__ == &#34;__main__&#34;: 64 65 sol = Solution() 66 sol2 = Solution() 67 for idx, nin in enumerate(in_arrs): 68 r = sol.findMin(nin) 69 print(exp_out[idx] == r, r) 70 r = sol2.findMin(nin) 71 print(exp_out[idx] == r, r)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Suppose an array sorted in ascending order is rotated at some pivot
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/find-minimum-in-rotated-sorted-array/index.xml" title="Tech Interview Prep" />
 
@@ -539,6 +540,7 @@ might become [4,5,6,7,0,1,2]).</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

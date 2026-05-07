@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Same tree# Levels: level-2 Data structures: tree Algorithms: dfs Practice Link# LeetCode
 Description# Given two binary trees, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical and the nodes have the same value. Examples# 1Input: 1 1 2 / \ / \ 3 2 3 2 3 4 5 [1,2,3], [1,2,3] 6 7Output: true1Input: 1 1 2 / \ 3 2 2 4 5 [1,2], [1,null,2] 6 7Output: falsePython Solution# 1from collections import deque 2 3 4class TreeNode(object): 5 def __init__(self, x): 6 self.val = x 7 self.left = None 8 self.right = None 9 10 11class Solution: 12 # Recursive solution 13 def isSameTree(self, p, q): 14 &#34;&#34;&#34; 15 :type p: TreeNode 16 :type q: TreeNode 17 :rtype: bool 18 &#34;&#34;&#34; 19 # p and q are both None 20 if not p and not q: 21 return True 22 # one of p and q is None 23 if not q or not p: 24 return False 25 if p.val != q.val: 26 return False 27 return self.isSameTree(p.right, q.right) and \ 28 self.isSameTree(p.left, q.left) 29 30 # Iterative solution 31 def isSameTreeIterative(self, p, q): 32 &#34;&#34;&#34; 33 :type p: TreeNode 34 :type q: TreeNode 35 :rtype: bool 36 &#34;&#34;&#34; 37 def check(p, q): 38 # if both are None 39 if not p and not q: 40 return True 41 # one of p and q is None 42 if not q or not p: 43 return False 44 if p.val != q.val: 45 return False 46 return True 47 48 deq = deque([ 49 (p, q), 50 ]) 51 while deq: 52 p, q = deq.popleft() 53 if not check(p, q): 54 return False 55 56 if p: 57 deq.append((p.left, q.left)) 58 deq.append((p.right, q.right)) 59 60 return True">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/same-tree/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Same tree">
   <meta property="og:description" content="Same tree# Levels: level-2 Data structures: tree Algorithms: dfs Practice Link# LeetCode
 Description# Given two binary trees, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical and the nodes have the same value. Examples# 1Input: 1 1 2 / \ / \ 3 2 3 2 3 4 5 [1,2,3], [1,2,3] 6 7Output: true1Input: 1 1 2 / \ 3 2 2 4 5 [1,2], [1,null,2] 6 7Output: falsePython Solution# 1from collections import deque 2 3 4class TreeNode(object): 5 def __init__(self, x): 6 self.val = x 7 self.left = None 8 self.right = None 9 10 11class Solution: 12 # Recursive solution 13 def isSameTree(self, p, q): 14 &#34;&#34;&#34; 15 :type p: TreeNode 16 :type q: TreeNode 17 :rtype: bool 18 &#34;&#34;&#34; 19 # p and q are both None 20 if not p and not q: 21 return True 22 # one of p and q is None 23 if not q or not p: 24 return False 25 if p.val != q.val: 26 return False 27 return self.isSameTree(p.right, q.right) and \ 28 self.isSameTree(p.left, q.left) 29 30 # Iterative solution 31 def isSameTreeIterative(self, p, q): 32 &#34;&#34;&#34; 33 :type p: TreeNode 34 :type q: TreeNode 35 :rtype: bool 36 &#34;&#34;&#34; 37 def check(p, q): 38 # if both are None 39 if not p and not q: 40 return True 41 # one of p and q is None 42 if not q or not p: 43 return False 44 if p.val != q.val: 45 return False 46 return True 47 48 deq = deque([ 49 (p, q), 50 ]) 51 while deq: 52 p, q = deq.popleft() 53 if not check(p, q): 54 return False 55 56 if p: 57 deq.append((p.left, q.left)) 58 deq.append((p.right, q.right)) 59 60 return True">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Given two binary trees, write a function to check if they are the s
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/same-tree/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/same-tree/index.xml" title="Tech Interview Prep" />
 
@@ -539,6 +540,7 @@ Description# Given two binary trees, write a function to check if they are the s
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

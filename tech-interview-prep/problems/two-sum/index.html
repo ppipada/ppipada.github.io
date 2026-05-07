@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Two sum# Levels: level-0 Data structures: array, hash-table Practice Link# LeetCode
 Description# Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Python Solution# 1class Solution1(object): 2 def twoSum(self, nums, target): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :type target: int 6 :rtype: List[int] 7 nlog(n) complexity using sorting. 8 &#34;&#34;&#34; 9 nums.sort() 10 l = len(nums) 11 start = 0 12 end = l - 1 13 while start &lt; end: 14 s = nums[start] &#43; nums[end] 15 if s == target: 16 return [start, end] 17 if s &gt; target: 18 end -= 1 19 continue 20 start &#43;= 1 21 return [] 22 23 24class Solution2(object): 25 def twoSum(self, nums, target): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :type target: int 29 :rtype: List[int] 30 O(n) complexity using hashmap. 31 &#34;&#34;&#34; 32 m = {} 33 for idx, num in enumerate(nums): 34 complement = target - num 35 if complement in m: 36 return [idx, m[complement]] 37 m[num] = idx 38 return [] 39 40 41if __name__ == &#34;__main__&#34;: 42 nin = [2, 1, 2, 1, 0, 1, 2] 43 tin = 3 44 #p = [3,3,5,0,0,3,1,4] 45 sol = Solution2() 46 r = sol.twoSum(nin, tin) 47 print(r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/two-sum/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Two sum">
   <meta property="og:description" content="Two sum# Levels: level-0 Data structures: array, hash-table Practice Link# LeetCode
 Description# Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Python Solution# 1class Solution1(object): 2 def twoSum(self, nums, target): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :type target: int 6 :rtype: List[int] 7 nlog(n) complexity using sorting. 8 &#34;&#34;&#34; 9 nums.sort() 10 l = len(nums) 11 start = 0 12 end = l - 1 13 while start &lt; end: 14 s = nums[start] &#43; nums[end] 15 if s == target: 16 return [start, end] 17 if s &gt; target: 18 end -= 1 19 continue 20 start &#43;= 1 21 return [] 22 23 24class Solution2(object): 25 def twoSum(self, nums, target): 26 &#34;&#34;&#34; 27 :type nums: List[int] 28 :type target: int 29 :rtype: List[int] 30 O(n) complexity using hashmap. 31 &#34;&#34;&#34; 32 m = {} 33 for idx, num in enumerate(nums): 34 complement = target - num 35 if complement in m: 36 return [idx, m[complement]] 37 m[num] = idx 38 return [] 39 40 41if __name__ == &#34;__main__&#34;: 42 nin = [2, 1, 2, 1, 0, 1, 2] 43 tin = 3 44 #p = [3,3,5,0,0,3,1,4] 45 sol = Solution2() 46 r = sol.twoSum(nin, tin) 47 print(r)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Given an array of integers, return indices of the two numbers such 
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/two-sum/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/two-sum/index.xml" title="Tech Interview Prep" />
 
@@ -512,6 +513,7 @@ Description# Given an array of integers, return indices of the two numbers such 
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

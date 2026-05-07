@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -10,12 +10,12 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Insert Into Complete Binary Tree (Level-Order)# Levels: level-4 Data structures: tree Patterns: bfs Practice Link# LeetCode (nearby/exact concept) Description# Inferred from your notes: “insert/attach child”, BFS levels, left-to-right. Given the root of a binary tree and a value val, insert a new node such that the tree remains a complete binary tree: fill levels top-to-bottom and within a level, fill left-to-right Concretely: perform level-order traversal and insert at the first node missing a left child, else the first node missing a right child. Return the root. Examples# 1Input: root = [1,2,3,4,5,6], val = 7 2Output: [1,2,3,4,5,6,7]1Input: root = [1,2,3,4,5,6], val = 8 2Output: [1,2,3,4,5,6,7,8]Python Solution# 1from collections import deque 2from typing import Optional 3 4 5class TreeNode: 6 def __init__(self, val: int = 0, 7 left: Optional[&#34;TreeNode&#34;] = None, 8 right: Optional[&#34;TreeNode&#34;] = None): 9 self.val = val 10 self.left = left 11 self.right = right 12 13def insert_complete(root: Optional[TreeNode], val: int) -&gt; TreeNode: 14 &#34;&#34;&#34; 15 Insert `val` into the first available spot to maintain completeness. 16 17 Time: O(n) worst-case per insertion 18 Space: O(width of tree) due to queue 19 &#34;&#34;&#34; 20 new_node = TreeNode(val) 21 if root is None: 22 return new_node 23 24 q = deque([root]) 25 while q: 26 node = q.popleft() 27 28 if node.left is None: 29 node.left = new_node 30 return root 31 else: 32 q.append(node.left) 33 34 if node.right is None: 35 node.right = new_node 36 return root 37 else: 38 q.append(node.right) 39 40 return root # logically unreachable">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/level-order-binary-tree-insert/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Insert Into Complete Binary Tree (Level-Order)">
   <meta property="og:description" content="Insert Into Complete Binary Tree (Level-Order)# Levels: level-4 Data structures: tree Patterns: bfs Practice Link# LeetCode (nearby/exact concept) Description# Inferred from your notes: “insert/attach child”, BFS levels, left-to-right. Given the root of a binary tree and a value val, insert a new node such that the tree remains a complete binary tree: fill levels top-to-bottom and within a level, fill left-to-right Concretely: perform level-order traversal and insert at the first node missing a left child, else the first node missing a right child. Return the root. Examples# 1Input: root = [1,2,3,4,5,6], val = 7 2Output: [1,2,3,4,5,6,7]1Input: root = [1,2,3,4,5,6], val = 8 2Output: [1,2,3,4,5,6,7,8]Python Solution# 1from collections import deque 2from typing import Optional 3 4 5class TreeNode: 6 def __init__(self, val: int = 0, 7 left: Optional[&#34;TreeNode&#34;] = None, 8 right: Optional[&#34;TreeNode&#34;] = None): 9 self.val = val 10 self.left = left 11 self.right = right 12 13def insert_complete(root: Optional[TreeNode], val: int) -&gt; TreeNode: 14 &#34;&#34;&#34; 15 Insert `val` into the first available spot to maintain completeness. 16 17 Time: O(n) worst-case per insertion 18 Space: O(width of tree) due to queue 19 &#34;&#34;&#34; 20 new_node = TreeNode(val) 21 if root is None: 22 return new_node 23 24 q = deque([root]) 25 while q: 26 node = q.popleft() 27 28 if node.left is None: 29 node.left = new_node 30 return root 31 else: 32 q.append(node.left) 33 34 if node.right is None: 35 node.right = new_node 36 return root 37 else: 38 q.append(node.right) 39 40 return root # logically unreachable">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -28,19 +28,20 @@ https://github.com/alex-shpak/hugo-book
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/level-order-binary-tree-insert/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/level-order-binary-tree-insert/index.xml" title="Tech Interview Prep" />
 
@@ -517,6 +518,7 @@ missing a right child.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

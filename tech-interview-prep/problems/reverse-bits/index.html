@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Reverse bits# Levels: level-2 Data structures: bits Practice Link# LeetCode
 Description# Reverse bits of a given 32 bits unsigned integer. Example# 1Input: 00000010100101000001111010011100 2Output: 00111001011110000010100101000000 3Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.Follow up# If this function is called many times, how would you optimize it? Thinking# We first intitialize result to 0. We then iterate from 0 to 31 (an integer has 32 bits). In each iteration: We first shift result to the left by 1 bit. Then, if the last digit of input n is 1, we add 1 to result. To find the last digit of n, we just do: (n &amp; 1) Example, if n=5 (101), n&amp;1 = 101 &amp; 001 = 001 = 1; however, if n = 2 (10), n&amp;1 = 10 &amp; 01 = 00 = 0). Finally, we update n by shifting it to the right by 1 (n »= 1). This is because the last digit is already taken care of, so we need to drop it by shifting n to the right by 1. At the end of the iteration, we return result. Python Solution# 1class Solution: 2 # @param n, an integer 3 # @return an integer 4 def reverseBits(self, n): 5 res = 0 6 for _ in range(32): 7 res = (res &lt;&lt; 1) &#43; (n &amp; 1) 8 n &gt;&gt;= 1 9 return res 10 11 # Use bit hacks to directly do in O(1) 12 # for 8 bit binary number abcdefgh, the process is as follow: 13 # abcdefgh -&gt; efghabcd -&gt; ghefcdab -&gt; hgfedcba 14 def reverseBitsHack(self, n): 15 n = (n &gt;&gt; 16) | (n &lt;&lt; 16) 16 n = ((n &amp; 0xff00ff00) &gt;&gt; 8) | ((n &amp; 0x00ff00ff) &lt;&lt; 8) 17 n = ((n &amp; 0xf0f0f0f0) &gt;&gt; 4) | ((n &amp; 0x0f0f0f0f) &lt;&lt; 4) 18 n = ((n &amp; 0xcccccccc) &gt;&gt; 2) | ((n &amp; 0x33333333) &lt;&lt; 2) 19 n = ((n &amp; 0xaaaaaaaa) &gt;&gt; 1) | ((n &amp; 0x55555555) &lt;&lt; 1) 20 return n">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/reverse-bits/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Reverse bits">
   <meta property="og:description" content="Reverse bits# Levels: level-2 Data structures: bits Practice Link# LeetCode
 Description# Reverse bits of a given 32 bits unsigned integer. Example# 1Input: 00000010100101000001111010011100 2Output: 00111001011110000010100101000000 3Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.Follow up# If this function is called many times, how would you optimize it? Thinking# We first intitialize result to 0. We then iterate from 0 to 31 (an integer has 32 bits). In each iteration: We first shift result to the left by 1 bit. Then, if the last digit of input n is 1, we add 1 to result. To find the last digit of n, we just do: (n &amp; 1) Example, if n=5 (101), n&amp;1 = 101 &amp; 001 = 001 = 1; however, if n = 2 (10), n&amp;1 = 10 &amp; 01 = 00 = 0). Finally, we update n by shifting it to the right by 1 (n »= 1). This is because the last digit is already taken care of, so we need to drop it by shifting n to the right by 1. At the end of the iteration, we return result. Python Solution# 1class Solution: 2 # @param n, an integer 3 # @return an integer 4 def reverseBits(self, n): 5 res = 0 6 for _ in range(32): 7 res = (res &lt;&lt; 1) &#43; (n &amp; 1) 8 n &gt;&gt;= 1 9 return res 10 11 # Use bit hacks to directly do in O(1) 12 # for 8 bit binary number abcdefgh, the process is as follow: 13 # abcdefgh -&gt; efghabcd -&gt; ghefcdab -&gt; hgfedcba 14 def reverseBitsHack(self, n): 15 n = (n &gt;&gt; 16) | (n &lt;&lt; 16) 16 n = ((n &amp; 0xff00ff00) &gt;&gt; 8) | ((n &amp; 0x00ff00ff) &lt;&lt; 8) 17 n = ((n &amp; 0xf0f0f0f0) &gt;&gt; 4) | ((n &amp; 0x0f0f0f0f) &lt;&lt; 4) 18 n = ((n &amp; 0xcccccccc) &gt;&gt; 2) | ((n &amp; 0x33333333) &lt;&lt; 2) 19 n = ((n &amp; 0xaaaaaaaa) &gt;&gt; 1) | ((n &amp; 0x55555555) &lt;&lt; 1) 20 return n">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Reverse bits of a given 32 bits unsigned integer. Example# 1Input: 
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/reverse-bits/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/reverse-bits/index.xml" title="Tech Interview Prep" />
 
@@ -506,6 +507,7 @@ care of, so we need to drop it by shifting n to the right by 1.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

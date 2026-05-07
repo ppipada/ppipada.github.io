@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,13 +12,13 @@ https://github.com/alex-shpak/hugo-book
 Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/data-structures/quick-notes/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Quick Notes">
   <meta property="og:description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
 Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="data-structures">
 
@@ -32,19 +32,20 @@ Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n)
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/data-structures/quick-notes/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 
   
@@ -804,6 +805,7 @@ Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n)
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

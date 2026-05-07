@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -10,12 +10,12 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Binary tree maximum path sum# Levels: level-5 Data structures: tree Algorithms: dfs Description# Given a non-empty binary tree, find the maximum path sum. For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root. Examples# 1Input: [1,2,3] 2 3 1 4 / \ 5 2 3 6 7Output: 61Input: [-10,9,20,null,null,15,7] 2 3 -10 4 / \ 5 9 20 6 / \ 7 15 7 8 9Output: 42Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def maxPathSum(self, root): 10 &#34;&#34;&#34; 11 :type root: TreeNode 12 :rtype: int 13 &#34;&#34;&#34; 14 def maxend(node): 15 if not node: 16 return 0 17 left = maxend(node.left) 18 right = maxend(node.right) 19 self.max = max(self.max, left &#43; node.val &#43; right) 20 return max(node.val &#43; max(left, right), 0) 21 22 self.max = None 23 maxend(root) 24 return self.max">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/binary-tree-maximum-path-sum/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Binary tree maximum path sum">
   <meta property="og:description" content="Binary tree maximum path sum# Levels: level-5 Data structures: tree Algorithms: dfs Description# Given a non-empty binary tree, find the maximum path sum. For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root. Examples# 1Input: [1,2,3] 2 3 1 4 / \ 5 2 3 6 7Output: 61Input: [-10,9,20,null,null,15,7] 2 3 -10 4 / \ 5 9 20 6 / \ 7 15 7 8 9Output: 42Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def maxPathSum(self, root): 10 &#34;&#34;&#34; 11 :type root: TreeNode 12 :rtype: int 13 &#34;&#34;&#34; 14 def maxend(node): 15 if not node: 16 return 0 17 left = maxend(node.left) 18 right = maxend(node.right) 19 self.max = max(self.max, left &#43; node.val &#43; right) 20 return max(node.val &#43; max(left, right), 0) 21 22 self.max = None 23 maxend(root) 24 return self.max">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -28,19 +28,20 @@ https://github.com/alex-shpak/hugo-book
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/binary-tree-maximum-path-sum/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/binary-tree-maximum-path-sum/index.xml" title="Tech Interview Prep" />
 
@@ -502,6 +503,7 @@ parent-child connections.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

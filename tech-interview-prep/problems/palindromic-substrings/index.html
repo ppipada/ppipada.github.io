@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Note:
 The input string length won’t exceed 1000. Examples# 1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Python Solution# 1class Solution(object): 2 # Let N be the length of the string. The middle of the palindrome could be in one of 2N - 1 positions: either at letter or between two letters. 3 # For each center, let&#39;s count all the palindromes that have this center. Notice that if [a, b] is a palindromic interval (meaning S[a], S[a&#43;1], ..., S[b] is a palindrome), then [a&#43;1, b-1] is one too. 4 # Algorithm 5 # For each possible palindrome center, 6 # let&#39;s expand our candidate palindrome on the interval [left, right] as long as we can. 7 # The condition for expanding is left &gt;= 0 and right &lt; N and S[left] == S[right]. 8 # That means we want to count a new palindrome S[left], S[left&#43;1], ..., S[right]. 9 def countSubstrings(self, S): 10 N = len(S) 11 ans = 0 12 for center in range(2 * N - 1): 13 left = center / 2 14 right = left &#43; center % 2 15 while left &gt;= 0 and right &lt; N and S[left] == S[right]: 16 ans &#43;= 1 17 left -= 1 18 right &#43;= 1 19 return ans">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/palindromic-substrings/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Palindromic substrings">
   <meta property="og:description" content="Palindromic substrings# Levels: level-4 Data structures: string Algorithms: dynamic-programming Practice Link# LeetCode
 Description# Given a string, your task is to count how many palindromic substrings in this string. The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters. Note:
 The input string length won’t exceed 1000. Examples# 1Input: &#34;abc&#34; 2Output: 3 3Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;.1Input: &#34;aaa&#34; 2Output: 6 3Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;.Python Solution# 1class Solution(object): 2 # Let N be the length of the string. The middle of the palindrome could be in one of 2N - 1 positions: either at letter or between two letters. 3 # For each center, let&#39;s count all the palindromes that have this center. Notice that if [a, b] is a palindromic interval (meaning S[a], S[a&#43;1], ..., S[b] is a palindrome), then [a&#43;1, b-1] is one too. 4 # Algorithm 5 # For each possible palindrome center, 6 # let&#39;s expand our candidate palindrome on the interval [left, right] as long as we can. 7 # The condition for expanding is left &gt;= 0 and right &lt; N and S[left] == S[right]. 8 # That means we want to count a new palindrome S[left], S[left&#43;1], ..., S[right]. 9 def countSubstrings(self, S): 10 N = len(S) 11 ans = 0 12 for center in range(2 * N - 1): 13 left = center / 2 14 right = left &#43; center % 2 15 while left &gt;= 0 and right &lt; N and S[left] == S[right]: 16 ans &#43;= 1 17 left -= 1 18 right &#43;= 1 19 return ans">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ The input string length won’t exceed 1000. Examples# 1Input: &#34;abc&#34; 2Ou
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/palindromic-substrings/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/palindromic-substrings/index.xml" title="Tech Interview Prep" />
 
@@ -498,6 +499,7 @@ same characters.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

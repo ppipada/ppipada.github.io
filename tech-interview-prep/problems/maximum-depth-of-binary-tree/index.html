@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. Note:
 A leaf is a node with no children. Example# 1Given binary tree [3,9,20,null,null,15,7], 2 3 3 4 / \ 5 9 20 6 / \ 7 15 7 8 9return its depth = 3.Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def maxDepth(self, root): 10 &#34;&#34;&#34; 11 :type root: TreeNode 12 :rtype: int 13 &#34;&#34;&#34; 14 return 1 &#43; max(self.maxDepth(root.left), self.maxDepth( 15 root.right)) if root else 0">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/maximum-depth-of-binary-tree/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Maximum depth of binary tree">
   <meta property="og:description" content="Maximum depth of binary tree# Levels: level-0 Data structures: tree Algorithms: dfs Practice Link# LeetCode
 Description# Given a binary tree, find its maximum depth. The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. Note:
 A leaf is a node with no children. Example# 1Given binary tree [3,9,20,null,null,15,7], 2 3 3 4 / \ 5 9 20 6 / \ 7 15 7 8 9return its depth = 3.Python Solution# 1class TreeNode(object): 2 def __init__(self, x): 3 self.val = x 4 self.left = None 5 self.right = None 6 7 8class Solution(object): 9 def maxDepth(self, root): 10 &#34;&#34;&#34; 11 :type root: TreeNode 12 :rtype: int 13 &#34;&#34;&#34; 14 return 1 &#43; max(self.maxDepth(root.left), self.maxDepth( 15 root.right)) if root else 0">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ A leaf is a node with no children. Example# 1Given binary tree [3,9,20,null,null
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/maximum-depth-of-binary-tree/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/maximum-depth-of-binary-tree/index.xml" title="Tech Interview Prep" />
 
@@ -497,6 +498,7 @@ A leaf is a node with no children. Example# 1Given binary tree [3,9,20,null,null
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

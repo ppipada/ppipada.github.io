@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given two strings s and t, write a function to determine if t is an anagram of s. Note:
 You may assume the string contains only lowercase alphabets. Examples# 1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: true1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseFollow up# What if the inputs contain unicode characters? How would you adapt your solution to such case? Thinking# This can be solved either by Sorting or hashing. Python Solution# 1import collections 2 3 4# Sorting solution 5def isAnagram(self, s, t): 6 if len(s) != len(t): 7 return False 8 return sorted(s) == sorted(t) 9 10 11# One liner with using counter 12def isAnagramCounter(self, s, t): 13 return collections.Counter(s) == collections.Counter(t) 14 15 16# using dicts 17def isAnagramDict(self, s, t): 18 dic1, dic2 = [0] * 26, [0] * 26 19 for item in s: 20 dic1[ord(item) - ord(&#39;a&#39;)] &#43;= 1 21 for item in t: 22 dic2[ord(item) - ord(&#39;a&#39;)] &#43;= 1 23 return dic1 == dic2">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/valid-anagram/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Valid anagram">
   <meta property="og:description" content="Valid anagram# Levels: level-1 Data structures: string, hash-table Practice Link# LeetCode
 Description# Given two strings s and t, write a function to determine if t is an anagram of s. Note:
 You may assume the string contains only lowercase alphabets. Examples# 1Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; 2Output: true1Input: s = &#34;rat&#34;, t = &#34;car&#34; 2Output: falseFollow up# What if the inputs contain unicode characters? How would you adapt your solution to such case? Thinking# This can be solved either by Sorting or hashing. Python Solution# 1import collections 2 3 4# Sorting solution 5def isAnagram(self, s, t): 6 if len(s) != len(t): 7 return False 8 return sorted(s) == sorted(t) 9 10 11# One liner with using counter 12def isAnagramCounter(self, s, t): 13 return collections.Counter(s) == collections.Counter(t) 14 15 16# using dicts 17def isAnagramDict(self, s, t): 18 dic1, dic2 = [0] * 26, [0] * 26 19 for item in s: 20 dic1[ord(item) - ord(&#39;a&#39;)] &#43;= 1 21 for item in t: 22 dic2[ord(item) - ord(&#39;a&#39;)] &#43;= 1 23 return dic1 == dic2">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ You may assume the string contains only lowercase alphabets. Examples# 1Input: s
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/valid-anagram/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/valid-anagram/index.xml" title="Tech Interview Prep" />
 
@@ -505,6 +506,7 @@ You may assume the string contains only lowercase alphabets. Examples# 1Input: s
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

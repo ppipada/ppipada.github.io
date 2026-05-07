@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note:
 Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 steps1Input: 3 2Output: 3 3Explanation: There are three ways to climb to the top. 41. 1 step &#43; 1 step &#43; 1 step 52. 1 step &#43; 2 steps 63. 2 steps &#43; 1 stepPython Solution# 1class Solution1(object): 2 def climbStairs(self, n): 3 &#34;&#34;&#34; 4 :type n: int 5 :rtype: int 6 &#34;&#34;&#34; 7 if not n: 8 return 0 9 if n == 1: 10 return 1 11 f = 1 12 s = 2 13 for _ in range(3, n &#43; 1): 14 t = f &#43; s 15 f = s 16 s = t 17 return s 18 19 20class Solution2(object): 21 def climbStairs(self, n): 22 &#34;&#34;&#34; 23 :type n: int 24 :rtype: int 25 &#34;&#34;&#34; 26 if not n: 27 return 0 28 if n == 1: 29 return 1 30 dp = [0 for _ in range(n &#43; 1)] 31 dp[1] = 1 32 dp[2] = 2 33 for i in range(3, n &#43; 1): 34 dp[i] = dp[i - 1] &#43; dp[i - 2] 35 return dp[n] 36 37 38tm = [ 39 (1, 1), 40 (2, 2), 41 (3, 3), 42 (0, 0), 43 (None, 0), 44] 45 46if __name__ == &#34;__main__&#34;: 47 48 sol1 = Solution1() 49 sol2 = Solution2() 50 51 for idx, nin in enumerate(tm): 52 resout = sol1.climbStairs(nin[0]) 53 print(nin, resout, resout == nin[1]) 54 resout = sol2.climbStairs(nin[0]) 55 print(nin, resout, resout == nin[1])">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/climbing-stairs/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Climbing stairs">
   <meta property="og:description" content="Climbing stairs# Levels: level-3 Algorithms: dynamic-programming Practice Link# LeetCode
 Description# You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note:
 Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation: There are two ways to climb to the top. 41. 1 step &#43; 1 step 52. 2 steps1Input: 3 2Output: 3 3Explanation: There are three ways to climb to the top. 41. 1 step &#43; 1 step &#43; 1 step 52. 1 step &#43; 2 steps 63. 2 steps &#43; 1 stepPython Solution# 1class Solution1(object): 2 def climbStairs(self, n): 3 &#34;&#34;&#34; 4 :type n: int 5 :rtype: int 6 &#34;&#34;&#34; 7 if not n: 8 return 0 9 if n == 1: 10 return 1 11 f = 1 12 s = 2 13 for _ in range(3, n &#43; 1): 14 t = f &#43; s 15 f = s 16 s = t 17 return s 18 19 20class Solution2(object): 21 def climbStairs(self, n): 22 &#34;&#34;&#34; 23 :type n: int 24 :rtype: int 25 &#34;&#34;&#34; 26 if not n: 27 return 0 28 if n == 1: 29 return 1 30 dp = [0 for _ in range(n &#43; 1)] 31 dp[1] = 1 32 dp[2] = 2 33 for i in range(3, n &#43; 1): 34 dp[i] = dp[i - 1] &#43; dp[i - 2] 35 return dp[n] 36 37 38tm = [ 39 (1, 1), 40 (2, 2), 41 (3, 3), 42 (0, 0), 43 (None, 0), 44] 45 46if __name__ == &#34;__main__&#34;: 47 48 sol1 = Solution1() 49 sol2 = Solution2() 50 51 for idx, nin in enumerate(tm): 52 resout = sol1.climbStairs(nin[0]) 53 print(nin, resout, resout == nin[1]) 54 resout = sol2.climbStairs(nin[0]) 55 print(nin, resout, resout == nin[1])">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation:
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/climbing-stairs/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/climbing-stairs/index.xml" title="Tech Interview Prep" />
 
@@ -538,6 +539,7 @@ Given n will be a positive integer. Examples# 1Input: 2 2Output: 2 3Explanation:
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

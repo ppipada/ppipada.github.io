@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Number of connected components in an undirected graph# Levels: level-5 Data structures: graph Description# Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Note:
 You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges. Examples# 1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.1 0 4 2 | | 3 1 --- 2 --- 3 4 5Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.Python Solution# 1class Solution(object): 2 def countComponents(self, n, edges): 3 &#34;&#34;&#34; 4 :type n: int 5 :type edges: List[List[int]] 6 :rtype: int 7 &#34;&#34;&#34; 8 V = [[] for _ in range(n)] 9 for e in edges: 10 V[e[0]].append(e[1]) 11 V[e[1]].append(e[0]) 12 13 visited = [False for _ in range(n)] 14 cnt = 0 15 for v in range(n): 16 if not visited[v]: 17 cnt &#43;= 1 18 self.dfs(V, v, visited) 19 20 return cnt 21 22 def dfs(self, V, v, visited): 23 visited[v] = True 24 for nbr in V[v]: 25 if not visited[nbr]: 26 self.dfs(V, nbr, visited)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Number of connected components in an undirected graph">
   <meta property="og:description" content="Number of connected components in an undirected graph# Levels: level-5 Data structures: graph Description# Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph. Note:
 You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges. Examples# 1 2 0 3 3 | | 4 1 --- 2 4 5 6Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.1 0 4 2 | | 3 1 --- 2 --- 3 4 5Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.Python Solution# 1class Solution(object): 2 def countComponents(self, n, edges): 3 &#34;&#34;&#34; 4 :type n: int 5 :type edges: List[List[int]] 6 :rtype: int 7 &#34;&#34;&#34; 8 V = [[] for _ in range(n)] 9 for e in edges: 10 V[e[0]].append(e[1]) 11 V[e[1]].append(e[0]) 12 13 visited = [False for _ in range(n)] 14 cnt = 0 15 for v in range(n): 16 if not visited[v]: 17 cnt &#43;= 1 18 self.dfs(V, v, visited) 19 20 return cnt 21 22 def dfs(self, V, v, visited): 23 visited[v] = True 24 for nbr in V[v]: 25 if not visited[nbr]: 26 self.dfs(V, nbr, visited)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ You can assume that no duplicate edges will appear in edges. Since all edges are
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/number-of-connected-components-in-an-undirected-graph/index.xml" title="Tech Interview Prep" />
 
@@ -504,6 +505,7 @@ to find the number of connected components in an undirected graph.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Maximum product subarray# Levels: level-3 Data structures: array Practice Link# LeetCode
 Description# Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Examples# 1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution# 1class Solution(object): 2 def maxProduct(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return 0 9 best = nums[0] 10 current_max = nums[0] 11 current_min = nums[0] 12 for x in range(1, len(nums)): 13 n = (nums[x], nums[x] * current_max, nums[x] * current_min) 14 current_max = max(n) 15 current_min = min(n) 16 best = max(current_max, best) 17 print(nums[x], current_max, current_min, best) 18 return best 19 20 21in_arrs = [ 22 # [2, 1, 2, 1, 0, 1, 2], 23 # [3, 3, 5, 0, 0, 3, 1, 4], 24 # [3, 5, 0, 1, 4], 25 # [1, 2, -1, 1], 26 # [1, 2, 3, 4], 27 # [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 28 # [-2, 1, -3, 4, -1, 2, 1, -5, 4], 29 [2, 3, -2, 4], 30 [-2, 0, -1], 31 [-2], 32 [-4, -3], 33 [-2, 3, -4], 34 [2, -3, 4], 35 [0, -2, -3], 36 [0, -2], 37 [2, -3, 4, 0], 38 [2, -5, -2, -4, 3], 39] 40 41if __name__ == &#34;__main__&#34;: 42 43 sol = Solution() 44 for nin in in_arrs: 45 print(nin) 46 r = sol.maxProduct(nin) 47 print(r)">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/maximum-product-subarray/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Maximum product subarray">
   <meta property="og:description" content="Maximum product subarray# Levels: level-3 Data structures: array Practice Link# LeetCode
 Description# Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product. Examples# 1Input: [2,3,-2,4] 2Output: 6 3Explanation: [2,3] has the largest product 6.1Input: [-2,0,-1] 2Output: 0 3Explanation: The result cannot be 2, because [-2,-1] is not a subarray.Python Solution# 1class Solution(object): 2 def maxProduct(self, nums): 3 &#34;&#34;&#34; 4 :type nums: List[int] 5 :rtype: int 6 &#34;&#34;&#34; 7 if not nums: 8 return 0 9 best = nums[0] 10 current_max = nums[0] 11 current_min = nums[0] 12 for x in range(1, len(nums)): 13 n = (nums[x], nums[x] * current_max, nums[x] * current_min) 14 current_max = max(n) 15 current_min = min(n) 16 best = max(current_max, best) 17 print(nums[x], current_max, current_min, best) 18 return best 19 20 21in_arrs = [ 22 # [2, 1, 2, 1, 0, 1, 2], 23 # [3, 3, 5, 0, 0, 3, 1, 4], 24 # [3, 5, 0, 1, 4], 25 # [1, 2, -1, 1], 26 # [1, 2, 3, 4], 27 # [1, 1, 1, 3, 3, 4, 3, 2, 4, 2], 28 # [-2, 1, -3, 4, -1, 2, 1, -5, 4], 29 [2, 3, -2, 4], 30 [-2, 0, -1], 31 [-2], 32 [-4, -3], 33 [-2, 3, -4], 34 [2, -3, 4], 35 [0, -2, -3], 36 [0, -2], 37 [2, -3, 4, 0], 38 [2, -5, -2, -4, 3], 39] 40 41if __name__ == &#34;__main__&#34;: 42 43 sol = Solution() 44 for nin in in_arrs: 45 print(nin) 46 r = sol.maxProduct(nin) 47 print(r)">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Given an integer array nums, find the contiguous subarray within an
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/maximum-product-subarray/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/maximum-product-subarray/index.xml" title="Tech Interview Prep" />
 
@@ -517,6 +518,7 @@ the largest product.</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

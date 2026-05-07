@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -11,13 +11,13 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Spiral matrix# Levels: level-2 Data structures: array Practice Link# LeetCode
 Description# Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order. Examples# 1Input: 2[ 3 [ 1, 2, 3 ], 4 [ 4, 5, 6 ], 5 [ 7, 8, 9 ] 6] 7Output: [1,2,3,6,9,8,7,4,5]1Input: 2[ 3 [1, 2, 3, 4], 4 [5, 6, 7, 8], 5 [9,10,11,12] 6] 7Output: [1,2,3,4,8,12,11,10,9,5,6,7]Python Solution# 1def spiralOrder(self, matrix): 2 res = [] 3 while matrix: 4 res.extend(matrix.pop(0)) # left to right 5 if matrix and matrix[0]: # top to dwon 6 for row in matrix: 7 res.append(row.pop()) 8 if matrix: # right to left 9 res.extend(matrix.pop()[::-1]) 10 if matrix and matrix[0]: # bottom to up 11 for row in matrix[::-1]: 12 res.append(row.pop(0)) 13 return res">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/spiral-matrix/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Spiral matrix">
   <meta property="og:description" content="Spiral matrix# Levels: level-2 Data structures: array Practice Link# LeetCode
 Description# Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order. Examples# 1Input: 2[ 3 [ 1, 2, 3 ], 4 [ 4, 5, 6 ], 5 [ 7, 8, 9 ] 6] 7Output: [1,2,3,6,9,8,7,4,5]1Input: 2[ 3 [1, 2, 3, 4], 4 [5, 6, 7, 8], 5 [9,10,11,12] 6] 7Output: [1,2,3,4,8,12,11,10,9,5,6,7]Python Solution# 1def spiralOrder(self, matrix): 2 res = [] 3 while matrix: 4 res.extend(matrix.pop(0)) # left to right 5 if matrix and matrix[0]: # top to dwon 6 for row in matrix: 7 res.append(row.pop()) 8 if matrix: # right to left 9 res.extend(matrix.pop()[::-1]) 10 if matrix and matrix[0]: # bottom to up 11 for row in matrix[::-1]: 12 res.append(row.pop(0)) 13 return res">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -31,19 +31,20 @@ Description# Given a matrix of m x n elements (m rows, n columns), return all el
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/spiral-matrix/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/spiral-matrix/index.xml" title="Tech Interview Prep" />
 
@@ -490,6 +491,7 @@ Description# Given a matrix of m x n elements (m rows, n columns), return all el
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

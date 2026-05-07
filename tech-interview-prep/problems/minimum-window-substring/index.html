@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -12,14 +12,14 @@ https://github.com/alex-shpak/hugo-book
 Description# Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n). Note:
 If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S. Example# 1Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; 2Output: &#34;BANC&#34;Thinking# Can this have a sliding window based approach? Python Solution# 1from collections import Counter 2 3 4class Solution(object): 5 def minWindow(self, s, t): 6 &#34;&#34;&#34; 7 :type s: str 8 :type t: str 9 :rtype: str 10 &#34;&#34;&#34; 11 12 if not t or not s: 13 return &#34;&#34; 14 15 # Dictionary which keeps a count of all the unique characters in t. 16 dict_t = Counter(t) 17 18 # Number of unique characters in t, which need to be present in the desired window. 19 required = len(dict_t) 20 21 # left and right pointer 22 l, r = 0, 0 23 24 # formed is used to keep track of how many unique characters in t are present in the current window in its desired frequency. 25 # e.g. if t is &#34;AABC&#34; then the window must have two A&#39;s, one B and one C. Thus formed would be = 3 when all these conditions are met. 26 formed = 0 27 28 # Dictionary which keeps a count of all the unique characters in the current window. 29 window_counts = {} 30 31 # ans tuple of the form (window length, left, right) 32 ans = float(&#34;inf&#34;), None, None 33 34 while r &lt; len(s): 35 36 # Add one character from the right to the window 37 character = s[r] 38 window_counts[character] = window_counts.get(character, 0) &#43; 1 39 40 # If the frequency of the current character added equals to the desired count in t then increment the formed count by 1. 41 if character in dict_t and window_counts[character] == dict_t[ 42 character]: 43 formed &#43;= 1 44 45 # Try and contract the window till the point where it ceases to be &#39;desirable&#39;. 46 while l &lt;= r and formed == required: 47 character = s[l] 48 49 # Save the smallest window until now. 50 if r - l &#43; 1 &lt; ans[0]: 51 ans = (r - l &#43; 1, l, r) 52 53 # The character at the position pointed by the `left` pointer is no longer a part of the window. 54 window_counts[character] -= 1 55 if character in dict_t and window_counts[character] &lt; dict_t[ 56 character]: 57 formed -= 1 58 59 # Move the left pointer ahead, this would help to look for a new window. 60 l &#43;= 1 61 62 # Keep expanding the window once we are done contracting. 63 r &#43;= 1 64 return &#34;&#34; if ans[0] == float(&#34;inf&#34;) else s[ans[1]:ans[2] &#43; 1]">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/minimum-window-substring/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="Minimum window substring">
   <meta property="og:description" content="Minimum window substring# Levels: level-5 Data structures: string, hash-table Patterns: sliding-window Practice Link# LeetCode
 Description# Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n). Note:
 If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S. Example# 1Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; 2Output: &#34;BANC&#34;Thinking# Can this have a sliding window based approach? Python Solution# 1from collections import Counter 2 3 4class Solution(object): 5 def minWindow(self, s, t): 6 &#34;&#34;&#34; 7 :type s: str 8 :type t: str 9 :rtype: str 10 &#34;&#34;&#34; 11 12 if not t or not s: 13 return &#34;&#34; 14 15 # Dictionary which keeps a count of all the unique characters in t. 16 dict_t = Counter(t) 17 18 # Number of unique characters in t, which need to be present in the desired window. 19 required = len(dict_t) 20 21 # left and right pointer 22 l, r = 0, 0 23 24 # formed is used to keep track of how many unique characters in t are present in the current window in its desired frequency. 25 # e.g. if t is &#34;AABC&#34; then the window must have two A&#39;s, one B and one C. Thus formed would be = 3 when all these conditions are met. 26 formed = 0 27 28 # Dictionary which keeps a count of all the unique characters in the current window. 29 window_counts = {} 30 31 # ans tuple of the form (window length, left, right) 32 ans = float(&#34;inf&#34;), None, None 33 34 while r &lt; len(s): 35 36 # Add one character from the right to the window 37 character = s[r] 38 window_counts[character] = window_counts.get(character, 0) &#43; 1 39 40 # If the frequency of the current character added equals to the desired count in t then increment the formed count by 1. 41 if character in dict_t and window_counts[character] == dict_t[ 42 character]: 43 formed &#43;= 1 44 45 # Try and contract the window till the point where it ceases to be &#39;desirable&#39;. 46 while l &lt;= r and formed == required: 47 character = s[l] 48 49 # Save the smallest window until now. 50 if r - l &#43; 1 &lt; ans[0]: 51 ans = (r - l &#43; 1, l, r) 52 53 # The character at the position pointed by the `left` pointer is no longer a part of the window. 54 window_counts[character] -= 1 55 if character in dict_t and window_counts[character] &lt; dict_t[ 56 character]: 57 formed -= 1 58 59 # Move the left pointer ahead, this would help to look for a new window. 60 l &#43;= 1 61 62 # Keep expanding the window once we are done contracting. 63 r &#43;= 1 64 return &#34;&#34; if ans[0] == float(&#34;inf&#34;) else s[ans[1]:ans[2] &#43; 1]">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -34,19 +34,20 @@ If there is no such window in S that covers all characters in T, return the empt
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/minimum-window-substring/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/minimum-window-substring/index.xml" title="Tech Interview Prep" />
 
@@ -544,6 +545,7 @@ O(n).</li>
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  

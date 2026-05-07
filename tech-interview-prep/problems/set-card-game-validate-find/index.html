@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <!--
 Made with Book Theme
@@ -10,12 +10,12 @@ https://github.com/alex-shpak/hugo-book
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SET Card Game - Validate Set And Find Set# Levels: level-4 Data structures: array, hash-table Patterns: hashing Practice Link# No single canonical LeetCode problem; this is a common interview / game-math problem. Description# Each card has k attributes (in the classic game, k = 4), each taking one of 3 values, typically encoded as 0/1/2. Three cards form a valid set if for every attribute: the values are all the same, OR the values are all different Tasks: is_set(cards3) -&gt; bool: given exactly 3 cards, return whether they form a set find_set(cards) -&gt; list[card]: given a list of cards, return any one set (3 cards), else [] Examples# 1(1,0,1,2) 2(1,2,0,2) 3(1,1,2,1) 4-&gt; True1(1,0,1,2) 2(1,0,1,2) 3(1,0,1,2) 4-&gt; True (all attributes all same)Python Solution# 1from collections import Counter 2from typing import List, Sequence, Tuple 3 4Card = Tuple[int, ...] # e.g. (1,0,1,2) 5 6def is_set(cards: Sequence[Card]) -&gt; bool: 7 &#34;&#34;&#34; 8 Check whether exactly 3 cards form a valid Set. 9 10 Condition per attribute i: 11 len({c1[i], c2[i], c3[i]}) in {1, 3} 12 13 Time: O(k) 14 Space: O(1) 15 &#34;&#34;&#34; 16 if len(cards) != 3: 17 return False 18 a, b, c = cards 19 if len(a) != len(b) or len(b) != len(c): 20 return False 21 22 k = len(a) 23 for i in range(k): 24 vals = {a[i], b[i], c[i]} 25 if len(vals) not in (1, 3): 26 return False 27 return True 28 29def _third_value_mod3(x: int, y: int) -&gt; int: 30 &#34;&#34;&#34; 31 Values are in {0,1,2}. 32 If x==y then third must be same. 33 Else third is the remaining value: 0&#43;1&#43;2 - x - y 34 &#34;&#34;&#34; 35 return x if x == y else (3 - x - y) 36 37def find_any_set(cards: List[Card]) -&gt; List[Card]: 38 &#34;&#34;&#34; 39 Find any set among the given cards (returns the 3 cards), else []. 40 41 Efficient approach (classic SET trick): 42 For any two cards A and B, the required third card C is uniquely determined 43 attribute-wise (in mod 3 encoding). 44 45 Handles duplicates by using counts. 46 47 Time: O(n^2 * k) 48 Space: O(n) 49 &#34;&#34;&#34; 50 n = len(cards) 51 if n &lt; 3: 52 return [] 53 54 counts = Counter(cards) 55 unique = list(counts.keys()) 56 k = len(unique[0]) if unique else 0 57 unique_set = set(unique) 58 59 # Iterate over pairs of unique cards (still fine; counts handle duplicates) 60 for i in range(len(unique)): 61 for j in range(i, len(unique)): 62 a = unique[i] 63 b = unique[j] 64 65 need = tuple(_third_value_mod3(a[d], b[d]) for d in range(k)) 66 if need not in unique_set: 67 continue 68 69 # Verify availability of 3 cards considering duplicates 70 # Build multiset requirement 71 req = Counter([a, b, need]) 72 ok = True 73 for card, r in req.items(): 74 if counts[card] &lt; r: 75 ok = False 76 break 77 if ok and is_set([a, b, need]): 78 return [a, b, need] 79 80 return []">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/problems/set-card-game-validate-find/">
   <meta property="og:site_name" content="Tech Interview Prep">
   <meta property="og:title" content="SET Card Game - Validate Set And Find Set">
   <meta property="og:description" content="SET Card Game - Validate Set And Find Set# Levels: level-4 Data structures: array, hash-table Patterns: hashing Practice Link# No single canonical LeetCode problem; this is a common interview / game-math problem. Description# Each card has k attributes (in the classic game, k = 4), each taking one of 3 values, typically encoded as 0/1/2. Three cards form a valid set if for every attribute: the values are all the same, OR the values are all different Tasks: is_set(cards3) -&gt; bool: given exactly 3 cards, return whether they form a set find_set(cards) -&gt; list[card]: given a list of cards, return any one set (3 cards), else [] Examples# 1(1,0,1,2) 2(1,2,0,2) 3(1,1,2,1) 4-&gt; True1(1,0,1,2) 2(1,0,1,2) 3(1,0,1,2) 4-&gt; True (all attributes all same)Python Solution# 1from collections import Counter 2from typing import List, Sequence, Tuple 3 4Card = Tuple[int, ...] # e.g. (1,0,1,2) 5 6def is_set(cards: Sequence[Card]) -&gt; bool: 7 &#34;&#34;&#34; 8 Check whether exactly 3 cards form a valid Set. 9 10 Condition per attribute i: 11 len({c1[i], c2[i], c3[i]}) in {1, 3} 12 13 Time: O(k) 14 Space: O(1) 15 &#34;&#34;&#34; 16 if len(cards) != 3: 17 return False 18 a, b, c = cards 19 if len(a) != len(b) or len(b) != len(c): 20 return False 21 22 k = len(a) 23 for i in range(k): 24 vals = {a[i], b[i], c[i]} 25 if len(vals) not in (1, 3): 26 return False 27 return True 28 29def _third_value_mod3(x: int, y: int) -&gt; int: 30 &#34;&#34;&#34; 31 Values are in {0,1,2}. 32 If x==y then third must be same. 33 Else third is the remaining value: 0&#43;1&#43;2 - x - y 34 &#34;&#34;&#34; 35 return x if x == y else (3 - x - y) 36 37def find_any_set(cards: List[Card]) -&gt; List[Card]: 38 &#34;&#34;&#34; 39 Find any set among the given cards (returns the 3 cards), else []. 40 41 Efficient approach (classic SET trick): 42 For any two cards A and B, the required third card C is uniquely determined 43 attribute-wise (in mod 3 encoding). 44 45 Handles duplicates by using counts. 46 47 Time: O(n^2 * k) 48 Space: O(n) 49 &#34;&#34;&#34; 50 n = len(cards) 51 if n &lt; 3: 52 return [] 53 54 counts = Counter(cards) 55 unique = list(counts.keys()) 56 k = len(unique[0]) if unique else 0 57 unique_set = set(unique) 58 59 # Iterate over pairs of unique cards (still fine; counts handle duplicates) 60 for i in range(len(unique)): 61 for j in range(i, len(unique)): 62 a = unique[i] 63 b = unique[j] 64 65 need = tuple(_third_value_mod3(a[d], b[d]) for d in range(k)) 66 if need not in unique_set: 67 continue 68 69 # Verify availability of 3 cards considering duplicates 70 # Build multiset requirement 71 req = Counter([a, b, need]) 72 ok = True 73 for card, r in req.items(): 74 if counts[card] &lt; r: 75 ok = False 76 break 77 if ok and is_set([a, b, need]): 78 return [a, b, need] 79 80 return []">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 
@@ -28,19 +28,20 @@ https://github.com/alex-shpak/hugo-book
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/problems/set-card-game-validate-find/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.a567a91bee849fdc8e389499c30737d9ada1b560975fb536f0b49c53aa5a0619.css" integrity="sha256-pWepG&#43;6En9yOOJSZwwc32a2htWCXX7U28LScU6paBhk=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
   <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PVSXVYRTKF');
-        </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PVSXVYRTKF');
+</script>
+
 
 <link rel="alternate" type="application/rss+xml" href="https://pankajpipada.com/tech-interview-prep/problems/set-card-game-validate-find/index.xml" title="Tech Interview Prep" />
 
@@ -564,6 +565,7 @@ https://github.com/alex-shpak/hugo-book
   
   <div class="book-copyright flex justify-center">
     <small>Tech Interview Prep - Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</small>
+
   </div>
   
  
