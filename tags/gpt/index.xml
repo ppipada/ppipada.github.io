@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 14 Dec 2025 12:51:31 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 10:00:00 +0530</lastBuildDate>
     <atom:link href="https://pankajpipada.com/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Motivation, Productivity Barriers, and Engineering Friction</title>
+      <link>https://pankajpipada.com/posts/2026-05-07-motivation-productivity-barriers/</link>
+      <pubDate>Thu, 07 May 2026 10:00:00 +0530</pubDate>
+      <guid>https://pankajpipada.com/posts/2026-05-07-motivation-productivity-barriers/</guid>
+      <description>What looks like a motivation problem in software work is often the cost of entering the next step - context load, cross-system design, LLM drift, verification, and re-entry. The fix is not more generated code, but better design ownership, scoped AI collaboration, repo-local context, and intentional switching.</description>
+    </item>
     <item>
       <title>Codex CLI vs Chat - Tokens, Output Quality, and Motivation</title>
       <link>https://pankajpipada.com/posts/2025-12-07-codex-motivation/</link>

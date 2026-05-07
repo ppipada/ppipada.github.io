@@ -261,14 +261,14 @@ coding workflow using a simple, markdown-based approach.</p>
 <p>To streamline my workflow, I categorize tasks into four main priorities (as described in my previous post), a system
 that has proven effective across different contexts:</p>
 <ul>
-<li><strong>P-0 (Immediate Tasks)</strong>: The most urgent tasks that needed to be tackled right away. This list is kept very short
-to avoid overwhelming stress and serves as a critical indicator of workload and pressure.</li>
-<li><strong>P-1 (Sooner than Later)</strong>: Important but not immediate tasks that are next in line after P-0. These tasks
-typically feed into P-0 during calmer periods.</li>
+<li><strong>P-0 (Immediate Tasks)</strong>: The most urgent tasks that needed to be tackled right away. This list is kept very short to
+avoid overwhelming stress and serves as a critical indicator of workload and pressure.</li>
+<li><strong>P-1 (Sooner than Later)</strong>: Important but not immediate tasks that are next in line after P-0. These tasks typically
+feed into P-0 during calmer periods.</li>
 <li><strong>P-2 (Obligations)</strong>: A catch-all for tasks with no pressing urgency. These are often obligatory tasks that lack
 clear motivation, leading them to become &ldquo;write and forget&rdquo; items.</li>
-<li><strong>P-X (Excitements)</strong>: A short list of tasks that genuinely excite me, crucial for maintaining motivation. Tasks
-here had to be interesting enough to merit their inclusion.</li>
+<li><strong>P-X (Excitements)</strong>: A short list of tasks that genuinely excite me, crucial for maintaining motivation. Tasks here
+had to be interesting enough to merit their inclusion.</li>
 </ul>
 <p>Each day, I draw from these categories to form (at least in my head) two lists:</p>
 <ul>
@@ -282,8 +282,7 @@ workflow works well for managing multiple streams of work, balancing motivation,
 <li>
 <p>Challenges with previous MS OneNote based system</p>
 <ul>
-<li>As I transitioned to solo development, the need for a more integrated and fluid execution system became
-apparent.</li>
+<li>As I transitioned to solo development, the need for a more integrated and fluid execution system became apparent.</li>
 <li>Managing tasks through MS OneNote caused frequent context switches, often disrupting my flow state.</li>
 <li>Also, the subpar support for Linux was a bit problematic.</li>
 </ul>
@@ -291,8 +290,8 @@ apparent.</li>
 <li>
 <p>Switch to Markdown+Git:</p>
 <ul>
-<li>I had experimented with markdown-based task management before, but it wasn’t until I faced these challenges that
-I fully embraced it.</li>
+<li>I had experimented with markdown-based task management before, but it wasn’t until I faced these challenges that I
+fully embraced it.</li>
 <li>Markdown, combined with Git, became the system that brought everything together. This approach integrates task
 management directly into the coding environment, minimizing context switches and keeping me in a productive flow
 state.</li>
@@ -304,15 +303,22 @@ streamlined.</li>
 <h3 id="ideasbrainstorminghigh-level-deliberations">Ideas/Brainstorming/High-Level Deliberations</h3>
 <p>For non-project-specific tasks or high-level ideas, I follow this implementation:</p>
 <ul>
-<li>Inbox: Everything starts in an <code>inbox.md</code> file, which acts as a simple task list. Items here are sourced from random
-notes in Google Keep, spontaneous thoughts, or ad-hoc notes taken with pen and paper.</li>
-<li>Todo: Items move from <code>inbox.md</code> to a <code>/todo.md</code> which is a prioritized task list according to the previous workflow
-P0/PX/P1/P2. Ideas or refinements of thoughts or brainstorming&rsquo;s dont move here.</li>
-<li>Ideas: These items are moved to specific files like <code>ideaOrNoteTypeTitle/someFileName.md</code> or
-<code>/notes/ideaOrNoteTypeTitle.md</code>. These files are generally similar to P-X lists, focusing on ideas that excite me
-but aren’t immediately actionable. These files are created as needed, and generic catch-all files (e.g., <code>notes.md</code>)
-are avoided.</li>
-<li>Sample folder structure:
+<li>
+<p>Inbox: Everything starts in an <code>inbox.md</code> file, which acts as a simple task list. Items here are sourced from random
+notes in Google Keep, spontaneous thoughts, or ad-hoc notes taken with pen and paper.</p>
+</li>
+<li>
+<p>Todo: Items move from <code>inbox.md</code> to a <code>/todo.md</code> which is a prioritized task list according to the previous workflow
+P0/PX/P1/P2. Ideas or refinements of thoughts or brainstorming&rsquo;s dont move here.</p>
+</li>
+<li>
+<p>Ideas: These items are moved to specific files like <code>ideaOrNoteTypeTitle/someFileName.md</code> or
+<code>/notes/ideaOrNoteTypeTitle.md</code>. These files are generally similar to P-X lists, focusing on ideas that excite me but
+aren’t immediately actionable. These files are created as needed, and generic catch-all files (e.g., <code>notes.md</code>) are
+avoided.</p>
+</li>
+<li>
+<p>Sample folder structure:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>root/
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>├── inbox.md
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>├── todo.md
@@ -406,12 +412,11 @@ repositories, can be awkward and frustrating. I experimented with
 </a>
  and other
 similar tools designed to manage Git-based markdown files on mobile, but the experience was not great.</li>
-<li>Editing in a mobile environment often felt jittery and unreliable, which disrupted the otherwise smooth
-workflow.</li>
+<li>Editing in a mobile environment often felt jittery and unreliable, which disrupted the otherwise smooth workflow.</li>
 <li>Also, editing markdown text on mobile and running the git workflow with it, just doesn&rsquo;t feel right.</li>
 <li>For quick, on-the-go notes, I use Google Keep, which I later transfer to markdown files. These notes are later
-transferred to the appropriate markdown files on my desktop, maintaining a single source of truth for all my
-tasks and ideas.</li>
+transferred to the appropriate markdown files on my desktop, maintaining a single source of truth for all my tasks
+and ideas.</li>
 <li>For reading my current notes, GitHub mobile app is more than sufficient.</li>
 <li>Maybe there will be some bridge that will block a lot of git updates etc from mobile but still allow a smooth
 inbox population. While a more refined mobile solution would be helpful, this current setup is sufficient and
@@ -430,8 +435,8 @@ daily lists just doesn&rsquo;t work out well.</li>
 <li>
 <p>Tool choice</p>
 <ul>
-<li>Lot of folks seem to suggest that Obsidian will give me best of all worlds, but that has not been the case for
-me as of now. May be I need to take a leap of faith at some point I suppose.</li>
+<li>Lot of folks seem to suggest that Obsidian will give me best of all worlds, but that has not been the case for me
+as of now. May be I need to take a leap of faith at some point I suppose.</li>
 </ul>
 </li>
 <li>

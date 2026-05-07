@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light"><head>
+    <title>Motivation, Productivity Barriers, and Engineering Friction</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    
+    
+        
+    
+
+
+    <meta name="description" content="What looks like a motivation problem in software work is often the cost of entering the next step - context load, cross-system design, LLM drift, verification, and re-entry. The fix is not more generated code, but better design ownership, scoped AI collaboration, repo-local context, and intentional switching." />
+    
+    
+
+    <script>
+        const storedTheme = localStorage.getItem('darkMode');
+        if (storedTheme === 'enabled' || (storedTheme !== 'disabled' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.style.backgroundColor = "#333333";
+            document.documentElement.style.color = "#E0E0E0";
+        }
+    </script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
+        
+        
+            
+        
+        
+            <link rel="preload" href="../../images/icon-192x192.png" as="image" />
+        
+    
+
+    
+    
+    
+        
+        <link rel="stylesheet" href="../../css/custom.min.19d11c3fd49fedba7850ef20e902ba4789b5ca169865ec21dfecbf3fba9be1ed.css" integrity="sha256-GdEcP9Sf7bp4UO8g6QK6R4m1yhaYZewh3&#43;y/P7qb4e0=" />
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PVSXVYRTKF');
+        </script>
+
+</head>
+<body><header class="container mt-sm-2 mt-1 mb-1 mx-auto" style="max-width: 768px; margin: auto; position: relative;">
+    
+    <div style="position: absolute; top: 0.5em; left: 1em; z-index: 10;">
+        
+<button id="darkModeToggle" class="btn" style="background: transparent; border: none" aria-label="Toggle dark mode">
+    <i id="darkModeIcon" class="fas"></i>
+</button>
+
+    </div>
+    
+    <div class="row justify-content-center">
+        
+        
+        
+        
+
+        <div class="col-sm-3 col-12 text-sm-end text-center pt-1">
+            <a href="../../" class="text-decoration-none" aria-label="home">
+                <img id="home-image" class="rounded-circle"
+                    src="../../images/icon-192x192.png"
+                    alt="home-image"
+                />
+            </a>
+        </div>
+
+        <div class="col-sm-7 col-12 text-sm-start text-center">
+        
+            <h2 class="m-0 mt-2">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Scramblings
+                    
+                </a>
+            </h2>
+            <p class="text-muted">
+                
+                    Dev scratchpad. Digital garden
+                
+            </p>
+            
+            <ul id="project-links" class="list-inline" style="list-style: none; padding: 0; margin: 0; margin-top: 0.25em; height: 1.2em; line-height: 0.8em; font-size: medium;">
+                <li class="badge" style="display: inline; color: var(--bs-body-color); padding: 0;">Projects:&nbsp;</li>
+                
+                    
+                    <li class="badge" style="display: inline;">
+                        <a href="https://github.com/flexigpt/flexigpt-app" target="_blank" rel="noopener noreferrer" title="">
+                            FlexiGPT
+														<i class="fa fa-external-link-square-alt"></i>
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li class="badge" style="display: inline;">
+                        <a href="../../tech-interview-prep/" target="_blank" rel="noopener noreferrer" title="">
+                            Tech Interview Prep
+														<i class="fa fa-link"></i>
+                        </a>
+                    </li>
+                    
+                
+
+                
+            </ul>
+            
+            <ul id="nav-links" class="list-inline" style="list-style: none; padding: 0; margin: 0; margin-top: 0.25em; margin-bottom: 0.5em; height: 1.2em; line-height: 0.8em; font-size: medium;">
+                <li class="badge" style="display: inline; color: var(--bs-body-color); padding: 0;">Sections:</li>
+								
+                
+                <li class="badge" style="display: inline;">
+                    <a href="../../tags/" title="Tags">Tags</a>
+                </li>
+                
+                <li class="badge" style="display: inline;">
+                    <a href="../../quotes/" title="Quotes">Quotes</a>
+                </li>
+                
+                <li class="badge" style="display: inline;">
+                    <a href="../../movies/" title="Movies">Movies</a>
+                </li>
+                
+                <li class="badge" style="display: inline;">
+                    <a href="../../breathing/" title="Breathing">Breathing</a>
+                </li>
+                
+           </ul>
+						<div id="breadcrumbs-container" style="height: 1.2em; line-height: 1em; margin: 0; overflow: hidden; font-size: small;">
+    <ul id="breadcrumbs" style="list-style: none; padding: 0;">
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <a class="text-muted" href="../../" aria-label="home"
+                        ><i class="fas fa-home"></i
+                    ></a>
+                </li>
+            
+        
+            
+                <li class="text-muted" style="display: inline;">
+                    <span>&gt;</span>
+                    <a class="text-muted" href="../../posts/">Posts</a>
+                </li>
+            
+        
+        
+            <li class="text-muted" style="display: inline;">
+                <span>&gt;</span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    </div>
+</header>
+
+			<div id="content" class="mx-auto">
+				<div class="container">
+					<form
+    id="search"
+    action="https://pankajpipada.com/search/"
+    method="get"
+    class="d-flex justify-content-center mt-2 mb-4"
+>
+    <label hidden for="search-input">Search site</label>
+    <div class="input-group" style="width: 90%">
+        <span class="input-group-text border-0 bg-transparent">
+            <i class="fa fa-search"></i>
+        </span>
+        <input
+            type="text"
+            class="form-control rounded-pill"
+            id="search-input"
+            name="query"
+            placeholder="Type here to search..."
+            aria-label="Search"
+        />
+        <button class="btn border-0 bg-transparent" type="submit" aria-label="search">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+
+	<div class="pl-sm-4 ml-sm-5">
+		<div style="margin-bottom: 2rem">
+			<h1 style="text-align: center">Motivation, Productivity Barriers, and Engineering Friction</h1>
+			<div
+				class="text-muted"
+				style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
+			>
+				<div>May 7, 2026 | Reading Time: 20 min</div>
+				<div>
+					<i class="fa fa-tags"></i>
+					
+						<a class="text-muted" href="../../tags/gpt/">gpt</a
+						>,
+					
+						<a class="text-muted" href="../../tags/life/">life</a
+						>
+					
+				</div>
+			</div>
+		</div><div class="mt-1 mb-5">
+    
+        <aside>
+            <h4>Table of contents</h4>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#where-the-motivation-problem-starts">Where the motivation problem starts</a></li>
+    <li><a href="#where-friction-shows-up">Where friction shows up</a>
+      <ul>
+        <li><a href="#1-execution-becomes-heavy-after-novelty-fades">1. Execution becomes heavy after novelty fades</a></li>
+        <li><a href="#2-context-load-becomes-the-real-cost">2. Context load becomes the real cost</a></li>
+        <li><a href="#3-cross-system-boundaries-are-often-the-real-wall">3. Cross-system boundaries are often the real wall</a></li>
+        <li><a href="#4-llms-create-false-progress-when-intent-is-not-anchored">4. LLMs create false progress when intent is not anchored</a></li>
+        <li><a href="#5-agent-runs-can-make-context-switching-worse">5. Agent runs can make context switching worse</a></li>
+        <li><a href="#6-verification-becomes-the-expensive-part">6. Verification becomes the expensive part</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-useful-lens-technical-debt-cognitive-debt-and-intent-debt">A useful lens: technical debt, cognitive debt, and intent debt</a></li>
+    <li><a href="#what-has-actually-worked-for-me">What has actually worked for me</a>
+      <ul>
+        <li><a href="#1-identify-the-actual-barrier">1. Identify the actual barrier</a></li>
+        <li><a href="#2-make-the-next-step-smaller-than-feels-necessary">2. Make the next step smaller than feels necessary</a></li>
+        <li><a href="#3-own-the-design-before-asking-for-code">3. Own the design before asking for code</a></li>
+        <li><a href="#4-prime-the-llm-narrowly">4. Prime the LLM narrowly</a></li>
+        <li><a href="#5-use-llms-as-bounded-collaborators-not-feature-owners">5. Use LLMs as bounded collaborators, not feature owners</a></li>
+        <li><a href="#6-treat-verification-as-first-class-work">6. Treat verification as first-class work</a></li>
+        <li><a href="#7-keep-context-anchored-near-the-repo">7. Keep context anchored near the repo</a></li>
+        <li><a href="#8-build-a-small-feedback-flywheel">8. Build a small feedback flywheel</a></li>
+        <li><a href="#9-switch-intentionally-when-persistence-fails">9. Switch intentionally when persistence fails</a></li>
+        <li><a href="#10-step-away-properly-when-the-issue-is-fatigue">10. Step away properly when the issue is fatigue</a></li>
+      </ul>
+    </li>
+    <li><a href="#closing">Closing</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+        </aside>
+    
+</div>
+<p>This post is about a pattern I keep hitting while building software.</p>
+<p>At the surface, it looks like a motivation/discipline problem. There is a feature to build. I know why it is needed. I
+may even know the broad solution. But after some point, the mind starts rejecting the work. I open the editor, check the
+same files, rewrite a prompt, maybe ask an LLM for help, switch tabs, come back, and nothing meaningful has changed.</p>
+<p>I do not think this is a motivation/discipline problem anymore. Most of the time, motivation drops after the next step
+becomes expensive to enter. That expense is usually engineering friction:</p>
+<ul>
+<li>too much context to hold</li>
+<li>too many files or systems involved</li>
+<li>unclear boundaries between systems</li>
+<li>boring but necessary execution</li>
+<li>inertia against doing something fully known</li>
+<li>large generated diffs to review</li>
+<li>verification work</li>
+<li>reloading state after a pause or context switch</li>
+</ul>
+<p>LLMs did not create this problem. Normal software development already has it. But LLMs can make it worse by producing
+code faster than understanding can catch up. That was the main point in my earlier post on
+ 
+
+
+
+<a
+    href="../../posts/2025-12-07-codex-motivation/"
+    title=""
+    
+>
+    Codex CLI vs chat workflows
+</a>
+. The problem was not just that agent-style tools
+generated too much code. The deeper issue was ownership. I was left with large patches that looked like progress but did
+not feel like my design. Reviewing, reshaping, and owning that code cost more motivation than writing a smaller version
+myself.</p>
+<p>So the useful question is not only:</p>
+<ul>
+<li>can this be generated?</li>
+</ul>
+<p>It is also:</p>
+<ul>
+<li>can I understand it?</li>
+<li>can I shape it?</li>
+<li>can I verify it?</li>
+<li>can I integrate it?</li>
+<li>can I own it later?</li>
+</ul>
+<p>If the answer is no, the generated code is not free progress. It is another form of work.</p>
+<h2 id="where-the-motivation-problem-starts">Where the motivation problem starts</h2>
+<p>A feature usually does not fail at the start.</p>
+<p>The beginning has energy. The problem is new. There is discovery. I read some code, inspect a few paths, sketch a rough
+solution, maybe ask an LLM for options. That phase usually feels fine.</p>
+<p>Then the novelty wears off. Now the work becomes execution. That execution can feel heavy for different reasons:</p>
+<ul>
+<li>it is overwhelming because there is too much to hold</li>
+<li>it is boring because the next steps are known</li>
+<li>it is inertia: I know what to do but still do not want to do it</li>
+</ul>
+<p>All three can feel like &ldquo;I am not motivated&rdquo;, but they are not the same problem.</p>
+<p>A simplified feature flow looks like this:</p>
+<ul>
+<li>understand the requirement</li>
+<li>inspect the code</li>
+<li>design the change</li>
+<li>implement it</li>
+<li>integrate it</li>
+<li>verify it</li>
+<li>clean up</li>
+<li>ship or pause</li>
+</ul>
+<p>Real development keeps looping inside that:</p>
+<ul>
+<li>while designing, I discover more context</li>
+<li>while implementing, I realize the boundary is wrong</li>
+<li>while using an LLM, I get code that now needs ownership</li>
+<li>while waiting for an agent, I switch away and lose context</li>
+<li>while verifying, I realize the intent was not captured</li>
+<li>after pausing, I have to load everything again</li>
+</ul>
+<p>This is where the so-called motivation problem usually begins.</p>
+<p>The feature is not necessarily hard in the abstract. The next step is just expensive to enter.</p>
+<h2 id="where-friction-shows-up">Where friction shows up</h2>
+<h3 id="1-execution-becomes-heavy-after-novelty-fades">1. Execution becomes heavy after novelty fades</h3>
+<p>Once the interesting part is done, the work can become mechanical:</p>
+<ul>
+<li>update these call sites</li>
+<li>rename this shape everywhere</li>
+<li>add this validation</li>
+<li>write the obvious tests</li>
+<li>clean up the generated patch</li>
+<li>run the boring verification steps</li>
+</ul>
+<p>My first instinct used to be to persist. Sit with it. Push through. This seldom works for me.</p>
+<p>What usually happens instead is fake work:</p>
+<ul>
+<li>opening the same files again</li>
+<li>rereading the same code</li>
+<li>switching tabs</li>
+<li>rewriting prompts</li>
+<li>thinking the same thought again</li>
+<li>making no real state change</li>
+</ul>
+<p>The editor is open, so it feels like work. But the feature has not moved. This distinction matters. If I am not changing
+the state of the work, I am probably not working. I am hovering around the work.</p>
+<p>Sometimes the fix is not more discipline. Sometimes the fix is to make the next step smaller. Sometimes it is to switch
+work intentionally. Sometimes it is to stop for a bit.</p>
+<h3 id="2-context-load-becomes-the-real-cost">2. Context load becomes the real cost</h3>
+<p>A feature may be simple in description but expensive in memory. &ldquo;Add this feature&rdquo; quickly expands into:</p>
+<ul>
+<li>what the feature should do</li>
+<li>what the current code already does</li>
+<li>which files matter</li>
+<li>which assumptions already exist</li>
+<li>what should not break</li>
+<li>which tests matter</li>
+<li>what changed recently</li>
+<li>what still needs verification</li>
+</ul>
+<p>A lot of productivity loss is just repeated context loading. This becomes especially expensive as a solo dev because
+there is no external team memory carrying the state with me. If I pause badly, future me has to reconstruct the whole
+thing again.</p>
+<p>Sometimes the problem is not deep complexity. It is width:</p>
+<ul>
+<li>too many files</li>
+<li>too many APIs</li>
+<li>too many small edits</li>
+<li>too many possible designs</li>
+<li>too many things to verify</li>
+</ul>
+<p>At that point, the real question is not &ldquo;can I solve this?&rdquo;</p>
+<p>The question is: can I hold enough of this in my head to make the next move safely?</p>
+<p>When the answer is no, the mind starts resisting the work.</p>
+<p>This is also where repo-local notes help a lot. In my
+ 
+
+
+
+<a
+    href="../../posts/2024-08-13-taskmgmt-2/"
+    title=""
+    
+>
+    markdown/git task management post
+</a>
+, the main idea was to keep project tasks close to the
+code. That still feels right. A local <code>todo.md</code> or small markdown note is not just task management. It is an external
+memory for the work.</p>
+<p>For solo development, this matters because the project state otherwise lives in one fragile place: my head.</p>
+<h3 id="3-cross-system-boundaries-are-often-the-real-wall">3. Cross-system boundaries are often the real wall</h3>
+<p>This is probably the biggest barrier for me.</p>
+<p>I have seen this pattern repeatedly: there is code in multiple places, meaning multiple systems that do different
+things. Each system is heavy enough to have its own nuances. Each has enough API surface to support multiple use cases.
+The hard part appears when I have to build something that crosses those boundaries.</p>
+<p>The solution is not unknown. Most of the time it is some version of:</p>
+<ul>
+<li>break the problem into sub-problems</li>
+<li>figure out the interaction points</li>
+<li>iterate on the separation of concerns</li>
+<li>decide the smallest end-to-end slice</li>
+<li>then execute</li>
+</ul>
+<p>That sounds straightforward. In reality, this is <em>the</em> work. In cross-system work, the breakdown is the design. Choosing
+the sub-problems is the work. Choosing the interaction points is the work. Choosing what belongs where is the work.</p>
+<p>Before implementation, I usually have to answer questions like:</p>
+<ul>
+<li>whose responsibility is this?</li>
+<li>what is the source of truth?</li>
+<li>what data crosses the boundary?</li>
+<li>where does validation happen?</li>
+<li>what should not leak across systems?</li>
+<li>what happens on partial failure?</li>
+<li>does anything need retry or idempotency?</li>
+<li>what is the API contract?</li>
+<li>what gets logged?</li>
+<li>what is the smallest slice that works end to end?</li>
+</ul>
+<p>Answering these requires knowledge across systems. It also requires focus and tradeoff analysis. By the time I get to a
+design I am happy with, I am often already tired.</p>
+<p>This creates a strange second-order problem. Even after crossing the design barrier, I may not want to prompt the LLM. I
+already know what will happen next. It will generate code. Then I will have to review it, clean it, reshape it into my
+intent, integrate it, verify it, and own it. So even &ldquo;use the LLM now&rdquo; has an energy cost.</p>
+<p>This is why design ownership matters so much. If I give away the boundary design, I am not just delegating typing. I am
+delegating the shape of the system. And if the generated shape is wrong, the cleanup is not mechanical. It is design
+recovery.</p>
+<h3 id="4-llms-create-false-progress-when-intent-is-not-anchored">4. LLMs create false progress when intent is not anchored</h3>
+<p>A large generated diff can look like progress while actually increasing the work. The problem is not only that there is
+more code to review. The bigger problem is that the code may be wrong structurally:</p>
+<ul>
+<li>logic is in the wrong place</li>
+<li>abstractions are shaped differently from what I want</li>
+<li>responsibilities are split across the wrong layers</li>
+<li>data flows through the wrong boundary</li>
+<li>error handling does not match the real system</li>
+<li>the code works locally but does not fit production behavior</li>
+<li>the output captures a plausible implementation, but not my implementation</li>
+</ul>
+<p>This is what I saw with Codex-style workflows. With broad repo context and &ldquo;implement this feature&rdquo; prompts, the tool
+often produced a lot of code across many files. On first look, it felt like progress. On review, domain boundaries were
+blurred, separation of concerns collapsed, and I had to decide whether to refactor a large alien patch or throw it away.</p>
+<p>Both options were demotivating. The article on
+ 
+
+
+
+<a
+    href="https://martinfowler.com/articles/reduce-friction-ai/"
+    title=""
+    
+        target="_blank"
+    
+>
+    reducing friction in AI-assisted development
+</a>
+ frames this well:
+AI assistants are like junior developers with infinite energy but zero project context. If we do not onboard them,
+whiteboard with them, and give them guardrails, they default to generic patterns. They produce something closer to the
+average of the internet than the shape of this specific codebase.</p>
+<p>That is exactly the failure mode. The model is not an all-knowing, intent-preserving design partner. It is a
+non-deterministic approximation machine working from visible context. Sometimes that approximation is useful. Sometimes
+it is good enough. But it does not know my intent, production constraints, domain language, or preferred boundaries
+unless I make those things explicit. Even then, it can drift. That drift is part of the tool.</p>
+<p>If I write code manually, I build understanding while writing it. If the LLM generates the code first, my job changes:</p>
+<ul>
+<li>understand what it did</li>
+<li>compare it with what I wanted</li>
+<li>find where it drifted</li>
+<li>decide what to keep</li>
+<li>decide what to throw away</li>
+<li>reshape it</li>
+<li>verify it</li>
+<li>own it later</li>
+</ul>
+<p>That is why a large generated patch can feel demotivating. It is not just more code. It is forced ownership of something
+I did not really design in the shape I wanted.</p>
+<p>The safer use is cognitive offloading, not cognitive surrender.</p>
+<p>For me, offloading means delegating a bounded part of the work while still staying in the loop. Surrender is when I
+start accepting external reasoning without doing enough deliberation of my own. With LLMs, that line is easy to cross
+because the output is fast, confident, and usually plausible.</p>
+<p>Plausible is not enough.</p>
+<h3 id="5-agent-runs-can-make-context-switching-worse">5. Agent runs can make context switching worse</h3>
+<p>Agent-style workflows add another version of the same problem.</p>
+<p>The flow often becomes:</p>
+<ul>
+<li>load context</li>
+<li>give task to agent</li>
+<li>agent starts working</li>
+<li>switch to Slack, Jira, messages, browser tabs, or something else</li>
+<li>agent returns</li>
+<li>review diff</li>
+</ul>
+<p>This looks efficient. Sometimes it is. But for context-heavy work, it can be expensive. When I gave the agent the task,
+my context was warm. I knew the files, constraints, expected direction, and tradeoffs. If I immediately switch away, I
+lose that warm context.</p>
+<p>When the agent returns, I now have to do two jobs:</p>
+<ul>
+<li>reload the original problem</li>
+<li>understand the generated output</li>
+</ul>
+<p>Review becomes more expensive than it needed to be.</p>
+<p>For small tasks, switching away is fine. For design-heavy or boundary-heavy tasks, switching away often creates more
+friction than it saves.</p>
+<p>A better use of the waiting time is to stay near the problem:</p>
+<ul>
+<li>write the test I expect</li>
+<li>inspect nearby code</li>
+<li>check call sites</li>
+<li>note assumptions</li>
+<li>prepare a review checklist</li>
+<li>note the next command to run</li>
+</ul>
+<p>The point is not to stay busy. The point is to keep review cheap when the output comes back.</p>
+<h3 id="6-verification-becomes-the-expensive-part">6. Verification becomes the expensive part</h3>
+<p>After implementation, the work becomes verification and cleanup. This part is easy to underestimate because it does not
+feel like building. But this is where the feature becomes real. Verification includes checking:</p>
+<ul>
+<li>whether the result matches intent</li>
+<li>manual behavior</li>
+<li>edge cases</li>
+<li>migration safety</li>
+<li>compatibility</li>
+<li>tests</li>
+<li>logs</li>
+<li>rollback behavior</li>
+</ul>
+<p>This matters even more with LLM-generated output because generated code can be locally plausible while still being wrong
+for the actual environment. Fowler&rsquo;s April 2026 fragment quotes Ajey Gore&rsquo;s point that if agents make coding cheaper,
+verification becomes the expensive thing. That feels right to me. The human job shifts from &ldquo;can I produce code?&rdquo; to
+&ldquo;can I define and recognize correctness?&rdquo;</p>
+<p>For many real systems, correctness is not one simple thing. It is a set of expectations:</p>
+<ul>
+<li>this API contract must hold</li>
+<li>this data must not leak across boundaries</li>
+<li>this retry must be idempotent</li>
+<li>this migration must be safe</li>
+<li>this log must make production debugging possible</li>
+<li>this UI state must not move into the wrong layer</li>
+<li>this behavior must survive future changes</li>
+</ul>
+<p>Agents can help execute. They cannot fully decide (yet) what correct means for my system.</p>
+<p>So instead of asking only &ldquo;what did I ship?&rdquo;, the better question is: what did I validate?</p>
+<p>That question is much harder to fake.</p>
+<h2 id="a-useful-lens-technical-debt-cognitive-debt-and-intent-debt">A useful lens: technical debt, cognitive debt, and intent debt</h2>
+<p>The April 2026 Fowler fragment also mentions a useful split from Margaret-Anne Storey:</p>
+<ul>
+<li>technical debt lives in code</li>
+<li>cognitive debt lives in people</li>
+<li>intent debt lives in artifacts</li>
+</ul>
+<p>I do not want to overdo debt metaphors, but this split maps cleanly to the motivation problem. Technical debt makes the
+code harder to change. Cognitive debt makes the system harder to reason about because understanding has eroded. Intent
+debt is what happens when the goals, constraints, and decisions behind the system are not captured well enough in
+artifacts.</p>
+<p>LLMs can increase all three:</p>
+<ul>
+<li>they can add technical debt by producing poor structure</li>
+<li>they can add cognitive debt by creating code I do not understand</li>
+<li>they can add intent debt by implementing something plausible without preserving the actual design intent</li>
+</ul>
+<p>For solo work, cognitive debt is especially dangerous because there is no team memory to fall back on. If the design
+lives only in my head, and I let the code drift away from it, re-entry becomes painful.</p>
+<p>This is why names, boundaries, notes, and tests matter. They are not ceremony. They are how intent survives. Good names
+expose intent. Clear boundaries preserve intent. Tests encode intent. Repo-local notes anchor intent. Without those,
+every pause becomes more expensive.</p>
+<h2 id="what-has-actually-worked-for-me">What has actually worked for me</h2>
+<p>The thing that helps most is reducing the cost of entering the next step. The rough operating model I use now is this.</p>
+<h3 id="1-identify-the-actual-barrier">1. Identify the actual barrier</h3>
+<p>Before pushing through, I try to name what is happening.</p>
+<p>Is this:</p>
+<ul>
+<li>boredom or inertia against known work? If yes, I need less decision-making.</li>
+<li>too much context or lost context after switching? If yes, I need a context cache.</li>
+<li>cross-system design? If yes, I need a design note.</li>
+<li>a large LLM-generated diff or verification load? If yes, I need to break things down.</li>
+<li>plain fatigue? If yes, take a break and stop pretending discipline will fix it.</li>
+</ul>
+<p>Different barriers need different fixes. Treating all of them as &ldquo;lack of motivation&rdquo; is too vague to be useful.</p>
+<h3 id="2-make-the-next-step-smaller-than-feels-necessary">2. Make the next step smaller than feels necessary</h3>
+<p>The next step should be easy to enter. Good next steps look like:</p>
+<ul>
+<li>inspect one interface</li>
+<li>decide one interaction point</li>
+<li>review one generated file</li>
+<li>write one test</li>
+<li>update one caller</li>
+<li>run one command</li>
+<li>commit one safe slice</li>
+</ul>
+<p>If the next step still feels heavy, it is probably not the next step. It is still too large.</p>
+<p>For boring but known work, I try to remove decision-making:</p>
+<ul>
+<li>make a checklist with fewer than five items</li>
+<li>batch similar edits</li>
+<li>timebox the mechanical part</li>
+<li>make small commits</li>
+<li>use the LLM only for narrow mechanical changes</li>
+</ul>
+<p>The point is to turn &ldquo;I do not want to do this&rdquo; into &ldquo;just do these obvious next three things.&rdquo;</p>
+<h3 id="3-own-the-design-before-asking-for-code">3. Own the design before asking for code</h3>
+<p>For boundary-heavy work, I try to write a small boundary note before implementation. It usually answers:</p>
+<ul>
+<li>goal</li>
+<li>systems touched</li>
+<li>source of truth</li>
+<li>responsibility split</li>
+<li>data crossing the boundary</li>
+<li>validation point</li>
+<li>failure behavior</li>
+<li>retry or idempotency needs</li>
+<li>smallest end-to-end slice</li>
+<li>tests or commands to verify</li>
+</ul>
+<p>This is not formal documentation. It is a context cache. It also turns vague pressure into concrete decisions. That is
+useful for me, and it is useful for the LLM if I decide to use one. This is basically the &ldquo;design-first collaboration&rdquo;
+idea: do not jump straight to implementation for complex work. First align on capabilities, components, interactions,
+contracts, and only then code.</p>
+<p>When the design is fuzzy, the generated code will also be fuzzy. It may be large and clean-looking, but it will still be
+fuzzy.</p>
+<h3 id="4-prime-the-llm-narrowly">4. Prime the LLM narrowly</h3>
+<p>I prefer LLM use where I control the context.</p>
+<p>This is why chat+files works better for me than broad agent autocontext for many tasks. In chat+files, I attach exactly
+the files I want the model to see. I can read the output in one place. I decide what to paste, what to ignore, and how
+to integrate it.</p>
+<p>The model may be the same, but the workflow is different. The important difference is control.</p>
+<p>Good priming usually includes:</p>
+<ul>
+<li>the exact files needed</li>
+<li>the relevant interface or contract</li>
+<li>the boundary decision</li>
+<li>the local style to follow</li>
+<li>what not to change</li>
+<li>what assumptions to list</li>
+</ul>
+<p>Bad priming is basically:</p>
+<ul>
+<li>here is the repo, implement the feature</li>
+</ul>
+<p>That invites the model to become global. It starts moving logic across layers, inventing structure, and optimizing in
+places where I wanted stability.</p>
+<p>For simple work, broad tools can be fine. For design-heavy work, I want narrow context.</p>
+<h3 id="5-use-llms-as-bounded-collaborators-not-feature-owners">5. Use LLMs as bounded collaborators, not feature owners</h3>
+<p>I still use LLMs a lot. But I try not to hand them broad design-heavy changes.</p>
+<p>Bad shape:</p>
+<ul>
+<li>implement the full feature</li>
+<li>modify all relevant files</li>
+<li>handle the whole flow across systems</li>
+<li>refactor this and update everything</li>
+</ul>
+<p>Better shape:</p>
+<ul>
+<li>implement only this adapter</li>
+<li>update only these call sites</li>
+<li>do not change the public API</li>
+<li>keep error handling in the current style</li>
+<li>add tests only for this boundary</li>
+<li>list assumptions</li>
+<li>list changed files</li>
+<li>list things not handled</li>
+</ul>
+<p>The narrower the task, the easier it is to judge whether the approximation is acceptable.</p>
+<p>My current rough split is:</p>
+<ul>
+<li>good fit:
+<ul>
+<li>exploration</li>
+<li>summarizing code</li>
+<li>Go tests with strict prompts</li>
+<li>small frontend components when I own state design</li>
+<li>DTOs after the data model is already fixed</li>
+<li>mechanical edits</li>
+<li>small single-file helpers</li>
+</ul>
+</li>
+<li>risky fit:
+<ul>
+<li>DB schema design</li>
+<li>cross-layer API design</li>
+<li>state ownership decisions</li>
+<li>tooling and CI configuration</li>
+<li>broad refactors</li>
+<li>whole-feature generation</li>
+</ul>
+</li>
+</ul>
+<p>This is not a universal rule. It is just what has worked for me. The key is that I need to feel like I still own the
+design and the code.</p>
+<h3 id="6-treat-verification-as-first-class-work">6. Treat verification as first-class work</h3>
+<p>I try to define verification earlier instead of leaving it as a vague cleanup step. Before or during implementation, I
+want to know:</p>
+<ul>
+<li>what behavior proves this works?</li>
+<li>what test should exist?</li>
+<li>what manual path should I check?</li>
+<li>what edge case matters?</li>
+<li>what log would help debug this?</li>
+<li>what migration or rollback concern exists?</li>
+<li>what would make me reject the generated patch?</li>
+</ul>
+<p>This also changes how I use agents. If an agent is generating code, I can use the waiting time to prepare verification:</p>
+<ul>
+<li>write the expected test</li>
+<li>list acceptance criteria</li>
+<li>inspect call sites</li>
+<li>prepare a review checklist</li>
+<li>note suspicious areas to check</li>
+</ul>
+<p>This keeps me from treating generation as completion. The feature is not real until I have verified it.</p>
+<h3 id="7-keep-context-anchored-near-the-repo">7. Keep context anchored near the repo</h3>
+<p>For me, this means local markdown notes close to the code.</p>
+<p>Usually the note is very small:</p>
+<ul>
+<li>current goal</li>
+<li>current decision</li>
+<li>important files</li>
+<li>systems touched</li>
+<li>open questions</li>
+<li>next step</li>
+<li>command or test to run</li>
+</ul>
+<p>This is connected to my markdown/git task management workflow. I like having a project-local <code>todo.md</code> because it avoids
+switching to a separate task system. The task file becomes part task list, part design scratchpad, part re-entry cache.</p>
+<p>The categories from that system still help:</p>
+<ul>
+<li><code>P-0</code>: urgent/current work</li>
+<li><code>P-1</code>: important next work</li>
+<li><code>P-2</code>: obligations or pushed-out work</li>
+<li><code>P-X</code>: excitement-driven work that helps restore momentum</li>
+</ul>
+<p>The exact labels matter less than the function. The function is to keep the work close to the code and reduce context
+switching. For active feature work, I especially care about two small notes.</p>
+<p>A boundary note:</p>
+<ul>
+<li>what are the systems?</li>
+<li>what crosses the boundary?</li>
+<li>who owns what?</li>
+<li>what should not leak?</li>
+<li>how is failure handled?</li>
+<li>how do I verify it?</li>
+</ul>
+<p>A re-entry note:</p>
+<ul>
+<li>what changed?</li>
+<li>what is still broken?</li>
+<li>what was I thinking?</li>
+<li>what looked suspicious?</li>
+<li>what is the next step?</li>
+<li>what command should I run next?</li>
+</ul>
+<p>A good re-entry note is one of the highest-leverage habits I have found.</p>
+<p>Sometimes the remaining work is only thirty minutes. But without a note, it needs forty minutes of reload before I can
+even begin.</p>
+<h3 id="8-build-a-small-feedback-flywheel">8. Build a small feedback flywheel</h3>
+<p>One useful idea from the AI-friction article is the feedback flywheel: when AI collaboration fails in a repeated way,
+capture that learning and feed it back into the workflow.</p>
+<p>For solo work, this does not need to be elaborate.</p>
+<p>If the LLM keeps making the same mistake, I add a short note:</p>
+<ul>
+<li>do not put business logic in UI helpers</li>
+<li>do not change this public API</li>
+<li>keep validation in this layer</li>
+<li>use table-driven tests</li>
+<li>use stdlib only</li>
+<li>list assumptions before code</li>
+<li>ask before moving state ownership</li>
+</ul>
+<p>If a prompt works well, I save the shape. If a review catches the same issue twice, I add it to the checklist.</p>
+<p>This is how my preferences become usable context. Otherwise I keep paying the same review cost again and again.</p>
+<h3 id="9-switch-intentionally-when-persistence-fails">9. Switch intentionally when persistence fails</h3>
+<p>If brute persistence is clearly not working, I switch intentionally. For me, that usually means picking something from
+<code>P-X</code> or from a pushed-out section in my project notes. Other options that often work are:</p>
+<ul>
+<li>bounded internal refactoring</li>
+<li>something I had postponed earlier</li>
+<li>a small maintenance task</li>
+<li>even a lower-priority task if it gets movement back</li>
+</ul>
+<p>Sometimes a lower-priority task is better than sitting in fake work for hours. This is not random avoidance. The
+difference is whether I am preserving the ability to return cleanly. If I leave a re-entry note, switch to a bounded
+task, and come back with context intact, that is controlled switching. If I just disappear into tabs and return with no
+idea what I was doing, that is avoidance.</p>
+<h3 id="10-step-away-properly-when-the-issue-is-fatigue">10. Step away properly when the issue is fatigue</h3>
+<p>Sometimes switching work is not the right answer. Sometimes the correct thing is to stop.</p>
+<p>If I am opening the same files, rewriting the same prompt, and changing nothing, I probably do not need more discipline.
+I need a real break.</p>
+<p>The best version of that is:</p>
+<ul>
+<li>leave a re-entry note</li>
+<li>note the next command or test</li>
+<li>move away from the screen</li>
+<li>walk, eat, drink, reset, or sleep</li>
+</ul>
+<p>Stopping cleanly is part of the work. A clean stop plus a good note is much better than dragging a tired brain through
+half-review work.</p>
+<h2 id="closing">Closing</h2>
+<p>I started thinking about this as a motivation problem. Now I think motivation is often downstream of engineering
+friction.</p>
+<p>When the next step is small, clear, and easy to verify, motivation is much easier to find. When the next step requires
+loading multiple systems, designing interaction points, reviewing a large generated patch, remembering old decisions,
+and re-entering after a context switch, the mind naturally resists.</p>
+<p>LLMs did not create this whole problem. But they can make parts of it worse. Not only by generating more code, but by
+generating code that is plausible while drifting from intent, structure, and real production behavior.</p>
+<p>The useful response is not to reject LLMs. I still use them a lot. The useful response is to keep design ownership:</p>
+<ul>
+<li>prime the model with narrow, relevant context</li>
+<li>design boundaries before asking for implementation</li>
+<li>keep generated diffs small</li>
+<li>use LLMs for bounded work, not broad feature ownership</li>
+<li>treat verification as first-class work</li>
+<li>anchor decisions in repo-local notes</li>
+<li>switch intentionally when persistence is failing</li>
+<li>step away properly when the real issue is fatigue</li>
+</ul>
+<p>For me, the goal is not to stay motivated all the time. The goal is to keep the work easy enough to enter, clear enough
+to verify, and cheap enough to re-enter.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Pankaj Pipada,
+ 
+
+
+
+<a
+    href="../../posts/2025-12-07-codex-motivation/"
+    title=""
+    
+>
+    Codex CLI vs Chat - Tokens, Output Quality, and Motivation
+</a>
+, 2025.</li>
+<li>Pankaj Pipada,
+ 
+
+
+
+<a
+    href="../../posts/2024-08-13-taskmgmt-2/"
+    title=""
+    
+>
+    Refining the Flow: A Streamlined Markdown/Git-Based Task Management System for Solo Developers
+</a>
+, 2024.</li>
+<li>Martin Fowler,
+ 
+
+
+
+<a
+    href="https://martinfowler.com/articles/reduce-friction-ai/"
+    title=""
+    
+        target="_blank"
+    
+>
+    Patterns for Reducing Friction in AI-Assisted Development
+</a>
+, 2026.</li>
+<li>Martin Fowler,  
+
+
+
+<a
+    href="https://martinfowler.com/fragments/2026-04-02.html"
+    title=""
+    
+        target="_blank"
+    
+>
+    Fragments: April 2, 2026
+</a>
+: cognitive debt, intent
+debt, cognitive offloading vs cognitive surrender, verification becoming expensive, and names exposing intent.</li>
+<li>Sophie Leroy,
+ 
+
+
+
+<a
+    href="https://doi.org/10.1016/j.obhdp.2009.04.002"
+    title=""
+    
+        target="_blank"
+    
+>
+    Why is it so hard to do my work? The challenge of attention residue when switching between work tasks
+</a>
+, 2009.</li>
+<li>Gloria Mark, Daniela Gudith, Ulrich Klocke,
+ 
+
+
+
+<a
+    href="https://ics.uci.edu/~gmark/chi08-mark.pdf"
+    title=""
+    
+        target="_blank"
+    
+>
+    The Cost of Interrupted Work: More Speed and Stress
+</a>
+, 2008.</li>
+</ul>
+
+	</div>
+
+				</div>
+			</div>
+		<footer class="text-center pb-1">
+    <ul id="nav-social" class="list-inline mb-1">
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://github.com/ppipada" target="_blank" aria-label="github">
+                    <i class="fab fa-github fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://www.linkedin.com/in/ppipada/" target="_blank" aria-label="linkedin">
+                    <i class="fab fa-linkedin-in fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://letterboxd.com/ppipada/" target="_blank" aria-label="letterboxd">
+                    <i class="fab fa-letterboxd fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="mailto:ppipada@gmail.com" target="_blank" aria-label="mail">
+                    <i class="fas fa-at fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+            <li class="list-inline-item mr-3">
+                <a href="https://pankajpipada.com/index.xml" target="_blank" aria-label="rss">
+                    <i class="fas fa-rss fa-1x text-muted"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <span class="text-muted" style="font-size: 0.8em">
+        
+            Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.
+        
+    </span>
+</footer>
+
+		<script src="https://pankajpipada.com/vendor/bootstrap/dist/js/bootstrap.bundle.min.0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC&#43;mjoJimHGw="></script>
+
+		
+			
+				
+				<script src="https://pankajpipada.com/js/darkmode.min.467c1f2703af90b4caf73908aec83e480947a92577fdfdaf0642d9f4afb47ce5.js" integrity="sha256-RnwfJwOvkLTK9zkIrsg&#43;SAlHqSV3/f2vBkLZ9K&#43;0fOU="></script>
+			
+		
+		
+
+
+
+
+
+    
+    
+
+
+		
+			
+			<script async src="https://pankajpipada.com/js/copybutton.min.a48e6828da436de32d10a615cb3004fd3348a7da47c661db91071e2b87a4294a.js" integrity="sha256-pI5oKNpDbeMtEKYVyzAE/TNIp9pHxmHbkQceK4ekKUo="></script>
+		
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				document.body.style.visibility = 'visible';
+			});
+		</script>
+	</body>
+</html>
