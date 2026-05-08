@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light"><head>
-    <title>Finding my balance: An evolved and simplified task management system</title>
+    <title>Human Typing Habits and Token Counts</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -10,7 +10,7 @@
     
 
 
-    <meta name="description" content="An evolution in work related task management over the years, that has worked for me, and has personally shaped my professional life." />
+    <meta name="description" content="Normal human habits like swapped letters, fillers, shorthand, pasted IDs, boundary whitespace, and nearby word forms can change token count without changing intent much." />
     
     
 
@@ -200,180 +200,120 @@
 
 	<div class="pl-sm-4 ml-sm-5">
 		<div style="margin-bottom: 2rem">
-			<h1 style="text-align: center">Finding my balance: An evolved and simplified task management system</h1>
+			<h1 style="text-align: center">Human Typing Habits and Token Counts</h1>
 			<div
 				class="text-muted"
 				style="display: flex; justify-content: space-between; align-items: center; height: 1.2em; line-height: 1em; padding: 0.25em; font-size: small;"
 			>
-				<div>Jul 30, 2023 | Reading Time: 5 min</div>
+				<div>May 8, 2026 | Reading Time: 3 min</div>
 				<div>
 					<i class="fa fa-tags"></i>
 					
-						<a class="text-muted" href="../../tags/life/">life</a
+						<a class="text-muted" href="../../tags/gpt/">gpt</a
 						>
 					
 				</div>
 			</div>
 		</div><div class="mt-1 mb-5">
     
-        <aside>
-            <h4>Table of contents</h4>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#evolution">Evolution</a></li>
-    <li><a href="#granularity">Granularity</a></li>
-    <li><a href="#arrangement-prioritization">Arrangement (prioritization)</a></li>
-    <li><a href="#daily-focus-the-heart-of-my-system">Daily focus (the heart of my system)</a></li>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#parting-note">Parting note</a></li>
-  </ul>
-</nav>
-        </aside>
-    
 </div>
-<p>Edit: A next stage evolution of this system can be found in my follow up post
+<p>Humans type for speed, tone, and habit. Tokenizers split text based on common patterns, and providers bill per token.
+That means ordinary habits like typos, shorthand, filler words, pasted IDs, and stray whitespace can change token counts
+without changing intent much.</p>
+<p>I started noticing this on a tiny prompt: 5 words, 2 spelling mistakes, 13 tokens. I fixed the spelling and sent it
+again: 6 tokens, including the full stop.</p>
+<p>Counts below use 
+
+
+<a
+	href="https://platform.openai.com/tokenizer"
+	title=""
+	
+		target="_blank"
+	
+	>OpenAI&rsquo;s tokenizer</a
+> and
 
 
 
 <a
-	href="../../posts/2024-08-13-taskmgmt-2/"
+	href="https://claude-tokenizer.vercel.app/"
 	title=""
 	
-	>here</a
-></p>
-<hr>
-<h2 id="evolution">Evolution</h2>
-<p>In this ever-changing world, with shifting demands and responsibilities, I have experimented through multiple task
-management strategies. E.g: Zettelkasten (much more than task management, but still), Eisenhower matrix, Getting things
-done (GTD) method, Agile/Kanban, ABCDE method, Franklin planner method, etc.</p>
-<p>Finally, I&rsquo;ve settled on a system that works for me (in most cases). It&rsquo;s most likely a mash-up of various methods
-recommended from books, blog posts, conversations with experienced folks, etc. It may not be perfect and might even
-change in the future with changing roles and responsibilities, but it has served me well since quite some time.</p>
-<h2 id="granularity">Granularity</h2>
-<p>I mostly deal with unit items of tasks which are neither too small, nor too large.</p>
+		target="_blank"
+	
+	>Claude&rsquo;s API based tokenizer</a
+>. In general Claude spits out more tokens on the
+same text compared to OpenAI in my usage. Counts here are for isolated strings. In real prompts, counts can shift
+slightly based on surrounding spaces, punctuation, and casing.</p>
+<h2 id="typos">Typos</h2>
+<p>Swapped letters, dropped letters, doubled letters, nearby-key misses: all normal typing habits, all billable.</p>
 <ul>
-<li>
-<p>&ldquo;Steps&rdquo; to complete one item are not included (<strong>Not Too Small</strong>).</p>
-</li>
-<li>
-<p>Projects or ideas that might span a long time (months to years) are excluded (<strong>Not Too Large</strong>). These items and
-associated brainstorming don&rsquo;t come into the task list. Parts of it only come here once these things materialize and
-are broken down into smaller units. Deliberation on a project, visions, designs, breakdowns into smaller items, are
-outside of task list.</p>
-</li>
+<li><code>template</code> → <code>1</code>, <code>tempalte</code> → <code>3</code></li>
+<li><code>loaded</code> → <code>1</code>, <code>lodaed</code> → <code>2</code>, Claude: <code>3</code></li>
+<li><code>assistant</code> → <code>1</code>, <code>assitant</code> → <code>2</code>, Claude: <code>3</code></li>
+<li><code>simple</code> → <code>1</code>, <code>simpel</code> → <code>2</code></li>
+<li><code>like</code> → <code>1</code>, <code>liek</code> → <code>2</code></li>
 </ul>
-<h2 id="arrangement-prioritization">Arrangement (prioritization)</h2>
+<p>Same intent. Different split.</p>
+<p>Common spellings compress. Rarer spellings fragment. In code, this can compound quickly: the same bad identifier/var
+name/func name shows up in declarations, references, logs, errors, diffs, etc.</p>
+<p>When I type for work (code, prompts, texts etc.) my left hand is slightly faster than my right which results in some
+swapped letters. I never bothered to correct myself when using Google searches, or text messages etc. Now apparently
+that difference has a pricing model.</p>
+<h2 id="word-shapes">Word shapes</h2>
+<p>Word shapes matter too. Quick checks:</p>
 <ul>
-<li><strong>P-0</strong>: A very short list of things I would do &ldquo;immediately&rdquo;.
-<ul>
-<li>Items that someone has told you to do immediately, but which you practically won&rsquo;t be able to accomplish, should
-not be included (i.e. give me yesterday things).</li>
-<li><strong>Stress Indicator</strong>: A large P-0 list means very high level of stress and is a sign of a problem that you need
-to address.</li>
+<li><code>describe</code> → <code>1</code>, <code>describer</code> → <code>2</code>, <code>describers</code> → <code>3</code></li>
+<li><code>error</code> → <code>1</code>, <code>errored</code> → <code>2</code></li>
 </ul>
-</li>
-<li><strong>P-1</strong>: Slightly larger list that contains the items that I need to address &ldquo;sooner than later&rdquo;.
+<p>A tiny suffix looks harmless to a human. Tokenizers may split it very differently.</p>
+<h2 id="conversation-habits">Conversation habits</h2>
+<p>Human chat carries a lot of low-signal padding:</p>
 <ul>
-<li>Many tasks enter directly into P-1.</li>
-<li>During peaceful times, P-0 is mostly populated from P-1.</li>
-<li>Although direct entries into P-0 can still happen, I prefer to avoid this as much as possible</li>
+<li>fillers: <code>just</code>, <code>basically</code>, <code>actually</code>, <code>really</code></li>
+<li>hedges: <code>maybe</code>, <code>I think</code>, <code>kind of</code>, <code>sort of</code></li>
+<li>wrappers: <code>hey</code>, <code>please</code>, <code>thanks</code>, <code>sorry</code></li>
+<li>tails: <code>etc.</code>, <code>or so</code>, <code>and all that</code>. <code>etc.</code> is a bit mixed. If it replaces a long useless tail, it can save tokens.
+If it just hangs off the end of a sentence, it mostly adds fog.</li>
+<li>chat noise: <code>lol</code>, <code>haha</code>, <code>...</code>, <code>!!</code>, <code>??</code></li>
+<li>transcript filler: <code>uh</code>, <code>um</code>, <code>you know</code>, <code>like</code></li>
 </ul>
-</li>
-<li><strong>P-2</strong>: A large list of various obligations and tasks.
+<p>Tiny expressive habits count too:</p>
 <ul>
-<li>These may be things I think I have to do, but they have no associated urgency and questionable motivation.</li>
-<li>This is an often neglected list. It turns out to be a &ldquo;write and forget&rdquo; list, with a hope attached that it
-&ldquo;may&rdquo; be used someday.</li>
-<li>General preference is to move things from here to associated project/ideas pages and reevaluate at that level
-rather than in task list.</li>
+<li><code>Good</code> → <code>1</code> / <code>Good...</code> → <code>2</code></li>
+<li><code>Yes</code> → <code>1</code> / <code>Yes!!</code> → <code>2</code></li>
+<li><code>Ok/Okay</code> → <code>1</code> / <code>Ok/Okay???</code> → <code>2</code></li>
+<li><code>yes</code> → <code>1</code> / <code>yesss</code> → <code>3</code></li>
+<li><code>really</code> → <code>1</code> / <code>reeeally</code> → <code>3</code></li>
 </ul>
-</li>
-<li><strong>P-X</strong>: A short list of things that excite me.
+<p>These help tone. They rarely help the task.</p>
+<h2 id="shorter-to-type-is-not-always-cheaper">Shorter to type is not always cheaper</h2>
+<p>Humans optimize for keystrokes. Tokenizers optimize for common text. Those are not the same thing.</p>
 <ul>
-<li>Keeping it short is crucial.</li>
-<li>If this grows, that means you I am not really excited by all of them and most probably few items need to be in
-P2.</li>
+<li><code>please</code> → <code>1</code> / <code>pls</code> → Claude: <code>2</code></li>
+<li><code>thanks</code> → <code>1</code> / <code>thx</code> → <code>2</code></li>
+<li><code>without</code> → <code>1</code> / <code>w/o</code> → <code>2</code>, Claude: <code>3</code></li>
 </ul>
-</li>
-</ul>
-<h2 id="daily-focus-the-heart-of-my-system">Daily focus (the heart of my system)</h2>
-<p>Every day come up with tasks in two categories (~5/10 minutes daily time spend):</p>
+<p>Most of the time standard dictionary words will be <code>1</code> token and almost always more explicit, clearer, and closer to the
+text models saw during training, than shorthands.</p>
+<h2 id="quiet-token-leaks">Quiet token leaks</h2>
+<p>Some things are not conversational, but they show up in normal work and still inflate tokens:</p>
 <ul>
-<li><strong>Do</strong>:
+<li>UUIDs, hashes, timestamps, request IDs.
 <ul>
-<li>These are the tasks I have planned for the day, primarily a subset from P-0.</li>
-<li>Meetings are excluded from this for now. They tend to be obligatory and preplanned most of the time. I don&rsquo;t see
-a lot of value in adding them as tasks.</li>
-</ul>
-</li>
-<li><strong>Look forward to</strong>:
-<ul>
-<li>Items that excite me. Generally items come from P-0 or P-X here.</li>
-<li>If there are days when this list is empty, it&rsquo;s a sign of a problem that I need to address.</li>
-<li>Good days are when there are more than 1 item here.</li>
+<li>e.g., UUID - <code>019d6ce9-7cfe-753a-b6d6-df719510c9e3</code> → <code>24</code>, Claude: <code>26</code></li>
+<li>e.g., RFC 3339 timestamp - <code>2026-05-08T21:00:00+05:30</code> → <code>16</code>, Claude: <code>17</code></li>
 </ul>
 </li>
+<li>long URLs and file paths</li>
+<li>leading spaces, trailing spaces. Normal internal spacing is usually fine. Boundary whitespace is where things get
+weird.</li>
 </ul>
-<h2 id="tools">Tools</h2>
-<ul>
-<li>
-<p><strong>Tried and discarded</strong>:</p>
-<ul>
-<li>Google keep:
-<ul>
-<li>It served well enough in very early stages.</li>
-<li>Somehow the &ldquo;features&rdquo; added increased and its usefulness decreased.</li>
-<li>I still use it for lists or things I need to refer to once in a while, but not for tasks.</li>
-</ul>
-</li>
-<li>Roam research/Notion:
-<ul>
-<li>Tried them for a very short time and most probably very early in their lifecycle.</li>
-<li>Never got over the initial barrier.</li>
-</ul>
-</li>
-<li>Editor plugins
-<ul>
-<li>Was interested in this as my writing in Markdown increased over time.</li>
-<li>Multi device availability and less suitability for projects/ideas deliberation were a problem.</li>
-</ul>
-</li>
-<li>Kanban boards
-<ul>
-<li>Tried it out just for the heck of it at some point.</li>
-<li>Looking at a board at the start of the day was a very bad feeling generally.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Current</strong>:</p>
-<ul>
-<li>Microsoft OneNote
-<ul>
-<li>Got introduced to it via a colleague when I shifted to Mac from Linux.</li>
-<li>I can easily keep most things in one &ldquo;Page&rdquo;.</li>
-<li>Daily &ldquo;Do/Look forward to&rdquo; list can be created in minimal time.</li>
-<li>Moving around tasks is very easy.</li>
-<li>Project/ideas/Meeting notes pages can be kept in same place.</li>
-<li>Sync is available across my devices (Mac/Android).</li>
-<li>There are a lot of features there that I have almost never used. Hope is that the primary workflow and UX
-for note-taking remains more or less same.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="parting-note">Parting note</h2>
-<p>Interestingly, this model doesn&rsquo;t apply to my family life at all. But, I find myself following it about 80% of the time
-in my work/career life. It&rsquo;s a delicate balance between the immediate necessities and the sparks of excitement that keep
-me going.</p>
-<p>The red flags, the problems, the overwhelming moments — all find their reflection in this system. It is not necessary
-that this model reduces stress per se. Depending on the way my career was going the P-0 list was very overwhelming at
-some points. And even though I was aware of the red flags, I couldn&rsquo;t do much about it.</p>
-<p>I hope sharing this provides a window into my thoughts and methods, but it&rsquo;s essential to remember that this is purely
-my experience. What works for me might not be applicable to anyone else, as it&rsquo;s a product of my unique journey and
-professional life.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The model may recover meaning from all of this. Billing does not.</p>
+<p>Humans type by habit. Tokenizers bill by pattern.</p>
+<p>Which is mildly annoying, because now even <code>tempalte</code> feels like a line item to rectify.</p>
 
 	</div>
 

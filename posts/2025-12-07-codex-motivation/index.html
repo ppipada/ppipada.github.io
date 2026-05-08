@@ -258,20 +258,17 @@ output and keeps my motivation and sense of control intact.</p>
 <p>I write software for a living. My main usage patterns:</p>
 <ul>
 <li>
-<p><em>Chat+files</em>: I dogfood my own  
-
+<p><em>Chat+files</em>: I dogfood my own 
 
 
 <a
-    href="https://github.com/ppipada/flexigpt-app"
-    title=""
-    
-        target="_blank"
-    
->
-    FlexiGPT
-</a>
-. It&rsquo;s a standalone chat app where I
+	href="https://github.com/ppipada/flexigpt-app"
+	title=""
+	
+		target="_blank"
+	
+	>FlexiGPT</a
+>. It&rsquo;s a standalone chat app where I
 can attach specific files and get back code blocks, diagrams, explanations, etc. The comparison below would be valid
 for any chat app I think, nothing very special about FlexiGPT here, its just my preference.</p>
 </li>
@@ -288,40 +285,34 @@ once, not my style) that I didn&rsquo;t go deep. I tried CoPilot some time back 
 autocomplete was not really for me.</p>
 <p>With some heavy usage of Codex, I have noticed my motivation to produce software take a big hit, especially in sessions
 where I am trying to build a feature. When I searched for any studies detailing how people get most out of these tools,
-most content is about productivity (for example, this  
-
+most content is about productivity (for example, this 
 
 
 <a
-    href="https://arxiv.org/abs/2507.09089"
-    title=""
-    
-        target="_blank"
-    
->
-    paper
-</a>
- is interesting), not
+	href="https://arxiv.org/abs/2507.09089"
+	title=""
+	
+		target="_blank"
+	
+	>paper</a
+> is interesting), not
 about what it does to your head when you&rsquo;re staring at 3000 lines of LLM‑written code that you don&rsquo;t really want to own.</p>
 <h2 id="experience-with-codex">Experience With Codex</h2>
 <h3 id="usage-pattern">Usage Pattern</h3>
 <p>The pattern for me with Codex CLI, especially with autocontext, looks like this:</p>
 <ol>
 <li>I want to build a feature.</li>
-<li>I write a spec (often from a prior  
-
+<li>I write a spec (often from a prior 
 
 
 <a
-    href="https://github.com/ppipada/flexigpt-app"
-    title=""
-    
-        target="_blank"
-    
->
-    FlexiGPT
-</a>
- chat).</li>
+	href="https://github.com/ppipada/flexigpt-app"
+	title=""
+	
+		target="_blank"
+	
+	>FlexiGPT</a
+> chat).</li>
 <li>I hand that to Codex CLI and tell it to &ldquo;implement it&rdquo;, mostly with autocontext on.</li>
 <li>It generates a lot of code across multiple files. (And consumes a lot of tokens)</li>
 <li>On first look it feels like progress: several new files, updated modules, proper naming.</li>
@@ -539,20 +530,17 @@ cases, N negative border cases, empty and nil cases.&rdquo;, etc.</li>
 <p>In chat mode, the main issues I see are due to model training lag, not misunderstanding:</p>
 <ul>
 <li>Old Go patterns (e.g. <code>for _, tc := range tcs { tc := tc; ... }</code>). Almost all
- 
 
 
 
 <a
-    href="https://pkg.go.dev/golang.org/x/tools/gopls/internal/analysis/modernize"
-    title=""
-    
-        target="_blank"
-    
->
-    modernize
-</a>
- issues.</li>
+	href="https://pkg.go.dev/golang.org/x/tools/gopls/internal/analysis/modernize"
+	title=""
+	
+		target="_blank"
+	
+	>modernize</a
+> issues.</li>
 <li>Slightly outdated file permission constants (e.g. writing files with permissions broader than <code>0o600</code>).</li>
 <li>Minor style differences from my current lint rules.</li>
 </ul>

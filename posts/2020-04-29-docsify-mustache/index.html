@@ -237,117 +237,96 @@
 </div>
 <p>Docsify, YAML front-matter, mustache templates &amp; tags and some quirks when using them.</p>
 <h2 id="docsify">Docsify</h2>
-<p> 
-
+<p>
 
 
 <a
-    href="https://docsify.js.org/"
-    title=""
-    
-        target="_blank"
-    
->
-    Docsify
-</a>
- is a great documentation site generator.</p>
+	href="https://docsify.js.org/"
+	title=""
+	
+		target="_blank"
+	
+	>Docsify</a
+> is a great documentation site generator.</p>
 <ul>
 <li>It generates your documentation website on the fly using Markdown files directly.</li>
 <li>To start using it, all you need to do is create an index.html and deploy it on GitHub pages or any other static site host.</li>
 <li>It has a great plugin system that enables extensibility and can be used for solving multiple use cases.</li>
 </ul>
 <h2 id="docsify-mustache">Docsify-Mustache</h2>
-<p>One such plugin that is greatly useful is  
-
+<p>One such plugin that is greatly useful is 
 
 
 <a
-    href="https://docsify-mustache.github.io/#/"
-    title=""
-    
-        target="_blank"
-    
->
-    Docsify-Mustache
-</a>
-.</p>
+	href="https://docsify-mustache.github.io/#/"
+	title=""
+	
+		target="_blank"
+	
+	>Docsify-Mustache</a
+>.</p>
 <ul>
-<li>It allows preprocessing markdown documents with  
-
+<li>It allows preprocessing markdown documents with 
 
 
 <a
-    href="https://mustache.github.io/"
-    title=""
-    
-        target="_blank"
-    
->
-    Mustache
-</a>
- template engine.</li>
+	href="https://mustache.github.io/"
+	title=""
+	
+		target="_blank"
+	
+	>Mustache</a
+> template engine.</li>
 <li>Mustache is a logic-less templating system. It works by expanding tags in a provided template using values provided in a hash or object.
 <ul>
-<li>E.g: If you use <code>{{name}}</code> as template in your markdown and provide the value for <code>name</code> either via  
-
-
-
-<a
-    href="https://docsify-mustache.github.io/#/?id=front-matter"
-    title=""
-    
-        target="_blank"
-    
->
-    YAML front-matter
-</a>
- or any other supported  
-
+<li>E.g: If you use <code>{{name}}</code> as template in your markdown and provide the value for <code>name</code> either via 
 
 
 <a
-    href="https://docsify-mustache.github.io/#/?id=sources"
-    title=""
-    
-        target="_blank"
-    
->
-    sources
-</a>
-, that value will get rendered.</li>
+	href="https://docsify-mustache.github.io/#/?id=front-matter"
+	title=""
+	
+		target="_blank"
+	
+	>YAML front-matter</a
+> or any other supported 
+
+
+<a
+	href="https://docsify-mustache.github.io/#/?id=sources"
+	title=""
+	
+		target="_blank"
+	
+	>sources</a
+>, that value will get rendered.</li>
 </ul>
 </li>
-<li>How to use this plugin with docsify is very well explained in the  
-
+<li>How to use this plugin with docsify is very well explained in the 
 
 
 <a
-    href="https://docsify-mustache.github.io/"
-    title=""
-    
-        target="_blank"
-    
->
-    documentation site
-</a>
- for this plugin.</li>
+	href="https://docsify-mustache.github.io/"
+	title=""
+	
+		target="_blank"
+	
+	>documentation site</a
+> for this plugin.</li>
 </ul>
 <h2 id="mustache-tags">Mustache tags</h2>
 <ul>
-<li>Mustache supports different types of tags as documented in  
-
+<li>Mustache supports different types of tags as documented in 
 
 
 <a
-    href="https://mustache.github.io/mustache.5.html"
-    title=""
-    
-        target="_blank"
-    
->
-    mustache manual
-</a>
-.</li>
+	href="https://mustache.github.io/mustache.5.html"
+	title=""
+	
+		target="_blank"
+	
+	>mustache manual</a
+>.</li>
 <li>The basic tags, that were useful to me, when dealing with a documentation site are <code>Variables</code>, <code>Sections with non-empty lists</code> and <code>Inverted sections</code>.</li>
 <li>Below are a few examples on using these mustache tag types. I have considered the source of the &ldquo;values&rdquo; as YAML front-matter in markdown but as pointed out before, the source can be any supported input type.</li>
 </ul>

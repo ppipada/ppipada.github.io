@@ -220,123 +220,99 @@
 <p>Generic references and points to consider when doing a memory analysis with go programming language.</p>
 <ul>
 <li>
-<p>Do  
-
+<p>Do 
 
 
 <a
-    href="https://github.com/golang/go/wiki/Performance#memory-profiler"
-    title=""
-    
-        target="_blank"
-    
->
-    pprof memory profiling
-</a>
-.</p>
+	href="https://github.com/golang/go/wiki/Performance#memory-profiler"
+	title=""
+	
+		target="_blank"
+	
+	>pprof memory profiling</a
+>.</p>
 </li>
 <li>
-<p>Go returns memory to OS gradually. Typical time is ~5 minutes. If immediate return is needed, we could use  
-
+<p>Go returns memory to OS gradually. Typical time is ~5 minutes. If immediate return is needed, we could use 
 
 
 <a
-    href="https://golang.org/pkg/runtime/debug/#FreeOSMemory"
-    title=""
-    
-        target="_blank"
-    
->
-    FreeOSMemory
-</a>
-. General recommendation is that if this is needed, manage memory alternatively.</p>
+	href="https://golang.org/pkg/runtime/debug/#FreeOSMemory"
+	title=""
+	
+		target="_blank"
+	
+	>FreeOSMemory</a
+>. General recommendation is that if this is needed, manage memory alternatively.</p>
 </li>
 <li>
-<p>Alternative for frequent allocated and reused objects is sync.Pool usage. This is tricky and have to be careful when doing this. Sample usage can be found in  
-
+<p>Alternative for frequent allocated and reused objects is sync.Pool usage. This is tricky and have to be careful when doing this. Sample usage can be found in 
 
 
 <a
-    href="https://www.akshaydeo.com/blog/2017/12/23/How-did-I-improve-latency-by-700-percent-using-syncPool/"
-    title=""
-    
-        target="_blank"
-    
->
-    blog
-</a>
-.</p>
+	href="https://www.akshaydeo.com/blog/2017/12/23/How-did-I-improve-latency-by-700-percent-using-syncPool/"
+	title=""
+	
+		target="_blank"
+	
+	>blog</a
+>.</p>
 </li>
 <li>
-<p>Excellant High performance go tips are avilable at this  
-
+<p>Excellant High performance go tips are avilable at this 
 
 
 <a
-    href="https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html#memory-and-gc"
-    title=""
-    
-        target="_blank"
-    
->
-    post
-</a>
-. This talks about memory and GC too.</p>
+	href="https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html#memory-and-gc"
+	title=""
+	
+		target="_blank"
+	
+	>post</a
+>. This talks about memory and GC too.</p>
 </li>
 <li>
-<p>Garbage collection behaviour is well explianed at: Ardan labs  
-
-
-
-<a
-    href="https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html"
-    title=""
-    
-        target="_blank"
-    
->
-    Post 1
-</a>
-,  
-
+<p>Garbage collection behaviour is well explianed at: Ardan labs 
 
 
 <a
-    href="https://www.ardanlabs.com/blog/2019/05/garbage-collection-in-go-part2-gctraces.html"
-    title=""
-    
-        target="_blank"
-    
->
-    Post 2
-</a>
- and  
-
+	href="https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html"
+	title=""
+	
+		target="_blank"
+	
+	>Post 1</a
+>, 
 
 
 <a
-    href="https://www.ardanlabs.com/blog/2019/07/garbage-collection-in-go-part3-gcpacing.html"
-    title=""
-    
-        target="_blank"
-    
->
-    Post 3
-</a>
-. Also there is this  
-
+	href="https://www.ardanlabs.com/blog/2019/05/garbage-collection-in-go-part2-gctraces.html"
+	title=""
+	
+		target="_blank"
+	
+	>Post 2</a
+> and 
 
 
 <a
-    href="https://blog.golang.org/ismmkeynote"
-    title=""
-    
-        target="_blank"
-    
->
-    keynote
-</a>
- explaining the evolution of Go&rsquo;s garbage collector.</p>
+	href="https://www.ardanlabs.com/blog/2019/07/garbage-collection-in-go-part3-gcpacing.html"
+	title=""
+	
+		target="_blank"
+	
+	>Post 3</a
+>. Also there is this 
+
+
+<a
+	href="https://blog.golang.org/ismmkeynote"
+	title=""
+	
+		target="_blank"
+	
+	>keynote</a
+> explaining the evolution of Go&rsquo;s garbage collector.</p>
 </li>
 </ul>
 
