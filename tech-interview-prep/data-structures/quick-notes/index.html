@@ -14,29 +14,29 @@ Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n)
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/data-structures/quick-notes/">
-  <meta property="og:site_name" content="Tech Interview Prep">
-  <meta property="og:title" content="Quick Notes">
-  <meta property="og:description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
+	<meta property="og:site_name" content="Tech Interview Prep">
+	<meta property="og:title" content="Quick Notes">
+	<meta property="og:description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
 Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="data-structures">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="data-structures">
 
 
-  <meta itemprop="name" content="Quick Notes">
-  <meta itemprop="description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
+	<meta itemprop="name" content="Quick Notes">
+	<meta itemprop="description" content="Data Structures: Quick Notes# Complexity summary (typical)# Many structures have good average performance but bad worst-case. Interviews often want both.
 Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n) O(n) insert/delete in middle shifts Dynamic Array (vector/list) O(1) O(n) amort. O(1) append O(n) O(n) occasional resize Stack top O(1) O(n) O(1) O(1) O(n) LIFO Queue / Deque front/back O(1) O(n) O(1) O(1) O(n) FIFO / double-ended Singly Linked List O(n) O(n) O(1)* O(1)* O(n) *if pointer to node/prev is known Doubly Linked List O(n) O(n) O(1)* O(1)* O(n) easy delete given node Hash Table / Hash Map N/A avg O(1), worst O(n) avg O(1), worst O(n) avg O(1), worst O(n) O(n) depends on hashing &#43; resizing BST (unbalanced) O(n) O(n) O(n) O(n) O(n) can degrade to linked list AVL / Red-Black Tree O(log n) O(log n) O(log n) O(log n) O(n) guaranteed height O(log n) B-Tree / B&#43;Tree O(log n) O(log n) O(log n) O(log n) O(n) great for disks/DBs Binary Heap peek O(1) O(n) O(log n) O(log n) O(n) priority queue Trie O(L) O(L) O(L) O(L) large L = key length Fenwick Tree (BIT) N/A range sum O(log n) update O(log n) N/A O(n) prefix sums Segment Tree N/A query O(log n) update O(log n) N/A O(n) flexible aggregates Linked List# Linear collection of nodes; each node points to next (and possibly prev). Good for: frequent inserts/deletes when you already have a node reference, building other structures (LRU list). Bad for: random access, cache locality. Variants:">
-  <meta itemprop="wordCount" content="607">
+	<meta itemprop="wordCount" content="607">
 
 <title>Quick Notes | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/data-structures/quick-notes/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.778adebfae9aec3cb349c9714c28d4e5408750e3e916b5ff9e680cf0e3473ef8.css" integrity="sha256-d4rev66a7DyzSclxTCjU5UCHUOPpFrX/nmgM8ONHPvg=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.608daa27cc37e18f418183011d2683eee4bf05628aca4d7721b5cb2ad44aa5c6.js" integrity="sha256-YI2qJ8w34Y9BgYMBHSaD7uS/BWKKyk13IbXLKtRKpcY=" crossorigin="anonymous"></script>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
 <script>
@@ -413,145 +413,145 @@ Data Structure Access Search Insert Delete Space Notes Array O(1) O(n) O(n) O(n)
 <blockquote class='book-hint '>
 <p>Many structures have good <strong>average</strong> performance but bad <strong>worst-case</strong>. Interviews often want both.</p>
 </blockquote><table>
-  <thead>
-      <tr>
-          <th>Data Structure</th>
-          <th style="text-align: right">Access</th>
-          <th style="text-align: right">Search</th>
-          <th style="text-align: right">Insert</th>
-          <th style="text-align: right">Delete</th>
-          <th style="text-align: right">Space</th>
-          <th>Notes</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Array</td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>insert/delete in middle shifts</td>
-      </tr>
-      <tr>
-          <td>Dynamic Array (vector/list)</td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right">amort. <code>O(1)</code> append</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>occasional resize</td>
-      </tr>
-      <tr>
-          <td>Stack</td>
-          <td style="text-align: right">top <code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>LIFO</td>
-      </tr>
-      <tr>
-          <td>Queue / Deque</td>
-          <td style="text-align: right">front/back <code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>FIFO / double-ended</td>
-      </tr>
-      <tr>
-          <td>Singly Linked List</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(1)</code>*</td>
-          <td style="text-align: right"><code>O(1)</code>*</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>*if pointer to node/prev is known</td>
-      </tr>
-      <tr>
-          <td>Doubly Linked List</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(1)</code>*</td>
-          <td style="text-align: right"><code>O(1)</code>*</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>easy delete given node</td>
-      </tr>
-      <tr>
-          <td>Hash Table / Hash Map</td>
-          <td style="text-align: right">N/A</td>
-          <td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
-          <td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
-          <td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>depends on hashing + resizing</td>
-      </tr>
-      <tr>
-          <td>BST (unbalanced)</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>can degrade to linked list</td>
-      </tr>
-      <tr>
-          <td>AVL / Red-Black Tree</td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>guaranteed height <code>O(log n)</code></td>
-      </tr>
-      <tr>
-          <td>B-Tree / B+Tree</td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>great for disks/DBs</td>
-      </tr>
-      <tr>
-          <td>Binary Heap</td>
-          <td style="text-align: right">peek <code>O(1)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>priority queue</td>
-      </tr>
-      <tr>
-          <td>Trie</td>
-          <td style="text-align: right"><code>O(L)</code></td>
-          <td style="text-align: right"><code>O(L)</code></td>
-          <td style="text-align: right"><code>O(L)</code></td>
-          <td style="text-align: right"><code>O(L)</code></td>
-          <td style="text-align: right">large</td>
-          <td><code>L</code> = key length</td>
-      </tr>
-      <tr>
-          <td>Fenwick Tree (BIT)</td>
-          <td style="text-align: right">N/A</td>
-          <td style="text-align: right">range sum <code>O(log n)</code></td>
-          <td style="text-align: right">update <code>O(log n)</code></td>
-          <td style="text-align: right">N/A</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>prefix sums</td>
-      </tr>
-      <tr>
-          <td>Segment Tree</td>
-          <td style="text-align: right">N/A</td>
-          <td style="text-align: right">query <code>O(log n)</code></td>
-          <td style="text-align: right">update <code>O(log n)</code></td>
-          <td style="text-align: right">N/A</td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>flexible aggregates</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Data Structure</th>
+					<th style="text-align: right">Access</th>
+					<th style="text-align: right">Search</th>
+					<th style="text-align: right">Insert</th>
+					<th style="text-align: right">Delete</th>
+					<th style="text-align: right">Space</th>
+					<th>Notes</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Array</td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>insert/delete in middle shifts</td>
+			</tr>
+			<tr>
+					<td>Dynamic Array (vector/list)</td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right">amort. <code>O(1)</code> append</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>occasional resize</td>
+			</tr>
+			<tr>
+					<td>Stack</td>
+					<td style="text-align: right">top <code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>LIFO</td>
+			</tr>
+			<tr>
+					<td>Queue / Deque</td>
+					<td style="text-align: right">front/back <code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>FIFO / double-ended</td>
+			</tr>
+			<tr>
+					<td>Singly Linked List</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(1)</code>*</td>
+					<td style="text-align: right"><code>O(1)</code>*</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>*if pointer to node/prev is known</td>
+			</tr>
+			<tr>
+					<td>Doubly Linked List</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(1)</code>*</td>
+					<td style="text-align: right"><code>O(1)</code>*</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>easy delete given node</td>
+			</tr>
+			<tr>
+					<td>Hash Table / Hash Map</td>
+					<td style="text-align: right">N/A</td>
+					<td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
+					<td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
+					<td style="text-align: right">avg <code>O(1)</code>, worst <code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>depends on hashing + resizing</td>
+			</tr>
+			<tr>
+					<td>BST (unbalanced)</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>can degrade to linked list</td>
+			</tr>
+			<tr>
+					<td>AVL / Red-Black Tree</td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>guaranteed height <code>O(log n)</code></td>
+			</tr>
+			<tr>
+					<td>B-Tree / B+Tree</td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>great for disks/DBs</td>
+			</tr>
+			<tr>
+					<td>Binary Heap</td>
+					<td style="text-align: right">peek <code>O(1)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>priority queue</td>
+			</tr>
+			<tr>
+					<td>Trie</td>
+					<td style="text-align: right"><code>O(L)</code></td>
+					<td style="text-align: right"><code>O(L)</code></td>
+					<td style="text-align: right"><code>O(L)</code></td>
+					<td style="text-align: right"><code>O(L)</code></td>
+					<td style="text-align: right">large</td>
+					<td><code>L</code> = key length</td>
+			</tr>
+			<tr>
+					<td>Fenwick Tree (BIT)</td>
+					<td style="text-align: right">N/A</td>
+					<td style="text-align: right">range sum <code>O(log n)</code></td>
+					<td style="text-align: right">update <code>O(log n)</code></td>
+					<td style="text-align: right">N/A</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>prefix sums</td>
+			</tr>
+			<tr>
+					<td>Segment Tree</td>
+					<td style="text-align: right">N/A</td>
+					<td style="text-align: right">query <code>O(log n)</code></td>
+					<td style="text-align: right">update <code>O(log n)</code></td>
+					<td style="text-align: right">N/A</td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>flexible aggregates</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="linked-list">Linked List<a class="anchor" href="#linked-list">#</a></h2>
 <ul>

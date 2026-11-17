@@ -16,33 +16,33 @@ Iterate set bits: while s: lsb = s &amp; -s; ...; s -= lsb Count bits: Python: s
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://pankajpipada.com/tech-interview-prep/algorithms/quick-notes/">
-  <meta property="og:site_name" content="Tech Interview Prep">
-  <meta property="og:title" content="Quick Notes">
-  <meta property="og:description" content="Algorithms: Quick Notes# Bitmasks# Bitmasking performs operations at the bit level (often faster and memory-efficient).
+	<meta property="og:site_name" content="Tech Interview Prep">
+	<meta property="og:title" content="Quick Notes">
+	<meta property="og:description" content="Algorithms: Quick Notes# Bitmasks# Bitmasking performs operations at the bit level (often faster and memory-efficient).
 Commonly used for:
 subset representation (set of small integers), DP over subsets, toggling flags, fast membership checks. Quick patterns
 Iterate set bits: while s: lsb = s &amp; -s; ...; s -= lsb Count bits: Python: s.bit_count() Enumerate all subsets of a mask: sub = mask; while sub: ...; sub = (sub - 1) &amp; mask (also include 0 separately) Convention: k is 0-indexed from LSB (least-significant bit).">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="algorithms">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="algorithms">
 
 
-  <meta itemprop="name" content="Quick Notes">
-  <meta itemprop="description" content="Algorithms: Quick Notes# Bitmasks# Bitmasking performs operations at the bit level (often faster and memory-efficient).
+	<meta itemprop="name" content="Quick Notes">
+	<meta itemprop="description" content="Algorithms: Quick Notes# Bitmasks# Bitmasking performs operations at the bit level (often faster and memory-efficient).
 Commonly used for:
 subset representation (set of small integers), DP over subsets, toggling flags, fast membership checks. Quick patterns
 Iterate set bits: while s: lsb = s &amp; -s; ...; s -= lsb Count bits: Python: s.bit_count() Enumerate all subsets of a mask: sub = mask; while sub: ...; sub = (sub - 1) &amp; mask (also include 0 separately) Convention: k is 0-indexed from LSB (least-significant bit).">
-  <meta itemprop="wordCount" content="4112">
+	<meta itemprop="wordCount" content="4112">
 
 <title>Quick Notes | Tech Interview Prep</title>
 <link rel="icon" href="/tech-interview-prep/favicon.ico" >
 <link rel="manifest" href="/tech-interview-prep/manifest.json">
 <link rel="canonical" href="https://pankajpipada.com/tech-interview-prep/algorithms/quick-notes/">
-<link rel="stylesheet" href="/tech-interview-prep/book.min.d115053181829b423a0e4e7598cb6bc44cb6854b805b26ac247352b13825114b.css" integrity="sha256-0RUFMYGCm0I6Dk51mMtrxEy2hUuAWyasJHNSsTglEUs=" crossorigin="anonymous">
+<link rel="stylesheet" href="/tech-interview-prep/book.min.778adebfae9aec3cb349c9714c28d4e5408750e3e916b5ff9e680cf0e3473ef8.css" integrity="sha256-d4rev66a7DyzSclxTCjU5UCHUOPpFrX/nmgM8ONHPvg=" crossorigin="anonymous">
 
 
   <script defer src="/tech-interview-prep/fuse.min.js"></script>
-  <script defer src="/tech-interview-prep/en.search.min.713e407e217a317ce31d77e165ee40078abbdb00815736255b852dabe752b6c5.js" integrity="sha256-cT5AfiF6MXzjHXfhZe5AB4q72wCBVzYlW4Utq&#43;dStsU=" crossorigin="anonymous"></script>
+  <script defer src="/tech-interview-prep/en.search.min.608daa27cc37e18f418183011d2683eee4bf05628aca4d7721b5cb2ad44aa5c6.js" integrity="sha256-YI2qJ8w34Y9BgYMBHSaD7uS/BWKKyk13IbXLKtRKpcY=" crossorigin="anonymous"></script>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVSXVYRTKF"></script>
 <script>
@@ -456,176 +456,176 @@ Iterate set bits: while s: lsb = s &amp; -s; ...; s -= lsb Count bits: Python: s
 <blockquote class='book-hint '>
 <p>Convention: <code>k</code> is 0-indexed from LSB (least-significant bit).</p>
 </blockquote><table>
-  <thead>
-      <tr>
-          <th>Operation</th>
-          <th style="text-align: right">Expression</th>
-          <th>Notes</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Test kth bit</td>
-          <td style="text-align: right"><code>s &amp; (1 &lt;&lt; k)</code></td>
-          <td>non-zero means set</td>
-      </tr>
-      <tr>
-          <td>Turn on kth bit</td>
-          <td style="text-align: right"><code>s = (1 &lt;&lt; k)</code></td>
-          <td><strong>(common bug: don’t assign <code>s = (1&lt;&lt;k)</code>)</strong></td>
-      </tr>
-      <tr>
-          <td>Turn off kth bit</td>
-          <td style="text-align: right"><code>s &amp;= ~(1 &lt;&lt; k)</code></td>
-          <td>clears bit</td>
-      </tr>
-      <tr>
-          <td>Toggle kth bit</td>
-          <td style="text-align: right"><code>s ^= (1 &lt;&lt; k)</code></td>
-          <td>flips bit</td>
-      </tr>
-      <tr>
-          <td>Multiply by 2^n</td>
-          <td style="text-align: right"><code>s &lt;&lt; n</code></td>
-          <td>beware overflow in fixed-width languages</td>
-      </tr>
-      <tr>
-          <td>Divide by 2^n</td>
-          <td style="text-align: right"><code>s &gt;&gt; n</code></td>
-          <td>signed right shift is arithmetic in many languages</td>
-      </tr>
-      <tr>
-          <td>Intersection</td>
-          <td style="text-align: right"><code>s &amp; t</code></td>
-          <td>set intersection</td>
-      </tr>
-      <tr>
-          <td>Union</td>
-          <td style="text-align: right"><code>s | t</code></td>
-          <td>set union</td>
-      </tr>
-      <tr>
-          <td>Set subtraction</td>
-          <td style="text-align: right"><code>s &amp; ~t</code></td>
-          <td>elements in <code>s</code> not in <code>t</code></td>
-      </tr>
-      <tr>
-          <td>Extract lowest set bit</td>
-          <td style="text-align: right"><code>s &amp; (-s)</code></td>
-          <td>works with two’s complement</td>
-      </tr>
-      <tr>
-          <td>Clear lowest set bit</td>
-          <td style="text-align: right"><code>s &amp;= (s - 1)</code></td>
-          <td>removes one lowest-set bit</td>
-      </tr>
-      <tr>
-          <td>Is power of two</td>
-          <td style="text-align: right"><code>s &gt; 0 and (s &amp; (s - 1)) == 0</code></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>XOR swap (not recommended)</td>
-          <td style="text-align: right"><code>x ^= y; y ^= x; x ^= y;</code></td>
-          <td>use temp var for clarity</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Operation</th>
+					<th style="text-align: right">Expression</th>
+					<th>Notes</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Test kth bit</td>
+					<td style="text-align: right"><code>s &amp; (1 &lt;&lt; k)</code></td>
+					<td>non-zero means set</td>
+			</tr>
+			<tr>
+					<td>Turn on kth bit</td>
+					<td style="text-align: right"><code>s = (1 &lt;&lt; k)</code></td>
+					<td><strong>(common bug: don’t assign <code>s = (1&lt;&lt;k)</code>)</strong></td>
+			</tr>
+			<tr>
+					<td>Turn off kth bit</td>
+					<td style="text-align: right"><code>s &amp;= ~(1 &lt;&lt; k)</code></td>
+					<td>clears bit</td>
+			</tr>
+			<tr>
+					<td>Toggle kth bit</td>
+					<td style="text-align: right"><code>s ^= (1 &lt;&lt; k)</code></td>
+					<td>flips bit</td>
+			</tr>
+			<tr>
+					<td>Multiply by 2^n</td>
+					<td style="text-align: right"><code>s &lt;&lt; n</code></td>
+					<td>beware overflow in fixed-width languages</td>
+			</tr>
+			<tr>
+					<td>Divide by 2^n</td>
+					<td style="text-align: right"><code>s &gt;&gt; n</code></td>
+					<td>signed right shift is arithmetic in many languages</td>
+			</tr>
+			<tr>
+					<td>Intersection</td>
+					<td style="text-align: right"><code>s &amp; t</code></td>
+					<td>set intersection</td>
+			</tr>
+			<tr>
+					<td>Union</td>
+					<td style="text-align: right"><code>s | t</code></td>
+					<td>set union</td>
+			</tr>
+			<tr>
+					<td>Set subtraction</td>
+					<td style="text-align: right"><code>s &amp; ~t</code></td>
+					<td>elements in <code>s</code> not in <code>t</code></td>
+			</tr>
+			<tr>
+					<td>Extract lowest set bit</td>
+					<td style="text-align: right"><code>s &amp; (-s)</code></td>
+					<td>works with two’s complement</td>
+			</tr>
+			<tr>
+					<td>Clear lowest set bit</td>
+					<td style="text-align: right"><code>s &amp;= (s - 1)</code></td>
+					<td>removes one lowest-set bit</td>
+			</tr>
+			<tr>
+					<td>Is power of two</td>
+					<td style="text-align: right"><code>s &gt; 0 and (s &amp; (s - 1)) == 0</code></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>XOR swap (not recommended)</td>
+					<td style="text-align: right"><code>x ^= y; y ^= x; x ^= y;</code></td>
+					<td>use temp var for clarity</td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="sorting">Sorting<a class="anchor" href="#sorting">#</a></h2>
 <h3 id="complexity-summary">Complexity summary<a class="anchor" href="#complexity-summary">#</a></h3>
 <table>
-  <thead>
-      <tr>
-          <th>Algorithm</th>
-          <th style="text-align: right">Best</th>
-          <th style="text-align: right">Average</th>
-          <th style="text-align: right">Worst</th>
-          <th style="text-align: right">Space</th>
-          <th>Stable</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Quicksort</td>
-          <td style="text-align: right"><code>Ω(n log n)</code></td>
-          <td style="text-align: right"><code>Θ(n log n)</code></td>
-          <td style="text-align: right"><code>O(n^2)</code></td>
-          <td style="text-align: right"><code>O(log n)</code></td>
-          <td>No</td>
-      </tr>
-      <tr>
-          <td>Mergesort</td>
-          <td style="text-align: right"><code>Ω(n log n)</code></td>
-          <td style="text-align: right"><code>Θ(n log n)</code></td>
-          <td style="text-align: right"><code>O(n log n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>Yes</td>
-      </tr>
-      <tr>
-          <td>Timsort (Python/Java)</td>
-          <td style="text-align: right"><code>Ω(n)</code></td>
-          <td style="text-align: right"><code>Θ(n log n)</code></td>
-          <td style="text-align: right"><code>O(n log n)</code></td>
-          <td style="text-align: right"><code>O(n)</code></td>
-          <td>Yes</td>
-      </tr>
-      <tr>
-          <td>Heapsort</td>
-          <td style="text-align: right"><code>Ω(n log n)</code></td>
-          <td style="text-align: right"><code>Θ(n log n)</code></td>
-          <td style="text-align: right"><code>O(n log n)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td>No</td>
-      </tr>
-      <tr>
-          <td>Bubble sort</td>
-          <td style="text-align: right"><code>Ω(n)</code></td>
-          <td style="text-align: right"><code>Θ(n^2)</code></td>
-          <td style="text-align: right"><code>O(n^2)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td>Yes</td>
-      </tr>
-      <tr>
-          <td>Insertion sort</td>
-          <td style="text-align: right"><code>Ω(n)</code></td>
-          <td style="text-align: right"><code>Θ(n^2)</code></td>
-          <td style="text-align: right"><code>O(n^2)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td>Yes</td>
-      </tr>
-      <tr>
-          <td>Selection sort</td>
-          <td style="text-align: right"><code>Ω(n^2)</code></td>
-          <td style="text-align: right"><code>Θ(n^2)</code></td>
-          <td style="text-align: right"><code>O(n^2)</code></td>
-          <td style="text-align: right"><code>O(1)</code></td>
-          <td>No</td>
-      </tr>
-      <tr>
-          <td>Counting sort</td>
-          <td style="text-align: right"><code>Ω(n+k)</code></td>
-          <td style="text-align: right"><code>Θ(n+k)</code></td>
-          <td style="text-align: right"><code>O(n+k)</code></td>
-          <td style="text-align: right"><code>O(k)</code></td>
-          <td>Yes</td>
-      </tr>
-      <tr>
-          <td>Radix sort</td>
-          <td style="text-align: right"><code>Ω(n·d)</code></td>
-          <td style="text-align: right"><code>Θ(n·d)</code></td>
-          <td style="text-align: right"><code>O(n·d)</code></td>
-          <td style="text-align: right"><code>O(n+k)</code></td>
-          <td>Yes (typical LSD)</td>
-      </tr>
-      <tr>
-          <td>Bucket sort</td>
-          <td style="text-align: right"><code>Ω(n+k)</code></td>
-          <td style="text-align: right"><code>Θ(n+k)</code></td>
-          <td style="text-align: right"><code>O(n^2)</code></td>
-          <td style="text-align: right"><code>O(n+k)</code></td>
-          <td>depends</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Algorithm</th>
+					<th style="text-align: right">Best</th>
+					<th style="text-align: right">Average</th>
+					<th style="text-align: right">Worst</th>
+					<th style="text-align: right">Space</th>
+					<th>Stable</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Quicksort</td>
+					<td style="text-align: right"><code>Ω(n log n)</code></td>
+					<td style="text-align: right"><code>Θ(n log n)</code></td>
+					<td style="text-align: right"><code>O(n^2)</code></td>
+					<td style="text-align: right"><code>O(log n)</code></td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>Mergesort</td>
+					<td style="text-align: right"><code>Ω(n log n)</code></td>
+					<td style="text-align: right"><code>Θ(n log n)</code></td>
+					<td style="text-align: right"><code>O(n log n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>Timsort (Python/Java)</td>
+					<td style="text-align: right"><code>Ω(n)</code></td>
+					<td style="text-align: right"><code>Θ(n log n)</code></td>
+					<td style="text-align: right"><code>O(n log n)</code></td>
+					<td style="text-align: right"><code>O(n)</code></td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>Heapsort</td>
+					<td style="text-align: right"><code>Ω(n log n)</code></td>
+					<td style="text-align: right"><code>Θ(n log n)</code></td>
+					<td style="text-align: right"><code>O(n log n)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>Bubble sort</td>
+					<td style="text-align: right"><code>Ω(n)</code></td>
+					<td style="text-align: right"><code>Θ(n^2)</code></td>
+					<td style="text-align: right"><code>O(n^2)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>Insertion sort</td>
+					<td style="text-align: right"><code>Ω(n)</code></td>
+					<td style="text-align: right"><code>Θ(n^2)</code></td>
+					<td style="text-align: right"><code>O(n^2)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>Selection sort</td>
+					<td style="text-align: right"><code>Ω(n^2)</code></td>
+					<td style="text-align: right"><code>Θ(n^2)</code></td>
+					<td style="text-align: right"><code>O(n^2)</code></td>
+					<td style="text-align: right"><code>O(1)</code></td>
+					<td>No</td>
+			</tr>
+			<tr>
+					<td>Counting sort</td>
+					<td style="text-align: right"><code>Ω(n+k)</code></td>
+					<td style="text-align: right"><code>Θ(n+k)</code></td>
+					<td style="text-align: right"><code>O(n+k)</code></td>
+					<td style="text-align: right"><code>O(k)</code></td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>Radix sort</td>
+					<td style="text-align: right"><code>Ω(n·d)</code></td>
+					<td style="text-align: right"><code>Θ(n·d)</code></td>
+					<td style="text-align: right"><code>O(n·d)</code></td>
+					<td style="text-align: right"><code>O(n+k)</code></td>
+					<td>Yes (typical LSD)</td>
+			</tr>
+			<tr>
+					<td>Bucket sort</td>
+					<td style="text-align: right"><code>Ω(n+k)</code></td>
+					<td style="text-align: right"><code>Θ(n+k)</code></td>
+					<td style="text-align: right"><code>O(n^2)</code></td>
+					<td style="text-align: right"><code>O(n+k)</code></td>
+					<td>depends</td>
+			</tr>
+	</tbody>
 </table>
 <blockquote class='book-hint '>
 <p><code>k</code> = value range (counting/bucket), <code>d</code> = number of digits/passes (radix).</p>

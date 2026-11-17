@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Golang on Scramblings</title>
-    <link>https://pankajpipada.com/tags/golang/</link>
-    <description>Recent content in Golang on Scramblings</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 14 Dec 2025 12:18:20 +0530</lastBuildDate>
-    <atom:link href="https://pankajpipada.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Memory analysis in Go</title>
-      <link>https://pankajpipada.com/posts/2020-03-24-go-memory-profiling/</link>
-      <pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2020-03-24-go-memory-profiling/</guid>
-      <description>Generic references and points to consider when doing a memory analysis with go programming language.</description>
-    </item>
-    <item>
-      <title>Go introductory primer</title>
-      <link>https://pankajpipada.com/posts/2019-11-17-go-intro-primer/</link>
-      <pubDate>Sun, 17 Nov 2019 20:55:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2019-11-17-go-intro-primer/</guid>
-      <description>Generic references to get started with go programming language.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Golang on Scramblings</title>
+		<link>https://pankajpipada.com/tags/golang/</link>
+		<description>Recent content in Golang on Scramblings</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+			<copyright>Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</copyright>
+		
+		
+			<lastBuildDate>Sun, 14 Dec 2025 12:18:20 +0530</lastBuildDate>
+		
+			<atom:link href="https://pankajpipada.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Memory analysis in Go</title>
+				<link>https://pankajpipada.com/posts/2020-03-24-go-memory-profiling/</link>
+				<pubDate>Tue, 24 Mar 2020 11:11:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2020-03-24-go-memory-profiling/</guid>
+				<description>Generic references and points to consider when doing a memory analysis with go programming language.</description>
+			</item>
+			<item>
+				<title>Go introductory primer</title>
+				<link>https://pankajpipada.com/posts/2019-11-17-go-intro-primer/</link>
+				<pubDate>Sun, 17 Nov 2019 20:55:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2019-11-17-go-intro-primer/</guid>
+				<description>Generic references to get started with go programming language.</description>
+			</item>
+	</channel>
 </rss>

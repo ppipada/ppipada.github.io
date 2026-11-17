@@ -40,7 +40,7 @@
     
     
         
-        <link rel="stylesheet" href="../../css/custom.min.19d11c3fd49fedba7850ef20e902ba4789b5ca169865ec21dfecbf3fba9be1ed.css" integrity="sha256-GdEcP9Sf7bp4UO8g6QK6R4m1yhaYZewh3&#43;y/P7qb4e0=" />
+        <link rel="stylesheet" href="../../css/custom.min.4606e5eca830899beb920d488c792a9abd450e6fa730b5075050779f7359978a.css" integrity="sha256-Rgbl7KgwiZvrkg1IjHkqmr1FDm&#43;nMLUHUFB3n3NZl4o=" />
     
 
     
@@ -355,9 +355,15 @@
 <p>Sections render blocks of text one or more times, depending on the value of the key in the current context.</p>
 <p>A section begins with a pound and ends with a slash. That is, <code>{{#person}}</code> begins a <code>&quot;person&quot;</code> section while <code>{{/person}}</code> ends it.</p>
 <p>When the value for a section is a non-empty list, the text in the block will be displayed once for each item in the list. The context of the block will be set to the current item for each iteration. In this way we can loop over collections.</p>
-<blockquote>
-<p>IMPORTANT NOTE: If the list <code>values</code> contain a hyphen <code>-</code> in them then the list rendering is incorrect/fails for that value. To avoid this use single quotes (&rsquo;&rsquo;) around the value as depicted below.</p>
-</blockquote>
+<div
+	class="authorquote border-start border-3 border-secondary px-4 py-1"
+	style="margin: 2.5em 10px; position: relative;"
+>
+	<div class="quote-wrapper d-flex align-items-start">
+		<div class="quote-content flex-grow-1" style="line-height: 1.5;"><p>IMPORTANT NOTE: If the list <code>values</code> contain a hyphen <code>-</code> in them then the list rendering is incorrect/fails for that value. To avoid this use single quotes (&rsquo;&rsquo;) around the value as depicted below.</p>
+</div>
+	</div>
+</div>
 <p>Example:</p>
 <ul>
 <li>
@@ -414,8 +420,8 @@
 <li>
 <p>Markdown file that adds a constant heading section to the documentation page, where the <code>title</code> will be displayed first, then <code>category</code> will be displayed and then the <code>tags</code> list is provided:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>title: My awesome project documentation
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>tags: [useful, &#34;rocket-science&#34;, launch]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">My awesome project documentation</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#f92672">tags</span>: [<span style="color:#ae81ff">useful, &#34;rocket-science&#34;, launch]</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>---
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span># {{title}}
@@ -488,7 +494,7 @@
     </span>
 </footer>
 
-		<script src="https://pankajpipada.com/vendor/bootstrap/dist/js/bootstrap.bundle.min.0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c.js" integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC&#43;mjoJimHGw="></script>
+		<script src="https://pankajpipada.com/vendor/bootstrap/dist/js/bootstrap.bundle.min.4ad2ad30a7df1fa0a615c4cfeb1aeffbe92019a8dff0262c99464acbd56dca5c.js" integrity="sha256-StKtMKffH6CmFcTP6xrv&#43;&#43;kgGajf8CYsmUZKy9Vtylw="></script>
 
 		
 			

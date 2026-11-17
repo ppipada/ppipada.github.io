@@ -1,97 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Life on Scramblings</title>
-    <link>https://pankajpipada.com/tags/life/</link>
-    <description>Recent content in Life on Scramblings</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 07 May 2026 14:46:14 +0530</lastBuildDate>
-    <atom:link href="https://pankajpipada.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Motivation, Productivity Barriers, and Engineering Friction</title>
-      <link>https://pankajpipada.com/posts/2026-05-07-motivation-productivity-barriers/</link>
-      <pubDate>Thu, 07 May 2026 10:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2026-05-07-motivation-productivity-barriers/</guid>
-      <description>What looks like a motivation problem in software work is often the cost of entering the next step - context load, cross-system design, LLM drift, verification, and re-entry. The fix is not more generated code, but better design ownership, scoped AI collaboration, repo-local context, and intentional switching.</description>
-    </item>
-    <item>
-      <title>Winter Honey From Himachal Pradesh</title>
-      <link>https://pankajpipada.com/posts/2025-05-05-winter-honey/</link>
-      <pubDate>Mon, 05 May 2025 10:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2025-05-05-winter-honey/</guid>
-      <description>A nostalgic journey to pure, unfiltered honey in the mountains of Himachal Pradesh, and a taste that brought back childhood memories.</description>
-    </item>
-    <item>
-      <title>My Go-to Espresso Recipe - An Everyday Brew</title>
-      <link>https://pankajpipada.com/posts/2025-03-27-espresso/</link>
-      <pubDate>Thu, 27 Mar 2025 11:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2025-03-27-espresso/</guid>
-      <description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
-    </item>
-    <item>
-      <title>A Great Spontaneous Morning</title>
-      <link>https://pankajpipada.com/posts/2025-03-24-spontaneous-morning/</link>
-      <pubDate>Mon, 24 Mar 2025 16:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2025-03-24-spontaneous-morning/</guid>
-      <description>A great spontaneous morning and associated thougths.</description>
-    </item>
-    <item>
-      <title>Coffee Beans of India, Varieties and Taste Profiles</title>
-      <link>https://pankajpipada.com/posts/2025-02-01-indian-coffee-beans/</link>
-      <pubDate>Sat, 01 Feb 2025 16:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2025-02-01-indian-coffee-beans/</guid>
-      <description>Different types of coffee bean varieties available in India, their flavour profiles, and associated processing.</description>
-    </item>
-    <item>
-      <title>Refining the Flow: A Streamlined Markdown/Git-Based Task Management System for Solo Developers</title>
-      <link>https://pankajpipada.com/posts/2024-08-13-taskmgmt-2/</link>
-      <pubDate>Tue, 13 Aug 2024 18:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2024-08-13-taskmgmt-2/</guid>
-      <description>This post explores a markdown-based task management system designed for solo developers, balancing simplicity with effective project management.</description>
-    </item>
-    <item>
-      <title>Personal experience with adapting to a Sit Stand Desk</title>
-      <link>https://pankajpipada.com/posts/2024-06-03-sit-stand-desk/</link>
-      <pubDate>Mon, 03 Jun 2024 11:30:05 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2024-06-03-sit-stand-desk/</guid>
-      <description>Sharing my personal journey through the first month of using a sit-stand desk, detailing the challenges and benefits of transitioning to a more dynamic work environment.</description>
-    </item>
-    <item>
-      <title>Finding my balance: An evolved and simplified task management system</title>
-      <link>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</link>
-      <pubDate>Sun, 30 Jul 2023 18:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</guid>
-      <description>An evolution in work related task management over the years, that has worked for me, and has personally shaped my professional life.</description>
-    </item>
-    <item>
-      <title>Blunt/Direct/Assertive communicators, online communication challenges and how to overcome them</title>
-      <link>https://pankajpipada.com/posts/2023-07-10-assertive/</link>
-      <pubDate>Mon, 10 Jul 2023 18:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2023-07-10-assertive/</guid>
-      <description>This blog post explores the challenges faced by blunt or direct communicators, particularly in the context of online communication, and proposes some effective strategies that have proven helpful.</description>
-    </item>
-    <item>
-      <title>Survival mode, life immediately after and Paul Graham&#39;s How to do great work</title>
-      <link>https://pankajpipada.com/posts/2023-07-02-great-work/</link>
-      <pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2023-07-02-great-work/</guid>
-      <description>How survival mode or life immediately after it affects one&amp;rsquo;s ability to do great work and what to adjust in the article for it.</description>
-    </item>
-    <item>
-      <title>Remembering my friend</title>
-      <link>https://pankajpipada.com/posts/2023-05-25-remembering/</link>
-      <pubDate>Thu, 25 May 2023 00:15:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2023-05-25-remembering/</guid>
-      <description>Remembering my friend</description>
-    </item>
-    <item>
-      <title>Voraciousness</title>
-      <link>https://pankajpipada.com/posts/2022-07-09-voraciousness/</link>
-      <pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
-      <guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
-      <description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Life on Scramblings</title>
+		<link>https://pankajpipada.com/tags/life/</link>
+		<description>Recent content in Life on Scramblings</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+			<copyright>Copyright © 2016-Present Pankaj Pipada. All Rights Reserved.</copyright>
+		
+		
+			<lastBuildDate>Tue, 17 Nov 2026 13:34:32 +0530</lastBuildDate>
+		
+			<atom:link href="https://pankajpipada.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Reading towards some clarity</title>
+				<link>https://pankajpipada.com/posts/2026-11-17-reading-towards-some-clarity/</link>
+				<pubDate>Tue, 17 Nov 2026 12:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2026-11-17-reading-towards-some-clarity/</guid>
+				<description>A reading plan for understanding the mind, ethics and Indian philosophy.</description>
+			</item>
+			<item>
+				<title>Motivation, Productivity Barriers, and Engineering Friction</title>
+				<link>https://pankajpipada.com/posts/2026-05-07-motivation-productivity-barriers/</link>
+				<pubDate>Thu, 07 May 2026 10:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2026-05-07-motivation-productivity-barriers/</guid>
+				<description>What looks like a motivation problem in software work is often the cost of entering the next step - context load, cross-system design, LLM drift, verification, and re-entry. The fix is not more generated code, but better design ownership, scoped AI collaboration, repo-local context, and intentional switching.</description>
+			</item>
+			<item>
+				<title>Winter Honey From Himachal Pradesh</title>
+				<link>https://pankajpipada.com/posts/2025-05-05-winter-honey/</link>
+				<pubDate>Mon, 05 May 2025 10:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2025-05-05-winter-honey/</guid>
+				<description>A nostalgic journey to pure, unfiltered honey in the mountains of Himachal Pradesh, and a taste that brought back childhood memories.</description>
+			</item>
+			<item>
+				<title>My Go-to Espresso Recipe - An Everyday Brew</title>
+				<link>https://pankajpipada.com/posts/2025-03-27-espresso/</link>
+				<pubDate>Thu, 27 Mar 2025 11:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2025-03-27-espresso/</guid>
+				<description>A home espresso recipe for daily brews using the Gaggia Classic Pro and Baratza Virtuoso Plus.</description>
+			</item>
+			<item>
+				<title>A Great Spontaneous Morning</title>
+				<link>https://pankajpipada.com/posts/2025-03-24-spontaneous-morning/</link>
+				<pubDate>Mon, 24 Mar 2025 16:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2025-03-24-spontaneous-morning/</guid>
+				<description>A great spontaneous morning and associated thougths.</description>
+			</item>
+			<item>
+				<title>Coffee Beans of India, Varieties and Taste Profiles</title>
+				<link>https://pankajpipada.com/posts/2025-02-01-indian-coffee-beans/</link>
+				<pubDate>Sat, 01 Feb 2025 16:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2025-02-01-indian-coffee-beans/</guid>
+				<description>Different types of coffee bean varieties available in India, their flavour profiles, and associated processing.</description>
+			</item>
+			<item>
+				<title>Refining the Flow: A Streamlined Markdown/Git-Based Task Management System for Solo Developers</title>
+				<link>https://pankajpipada.com/posts/2024-08-13-taskmgmt-2/</link>
+				<pubDate>Tue, 13 Aug 2024 18:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2024-08-13-taskmgmt-2/</guid>
+				<description>This post explores a markdown-based task management system designed for solo developers, balancing simplicity with effective project management.</description>
+			</item>
+			<item>
+				<title>Personal experience with adapting to a Sit Stand Desk</title>
+				<link>https://pankajpipada.com/posts/2024-06-03-sit-stand-desk/</link>
+				<pubDate>Mon, 03 Jun 2024 11:30:05 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2024-06-03-sit-stand-desk/</guid>
+				<description>Sharing my personal journey through the first month of using a sit-stand desk, detailing the challenges and benefits of transitioning to a more dynamic work environment.</description>
+			</item>
+			<item>
+				<title>Finding my balance: An evolved and simplified task management system</title>
+				<link>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</link>
+				<pubDate>Sun, 30 Jul 2023 18:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2023-07-30-taskmgmt/</guid>
+				<description>An evolution in work related task management over the years, that has worked for me, and has personally shaped my professional life.</description>
+			</item>
+			<item>
+				<title>Blunt/Direct/Assertive communicators, online communication challenges and how to overcome them</title>
+				<link>https://pankajpipada.com/posts/2023-07-10-assertive/</link>
+				<pubDate>Mon, 10 Jul 2023 18:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2023-07-10-assertive/</guid>
+				<description>This blog post explores the challenges faced by blunt or direct communicators, particularly in the context of online communication, and proposes some effective strategies that have proven helpful.</description>
+			</item>
+			<item>
+				<title>Survival mode, life immediately after and Paul Graham&#39;s How to do great work</title>
+				<link>https://pankajpipada.com/posts/2023-07-02-great-work/</link>
+				<pubDate>Sun, 02 Jul 2023 12:01:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2023-07-02-great-work/</guid>
+				<description>How survival mode or life immediately after it affects one&amp;rsquo;s ability to do great work and what to adjust in the article for it.</description>
+			</item>
+			<item>
+				<title>Remembering my friend</title>
+				<link>https://pankajpipada.com/posts/2023-05-25-remembering/</link>
+				<pubDate>Thu, 25 May 2023 00:15:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2023-05-25-remembering/</guid>
+				<description>Remembering my friend</description>
+			</item>
+			<item>
+				<title>Voraciousness</title>
+				<link>https://pankajpipada.com/posts/2022-07-09-voraciousness/</link>
+				<pubDate>Sat, 09 Jul 2022 16:00:00 +0530</pubDate>
+				<guid>https://pankajpipada.com/posts/2022-07-09-voraciousness/</guid>
+				<description>Personal experience about voraciousness, its decrease, corresponding issues and thoughts.</description>
+			</item>
+	</channel>
 </rss>
